@@ -6,8 +6,8 @@
   const store = window.StoreProducts;
   const images = {
     "apple-iphone-15-pro-max-256gb": "iPhone_17_Pro_Max-hero.webp",
-    "macbook-pro-16-m3-max": "sony-wf-hero.webp",
-    "playstation-5-slim-bundle": "iphone-15-showcase.webp"
+    "macbook-pro-16-m3-max": "macbook-m3-cutout.png",
+    "playstation-5-slim-bundle": "ps5-slim-hero.png"
   };
   const escape = value => String(value).replace(/[&<>"']/g, character => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -16,8 +16,11 @@
   function content(product, side) {
     const language = document.documentElement.lang === "ar" ? "ar" : "en";
     const local = store.localized(product, language);
+    const alt = product.id === "apple-iphone-15-pro-max-256gb"
+      ? (language === "ar" ? "آيفون 17 برو ماكس" : "iPhone 17 Pro Max")
+      : local.name;
     const unified = document.body.classList.contains("pg-unified");
-    return `<div class="${side ? "hb-side-link" : "hb-slide is-active"}"><img src="assets/images/${escape(images[product.id])}" width="${side ? 210 : 296}" height="${side ? 130 : unified ? 290 : 382}" ${side ? 'loading="lazy"' : 'fetchpriority="high"'} alt="${escape(local.name)}"></div>`;
+    return `<div class="${side ? "hb-side-link" : "hb-slide is-active"}"><img src="assets/images/${escape(images[product.id])}" width="${side ? 210 : 296}" height="${side ? 130 : unified ? 290 : 382}" ${side ? 'loading="lazy"' : 'fetchpriority="high"'} alt="${escape(alt)}"></div>`;
   }
 
   function render() {
