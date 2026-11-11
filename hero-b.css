@@ -2058,7 +2058,7 @@
 /* Keep the original showcase dimensions independent of the selected artwork. */
 .pg-unified .hb-slides{height:344px;aspect-ratio:auto;border-radius:18px;overflow:hidden}
 .pg-unified .hb-slide img{height:100%!important;border-radius:18px;scale:1}
-.pg-unified .hb-visual .hb-slide img{padding:0}
+.pg-unified .hb-visual .hb-slide img{padding:0;object-fit:cover!important;object-position:center!important}
 .pg-unified .hb-side .hb-side-link{padding:6px;border-radius:20px;overflow:hidden}
 .pg-unified .hb-mac{inset-inline-start:4px;top:248px;width:220px}
 .pg-unified .hb-ps{inset-inline-end:4px;top:232px;width:204px}
