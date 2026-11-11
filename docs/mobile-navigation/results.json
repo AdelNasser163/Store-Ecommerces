@@ -1,0 +1,269 @@
+[
+  {
+    "file": "index.html",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "accessories.html",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "about.html",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "blog.html",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "contact.html",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "checkout.html",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "index.html",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "accessories.html",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "about.html",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "blog.html",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "contact.html",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "checkout.html",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "index.html",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "accessories.html",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "about.html",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "blog.html",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "contact.html",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "checkout.html",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "index.html",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "accessories.html",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "about.html",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "blog.html",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "contact.html",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "checkout.html",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "width": 320,
+    "breakpoint": true,
+    "passed": true
+  },
+  {
+    "width": 767,
+    "breakpoint": true,
+    "passed": true
+  },
+  {
+    "width": 820,
+    "breakpoint": true,
+    "passed": true
+  }
+]

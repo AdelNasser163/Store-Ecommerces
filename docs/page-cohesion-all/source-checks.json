@@ -1,0 +1,11 @@
+{
+  "heroMarkup": true,
+  "headerMarkup": true,
+  "heroCSS": true,
+  "cardCSS": true,
+  "catalogCSS": true,
+  "mainTranslationsOnly": true,
+  "catalogJS": true,
+  "cardJS": true,
+  "oldThemeUnchanged": true
+}

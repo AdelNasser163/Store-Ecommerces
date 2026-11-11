@@ -1,0 +1,86 @@
+[
+  {
+    "file": "index.html",
+    "shifts": [
+      {
+        "value": 0.000009921017661179699,
+        "time": 1891.9000000953674,
+        "sources": []
+      }
+    ],
+    "frames": [
+      {
+        "time": 782.1000001430511,
+        "dir": "rtl",
+        "header": 76,
+        "title": 188.875
+      }
+    ],
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 1464
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 1464
+      }
+    ]
+  },
+  {
+    "file": "accessories.html",
+    "shifts": [
+      {
+        "value": 0.000009921017661179699,
+        "time": 837,
+        "sources": []
+      }
+    ],
+    "frames": [
+      {
+        "time": 593.3999998569489,
+        "dir": "rtl",
+        "header": 76,
+        "title": 215.390625
+      }
+    ],
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 836
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 836
+      }
+    ]
+  },
+  {
+    "file": "about.html",
+    "shifts": [
+      {
+        "value": 0.000009921017661179699,
+        "time": 726.5,
+        "sources": []
+      }
+    ],
+    "frames": [
+      {
+        "time": 522.5,
+        "dir": "rtl",
+        "header": 76,
+        "title": 249.53125
+      }
+    ],
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 596
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 596
+      }
+    ]
+  }
+]

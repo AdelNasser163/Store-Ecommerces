@@ -1,0 +1,61 @@
+/* ===== Motion layer (GSAP + Lenis + React Bits) ===== */
+
+/* Lenis base */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* scroll progress */
+.fx-progress {
+  position: fixed; inset: 0 0 auto 0; height: 3px; z-index: 2000;
+  background: linear-gradient(90deg, #8bc34a, #bef264, #22d3ee);
+  pointer-events: none;
+}
+
+/* back to top */
+.fx-top {
+  position: fixed; inset-inline-start: 1.1rem; bottom: 1.1rem; z-index: 1500;
+  width: 2.9rem; height: 2.9rem; border-radius: 9999px; border: 0; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #0b192e; color: #8bc34a; box-shadow: 0 10px 25px -8px rgba(11,25,46,.55);
+  transition: background .2s, color .2s;
+}
+.fx-top:hover { background: #8bc34a; color: #0b192e; }
+
+/* header */
+[data-component="site-header"] { will-change: transform; transition: box-shadow .3s ease; }
+[data-component="site-header"].fx-header-scrolled { box-shadow: 0 10px 30px -12px rgba(11,25,46,.25); }
+
+/* add-to-cart flyer */
+.fx-fly {
+  position: fixed; z-index: 3000; pointer-events: none; object-fit: cover;
+  border-radius: 14px; box-shadow: 0 18px 40px -10px rgba(0,0,0,.35);
+  transform-origin: center center;
+}
+
+/* page transition curtain */
+.fx-curtain {
+  position: fixed; inset: 0; z-index: 4000; pointer-events: none;
+  background: radial-gradient(1200px 600px at 50% 40%, #12305a 0%, #0b192e 60%);
+}
+.fx-curtain[style*="visibility: visible"] { pointer-events: all; }
+
+/* hero particles layer */
+.rb-hero-particles { position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .75; }
+
+/* click sparks (full-viewport, click-through) */
+.rb-sparks-root { position: fixed; inset: 0; z-index: 3500; pointer-events: none; }
+.rb-sparks, .rb-sparks * { width: 100%; height: 100%; pointer-events: none !important; }
+html.fx-reduce .rb-sparks-root { display: none; }
+
+/* stats section */
+.rb-stats { margin-block: .25rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-progress, .fx-fly, .fx-curtain { display: none; }
+}
+
+/* Navigation stays at the top while browsing every storefront page. */
+[data-component="site-header"] { position: sticky; top: 0; z-index: 50; }

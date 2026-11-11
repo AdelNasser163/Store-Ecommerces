@@ -1,0 +1,114 @@
+[
+  {
+    "file": "index.html",
+    "lang": "en",
+    "width": 1440,
+    "headingMovement": 0,
+    "frames": 44,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "en",
+    "width": 1440,
+    "headingMovement": 0,
+    "frames": 87,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "en",
+    "width": 1440,
+    "headingMovement": 0,
+    "frames": 100,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "en",
+    "width": 390,
+    "headingMovement": 0,
+    "frames": 87,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "en",
+    "width": 390,
+    "headingMovement": 0,
+    "frames": 99,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "en",
+    "width": 390,
+    "headingMovement": 0,
+    "frames": 98,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "ar",
+    "width": 1440,
+    "headingMovement": 0,
+    "frames": 83,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "ar",
+    "width": 1440,
+    "headingMovement": 0,
+    "frames": 102,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "ar",
+    "width": 1440,
+    "headingMovement": 0,
+    "frames": 101,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "ar",
+    "width": 390,
+    "headingMovement": 0,
+    "frames": 96,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "ar",
+    "width": 390,
+    "headingMovement": 0,
+    "frames": 101,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "ar",
+    "width": 390,
+    "headingMovement": 0,
+    "frames": 102,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "mobileSequence": "home/products/about/home",
+    "cartDrawer": true
+  }
+]

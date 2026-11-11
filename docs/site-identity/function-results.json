@@ -1,0 +1,6 @@
+{
+  "authValidation": true,
+  "existingMockLogin": true,
+  "footerLanguageAfterRender": true,
+  "cartAdditionAndDrawer": true
+}

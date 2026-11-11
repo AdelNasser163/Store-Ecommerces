@@ -1,0 +1,66 @@
+[
+  {
+    "lang": "en",
+    "reduced": true,
+    "rails": 2,
+    "arrowsAndEnds": true,
+    "noVerticalJump": true,
+    "filter": true,
+    "language": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "reduced": false,
+    "rails": 2,
+    "arrowsAndEnds": true,
+    "noVerticalJump": true,
+    "filter": true,
+    "language": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "reduced": true,
+    "rails": 2,
+    "arrowsAndEnds": true,
+    "noVerticalJump": true,
+    "filter": true,
+    "language": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "reduced": false,
+    "rails": 2,
+    "arrowsAndEnds": true,
+    "noVerticalJump": true,
+    "filter": true,
+    "language": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "width": 320,
+    "breakpoint": true,
+    "passed": true
+  },
+  {
+    "width": 767,
+    "breakpoint": true,
+    "passed": true
+  },
+  {
+    "width": 820,
+    "breakpoint": true,
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "breakpoint": true,
+    "passed": true
+  }
+]

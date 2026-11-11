@@ -1,0 +1,50 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "errors": [],
+    "before": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "after": "product.html?id=samsung-galaxy-s24-ultra",
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "width": 820,
+    "errors": [],
+    "before": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "after": "product.html?id=samsung-galaxy-s24-ultra",
+    "overflow": false
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "errors": [],
+    "before": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "after": "product.html?id=samsung-galaxy-s24-ultra",
+    "overflow": false
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "errors": [],
+    "before": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "after": "product.html?id=samsung-galaxy-s24-ultra",
+    "overflow": false
+  },
+  {
+    "lang": "ar",
+    "width": 820,
+    "errors": [],
+    "before": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "after": "product.html?id=samsung-galaxy-s24-ultra",
+    "overflow": false
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "errors": [],
+    "before": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "after": "product.html?id=samsung-galaxy-s24-ultra",
+    "overflow": false
+  }
+]

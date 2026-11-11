@@ -1,0 +1,430 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "height": 5519,
+    "errors": [],
+    "sections": [
+      {
+        "title": "The tech youwant. Genuinelyyours.",
+        "class": "hb-hero",
+        "background": "radial-gradient(760px 520px at 78% 38%, rgba(34, 96, 160, 0.55), rgba(0, 0, 0, 0) 70%) repeat scroll 0% 0% / auto padding-box border-box, radial-gradient(600px 420px at 6% 90%, rgba(139, 195, 74, 0.16), rgba(0, 0, 0, 0) 70%) repeat scroll 0% 0% / auto padding-box border-box, rgb(7, 17, 31) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "24h Express Delivery",
+        "class": "pt-trust grid grid-cols-2 md:grid-cols-4 gap-space-md py-4 px-6 bg-white rounded-xl border border-slate-200/90 shadow-sm",
+        "background": "rgba(15, 30, 47, 0.94) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 152,
+          "width": 1136
+        }
+      },
+      {
+        "title": "A world of tech, in numbers.",
+        "class": "pt-section pt-stats",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "Flash Deals",
+        "class": "pt-section pt-band pt-flash",
+        "background": "radial-gradient(rgba(255, 255, 255, 0.03) 1px, rgba(0, 0, 0, 0) 1px) repeat scroll 0% 0% / 28px 28px padding-box border-box, radial-gradient(600px 420px at 90% 0px, rgba(34, 96, 160, 0.2), rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(7, 17, 31), rgb(16, 41, 74)) repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "Shop by Category",
+        "class": "pt-section pt-categories",
+        "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "Featured Tech Collections",
+        "class": "pt-section pt-featured",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "Make room for an upgrade.",
+        "class": "pt-section pt-promos",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "Good tech. Real experiences.",
+        "class": "pt-section pt-reviews",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "Get 200 EGP Off Your First Order",
+        "class": "pt-section pt-band pt-newsletter",
+        "background": "radial-gradient(rgba(255, 255, 255, 0.03) 1px, rgba(0, 0, 0, 0) 1px) repeat scroll 0% 0% / 28px 28px padding-box border-box, radial-gradient(600px 420px at 90% 0px, rgba(34, 96, 160, 0.2), rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(7, 17, 31), rgb(16, 41, 74)) repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      }
+    ]
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "height": 9060,
+    "errors": [],
+    "sections": [
+      {
+        "title": "The tech youwant. Genuinelyyours.",
+        "class": "hb-hero",
+        "background": "radial-gradient(760px 520px at 78% 38%, rgba(34, 96, 160, 0.55), rgba(0, 0, 0, 0) 70%) repeat scroll 0% 0% / auto padding-box border-box, radial-gradient(600px 420px at 6% 90%, rgba(139, 195, 74, 0.16), rgba(0, 0, 0, 0) 70%) repeat scroll 0% 0% / auto padding-box border-box, rgb(7, 17, 31) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "24h Express Delivery",
+        "class": "pt-trust grid grid-cols-2 md:grid-cols-4 gap-space-md py-4 px-6 bg-white rounded-xl border border-slate-200/90 shadow-sm",
+        "background": "rgba(15, 30, 47, 0.94) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 20,
+          "width": 350
+        }
+      },
+      {
+        "title": "A world of tech, in numbers.",
+        "class": "pt-section pt-stats",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "Flash Deals",
+        "class": "pt-section pt-band pt-flash",
+        "background": "radial-gradient(rgba(255, 255, 255, 0.03) 1px, rgba(0, 0, 0, 0) 1px) repeat scroll 0% 0% / 28px 28px padding-box border-box, radial-gradient(600px 420px at 90% 0px, rgba(34, 96, 160, 0.2), rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(7, 17, 31), rgb(16, 41, 74)) repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "Shop by Category",
+        "class": "pt-section pt-categories",
+        "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "Featured Tech Collections",
+        "class": "pt-section pt-featured",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "Make room for an upgrade.",
+        "class": "pt-section pt-promos",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "Good tech. Real experiences.",
+        "class": "pt-section pt-reviews",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "Get 200 EGP Off Your First Order",
+        "class": "pt-section pt-band pt-newsletter",
+        "background": "radial-gradient(rgba(255, 255, 255, 0.03) 1px, rgba(0, 0, 0, 0) 1px) repeat scroll 0% 0% / 28px 28px padding-box border-box, radial-gradient(600px 420px at 90% 0px, rgba(34, 96, 160, 0.2), rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(7, 17, 31), rgb(16, 41, 74)) repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      }
+    ]
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "height": 5454,
+    "errors": [],
+    "sections": [
+      {
+        "title": "التقنية التيتريدها. أصليةولك.",
+        "class": "hb-hero",
+        "background": "radial-gradient(760px 520px at 78% 38%, rgba(34, 96, 160, 0.55), rgba(0, 0, 0, 0) 70%) repeat scroll 0% 0% / auto padding-box border-box, radial-gradient(600px 420px at 6% 90%, rgba(139, 195, 74, 0.16), rgba(0, 0, 0, 0) 70%) repeat scroll 0% 0% / auto padding-box border-box, rgb(7, 17, 31) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "توصيل سريع خلال 24 ساعة التوصيل",
+        "class": "pt-trust grid grid-cols-2 md:grid-cols-4 gap-space-md py-4 px-6 bg-white rounded-xl border border-slate-200/90 shadow-sm",
+        "background": "rgba(15, 30, 47, 0.94) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 152,
+          "width": 1136
+        }
+      },
+      {
+        "title": "عالم من التقنية، بالأرقام.",
+        "class": "pt-section pt-stats",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "العروض السريعة",
+        "class": "pt-section pt-band pt-flash",
+        "background": "radial-gradient(rgba(255, 255, 255, 0.03) 1px, rgba(0, 0, 0, 0) 1px) repeat scroll 0% 0% / 28px 28px padding-box border-box, radial-gradient(600px 420px at 90% 0px, rgba(34, 96, 160, 0.2), rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(7, 17, 31), rgb(16, 41, 74)) repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "تسوق حسب القسم",
+        "class": "pt-section pt-categories",
+        "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "منتجات تقنية مميزة",
+        "class": "pt-section pt-featured",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "حان الوقت لتجربة أفضل.",
+        "class": "pt-section pt-promos",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "تقنية مميزة. تجارب حقيقية.",
+        "class": "pt-section pt-reviews",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      },
+      {
+        "title": "احصل على خصم 200 جنيه على طلبك الأول",
+        "class": "pt-section pt-band pt-newsletter",
+        "background": "radial-gradient(rgba(255, 255, 255, 0.03) 1px, rgba(0, 0, 0, 0) 1px) repeat scroll 0% 0% / 28px 28px padding-box border-box, radial-gradient(600px 420px at 90% 0px, rgba(34, 96, 160, 0.2), rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(7, 17, 31), rgb(16, 41, 74)) repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 112,
+          "width": 1216
+        }
+      }
+    ]
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "height": 8755,
+    "errors": [],
+    "sections": [
+      {
+        "title": "التقنية التيتريدها. أصليةولك.",
+        "class": "hb-hero",
+        "background": "radial-gradient(760px 520px at 78% 38%, rgba(34, 96, 160, 0.55), rgba(0, 0, 0, 0) 70%) repeat scroll 0% 0% / auto padding-box border-box, radial-gradient(600px 420px at 6% 90%, rgba(139, 195, 74, 0.16), rgba(0, 0, 0, 0) 70%) repeat scroll 0% 0% / auto padding-box border-box, rgb(7, 17, 31) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "توصيل سريع خلال 24 ساعة التوصيل",
+        "class": "pt-trust grid grid-cols-2 md:grid-cols-4 gap-space-md py-4 px-6 bg-white rounded-xl border border-slate-200/90 shadow-sm",
+        "background": "rgba(15, 30, 47, 0.94) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 20,
+          "width": 350
+        }
+      },
+      {
+        "title": "عالم من التقنية، بالأرقام.",
+        "class": "pt-section pt-stats",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "العروض السريعة",
+        "class": "pt-section pt-band pt-flash",
+        "background": "radial-gradient(rgba(255, 255, 255, 0.03) 1px, rgba(0, 0, 0, 0) 1px) repeat scroll 0% 0% / 28px 28px padding-box border-box, radial-gradient(600px 420px at 90% 0px, rgba(34, 96, 160, 0.2), rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(7, 17, 31), rgb(16, 41, 74)) repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "تسوق حسب القسم",
+        "class": "pt-section pt-categories",
+        "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "منتجات تقنية مميزة",
+        "class": "pt-section pt-featured",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "حان الوقت لتجربة أفضل.",
+        "class": "pt-section pt-promos",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "تقنية مميزة. تجارب حقيقية.",
+        "class": "pt-section pt-reviews",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px",
+        "shadow": "none",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      },
+      {
+        "title": "احصل على خصم 200 جنيه على طلبك الأول",
+        "class": "pt-section pt-band pt-newsletter",
+        "background": "radial-gradient(rgba(255, 255, 255, 0.03) 1px, rgba(0, 0, 0, 0) 1px) repeat scroll 0% 0% / 28px 28px padding-box border-box, radial-gradient(600px 420px at 90% 0px, rgba(34, 96, 160, 0.2), rgba(0, 0, 0, 0) 75%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(7, 17, 31), rgb(16, 41, 74)) repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "24px",
+        "shadow": "rgba(0, 0, 0, 0.094) 0px 12px 36px 0px",
+        "rect": {
+          "x": 12,
+          "width": 366
+        }
+      }
+    ]
+  }
+]

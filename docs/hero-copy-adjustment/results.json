@@ -1,0 +1,284 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "geometry": [
+      {
+        "class": "hb-side hb-mac",
+        "rect": {
+          "x": 772,
+          "y": 368,
+          "width": 230,
+          "height": 232,
+          "top": 368,
+          "right": 1002,
+          "bottom": 600,
+          "left": 772
+        }
+      },
+      {
+        "class": "hb-carousel",
+        "rect": {
+          "x": 904.9779663085938,
+          "y": 136.54034423828125,
+          "width": 334.04400634765625,
+          "height": 418.9193115234375,
+          "top": 136.54034423828125,
+          "right": 1239.02197265625,
+          "bottom": 555.4596557617188,
+          "left": 904.9779663085938
+        }
+      },
+      {
+        "class": "hb-side hb-ps",
+        "rect": {
+          "x": 1136,
+          "y": 348,
+          "width": 220,
+          "height": 232,
+          "top": 348,
+          "right": 1356,
+          "bottom": 580,
+          "left": 1136
+        }
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 820,
+    "geometry": [
+      {
+        "class": "hb-side hb-mac",
+        "rect": {
+          "x": 136,
+          "y": 977.859375,
+          "width": 170,
+          "height": 232,
+          "top": 977.859375,
+          "right": 306,
+          "bottom": 1209.859375,
+          "left": 136
+        }
+      },
+      {
+        "class": "hb-carousel",
+        "rect": {
+          "x": 252.9718780517578,
+          "y": 746.7487182617188,
+          "width": 314.05621337890625,
+          "height": 418.22125244140625,
+          "top": 746.7487182617188,
+          "right": 567.0280914306641,
+          "bottom": 1164.969970703125,
+          "left": 252.9718780517578
+        }
+      },
+      {
+        "class": "hb-side hb-ps",
+        "rect": {
+          "x": 500,
+          "y": 977.859375,
+          "width": 170,
+          "height": 232,
+          "top": 977.859375,
+          "right": 670,
+          "bottom": 1209.859375,
+          "left": 500
+        }
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "geometry": [
+      {
+        "class": "hb-side hb-mac",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      {
+        "class": "hb-carousel",
+        "rect": {
+          "x": 48.26243209838867,
+          "y": 693.826904296875,
+          "width": 293.47515869140625,
+          "height": 400.53369140625,
+          "top": 693.826904296875,
+          "right": 341.7375907897949,
+          "bottom": 1094.360595703125,
+          "left": 48.26243209838867
+        }
+      },
+      {
+        "class": "hb-side hb-ps",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "geometry": [
+      {
+        "class": "hb-side hb-mac",
+        "rect": {
+          "x": 438,
+          "y": 368,
+          "width": 230,
+          "height": 231.5,
+          "top": 368,
+          "right": 668,
+          "bottom": 599.5,
+          "left": 438
+        }
+      },
+      {
+        "class": "hb-carousel",
+        "rect": {
+          "x": 200.97796630859375,
+          "y": 136.54034423828125,
+          "width": 334.0440673828125,
+          "height": 418.9193115234375,
+          "top": 136.54034423828125,
+          "right": 535.0220336914062,
+          "bottom": 555.4596557617188,
+          "left": 200.97796630859375
+        }
+      },
+      {
+        "class": "hb-side hb-ps",
+        "rect": {
+          "x": 84,
+          "y": 348,
+          "width": 220,
+          "height": 231.5,
+          "top": 348,
+          "right": 304,
+          "bottom": 579.5,
+          "left": 84
+        }
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 820,
+    "geometry": [
+      {
+        "class": "hb-side hb-mac",
+        "rect": {
+          "x": 514,
+          "y": 876.21875,
+          "width": 170,
+          "height": 231.5,
+          "top": 876.21875,
+          "right": 684,
+          "bottom": 1107.71875,
+          "left": 514
+        }
+      },
+      {
+        "class": "hb-carousel",
+        "rect": {
+          "x": 252.9718780517578,
+          "y": 645.1080932617188,
+          "width": 314.05621337890625,
+          "height": 418.22125244140625,
+          "top": 645.1080932617188,
+          "right": 567.0280914306641,
+          "bottom": 1063.329345703125,
+          "left": 252.9718780517578
+        }
+      },
+      {
+        "class": "hb-side hb-ps",
+        "rect": {
+          "x": 150,
+          "y": 876.21875,
+          "width": 170,
+          "height": 231.5,
+          "top": 876.21875,
+          "right": 320,
+          "bottom": 1107.71875,
+          "left": 150
+        }
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "geometry": [
+      {
+        "class": "hb-side hb-mac",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      {
+        "class": "hb-carousel",
+        "rect": {
+          "x": 48.26243209838867,
+          "y": 569.467529296875,
+          "width": 293.47515869140625,
+          "height": 400.53369140625,
+          "top": 569.467529296875,
+          "right": 341.7375907897949,
+          "bottom": 970.001220703125,
+          "left": 48.26243209838867
+        }
+      },
+      {
+        "class": "hb-side hb-ps",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      }
+    ],
+    "errors": [],
+    "passed": true
+  }
+]

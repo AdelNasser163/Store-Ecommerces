@@ -1,0 +1,110 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "cartQuantity": 3,
+    "selectedPrice": 66499,
+    "lightbox": true,
+    "gallery": true,
+    "flyUsesProductImage": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 1024,
+    "cartQuantity": 3,
+    "selectedPrice": 66499,
+    "lightbox": true,
+    "gallery": true,
+    "flyUsesProductImage": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 820,
+    "cartQuantity": 3,
+    "selectedPrice": 66499,
+    "lightbox": true,
+    "gallery": true,
+    "flyUsesProductImage": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "cartQuantity": 3,
+    "selectedPrice": 66499,
+    "lightbox": true,
+    "gallery": true,
+    "flyUsesProductImage": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "cartQuantity": 3,
+    "selectedPrice": 66499,
+    "lightbox": true,
+    "gallery": true,
+    "flyUsesProductImage": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 1024,
+    "cartQuantity": 3,
+    "selectedPrice": 66499,
+    "lightbox": true,
+    "gallery": true,
+    "flyUsesProductImage": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 820,
+    "cartQuantity": 3,
+    "selectedPrice": 66499,
+    "lightbox": true,
+    "gallery": true,
+    "flyUsesProductImage": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "cartQuantity": 3,
+    "selectedPrice": 66499,
+    "lightbox": true,
+    "gallery": true,
+    "flyUsesProductImage": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "id": "sony-wf-1000xm5",
+    "passed": true
+  },
+  {
+    "id": "macbook-pro-16-m3-max",
+    "passed": true
+  },
+  {
+    "bundleAddition": true,
+    "buyNowCheckout": true
+  },
+  {
+    "page": "index.html",
+    "opaqueNav": true
+  },
+  {
+    "page": "accessories.html",
+    "opaqueNav": true
+  }
+]

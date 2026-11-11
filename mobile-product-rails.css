@@ -1,0 +1,30 @@
+/* Home product navigation on phones; desktop grids keep their existing styles. */
+.pg-page .pg-rail-controls{display:none}
+.pg-page .pg-rail-controls[hidden]{display:none!important}
+@media(max-width:767px){
+ .pg-page .hb-card-grid.pg-mobile-product-rail{
+  display:grid!important;grid-template-columns:none!important;grid-template-rows:none!important;
+  grid-auto-flow:column!important;grid-auto-columns:100%!important;grid-auto-rows:1fr!important;
+  gap:12px!important;min-width:0!important;min-height:0!important;
+  overflow-x:auto!important;overflow-y:hidden!important;padding:6px 0 18px!important;
+  scroll-snap-type:x mandatory;scroll-padding-inline:0;scroll-behavior:auto;
+  overscroll-behavior-inline:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+ }
+ .pg-page .hb-card-grid.pg-mobile-product-rail::-webkit-scrollbar{display:none}
+ .pg-page .pg-mobile-product-rail>.hb-card{scroll-snap-align:start;scroll-snap-stop:always;min-width:0}
+ .pg-page .hb-card-grid.pg-mobile-product-rail.pg-product-rail--empty{display:block!important}
+ .pg-page .pg-rail-controls{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-top:8px}
+ .pg-page .pg-rail-button{
+  display:inline-flex!important;align-items:center;justify-content:center;
+  width:44px!important;min-width:44px!important;height:44px!important;min-height:44px!important;
+  margin:0!important;padding:0!important;border:1px solid #0f354f2e!important;border-radius:50%!important;
+  background:var(--site-navy,#0f354f)!important;color:#fff!important;
+  box-shadow:0 4px 12px #0f354f10;cursor:pointer;transition:background .2s ease,color .2s ease,opacity .2s ease;
+ }
+ .pg-page .pg-rail-button svg{display:block;width:20px;height:20px;pointer-events:none}
+ [dir=rtl] .pg-page .pg-rail-button svg{transform:scaleX(-1)}
+ .pg-page .pg-rail-button:hover:not(:disabled){background:var(--site-green,#8bc34a)!important;color:var(--site-navy,#0f354f)!important}
+ .pg-page .pg-rail-button:disabled{opacity:.35;cursor:default;box-shadow:none}
+ .pg-page .pg-rail-button:focus-visible,.pg-page .pg-mobile-product-rail:focus-visible{outline:3px solid #4d7c0f;outline-offset:4px}
+}
+@media(prefers-reduced-motion:reduce){.pg-page .pg-rail-button{transition:none!important}}

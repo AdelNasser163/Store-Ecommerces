@@ -1,0 +1,69 @@
+[
+  {
+    "width": 1440,
+    "lang": "en",
+    "savedSession": false,
+    "loginOpens": true,
+    "sessionPreserved": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "lang": "en",
+    "savedSession": true,
+    "loginOpens": true,
+    "sessionPreserved": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "lang": "ar",
+    "savedSession": false,
+    "loginOpens": true,
+    "sessionPreserved": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "lang": "ar",
+    "savedSession": true,
+    "loginOpens": true,
+    "sessionPreserved": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "lang": "en",
+    "savedSession": false,
+    "loginOpens": true,
+    "sessionPreserved": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "lang": "en",
+    "savedSession": true,
+    "loginOpens": true,
+    "sessionPreserved": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "lang": "ar",
+    "savedSession": false,
+    "loginOpens": true,
+    "sessionPreserved": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "lang": "ar",
+    "savedSession": true,
+    "loginOpens": true,
+    "sessionPreserved": true,
+    "errors": []
+  },
+  {
+    "existingMockLoginRedirect": true
+  }
+]

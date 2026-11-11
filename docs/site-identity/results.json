@@ -1,0 +1,842 @@
+[
+  {
+    "file": "index.html",
+    "lang": "en",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "en",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "en",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "en",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "en",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "en",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "en",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "en",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "en",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "en",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": false,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "en",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "en",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "en",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "en",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "en",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "en",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "en",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "en",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "en",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "en",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": false,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "en",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "en",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "en",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "en",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "en",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "en",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "en",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "en",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "en",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "en",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": false,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "ar",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "ar",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "ar",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "ar",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "ar",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "ar",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "ar",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "ar",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "ar",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "ar",
+    "width": 1440,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": false,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "ar",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "ar",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "ar",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "ar",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "ar",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "ar",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "ar",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "ar",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "ar",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "ar",
+    "width": 820,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": false,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "ar",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "ar",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "ar",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "ar",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "ar",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "ar",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "ar",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "ar",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "ar",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "ar",
+    "width": 390,
+    "palette": [
+      "#0b192e",
+      "#07111f",
+      "#8bc34a",
+      "#f4f6f8"
+    ],
+    "footer": false,
+    "errors": [],
+    "passed": true
+  }
+]

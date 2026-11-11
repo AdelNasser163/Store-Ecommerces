@@ -1,0 +1,146 @@
+{
+  "checked": [
+    {
+      "url": "http://127.0.0.1:8765/index.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/index.html?wishlist=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/auth.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/admin.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/accessories.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/about.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/blog.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/contact.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/product.html?id=macbook-pro-16-m3-max",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/product.html?id=apple-iphone-15-pro-max-256gb",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/product.html?id=playstation-5-slim-bundle",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/accessories.html?dept=mobiles",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/accessories.html?dept=audio",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/accessories.html?dept=appliances",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/accessories.html?sale=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/product.html?id=sony-wf-1000xm5",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/product.html?id=samsung-galaxy-watch-6-classic",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/product.html?id=dell-g15-i7-rtx4060",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/product.html?id=philips-barista-touch",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/product.html?id=anker-maggo-10000",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/accessories.html?q=laptop",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/accessories.html?q=OLED",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/accessories.html?q=PlayStation",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/product.html?id=samsung-odyssey-g9-oled",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/product.html?id=philips-xxl-airfryer",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8765/checkout.html",
+      "status": 200
+    }
+  ],
+  "categories": [
+    {
+      "id": "mobiles",
+      "url": "http://127.0.0.1:8765/accessories.html?dept=mobiles",
+      "count": 9,
+      "range": "1–9 of 9"
+    },
+    {
+      "id": "laptops",
+      "url": "http://127.0.0.1:8765/accessories.html?q=laptop",
+      "count": 3,
+      "range": "1–3 of 3"
+    },
+    {
+      "id": "audio",
+      "url": "http://127.0.0.1:8765/accessories.html?dept=audio",
+      "count": 2,
+      "range": "1–2 of 2"
+    },
+    {
+      "id": "screens",
+      "url": "http://127.0.0.1:8765/accessories.html?q=OLED",
+      "count": 1,
+      "range": "1–1 of 1"
+    },
+    {
+      "id": "appliances",
+      "url": "http://127.0.0.1:8765/accessories.html?dept=appliances",
+      "count": 2,
+      "range": "1–2 of 2"
+    },
+    {
+      "id": "gaming",
+      "url": "http://127.0.0.1:8765/accessories.html?q=PlayStation",
+      "count": 1,
+      "range": "1–1 of 1"
+    }
+  ]
+}

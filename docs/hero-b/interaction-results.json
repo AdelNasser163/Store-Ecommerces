@@ -1,0 +1,159 @@
+{
+  "links": [
+    {
+      "text": "AlMumez Online Store - المميز ستور",
+      "href": "index.html",
+      "status": 200
+    },
+    {
+      "text": "favorite\n              0",
+      "href": "index.html?wishlist=1",
+      "status": 200
+    },
+    {
+      "text": "Login",
+      "href": "auth.html",
+      "status": 200
+    },
+    {
+      "text": "Dashboard",
+      "href": "admin.html",
+      "status": 200
+    },
+    {
+      "text": "Home",
+      "href": "index.html",
+      "status": 200
+    },
+    {
+      "text": "Products",
+      "href": "accessories.html",
+      "status": 200
+    },
+    {
+      "text": "About",
+      "href": "about.html",
+      "status": 200
+    },
+    {
+      "text": "Blog",
+      "href": "blog.html",
+      "status": 200
+    },
+    {
+      "text": "Contact",
+      "href": "contact.html",
+      "status": 200
+    },
+    {
+      "text": "loginLogin",
+      "href": "auth.html",
+      "status": 200
+    },
+    {
+      "text": "Explore products→",
+      "href": "accessories.html",
+      "status": 200
+    },
+    {
+      "text": "View today's deals",
+      "href": "#flash-deals",
+      "status": 200
+    },
+    {
+      "text": "MacBook Pro 16\" M3 Max 36GB Unified 1TB124,500 EGP",
+      "href": "product.html?id=macbook-pro-16-m3-max",
+      "status": 200
+    },
+    {
+      "text": "-11%iPhone 15 Pro Max58,999 EGP65,999 EGP",
+      "href": "product.html?id=apple-iphone-15-pro-max-256gb",
+      "status": 200
+    },
+    {
+      "text": "-12%Galaxy S24 Ultra AI54,500 EGP61,900 EGP",
+      "href": "product.html?id=samsung-galaxy-s24-ultra",
+      "status": 200
+    },
+    {
+      "text": "-25%Sony WF-1000XM5 Wireless Noise Canceling8,499 EGP11,300 EGP",
+      "href": "product.html?id=sony-wf-1000xm5",
+      "status": 200
+    },
+    {
+      "text": "Sony PlayStation 5 Slim 1TB + Extra DualSense28,990 EGP",
+      "href": "product.html?id=playstation-5-slim-bundle",
+      "status": 200
+    },
+    {
+      "text": "smartphoneMobiles",
+      "href": "accessories.html?dept=mobiles",
+      "status": 200
+    },
+    {
+      "text": "laptop_macLaptops",
+      "href": "accessories.html",
+      "status": 200
+    },
+    {
+      "text": "headphonesAudio",
+      "href": "accessories.html?dept=audio",
+      "status": 200
+    },
+    {
+      "text": "tvTV & Screens",
+      "href": "accessories.html",
+      "status": 200
+    },
+    {
+      "text": "kitchenAppliances",
+      "href": "accessories.html?dept=appliances",
+      "status": 200
+    },
+    {
+      "text": "sports_esportsGaming",
+      "href": "accessories.html",
+      "status": 200
+    }
+  ],
+  "cart": true,
+  "wishlist": true,
+  "dashboard": true,
+  "search": true,
+  "language": true,
+  "hoverPause": true,
+  "dotsAndFocusPause": true,
+  "hiddenSlides": true,
+  "anchor": true,
+  "addButton": 1,
+  "cartUpdated": "8,499 EGP",
+  "mobileMenu": true,
+  "reduced": {
+    "first": true,
+    "particles": 0,
+    "animation": "none"
+  },
+  "pages": [
+    {
+      "path": "accessories.html",
+      "status": 200,
+      "header": 1
+    },
+    {
+      "path": "product.html?id=sony-wf-1000xm5",
+      "status": 200,
+      "header": 1
+    },
+    {
+      "path": "checkout.html",
+      "status": 200,
+      "header": 1
+    },
+    {
+      "path": "auth.html",
+      "status": 200,
+      "header": 1
+    }
+  ],
+  "errors": []
+}

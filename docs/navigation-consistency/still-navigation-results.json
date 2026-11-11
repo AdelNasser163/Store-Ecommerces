@@ -1,0 +1,38 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "nativeClicks": true,
+    "noCurtain": true,
+    "noRepeatedReveals": true,
+    "reloadAndBack": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "nativeClicks": true,
+    "noCurtain": true,
+    "noRepeatedReveals": true,
+    "reloadAndBack": true,
+    "errors": []
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "nativeClicks": true,
+    "noCurtain": true,
+    "noRepeatedReveals": true,
+    "reloadAndBack": true,
+    "errors": []
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "nativeClicks": true,
+    "noCurtain": true,
+    "noRepeatedReveals": true,
+    "reloadAndBack": true,
+    "errors": []
+  }
+]

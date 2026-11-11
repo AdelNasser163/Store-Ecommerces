@@ -1,0 +1,86 @@
+[
+  {
+    "page": "index",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "accessories",
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "index",
+    "lang": "en",
+    "width": 820,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "accessories",
+    "lang": "en",
+    "width": 820,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "index",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "accessories",
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "index",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "accessories",
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "index",
+    "lang": "ar",
+    "width": 820,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "accessories",
+    "lang": "ar",
+    "width": 820,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "index",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "accessories",
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "errors": []
+  }
+]

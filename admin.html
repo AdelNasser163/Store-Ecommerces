@@ -1,0 +1,152 @@
+﻿ <!doctype html>
+<html lang="ar" dir="rtl">
+  <head><meta charset="utf-8"><meta name="viewport"
+      content="width=device-width,initial-scale=1"><title>لوحة تحكم المميز |
+      AlMumez</title><link rel="stylesheet" href="assets/fonts/fonts.css"><link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"><link rel="stylesheet" href="style.css?v=5"></head>
+  <body data-page="admin" class="admin-dashboard-page admin-mobile-dashboard">
+    <main class="admin-login-screen" data-admin-login><form
+        class="admin-login-card" data-admin-login-form novalidate><img
+          src="assets/images/logo.png" alt="AlMumez"><div
+          class="admin-login-copy"><h1 data-login-text="title">تسجيل دخول لوحة
+            التحكم</h1><p data-login-text="description">سجّل الدخول لإدارة
+            المتجر والطلبات.</p></div>
+        <label><span
+            data-login-text="username">اسم المستخدم</span><span
+            class="admin-login-field"><span
+              class="material-symbols-outlined">person</span><input
+              name="username" autocomplete="username"
+              required></span></label><label><span
+            data-login-text="password">كلمة المرور</span><span
+            class="admin-login-field"><span
+              class="material-symbols-outlined">lock</span><input
+              name="password" type="password" autocomplete="current-password"
+              required><button class="admin-password-toggle" type="button"
+              aria-label="إظهار كلمة المرور"><span
+                class="material-symbols-outlined">visibility</span></button></span></label><small
+          data-login-error aria-live="polite"></small><button
+          class="admin-login-submit" type="submit"><span
+            data-login-text="submit">تسجيل الدخول</span><span
+            class="admin-login-spinner"></span></button><a
+          class="admin-back-store" href="index.html"><span
+            class="material-symbols-outlined">arrow_back</span><span
+            data-login-text="back">العودة للمتجر</span></a></form></main>
+    <div class="dashboard-app" data-admin-app hidden>
+      <header class="dashboard-header"></header>
+      <main class="mobile-dashboard-main">
+        <section class="mobile-live">
+          <span><i></i>نظام إدارة التجزئة
+            المتكامل</span><b>متصل مباشر</b>
+        </section>
+        <section class="mobile-welcome">
+          <h1>مرحبًا بعودتك، مدير المنصة
+            👋</h1>
+          <p>نظرة مباشرة على أداء المتجر والطلبات والمخزون.</p>
+          <div
+            class="mobile-period" data-dashboard-period>
+            <button class="is-active" data-period="today">اليوم</button>
+            <button
+              data-period="7">آخر 7 أيام</button><button data-period="month">هذا
+              الشهر</button><button
+              data-period="all">الكل</button></div></section>
+        <section class="mobile-kpis">
+          <article>
+            <header>
+              <span>إجمالي
+                المبيعات</span>
+                <i class="material-symbols-outlined green">payments</i>
+            </header>
+            <strong data-kpi-revenue>0 EGP</strong>
+            <p data-kpi-revenue-note>لا توجد
+              مبيعات بعد</p></article>
+              <article>
+                <header>
+                  <span>الطلبات الجديدة</span>
+                  <i class="material-symbols-outlined blue">shopping_bag</i>
+                </header>
+                <strong data-kpi-orders>0</strong>
+                <p data-kpi-orders-note>0 منتج
+                  مباع</p>
+              </article>
+              <article>
+                <header>
+                  <span>متوسط قيمة الطلب</span>
+                  <i class="material-symbols-outlined violet">monitoring</i>
+                </header>
+                <strong data-kpi-aov>0 EGP</strong>
+                <p>محسوب من
+                  الطلبات</p>
+              </article>
+              <article class="warning">
+                <header>
+                  <span>تنبيهات المخزون</span>
+                  <i class="material-symbols-outlined amber">warning</i>
+                </header>
+                <strong data-kpi-low-stock>0</strong>
+                <p>متبقي 5 قطع أو
+                  أقل</p>
+              </article>
+            </section>
+          <section class="mobile-panel" id="sales"><header><div><h2>معدل المبيعات
+                الأسبوعية</h2><p>إجمالي قيمة الطلبات خلال آخر سبعة
+                أيام</p></div><strong data-chart-total>0
+              EGP</strong></header><div class="dashboard-bars"
+            data-sales-chart></div></section>
+        <section class="mobile-panel"><header><div><h2>طرق الدفع
+                المستخدمة</h2><p>توزيع الطلبات حسب وسيلة
+                السداد</p></div></header><div
+            data-payment-breakdown></div></section>
+        <section class="mobile-panel"><header><div><h2>الأكثر مبيعًا</h2><p>مرتب
+                حسب الكمية</p></div></header><div class="mobile-best"
+            data-best-sellers></div></section>
+        <section class="mobile-panel" id="orders"><header><div><h2>أحدث طلبات
+                المتجر</h2><p>كل عملية شراء مكتملة تظهر هنا</p></div><a
+              class="mobile-panel-link" href="admin-orders.html">عرض
+              الكل</a></header><div class="mobile-recent-orders"
+            data-orders-list></div><div class="dashboard-empty compact"
+            data-orders-empty><span
+              class="material-symbols-outlined">receipt_long</span><p>لا توجد
+              طلبات بعد</p></div><button type="button" data-export-orders
+            hidden>تصدير CSV</button></section>
+        <section class="mobile-panel" id="products"><header><div><h2>إدارة
+                المنتجات</h2><p><span data-storage-usage>جاري حساب
+                  المساحة…</span></p></div><a class="mobile-add-product"
+              href="admin-product.html"><span
+                class="material-symbols-outlined">add</span>إضافة
+              منتج</a></header><label class="mobile-admin-search"><span
+              class="material-symbols-outlined">search</span><input
+              type="search" data-admin-search
+              placeholder="ابحث بالاسم أو الماركة أو القسم..."></label><div
+            class="mobile-product-list" data-admin-list></div><div
+            class="dashboard-empty" data-admin-empty hidden><span
+              class="material-symbols-outlined">inventory_2</span><p>لا توجد
+              منتجات</p></div></section>
+        <footer class="mobile-admin-footer">© <span data-dashboard-year></span>
+          AlMumez. جميع الحقوق محفوظة.<small>AlMumez Admin v1.0</small></footer>
+      </main>
+      <nav class="mobile-admin-dock">
+        <a class="is-active"
+          href="admin.html"><span
+            class="material-symbols-outlined">home</span><b>نظرة عامة</b></a><a
+          href="admin-orders.html"><span
+            class="material-symbols-outlined">assignment</span><b>الطلبات</b></a><a
+          href="admin-products.html"><span
+            class="material-symbols-outlined">inventory_2</span><b>المنتجات</b></a>
+        <a href="admin-bundles.html">
+          <span class="material-symbols-outlined">redeem</span>
+          <b>الباقات</b>
+        </a>
+
+        <button type="button" data-admin-logout>
+          <span class="material-symbols-outlined">logout</span>
+          <b>خروج</b>
+        </button>
+      </nav>
+    </div>
+    <script src="admin-ui.js?v=4"></script><script
+      src="data/products.js"></script><script
+      src="js/image-store.js?v=2"></script><script
+      src="data/store.js?v=9"></script><script
+      src="admin-dashboard.js?v=6"></script>
+  </body></html>

@@ -1,0 +1,48 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "passed": true,
+    "browserExceptions": [
+      "Transition was skipped"
+    ]
+  },
+  {
+    "lang": "en",
+    "width": 820,
+    "passed": true,
+    "browserExceptions": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "passed": true,
+    "browserExceptions": []
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "passed": true,
+    "browserExceptions": []
+  },
+  {
+    "lang": "ar",
+    "width": 820,
+    "passed": true,
+    "browserExceptions": [
+      "Transition was skipped"
+    ]
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "passed": true,
+    "browserExceptions": [
+      "Transition was skipped"
+    ]
+  },
+  {
+    "reducedMotion": true,
+    "passed": true
+  }
+]

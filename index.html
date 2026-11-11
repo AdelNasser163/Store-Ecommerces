@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+    <meta charset="utf-8" />
+<script src="js/page-bootstrap.js?v=1"></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AlMumez Online Store| Authorized Regional Tech
+      Distributor</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <!-- Google Fonts: Plus Jakarta Sans & Bricolage Grotesque -->
+    <!-- Material Symbols Outlined -->
+    <!-- Tailwind CSS v3 -->
+
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="fx.css?v=2">
+    <link rel="stylesheet" href="js/vendor/rb-islands.css?v=1">
+    <link rel="stylesheet" href="products-page.css?v=11">
+    <link rel="stylesheet" href="hero-b.css?v=19">
+    <link rel="stylesheet" href="product-card.css?v=5">
+    <link rel="stylesheet" href="page-theme.css?v=5">
+  <link rel="stylesheet" href="site-navigation.css?v=6">
+<script src="js/site-navigation.js?v=4" defer blocking="render"></script>
+<link rel="stylesheet" href="site-theme.css?v=3">
+<script src="js/site-theme.js?v=2" defer blocking="render"></script>
+<link rel="stylesheet" href="mobile-product-rails.css?v=1">
+</head>
+  <body
+    class="hb-home pt-page pg-page pg-unified bg-[#f8fafc] text-on-surface antialiased font-body selection:bg-mumez-green selection:text-navy-dark min-h-screen flex flex-col">
+
+    <!-- ========================================================================= -->
+    <!-- TOP NAVBAR (Clean AlMumez Storefront Header)                             -->
+    <!-- ========================================================================= -->
+    <header data-component="site-header"
+      class="hb-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
+      <div class="w-full max-w-7xl mx-auto px-margin py-3 flex flex-col gap-3">
+        <div class="flex items-center justify-between gap-space-lg">
+          <button
+            class="mobile-menu-button md:hidden inline-flex items-center justify-center size-10 rounded-full border border-slate-200 text-navy-dark"
+            type="button" aria-label="فتح القائمة" aria-expanded="false"
+            aria-controls="mobile-navigation">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <!-- Logo: AlMumez Online Store -->
+          <a
+            class="flex items-center shrink-0 transition-transform duration-200 active:scale-95"
+            href="index.html" title="AlMumez Online Store - المميز ستور">
+            <div
+              class="bg-white rounded-lg px-2 py-0.5 flex items-center justify-center">
+              <img alt="AlMumez Online Store"
+                class="h-10 md:h-12 w-auto object-contain block"
+                src="assets/images/logo.png" width="150" height="48" />
+            </div>
+          </a>
+          <!-- Search Bar -->
+          <div
+            class="hb-search flex-1 max-w-xl hidden md:flex items-center bg-slate-50 hover:bg-slate-100/90 rounded-full border border-slate-200 focus-within:border-mumez-green focus-within:ring-2 focus-within:ring-mumez-green/25 transition-all duration-200 px-4 py-1.5 shadow-inner">
+            <span
+              class="material-symbols-outlined text-slate-400 text-xl mr-2">search</span>
+            <label class="sr-only" for="hb-search-input">Search</label>
+            <input id="hb-search-input"
+              class="bg-transparent border-0 text-slate-800 placeholder:text-slate-400 focus:ring-0 w-full text-sm font-medium py-0.5"
+              placeholder="Search genuine electronics, accessories, laptops..."
+              type="text" />
+            <button
+              class="bg-mumez-green hover:bg-mumez-green-dark text-navy-dark hover:text-white font-extrabold px-5 py-1.5 rounded-full text-xs transition-all ml-1 shadow-sm flex items-center gap-1">
+              <span>Search</span>
+            </button>
+          </div>
+          <!-- Compact Actions: Wishlist, Account, Language, Cart -->
+          <div
+            class="home-header-actions flex items-center gap-space-md shrink-0">
+            <a href="index.html?wishlist=1" class="home-header-wishlist home-action-icon"
+              title="Wishlist" aria-label="Open wishlist">
+              <svg class="hb-wishlist-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+              <span class="home-wishlist-count">0</span>
+            </a>
+            <a class="home-action-icon" href="auth.html" title="Login"
+              aria-label="Login or create account">
+              <span class="material-symbols-outlined">person</span>
+            </a>
+            <div class="home-action-icon home-language-toggle"
+              title="Change language" aria-label="Current language: English">
+              <span class="material-symbols-outlined">language</span>
+              <span class="home-language-badge">AR</span><span class="sr-only">/
+                EN</span>
+            </div>
+            <button class="home-cart-button" type="button"
+              title="Shopping Cart">
+              <span
+                class="material-symbols-outlined home-cart-icon">shopping_bag</span>
+              <span class="home-cart-copy">
+                <span class="home-cart-meta">Cart: 0 items</span>
+                <strong class="home-cart-total">0 EGP</strong>
+              </span>
+            </button>
+          </div>
+        </div>
+        <!-- Secondary Nav Bar -->
+        <nav id="mobile-navigation"
+          class="home-navigation flex items-center justify-between border-t border-slate-100 pt-2 text-sm overflow-x-auto no-scrollbar">
+          <div class="flex items-center gap-space-lg whitespace-nowrap">
+            <a
+              class="text-primary font-bold border-b-2 border-mumez-green pb-1 flex items-center gap-1"
+              href="index.html">
+              <span>Home</span>
+            </a>
+            <a
+              class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
+              href="accessories.html">Products</a>
+            <a
+              class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
+              href="about.html">About</a>
+            <a
+              class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
+              href="blog.html">Blog</a>
+            <a
+              class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
+              href="contact.html">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- ========================================================================= -->
+    <!-- MAIN CANVASES: HERO SHOWCASE (Refined AlMumez Bento Grid)                 -->
+    <!-- ========================================================================= -->
+    <main
+      class="flex-1 w-full max-w-7xl mx-auto px-margin py-space-md space-y-space-xl">
+      <section class="hb-hero" data-fx-skip aria-labelledby="hb-title">
+        <div class="hb-particles" data-rb="particles" aria-hidden="true"></div>
+        <div class="hb-grid">
+          <div class="hb-copy">
+            <span class="hb-eyebrow"><i></i><span>Authorized tech distributor · Egypt</span></span>
+            <h1 id="hb-title">The tech you<br> want. <span class="hb-gradient">Genuinely<br> yours.</span></h1>
+            <p class="hb-lead">Original phones, laptops, audio and gaming gear with regional warranty — express delivery across Cairo &amp; Giza.</p>
+            <div class="hb-actions"><a class="hb-primary" href="accessories.html"><span>Explore products</span><span class="hb-arrow" aria-hidden="true">→</span></a><a class="hb-secondary" href="#flash-deals">View today's deals</a></div>
+            <div class="hb-stats"><div><strong>24h</strong><span>Express delivery</span></div><div><strong class="material-symbols-outlined">verified</strong><span>Official warranty</span></div><div><strong>14-day</strong><span>Easy returns</span></div></div>
+          </div>
+          <div class="hb-visual">
+            <div class="hb-ring hb-ring-one" aria-hidden="true"><i></i></div><div class="hb-ring hb-ring-two" aria-hidden="true"><i></i></div><div class="hb-glow" aria-hidden="true"></div>
+            <div class="hb-side hb-mac" data-hb-side="macbook-pro-16-m3-max"></div>
+            <div class="hb-carousel" aria-live="off"><div class="hb-slides" data-hb-slides></div></div>
+            <div class="hb-side hb-ps" data-hb-side="playstation-5-slim-bundle"></div>
+            <span class="hb-warranty"><span aria-hidden="true">✓</span><span>Official warranty</span></span><span class="hb-delivery">24h Express Delivery</span>
+          </div>
+        </div>
+        <div class="hb-categories"><span class="hb-category-title">Shop by category</span><a href="accessories.html?dept=mobiles"><span class="material-symbols-outlined" aria-hidden="true">smartphone</span><span>Mobiles</span></a><a href="accessories.html"><span class="material-symbols-outlined" aria-hidden="true">laptop_mac</span><span>Laptops</span></a><a href="accessories.html?dept=audio"><span class="material-symbols-outlined" aria-hidden="true">headphones</span><span>Audio</span></a><a href="accessories.html"><span class="material-symbols-outlined" aria-hidden="true">tv</span><span>TV &amp; Screens</span></a><a href="accessories.html?dept=appliances"><span class="material-symbols-outlined" aria-hidden="true">kitchen</span><span>Appliances</span></a><a href="accessories.html"><span class="material-symbols-outlined" aria-hidden="true">sports_esports</span><span>Gaming</span></a></div>
+        <div class="hb-brands" data-rb="brands" aria-label="Brands">Apple · SAMSUNG · DELL · SONY · Lenovo · LG · PHILIPS</div>
+      </section>
+      <div class="pt-transition pg-transition" aria-hidden="true" data-fx-skip></div>
+<section
+        class="pt-trust pg-trust grid grid-cols-2 md:grid-cols-4 gap-space-md py-4 px-6 bg-white rounded-xl border border-slate-200/90 shadow-sm">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-11 h-11 rounded-full bg-mumez-green/15 flex items-center justify-center text-primary shrink-0">
+            <span
+              class="material-symbols-outlined text-2xl">local_shipping</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-navy-dark">24h Express
+              Delivery</h4>
+            <p class="text-xs text-slate-500">Cairo &amp; Giza guaranteed</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div
+            class="w-11 h-11 rounded-full bg-navy-dark/10 flex items-center justify-center text-navy-dark shrink-0">
+            <span class="material-symbols-outlined text-2xl">lock</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-navy-dark">Secure Payment</h4>
+            <p class="text-xs text-slate-500">Cards, ValU, Meeza, COD</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div
+            class="w-11 h-11 rounded-full bg-mumez-green/15 flex items-center justify-center text-primary shrink-0">
+            <span
+              class="material-symbols-outlined text-2xl">change_circle</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-navy-dark">14-Day Free
+              Returns</h4>
+            <p class="text-xs text-slate-500">No hassle replacement</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div
+            class="w-11 h-11 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
+            <span class="material-symbols-outlined text-2xl">chat</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-navy-dark">24/7 VIP Support</h4>
+            <p class="text-xs text-slate-500">WhatsApp &amp; Phone Live</p>
+          </div>
+        </div>
+      </section>
+<section class="pt-section pg-section pt-stats pg-stats" aria-labelledby="pt-stats-title"><div class="pt-heading pg-heading"><div><span class="pt-eyebrow pg-eyebrow">The store at a glance</span><h2 id="pt-stats-title">A world of tech, in numbers.</h2><p class="pt-description pg-description">Live figures from our current product catalog.</p></div><a class="pt-button pg-button pt-button--outline pg-button--outline" href="accessories.html"><span>View all</span><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div><div class="rb-stats" data-rb="stats" aria-label="AlMumez in numbers"><div class="rb-stats-grid"><article class="rb-stat"><div class="rb-stat-inner"><span class="material-symbols-outlined rb-stat-icon" aria-hidden="true">inventory_2</span><div class="rb-stat-num" data-pt-stat="products">—</div><div class="rb-stat-label">Products in our catalog</div></div></article><article class="rb-stat"><div class="rb-stat-inner"><span class="material-symbols-outlined rb-stat-icon" aria-hidden="true">verified</span><div class="rb-stat-num" data-pt-stat="brands">—</div><div class="rb-stat-label">Partner brands on this page</div></div></article><article class="rb-stat"><div class="rb-stat-inner"><span class="material-symbols-outlined rb-stat-icon" aria-hidden="true">category</span><div class="rb-stat-num" data-pt-stat="departments">—</div><div class="rb-stat-label">Shopping categories</div></div></article><article class="rb-stat"><div class="rb-stat-inner"><span class="material-symbols-outlined rb-stat-icon" aria-hidden="true">local_offer</span><div class="rb-stat-num" data-pt-stat="offers">—</div><div class="rb-stat-label">Flash deals live now</div></div></article></div></div></section>
+<section id="flash-deals" class="pt-section pg-section pt-band pg-band pt-flash pg-flash" aria-labelledby="pt-flash-title"><div class="pt-heading pg-heading"><div><span class="pt-eyebrow pg-eyebrow">Worth a closer look</span><h2 id="pt-flash-title">Flash Deals</h2><p class="pt-description pg-description">Explore the offers currently available in our catalog.</p></div><div class="pg-deal-actions"><div class="pg-deal-clock" aria-live="off" hidden><span>Ends in</span><bdi></bdi><bdi></bdi><bdi></bdi></div><a class="pt-button pg-button pt-button--outline pg-button--outline" href="accessories.html?sale=1"><span>View all</span><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div></div><div class="hb-card-grid" data-products-section="home-flash" data-fx-skip role="region" tabindex="0" aria-labelledby="pt-flash-title"></div></section>
+<section class="pt-section pg-section pt-categories pg-categories" aria-labelledby="pt-categories-title"><div class="pt-heading pg-heading"><div><span class="pt-eyebrow pg-eyebrow">Shop by department</span><h2 id="pt-categories-title">Find your next device.</h2><p class="pt-description pg-description">Certified tech, organized the way you shop.</p></div><a class="pt-button pg-button pt-button--outline pg-button--outline" href="accessories.html"><span>All departments</span><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div><div class="pt-category-grid pg-category-grid"><a class="pt-category-card pg-category" href="accessories.html?dept=mobiles" data-pt-category="mobiles"><span class="pt-category-icon pg-category-icon material-symbols-outlined" aria-hidden="true">smartphone</span><span class="pt-category-title pg-category-title">Mobiles &amp; Tablets</span><span class="pg-category-description">Everyday mobile essentials</span><span class="pt-category-count pg-category-count" data-pt-count>—</span><span class="pt-category-arrow pg-category-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span></a><a class="pt-category-card pg-category" href="accessories.html?q=laptop" data-pt-category="laptops"><span class="pt-category-icon pg-category-icon material-symbols-outlined" aria-hidden="true">laptop_mac</span><span class="pt-category-title pg-category-title">Laptops &amp; PCs</span><span class="pg-category-description">Work and create anywhere</span><span class="pt-category-count pg-category-count" data-pt-count>—</span><span class="pt-category-arrow pg-category-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span></a><a class="pt-category-card pg-category" href="accessories.html?dept=audio" data-pt-category="audio"><span class="pt-category-icon pg-category-icon material-symbols-outlined" aria-hidden="true">headphones</span><span class="pt-category-title pg-category-title">Audio &amp; Sound</span><span class="pg-category-description">Listen to every detail</span><span class="pt-category-count pg-category-count" data-pt-count>—</span><span class="pt-category-arrow pg-category-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span></a><a class="pt-category-card pg-category" href="accessories.html?q=OLED" data-pt-category="screens"><span class="pt-category-icon pg-category-icon material-symbols-outlined" aria-hidden="true">tv</span><span class="pt-category-title pg-category-title">TV &amp; Screens</span><span class="pg-category-description">Entertainment on a bigger screen</span><span class="pt-category-count pg-category-count" data-pt-count>—</span><span class="pt-category-arrow pg-category-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span></a><a class="pt-category-card pg-category" href="accessories.html?dept=appliances" data-pt-category="appliances"><span class="pt-category-icon pg-category-icon material-symbols-outlined" aria-hidden="true">kitchen</span><span class="pt-category-title pg-category-title">Home Appliances</span><span class="pg-category-description">Technology for your home</span><span class="pt-category-count pg-category-count" data-pt-count>—</span><span class="pt-category-arrow pg-category-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span></a><a class="pt-category-card pg-category" href="accessories.html?q=PlayStation" data-pt-category="gaming"><span class="pt-category-icon pg-category-icon material-symbols-outlined" aria-hidden="true">sports_esports</span><span class="pt-category-title pg-category-title">Gaming Gear</span><span class="pg-category-description">Your next gaming setup</span><span class="pt-category-count pg-category-count" data-pt-count>—</span><span class="pt-category-arrow pg-category-arrow material-symbols-outlined" aria-hidden="true">arrow_outward</span></a></div></section>
+<section class="pt-section pg-section pt-featured pg-featured" aria-labelledby="pt-featured-title"><div class="pt-heading pg-heading"><div><span class="pt-eyebrow pg-eyebrow">Curated for you</span><h2 id="pt-featured-title">Featured Tech Collections</h2><p class="pt-description pg-description">Top-rated performance units backed by manufacturer warranties</p></div><div class="pt-tabs pg-tabs" role="group" aria-label="Product categories"><button class="filter-active" type="button">Electronics</button><button type="button">Mobiles</button><button type="button">Appliances</button><button type="button">Audio</button></div></div><div class="hb-card-grid" data-products-section="home-featured"></div></section>
+<section class="pt-section pg-section pt-promos pg-promos" aria-labelledby="pt-promos-title"><div class="pt-heading pg-heading"><div><span class="pt-eyebrow pg-eyebrow">More possibilities</span><h2 id="pt-promos-title">Make room for an upgrade.</h2><p class="pt-description pg-description">Discover computing and home technology for your next setup.</p></div></div><div class="pt-promo-grid pg-promo-grid"><article class="pt-promo pg-promo pt-promo--dark"><span class="pt-eyebrow pg-eyebrow">Upgrade Pass</span><h3>Pro PC Building &amp; Workstations</h3><p>Custom assembly with certified stress testing and 3-year door-to-door AlMumez warranty.</p><a class="pt-button pg-button pt-button--primary pg-button--primary" href="contact.html"><span>Configure Setup</span><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a><span class="pt-promo-art pg-promo-art material-symbols-outlined" aria-hidden="true">memory</span></article><article class="pt-promo pg-promo"><span class="pt-eyebrow pg-eyebrow">Smart Home Bundle</span><h3>Smart Kitchen Ecosystems</h3><p>Save an extra 2,000 EGP when pairing any smart refrigerator with multi-cooker appliances.</p><a class="pt-button pg-button pt-button--outline pg-button--outline" href="accessories.html?dept=appliances"><span>Explore Bundles</span><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a><span class="pt-promo-art pg-promo-art material-symbols-outlined" aria-hidden="true">kitchen</span></article></div></section>
+<section class="pt-section pg-section pt-reviews pg-reviews" aria-labelledby="pt-reviews-title"><div class="pt-heading pg-heading"><div><span class="pt-eyebrow pg-eyebrow">Verified buyers</span><h2 id="pt-reviews-title">Loved across Egypt.</h2></div></div><div class="pt-review-grid pg-review-grid"><article class="pt-review pg-review"><div class="pt-review-stars pg-review-stars" role="img" aria-label="5 out of 5 stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></div><blockquote>"Ordered my iPhone 15 Pro Max at 11 PM and it was delivered to New Cairo before 2 PM next day with genuine regional warranty stamps from AlMumez."</blockquote><div class="pt-review-person pg-review-person"><span class="pt-review-avatar" aria-hidden="true">TM</span><span><span>Tamer M., Cairo</span><span class="pg-review-confirmation">Verified buyer</span></span><span class="pt-review-verified material-symbols-outlined" aria-hidden="true">verified_user</span></div></article><article class="pt-review pg-review"><div class="pt-review-stars pg-review-stars" aria-label="5 out of 5 stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></div><blockquote>"ValU 0% interest payment was completely seamless during checkout. No hidden processing charges. AlMumez Store is truly our premier tech destination."</blockquote><div class="pt-review-person pg-review-person"><span class="pt-review-avatar" aria-hidden="true">NS</span><span><span>Nourhan S., Giza</span><span class="pg-review-confirmation">Verified buyer</span></span><span class="pt-review-verified material-symbols-outlined" aria-hidden="true">verified_user</span></div></article><article class="pt-review pg-review"><div class="pt-review-stars pg-review-stars" aria-label="5 out of 5 stars"><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span><span class="material-symbols-outlined" aria-hidden="true">star</span></div><blockquote>"Replaced an open-box display adapter within 24 hours under their 14-day policy without any hassle. Exceptional customer care team at AlMumez."</blockquote><div class="pt-review-person pg-review-person"><span class="pt-review-avatar" aria-hidden="true">AK</span><span><span>Ahmed K., Alexandria</span><span class="pg-review-confirmation">Verified buyer</span></span><span class="pt-review-verified material-symbols-outlined" aria-hidden="true">verified_user</span></div></article></div></section>
+<section class="pt-section pg-section pt-band pg-band pt-newsletter pg-newsletter" aria-labelledby="pt-newsletter-title"><div><span class="pt-eyebrow pg-eyebrow">AlMumez Priority Insider</span><h2 id="pt-newsletter-title">Get 200 EGP Off Your First Order</h2><p class="pt-description pg-description">Subscribe for flash drop notifications, exclusive warehouse sale invites, and member-only tech vouchers.</p></div><div class="pt-newsletter-fields pg-newsletter-fields"><label class="sr-only" for="pt-newsletter-email">Email address</label><input id="pt-newsletter-email" placeholder="Enter your email address..." type="email" /><button class="pt-button pg-button pt-button--primary pg-button--primary mumez-glow" type="button">Claim Voucher</button></div></section>
+    </main>
+    <!-- ========================================================================= -->
+    <!-- FOOTER (AlMumez Clean Branded Layout)                                     -->
+    <!-- ========================================================================= -->
+    <footer data-component="site-footer"
+      class="bg-white border-t border-slate-200 mt-space-xl">
+      <div
+        class="w-full max-w-7xl mx-auto px-margin py-space-xl space-y-space-lg">
+        <!-- Top Grid: Brand & Category Columns -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-space-lg">
+          <!-- Brand Summary Column -->
+          <div class="col-span-2 space-y-space-sm pr-4">
+            <div class="inline-block bg-white rounded-lg p-1">
+              <img alt="AlMumez Online Store"
+                class="h-10 w-auto object-contain block"
+                src="assets/images/logo-footer.png" />
+            </div>
+            <p class="text-xs text-slate-500 max-w-sm leading-relaxed">
+              المميز ستور - AlMumez Online Store is Egypt and the region's
+              certified premier distributor for genuine consumer electronics,
+              premium computing hardware, and smart lifestyle tech.
+            </p>
+            <div class="flex items-center gap-2.5 pt-2">
+              <span
+                class="w-8 h-8 rounded-full bg-slate-100 hover:bg-mumez-green hover:text-navy-dark flex items-center justify-center text-slate-600 transition-colors"
+                 title="Facebook">
+                <span class="material-symbols-outlined text-base">public</span>
+              </span>
+              <span
+                class="w-8 h-8 rounded-full bg-slate-100 hover:bg-mumez-green hover:text-navy-dark flex items-center justify-center text-slate-600 transition-colors"
+                 title="Instagram">
+                <span
+                  class="material-symbols-outlined text-base">photo_camera</span>
+              </span>
+              <span
+                class="w-8 h-8 rounded-full bg-slate-100 hover:bg-mumez-green hover:text-navy-dark flex items-center justify-center text-slate-600 transition-colors"
+                 title="LinkedIn">
+                <span
+                  class="material-symbols-outlined text-base">business_center</span>
+              </span>
+              <span
+                class="w-8 h-8 rounded-full bg-slate-100 hover:bg-mumez-green hover:text-navy-dark flex items-center justify-center text-slate-600 transition-colors"
+                 title="YouTube">
+                <span
+                  class="material-symbols-outlined text-base">play_circle</span>
+              </span>
+            </div>
+          </div>
+          <!-- Col 2: Company -->
+          <div class="space-y-space-sm">
+            <h4
+              class="font-headline text-sm font-bold text-navy-dark">Company</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a class="text-slate-500 hover:text-primary transition-colors"
+                  href="about.html">About Us</a></li>
+              <li><span class="text-slate-500 hover:text-primary transition-colors"
+                  >Careers</span></li>
+              <li><span class="text-slate-500 hover:text-primary transition-colors"
+                  >Press Releases</span></li>
+              <li><span class="text-slate-500 hover:text-primary transition-colors"
+                  id="privacy" >Privacy Policy</span></li>
+              <li><span class="text-slate-500 hover:text-primary transition-colors"
+                  id="terms" >Terms of Service</span></li>
+            </ul>
+          </div>
+          <!-- Col 3: Customer Care -->
+          <div class="space-y-space-sm">
+            <h4 class="font-headline text-sm font-bold text-navy-dark">Customer
+              Care</h4>
+            <ul class="space-y-2 text-xs">
+              <li><span class="text-slate-500 hover:text-primary transition-colors"
+                  >Help Center</span></li>
+              <li><span class="text-slate-500 hover:text-primary transition-colors"
+                  >Returns &amp; Refunds</span></li>
+              <li><span class="text-slate-500 hover:text-primary transition-colors"
+                  >Track Order</span></li>
+              <li><span class="text-slate-500 hover:text-primary transition-colors"
+                  >Shipping &amp; Delivery</span></li>
+              <li><a class="text-slate-500 hover:text-primary transition-colors"
+                  href="contact.html">Contact Support</a></li>
+            </ul>
+          </div>
+          <!-- Col 4: Payment Partners -->
+          <div class="space-y-space-sm">
+            <h4 class="font-headline text-sm font-bold text-navy-dark">Payment
+              Options</h4>
+            <div class="flex flex-wrap gap-1.5 text-slate-600">
+              <span
+                class="bg-slate-100 px-2 py-1 rounded text-[11px] font-bold border border-slate-200">Visa</span>
+              <span
+                class="bg-slate-100 px-2 py-1 rounded text-[11px] font-bold border border-slate-200">Mastercard</span>
+              <span
+                class="bg-slate-100 px-2 py-1 rounded text-[11px] font-bold border border-slate-200">Meeza</span>
+              <span
+                class="bg-slate-100 px-2 py-1 rounded text-[11px] font-bold border border-slate-200">ValU</span>
+              <span
+                class="bg-slate-100 px-2 py-1 rounded text-[11px] font-bold border border-slate-200">Cash
+                on Delivery</span>
+            </div>
+            <div class="pt-3 text-[11px] text-slate-500 space-y-0.5">
+              <span class="block">Commercial Registry: #198273</span>
+              <span class="block">Tax Registration: 492-811-002</span>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Copyright Strip -->
+        <div
+          class="border-t border-slate-200 pt-space-md flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-xs text-slate-500">
+          <p>© 2025 AlMumez Online Store (المميز ستور). All rights reserved.
+            Authorized Regional Tech Distributor.</p>
+          <div class="flex items-center gap-space-md font-medium">
+            <span class="flex items-center gap-1 text-primary">
+              <span
+                class="material-symbols-outlined text-xs text-primary">lock</span>
+              256-Bit SSL Encrypted
+            </span>
+            <span>•</span>
+            <span>Cairo, Egypt</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="shared-site-footer.js?v=4"></script><script
+      src="data/products.js"></script><script
+      src="js/image-store.js?v=2"></script><script
+      src="data/store.js?v=9"></script><script
+      src="js/product-card.js?v=4"></script><script
+      src="catalog.js?v=6"></script><script
+      src="main.js?v=25"></script>
+    <script src="js/page-theme.js?v=4"></script>
+    <script src="js/mobile-product-rails.js?v=1"></script>
+    <script src="js/home-card-quantity.js?v=1"></script>
+    <script src="js/vendor/gsap.min.js"></script>
+    <script src="js/vendor/ScrollTrigger.min.js"></script>
+    <script src="js/vendor/lenis.min.js"></script>
+    <script src="js/hero-b.js?v=7"></script>
+    <script src="js/fx.js?v=10"></script>
+    <script src="js/vendor/rb-islands.js?v=4" defer></script>
+  </body></html>

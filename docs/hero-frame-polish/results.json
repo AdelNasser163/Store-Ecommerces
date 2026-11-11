@@ -1,0 +1,206 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "fit": {
+      "width": 282,
+      "height": 344,
+      "bounds": [
+        32.19122222222222,
+        32.02488888888888,
+        249.80877777777778,
+        311.4283333333334
+      ],
+      "alpha": 0
+    },
+    "images": [
+      {
+        "src": "assets/images/sony-wf-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=macbook-pro-16-m3-max"
+      },
+      {
+        "src": "assets/images/iPhone_17_Pro_Max-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=apple-iphone-15-pro-max-256gb"
+      },
+      {
+        "src": "assets/images/iphone-15-showcase.webp",
+        "fit": "contain",
+        "link": "product.html?id=playstation-5-slim-bundle"
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 820,
+    "fit": {
+      "width": 258,
+      "height": 344,
+      "bounds": [
+        30.008555555555546,
+        44.65422222222222,
+        227.99144444444445,
+        298.8483333333333
+      ],
+      "alpha": 0
+    },
+    "images": [
+      {
+        "src": "assets/images/sony-wf-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=macbook-pro-16-m3-max"
+      },
+      {
+        "src": "assets/images/iPhone_17_Pro_Max-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=apple-iphone-15-pro-max-256gb"
+      },
+      {
+        "src": "assets/images/iphone-15-showcase.webp",
+        "fit": "contain",
+        "link": "product.html?id=playstation-5-slim-bundle"
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "fit": {
+      "width": 256,
+      "height": 324,
+      "bounds": [
+        29.826666666666654,
+        35.70666666666665,
+        226.1733333333333,
+        287.8
+      ],
+      "alpha": 0
+    },
+    "images": [
+      {
+        "src": "assets/images/sony-wf-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=macbook-pro-16-m3-max"
+      },
+      {
+        "src": "assets/images/iPhone_17_Pro_Max-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=apple-iphone-15-pro-max-256gb"
+      },
+      {
+        "src": "assets/images/iphone-15-showcase.webp",
+        "fit": "contain",
+        "link": "product.html?id=playstation-5-slim-bundle"
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "fit": {
+      "width": 282,
+      "height": 344,
+      "bounds": [
+        32.19122222222222,
+        32.02488888888888,
+        249.80877777777778,
+        311.4283333333334
+      ],
+      "alpha": 0
+    },
+    "images": [
+      {
+        "src": "assets/images/sony-wf-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=macbook-pro-16-m3-max"
+      },
+      {
+        "src": "assets/images/iPhone_17_Pro_Max-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=apple-iphone-15-pro-max-256gb"
+      },
+      {
+        "src": "assets/images/iphone-15-showcase.webp",
+        "fit": "contain",
+        "link": "product.html?id=playstation-5-slim-bundle"
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 820,
+    "fit": {
+      "width": 258,
+      "height": 344,
+      "bounds": [
+        30.008555555555546,
+        44.65422222222222,
+        227.99144444444445,
+        298.8483333333333
+      ],
+      "alpha": 0
+    },
+    "images": [
+      {
+        "src": "assets/images/sony-wf-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=macbook-pro-16-m3-max"
+      },
+      {
+        "src": "assets/images/iPhone_17_Pro_Max-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=apple-iphone-15-pro-max-256gb"
+      },
+      {
+        "src": "assets/images/iphone-15-showcase.webp",
+        "fit": "contain",
+        "link": "product.html?id=playstation-5-slim-bundle"
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "fit": {
+      "width": 256,
+      "height": 324,
+      "bounds": [
+        29.826666666666654,
+        35.70666666666665,
+        226.1733333333333,
+        287.8
+      ],
+      "alpha": 0
+    },
+    "images": [
+      {
+        "src": "assets/images/sony-wf-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=macbook-pro-16-m3-max"
+      },
+      {
+        "src": "assets/images/iPhone_17_Pro_Max-hero.webp",
+        "fit": "contain",
+        "link": "product.html?id=apple-iphone-15-pro-max-256gb"
+      },
+      {
+        "src": "assets/images/iphone-15-showcase.webp",
+        "fit": "contain",
+        "link": "product.html?id=playstation-5-slim-bundle"
+      }
+    ],
+    "errors": [],
+    "passed": true
+  }
+]

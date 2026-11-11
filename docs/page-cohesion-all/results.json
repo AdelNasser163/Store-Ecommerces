@@ -1,0 +1,326 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "edges": [
+      {
+        "class": "hb-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-stats pg-stats",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-flash pg-flash",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-categories pg-categories",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-featured pg-featured",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-promos pg-promos",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-reviews pg-reviews",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-newsletter pg-newsletter",
+        "x": 64,
+        "width": 1312
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 820,
+    "edges": [
+      {
+        "class": "hb-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-stats pg-stats",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-flash pg-flash",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-categories pg-categories",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-featured pg-featured",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-promos pg-promos",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-reviews pg-reviews",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-newsletter pg-newsletter",
+        "x": 32,
+        "width": 756
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "edges": [
+      {
+        "class": "hb-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm",
+        "x": 10,
+        "width": 370
+      },
+      {
+        "class": "pt-section pg-section pt-stats pg-stats",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-flash pg-flash",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-categories pg-categories",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-featured pg-featured",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-promos pg-promos",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-reviews pg-reviews",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-newsletter pg-newsletter",
+        "x": 20,
+        "width": 350
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "edges": [
+      {
+        "class": "hb-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-stats pg-stats",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-flash pg-flash",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-categories pg-categories",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-featured pg-featured",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-promos pg-promos",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-reviews pg-reviews",
+        "x": 64,
+        "width": 1312
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-newsletter pg-newsletter",
+        "x": 64,
+        "width": 1312
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 820,
+    "edges": [
+      {
+        "class": "hb-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-stats pg-stats",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-flash pg-flash",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-categories pg-categories",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-featured pg-featured",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-promos pg-promos",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-reviews pg-reviews",
+        "x": 32,
+        "width": 756
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-newsletter pg-newsletter",
+        "x": 32,
+        "width": 756
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "edges": [
+      {
+        "class": "hb-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm",
+        "x": 10,
+        "width": 370
+      },
+      {
+        "class": "pt-section pg-section pt-stats pg-stats",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-flash pg-flash",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-categories pg-categories",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-featured pg-featured",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-promos pg-promos",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-reviews pg-reviews",
+        "x": 20,
+        "width": 350
+      },
+      {
+        "class": "pt-section pg-section pt-band pg-band pt-newsletter pg-newsletter",
+        "x": 20,
+        "width": 350
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  {
+    "mode": "reduce",
+    "passed": true
+  },
+  {
+    "mode": "observer-silent",
+    "passed": true
+  },
+  {
+    "mode": "no-gsap",
+    "passed": true
+  },
+  {
+    "mode": "no-islands",
+    "passed": true
+  },
+  {
+    "mode": "print",
+    "passed": true
+  },
+  {
+    "page": "accessories.html",
+    "passed": true
+  },
+  {
+    "page": "product.html?id=sony-wf-1000xm5",
+    "passed": true
+  },
+  {
+    "page": "checkout.html",
+    "passed": true
+  },
+  {
+    "page": "auth.html",
+    "passed": true
+  }
+]

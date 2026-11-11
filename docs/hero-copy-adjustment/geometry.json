@@ -1,0 +1,80 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "cardImageSizeAndHorizontalPositionUnchanged": true,
+    "verticalShift": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "lang": "en",
+    "width": 820,
+    "cardImageSizeAndHorizontalPositionUnchanged": true,
+    "verticalShift": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "cardImageSizeAndHorizontalPositionUnchanged": true,
+    "verticalShift": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "cardImageSizeAndHorizontalPositionUnchanged": true,
+    "verticalShift": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "lang": "ar",
+    "width": 820,
+    "cardImageSizeAndHorizontalPositionUnchanged": true,
+    "verticalShift": [
+      -91.640625,
+      -91.640625,
+      -91.640625,
+      -91.640625,
+      -91.640625,
+      -91.640625
+    ]
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "cardImageSizeAndHorizontalPositionUnchanged": true,
+    "verticalShift": [
+      0,
+      0,
+      -31.3125,
+      -31.3125,
+      0,
+      0
+    ]
+  }
+]

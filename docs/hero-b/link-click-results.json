@@ -1,0 +1,62 @@
+[
+  {
+    "href": "index.html",
+    "actual": "http://127.0.0.1:8765/index.html"
+  },
+  {
+    "href": "auth.html",
+    "actual": "http://127.0.0.1:8765/auth.html"
+  },
+  {
+    "href": "admin.html",
+    "actual": "http://127.0.0.1:8765/admin.html"
+  },
+  {
+    "href": "accessories.html",
+    "actual": "http://127.0.0.1:8765/accessories.html"
+  },
+  {
+    "href": "about.html",
+    "actual": "http://127.0.0.1:8765/about.html"
+  },
+  {
+    "href": "blog.html",
+    "actual": "http://127.0.0.1:8765/blog.html"
+  },
+  {
+    "href": "contact.html",
+    "actual": "http://127.0.0.1:8765/contact.html"
+  },
+  {
+    "href": "product.html?id=macbook-pro-16-m3-max",
+    "actual": "http://127.0.0.1:8765/product.html?id=macbook-pro-16-m3-max"
+  },
+  {
+    "href": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "actual": "http://127.0.0.1:8765/product.html?id=apple-iphone-15-pro-max-256gb&storage=256"
+  },
+  {
+    "href": "product.html?id=samsung-galaxy-s24-ultra",
+    "actual": "http://127.0.0.1:8765/product.html?id=samsung-galaxy-s24-ultra"
+  },
+  {
+    "href": "product.html?id=sony-wf-1000xm5",
+    "actual": "http://127.0.0.1:8765/product.html?id=sony-wf-1000xm5"
+  },
+  {
+    "href": "product.html?id=playstation-5-slim-bundle",
+    "actual": "http://127.0.0.1:8765/product.html?id=playstation-5-slim-bundle"
+  },
+  {
+    "href": "accessories.html?dept=mobiles",
+    "actual": "http://127.0.0.1:8765/accessories.html?dept=mobiles"
+  },
+  {
+    "href": "accessories.html?dept=audio",
+    "actual": "http://127.0.0.1:8765/accessories.html?dept=audio"
+  },
+  {
+    "href": "accessories.html?dept=appliances",
+    "actual": "http://127.0.0.1:8765/accessories.html?dept=appliances"
+  }
+]

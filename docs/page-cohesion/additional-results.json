@@ -1,0 +1,10 @@
+{
+  "reduced": {
+    "translate": "none",
+    "transition": "0s",
+    "opacity": "1"
+  },
+  "otherPagesUnaffected": true,
+  "animationFailureFallback": true,
+  "errors": []
+}

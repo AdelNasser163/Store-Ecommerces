@@ -1,0 +1,549 @@
+(function () {
+  "use strict";
+  const KEY = "almumez-language",
+    rawLanguage = localStorage.getItem(KEY),
+    storedLanguage = rawLanguage === '"ar"' ? "ar" : rawLanguage === '"en"' ? "en" : rawLanguage,
+    language = storedLanguage === "ar" || storedLanguage === "en" ? storedLanguage : (localStorage.getItem("almumez-admin-language") || "ar"),
+    arabic = language === "ar";
+  localStorage.setItem(KEY, language);
+  const ar = {
+    Admin: "الإدارة",
+    "View store": "عرض الموقع",
+    "PRODUCT MANAGEMENT": "إدارة المنتجات",
+    Products: "المنتجات",
+    "Add product": "إضافة منتج",
+    "Edit product": "تعديل المنتج",
+    "Edit every product detail from one place.":
+      "تحكم في جميع بيانات المنتج من مكان واحد.",
+    "Add, edit and manage product photos and specifications.":
+      "أضف المنتجات وعدّل الصور والمواصفات والمخزون.",
+    "Total products": "إجمالي المنتجات",
+    "Units in stock": "الوحدات المتاحة",
+    "Stock value": "قيمة المخزون",
+    "Product inventory": "مخزون المنتجات",
+    "All products in your storefront catalog.":
+      "جميع المنتجات المعروضة في المتجر.",
+    Product: "المنتج",
+    Category: "القسم",
+    Price: "السعر",
+    Stock: "المخزون",
+    Status: "الحالة",
+    "In stock": "متوفر",
+    "Out of stock": "نفد المخزون",
+    "No products yet": "لا توجد منتجات",
+    "Add your first product to start building the catalog.":
+      "أضف أول منتج لبدء تكوين المتجر.",
+    "Back to products": "العودة للمنتجات",
+    "Basic information": "البيانات الأساسية",
+    "The ID is generated automatically from the English name.":
+      "يتم إنشاء المعرّف تلقائيًا من الاسم الإنجليزي.",
+    "English name *": "الاسم بالإنجليزية *",
+    "Arabic name *": "الاسم بالعربية *",
+    "Brand *": "الماركة *",
+    "Category *": "القسم *",
+    "English subcategory *": "القسم الفرعي بالإنجليزية *",
+    "Arabic subcategory *": "القسم الفرعي بالعربية *",
+    "SKU *": "رمز SKU *",
+    "English description": "الوصف بالإنجليزية",
+    "Arabic description": "الوصف بالعربية",
+    "Price & stock": "السعر والمخزون",
+    "Set the regular price and current inventory.":
+      "حدّد السعر الأساسي والمخزون الحالي.",
+    "Regular price *": "السعر الأساسي *",
+    "Legacy old price": "السعر القديم",
+    "Stock *": "المخزون *",
+    Badge: "الشارة",
+    None: "بدون",
+    "New arrival": "وصل حديثًا",
+    "Best seller": "الأكثر مبيعًا",
+    "Official warranty": "ضمان رسمي",
+    Discount: "خصم",
+    "Rating *": "التقييم *",
+    Reviews: "المراجعات",
+    "Offer & discount": "العرض والخصم",
+    "Schedule the offer and its claimed stock.":
+      "حدّد الخصم وموعد العرض والكميات المحجوزة.",
+    "This product is on offer": "هذا المنتج عليه عرض",
+    "Discount type": "نوع الخصم",
+    "Percentage %": "نسبة مئوية %",
+    "Fixed amount": "مبلغ ثابت",
+    "Old price + new price": "سعر قديم + سعر جديد",
+    "Discount value": "قيمة الخصم",
+    "Offer old price": "السعر القديم للعرض",
+    "Offer new price": "السعر الجديد للعرض",
+    "Starts at": "بداية العرض",
+    "Ends at": "نهاية العرض",
+    "Offer quantity": "كمية العرض",
+    Sold: "المباع",
+    "Manual claimed %": "نسبة الحجز يدويًا %",
+    "Show in Flash Deals while active": "إظهاره في عروض فلاش أثناء سريان العرض",
+    "Product photos": "صور المنتج",
+    "Upload one cover and exactly four gallery images.":
+      "ارفع صورة غلاف وأربع صور للمعرض.",
+    "Choose cover image": "اختر صورة الغلاف",
+    "Gallery — 4 images *": "المعرض — 4 صور *",
+    "Shown under the main photo on product.html.":
+      "تظهر أسفل الصورة الرئيسية في صفحة المنتج.",
+    "Choose 4 images": "اختر 4 صور",
+    Variants: "الخيارات والمقاسات",
+    "Add storage, size, color or other choices.":
+      "أضف السعة أو المقاس أو اللون أو خيارات أخرى.",
+    "Variant type": "نوع الخيار",
+    "Storage capacity": "سعة التخزين",
+    Size: "المقاس",
+    Color: "اللون",
+    Other: "أخرى",
+    "English section title": "عنوان القسم بالإنجليزية",
+    "Arabic section title": "عنوان القسم بالعربية",
+    "Add variant": "إضافة خيار",
+    "Product specifications": "مواصفات المنتج",
+    "Add grouped specifications in both languages.":
+      "أضف المواصفات في مجموعات باللغتين.",
+    "Paste specifications": "لصق مواصفات",
+    "Add specification": "إضافة مواصفة",
+    "Warranty (English)": "الضمان بالإنجليزية",
+    "Warranty (Arabic)": "الضمان بالعربية",
+    "Delivery (English)": "التوصيل بالإنجليزية",
+    "Delivery (Arabic)": "التوصيل بالعربية",
+    "Return period (English)": "مدة الإرجاع بالإنجليزية",
+    "Return period (Arabic)": "مدة الإرجاع بالعربية",
+    "Product placement": "أماكن ظهور المنتج",
+    "Select where this product should appear.":
+      "اختر الصفحات والأقسام التي يظهر فيها المنتج.",
+    "Live preview": "معاينة مباشرة",
+    "Card and product price before saving.":
+      "معاينة الكارت وسعر صفحة المنتج قبل الحفظ.",
+    Cancel: "إلغاء",
+    "Save product": "حفظ المنتج",
+    "Product page": "صفحة المنتج",
+    "No active offer": "لا يوجد عرض نشط",
+    Default: "افتراضي",
+    "Gallery image": "صورة المعرض",
+    "Dashboard login": "تسجيل دخول لوحة التحكم",
+    "Sign in to manage products and store inventory.":
+      "سجّل الدخول لإدارة المنتجات ومخزون المتجر.",
+    Username: "اسم المستخدم",
+    Password: "كلمة المرور",
+    "Sign in": "تسجيل الدخول",
+    "Back to store": "العودة للمتجر",
+  };
+  Object.assign(ar, {
+    "All products": "كل المنتجات",
+    "Manage your store catalog from one place.":
+      "أدر كتالوج المتجر بالكامل من مكان واحد.",
+    Actions: "الإجراءات",
+    "Choose whether this product has storage capacities, then add each capacity and its price increase.":
+      "حدّد هل المنتج له سعات، ثم أضف كل سعة والزيادة في سعرها.",
+    "This product has capacities or variants": "هذا المنتج له سعات أو خيارات",
+    "Storage capacity (GB / TB)": "سعة التخزين (GB / TB)",
+    "Add the base capacity with a price increase of 0, then add larger capacities with their price increase in EGP.":
+      "أضف السعة الأساسية بزيادة سعر 0، ثم أضف السعات الأكبر وقيمة الزيادة بالجنيه.",
+    "Add capacity / variant": "إضافة سعة أو خيار",
+  });
+  const placeholders = {
+    "Search by name, brand or category": "ابحث بالاسم أو الماركة أو القسم",
+    Automatic: "تلقائي",
+    "English label": "التسمية بالإنجليزية",
+    "Price difference": "فرق السعر",
+    "Price increase (EGP)": "زيادة السعر (جنيه)",
+    "Capacity, e.g. 256 GB": "السعة، مثال 256 GB",
+    "Specification name": "اسم المواصفة",
+    Value: "القيمة",
+    Group: "المجموعة",
+  };
+  document.documentElement.lang = language;
+  document.documentElement.dir = arabic ? "rtl" : "ltr";
+  const translateRoot = (root) => {
+    if (!arabic || !root) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach((node) => {
+      if (node.parentElement?.closest("script,style")) return;
+      const value = node.nodeValue.trim(),
+        translated = ar[value];
+      if (translated)
+        node.nodeValue = node.nodeValue.replace(value, translated);
+    });
+    root
+      .querySelectorAll?.("input[placeholder],textarea[placeholder]")
+      .forEach((input) => {
+        if (placeholders[input.placeholder])
+          input.placeholder = placeholders[input.placeholder];
+      });
+  };
+  const header = document.querySelector(".dashboard-header");
+  if (header) {
+    const dashboardPage = document.body.dataset.page === "admin";
+    header.innerHTML = `<a class="dashboard-brand" href="admin.html"><img src="assets/images/logo.png" alt="AlMumez"><span>${arabic ? "لوحة التحكم" : "Dashboard"}</span></a><nav class="admin-nav" aria-label="${arabic ? "تنقل لوحة التحكم" : "Dashboard navigation"}"><div class="admin-manager"><button class="admin-manager-button" type="button" aria-expanded="false"><span class="admin-manager-avatar">م</span><span>${arabic ? "مدير المنصة" : "Platform manager"}</span><span class="material-symbols-outlined">arrow_drop_down</span></button><div class="admin-manager-menu" hidden><strong>${arabic ? "مدير المنصة" : "Platform manager"}</strong><small>${arabic ? "مدير عام" : "General manager"}</small><hr><a href="#">${arabic ? "الملف الشخصي" : "Profile"}</a><button type="button" data-admin-notifications>${arabic ? "الإشعارات" : "Notifications"}</button>${dashboardPage ? `<button type="button" data-export>${arabic ? "تصدير المنتجات" : "Export products"}</button><label>${arabic ? "استيراد المنتجات" : "Import products"}<input type="file" accept="application/json" data-import hidden></label>` : ""}<button type="button" data-admin-logout>${arabic ? "تسجيل الخروج" : "Sign out"}</button></div></div><button class="admin-nav-icon" type="button" data-admin-notifications aria-label="${arabic ? "الإشعارات" : "Notifications"}"><span class="material-symbols-outlined">notifications</span></button><button class="admin-language-toggle" type="button">${arabic ? "EN" : "AR"}</button><a class="admin-view-store" href="index.html">${arabic ? "عرض الموقع" : "View store"}</a></nav>`;
+    const manager = header.querySelector(".admin-manager-button"),
+      menu = header.querySelector(".admin-manager-menu");
+    manager.addEventListener("click", () => {
+      const open = menu.hidden;
+      menu.hidden = !open;
+      manager.setAttribute("aria-expanded", String(open));
+    });
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest(".admin-manager")) {
+        menu.hidden = true;
+        manager.setAttribute("aria-expanded", "false");
+      }
+    });
+    header
+      .querySelector(".admin-language-toggle")
+      .addEventListener("click", () => {
+        localStorage.setItem(KEY, arabic ? "en" : "ar");
+        location.reload();
+      });
+    header
+      .querySelector("[data-admin-logout]")
+      .addEventListener("click", () => {
+        sessionStorage.removeItem("almumez-admin");
+        location.href = "admin.html";
+      });
+    header
+      .querySelectorAll("[data-admin-notifications]")
+      .forEach((button) =>
+        button.addEventListener("click", () =>
+          alert(arabic ? "لا توجد إشعارات جديدة" : "No new notifications"),
+        ),
+      );
+  }
+  translateRoot(document.body);
+  new MutationObserver((records) =>
+    records.forEach((record) =>
+      record.addedNodes.forEach((node) => {
+        if (node.nodeType === 1) translateRoot(node);
+        else if (node.nodeType === 3 && ar[node.nodeValue.trim()])
+          node.nodeValue = ar[node.nodeValue.trim()];
+      }),
+    ),
+  ).observe(document.body, { childList: true, subtree: true });
+  window.AdminUI = { language, arabic, translateRoot };
+})();
+
+// Keep the dashboard sidebar structure identical on every admin page.
+(() => {
+  const arabic =
+    (localStorage.getItem("almumez-language") || "ar") === "ar";
+  document
+    .querySelectorAll(".mobile-admin-dock,.orders-admin-dock")
+    .forEach((nav) => {
+      if (!nav.querySelector(".admin-side-brand")) {
+        const brand = document.createElement("div");
+        brand.className = "admin-side-brand";
+        brand.innerHTML = `<span class="material-symbols-outlined">dashboard</span><div><strong>${arabic ? "&#1604;&#1608;&#1581;&#1577; &#1575;&#1604;&#1578;&#1581;&#1603;&#1605;" : "Dashboard"}</strong><small>${arabic ? "&#1573;&#1583;&#1575;&#1585;&#1577; &#1575;&#1604;&#1605;&#1578;&#1580;&#1585;" : "Store management"}</small></div>`;
+        nav.prepend(brand);
+      }
+
+      const home = nav.querySelector('a[href="admin.html"]');
+      if (home) {
+        const icon = home.querySelector(".material-symbols-outlined");
+        const label = home.querySelector("b");
+        if (icon) icon.textContent = "grid_view";
+        if (label)
+          label.textContent = arabic
+            ? "\u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629"
+            : "Home";
+      }
+
+      nav
+        .querySelectorAll('a[href="#sales"],a[href="admin.html#sales"]')
+        .forEach((link) => link.remove());
+
+      // A fixed element inside an animated/transformed container scrolls with it.
+      // Mount the overview navigation directly under body so it stays viewport-fixed.
+      if (
+        nav.classList.contains("mobile-admin-dock") &&
+        nav.parentElement !== document.body
+      ) {
+        document.body.append(nav);
+      }
+      if (
+        document.body.dataset.page === "admin" &&
+        nav.classList.contains("mobile-admin-dock")
+      ) {
+        nav.hidden = sessionStorage.getItem("almumez-admin") !== "1";
+      }
+    });
+
+  document.documentElement.classList.add("dashboard-page-ready");
+  document.addEventListener(
+    "click",
+    (event) => {
+      const logout = event.target.closest("[data-admin-logout]");
+      if (!logout) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      sessionStorage.removeItem("almumez-admin");
+      location.replace("admin.html");
+    },
+    true,
+  );
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest(
+      ".mobile-admin-dock a,.orders-admin-dock a",
+    );
+    if (
+      !link ||
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    )
+      return;
+    const target = new URL(link.href, location.href);
+    if (target.origin !== location.origin) return;
+    if (target.pathname === location.pathname && target.hash) return;
+    event.preventDefault();
+    document.documentElement.classList.add("dashboard-page-leaving");
+    setTimeout(() => {
+      location.href = target.href;
+    }, 180);
+  });
+})();
+
+// Keep the shared legacy dashboard navigation copy readable in Arabic.
+(() => {
+  if ((localStorage.getItem("almumez-language") || "ar") !== "ar") return;
+  const header = document.querySelector(".dashboard-header"),
+    menu = header?.querySelector(".admin-manager-menu");
+  if (!header || !menu) return;
+  header.querySelector(".dashboard-brand span").textContent = "لوحة التحكم";
+  header.querySelector(".admin-manager-avatar").textContent = "م";
+  header.querySelector(".admin-manager-button>span:nth-child(2)").textContent =
+    "مدير المنصة";
+  menu.querySelector("strong").textContent = "مدير المنصة";
+  menu.querySelector("small").textContent = "مدير عام";
+  menu.querySelector("a").textContent = "الملف الشخصي";
+  menu.querySelector("[data-admin-notifications]").textContent = "الإشعارات";
+  const exportButton = menu.querySelector("[data-export]"),
+    importLabel = menu.querySelector("label");
+  if (exportButton) exportButton.textContent = "تصدير المنتجات";
+  if (importLabel) importLabel.childNodes[0].nodeValue = "استيراد المنتجات";
+  menu.querySelector("[data-admin-logout]").textContent = "تسجيل الخروج";
+  header
+    .querySelector(".admin-nav-icon")
+    .setAttribute("aria-label", "الإشعارات");
+  header.querySelector(".admin-view-store").textContent = "عرض الموقع";
+})();
+
+// Translate the Arabic-first dashboard and every dynamically rendered order to English.
+(() => {
+  if ((localStorage.getItem("almumez-language") || "ar") !== "en") return;
+  const dictionary = {
+    "نظام إدارة التجزئة المتكامل": "Integrated retail management system",
+    "متصل مباشر": "Live connection",
+    "مرحبًا بعودتك، مدير المنصة 👋": "Welcome back, Platform Manager 👋",
+    "نظرة مباشرة على أداء المتجر والطلبات والمخزون.":
+      "A live overview of store performance, orders, and inventory.",
+    اليوم: "Today",
+    "آخر 7 أيام": "Last 7 days",
+    "هذا الشهر": "This month",
+    الكل: "All",
+    "إجمالي المبيعات": "Total sales",
+    "الطلبات الجديدة": "New orders",
+    "لا توجد مبيعات بعد": "No sales yet",
+    "متوسط قيمة الطلب": "Average order value",
+    "محسوب من الطلبات": "Calculated from orders",
+    "تنبيهات المخزون": "Stock alerts",
+    "متبقي 5 قطع أو أقل": "5 items or fewer remaining",
+    "معدل المبيعات الأسبوعية": "Weekly sales rate",
+    "إجمالي قيمة الطلبات خلال آخر سبعة أيام":
+      "Total order value over the last seven days",
+    "طرق الدفع المستخدمة": "Payment methods used",
+    "توزيع الطلبات حسب وسيلة السداد": "Order distribution by payment method",
+    "الأكثر مبيعًا": "Best sellers",
+    "مرتب حسب الكمية": "Sorted by quantity",
+    "أحدث طلبات المتجر": "Latest store orders",
+    "كل عملية شراء مكتملة تظهر هنا": "Every completed purchase appears here",
+    "عرض الكل": "View all",
+    "لا توجد طلبات بعد": "No orders yet",
+    "إدارة المنتجات": "Product management",
+    "جاري حساب المساحة…": "Calculating storage…",
+    "إضافة منتج": "Add product",
+    "لا توجد منتجات": "No products",
+    "نظرة عامة": "Overview",
+    الطلبات: "Orders",
+    المنتجات: "Products",
+    الباقات: "Bundles",
+    المبيعات: "Sales",
+    خروج: "Sign out",
+    "إدارة الطلبات": "Order management",
+    "تصدير CSV": "Export CSV",
+    "متجر المميز": "AlMumez Store",
+    "لوحة التحكم الرئيسية": "Main dashboard",
+    "قيد التنفيذ": "Processing",
+    "طلبات تحتاج تأكيد": "Orders need confirmation",
+    "جاري التوصيل": "Out for delivery",
+    "مع المناديب الآن": "With couriers now",
+    "مكتمل اليوم": "Completed today",
+    "تم التسليم بنجاح": "Delivered successfully",
+    جديد: "New",
+    "قيد التجهيز": "Preparing",
+    مكتمل: "Completed",
+    "لا توجد طلبات": "No orders",
+    "لم يتم العثور على طلبات مطابقة.": "No matching orders were found.",
+    "طريقة الدفع": "Payment method",
+    "بطاقة بنكية": "Bank card",
+    "الدفع عند الاستلام": "Cash on delivery",
+    "بدء التجهيز": "Start preparing",
+    "تجهيز الشحن": "Prepare shipment",
+    "تأكيد التسليم": "Confirm delivery",
+    "عرض التفاصيل": "View details",
+    "إجمالي الطلب": "Order total",
+    "المنتجات المطلوبة": "Ordered products",
+    العميل: "Customer",
+    الهاتف: "Phone",
+    العنوان: "Address",
+    الدفع: "Payment",
+    الإجمالي: "Total",
+    "تفاصيل الطلب": "Order details",
+    الرئيسية: "Home",
+    العملاء: "Customers",
+    المزيد: "More",
+    "لا توجد إشعارات جديدة": "No new notifications",
+    "تمت الإضافة إلى المفضلة": "Added to wishlist",
+    متوفر: "In stock",
+    نفد: "Out of stock",
+    "وحدة مباعة": "unit sold",
+    "وحدات مباعة": "units sold",
+    "طلب جديد": "New order",
+    مدفوع: "Paid",
+    بطاقة: "Card",
+    "عند الاستلام": "Cash on delivery",
+    مجاني: "Free",
+    أحد: "Sun",
+    اثن: "Mon",
+    ثلا: "Tue",
+    أرب: "Wed",
+    خمي: "Thu",
+    جمع: "Fri",
+    سبت: "Sat",
+    "جميع الحقوق محفوظة.": "All rights reserved.",
+    "AlMumez. جميع الحقوق محفوظة.": "AlMumez. All rights reserved.",
+    "إدارة الكتالوج": "Catalog management",
+    "كل المنتجات": "All products",
+    "تحكم في جميع المنتجات المعروضة في المتجر من مكان واحد.":
+      "Manage every storefront product from one place.",
+    "تصدير JSON": "Export JSON",
+    "إجمالي المنتجات": "Total products",
+    "الوحدات المتاحة": "Available units",
+    "مخزون منخفض": "Low stock",
+    "قيمة المخزون": "Inventory value",
+    "كل الأقسام": "All categories",
+    "كل حالات المخزون": "All stock states",
+    "نفد المخزون": "Out of stock",
+    الترتيب: "Sort",
+    الاسم: "Name",
+    الأحدث: "Newest",
+    "السعر: الأقل": "Price: low to high",
+    "السعر: الأعلى": "Price: high to low",
+    القسم: "Category",
+    السعر: "Price",
+    المخزون: "Stock",
+    "أماكن الظهور": "Placements",
+    الحالة: "Status",
+    الإجراءات: "Actions",
+    "لا توجد منتجات مطابقة للبحث أو الفلاتر.":
+      "No products match the search or filters.",
+    عرض: "View",
+    "إدارة عروض المتجر": "Store offer management",
+    "باقات المنتجات": "Product bundles",
+    "أنشئ باقة من ثلاثة منتجات وحدد سعر العرض والخصم.":
+      "Create a three-product bundle and set its offer price and discount.",
+    "بيانات الباقة": "Bundle details",
+    "المنتج الأساسي هو الصفحة التي ستظهر فيها الباقة.":
+      "The primary product is the page where the bundle appears.",
+    "الباقة مفعّلة": "Bundle enabled",
+    "اسم الباقة بالعربية": "Arabic bundle name",
+    "اسم الباقة بالإنجليزية": "English bundle name",
+    "المنتج الأساسي": "Primary product",
+    "المنتج الثاني": "Second product",
+    "المنتج الثالث": "Third product",
+    "إجمالي المنتجات قبل الخصم": "Products total before discount",
+    "قيمة الخصم (EGP)": "Discount (EGP)",
+    "سعر الباقة النهائي (EGP)": "Final bundle price (EGP)",
+    "إلغاء التعديل": "Cancel editing",
+    "حفظ الباقة": "Save bundle",
+    "الباقات الحالية": "Current bundles",
+    "لا توجد باقات حتى الآن.": "No bundles yet.",
+    خصم: "Discount",
+    مفعّلة: "Enabled",
+    متوقفة: "Disabled",
+  };
+  const patterns = [
+    [/^(\d+) عملية شراء مكتملة$/, "$1 completed purchase(s)"],
+    [/^(\d+) منتج مباع$/, "$1 item(s) sold"],
+    [/^(\d+) طلب$/, "$1 order(s)"],
+    [/^(\d+) وحدة مباعة$/, "$1 unit(s) sold"],
+    [/^متوفر: (\d+)$/, "In stock: $1"],
+    [/^متبقي: (\d+) فقط$/, "Only $1 left"],
+    [/^البيانات المحلية:/, "Local data:"],
+    [/مساحة المتصفح:/, "Browser storage:"],
+    [/^مندوب الشحن:/, "Courier:"],
+    [/^المنتجات المطلوبة \((\d+)\):$/, "Ordered products ($1):"],
+    [/^تفاصيل الطلب #/, "Order details #"],
+  ];
+  const translateText = (value) => {
+    const clean = value.trim();
+    if (!clean) return value;
+    let translated = dictionary[clean];
+    if (!translated) {
+      translated = clean;
+      for (const [pattern, replacement] of patterns)
+        translated = translated.replace(pattern, replacement);
+      if (translated === clean) translated = "";
+    }
+    return translated ? value.replace(clean, translated) : value;
+  };
+  const translate = (root) => {
+    if (!root) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT),
+      nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach((node) => {
+      if (!node.parentElement?.closest("script,style"))
+        node.nodeValue = translateText(node.nodeValue);
+    });
+    root.querySelectorAll?.("input[placeholder]").forEach((input) => {
+      const placeholders = {
+        "ابحث بالاسم أو الماركة أو القسم...":
+          "Search by name, brand, or category...",
+        "ابحث برقم الطلب، اسم العميل، أو الهاتف...":
+          "Search by order number, customer name, or phone...",
+      };
+      if (placeholders[input.placeholder])
+        input.placeholder = placeholders[input.placeholder];
+    });
+    root.querySelectorAll?.("[aria-label]").forEach((node) => {
+      const labels = {
+        الإشعارات: "Notifications",
+        القائمة: "Menu",
+        إغلاق: "Close",
+        طباعة: "Print",
+        "خيارات البحث": "Search options",
+        تعديل: "Edit",
+        نسخ: "Copy",
+        حذف: "Delete",
+      };
+      if (labels[node.getAttribute("aria-label")])
+        node.setAttribute(
+          "aria-label",
+          labels[node.getAttribute("aria-label")],
+        );
+    });
+  };
+  translate(document.body);
+  new MutationObserver((records) =>
+    records.forEach((record) =>
+      record.addedNodes.forEach((node) => {
+        if (node.nodeType === 1) translate(node);
+        else if (node.nodeType === 3)
+          node.nodeValue = translateText(node.nodeValue);
+      }),
+    ),
+  ).observe(document.body, { childList: true, subtree: true });
+})();

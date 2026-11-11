@@ -1,0 +1,44 @@
+[
+  {
+    "name": "shell muted",
+    "fg": "5e6d82",
+    "bg": "f6fbee",
+    "ratio": 5.01
+  },
+  {
+    "name": "shell eyebrow",
+    "fg": "4d7c0f",
+    "bg": "f6fbee",
+    "ratio": 4.74
+  },
+  {
+    "name": "navy metadata",
+    "fg": "aab6c8",
+    "bg": "12315a",
+    "ratio": 6.35
+  },
+  {
+    "name": "navy title",
+    "fg": "ffffff",
+    "bg": "12315a",
+    "ratio": 13.02
+  },
+  {
+    "name": "green button",
+    "fg": "0b192e",
+    "bg": "8bc34a",
+    "ratio": 8.39
+  },
+  {
+    "name": "discount badge",
+    "fg": "0b192e",
+    "bg": "bef264",
+    "ratio": 13.48
+  },
+  {
+    "name": "inverse paragraph",
+    "fg": "b6c2d4",
+    "bg": "10294a",
+    "ratio": 8.11
+  }
+]

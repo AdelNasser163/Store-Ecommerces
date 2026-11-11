@@ -1,0 +1,209 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "errors": [],
+    "protectedGeometry": true,
+    "trustColumns": 4,
+    "stats": [
+      20,
+      9,
+      5,
+      19
+    ],
+    "alignment": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "cartAndFly": true,
+    "wishlist": true,
+    "tabs": true,
+    "language": true,
+    "newsletterExistingBehavior": "Email input works; no submission handler or service was present before the redesign",
+    "noHiddenContent": true,
+    "noHorizontalScroll": true,
+    "categoryLinks": [
+      {
+        "href": "http://127.0.0.1:8765/accessories.html?dept=mobiles",
+        "count": 9
+      },
+      {
+        "href": "http://127.0.0.1:8765/accessories.html?q=laptop",
+        "count": 3
+      },
+      {
+        "href": "http://127.0.0.1:8765/accessories.html?dept=audio",
+        "count": 2
+      },
+      {
+        "href": "http://127.0.0.1:8765/accessories.html?q=OLED",
+        "count": 1
+      },
+      {
+        "href": "http://127.0.0.1:8765/accessories.html?dept=appliances",
+        "count": 2
+      },
+      {
+        "href": "http://127.0.0.1:8765/accessories.html?q=PlayStation",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "lang": "en",
+    "width": 820,
+    "errors": [],
+    "trustColumns": 2,
+    "stats": [
+      20,
+      9,
+      5,
+      19
+    ],
+    "alignment": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "cartAndFly": true,
+    "wishlist": true,
+    "tabs": true,
+    "language": true,
+    "newsletterExistingBehavior": "Email input works; no submission handler or service was present before the redesign",
+    "noHiddenContent": true,
+    "noHorizontalScroll": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "errors": [],
+    "protectedGeometry": true,
+    "trustColumns": 2,
+    "stats": [
+      20,
+      9,
+      5,
+      19
+    ],
+    "alignment": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "cartAndFly": true,
+    "wishlist": true,
+    "tabs": true,
+    "language": true,
+    "newsletterExistingBehavior": "Email input works; no submission handler or service was present before the redesign",
+    "noHiddenContent": true,
+    "noHorizontalScroll": true
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "errors": [],
+    "protectedGeometry": true,
+    "trustColumns": 4,
+    "stats": [
+      20,
+      9,
+      5,
+      19
+    ],
+    "alignment": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "cartAndFly": true,
+    "wishlist": true,
+    "tabs": true,
+    "language": true,
+    "arabicReviews": true,
+    "newsletterExistingBehavior": "Email input works; no submission handler or service was present before the redesign",
+    "noHiddenContent": true,
+    "noHorizontalScroll": true
+  },
+  {
+    "lang": "ar",
+    "width": 820,
+    "errors": [],
+    "trustColumns": 2,
+    "stats": [
+      20,
+      9,
+      5,
+      19
+    ],
+    "alignment": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "cartAndFly": true,
+    "wishlist": true,
+    "tabs": true,
+    "language": true,
+    "arabicReviews": true,
+    "newsletterExistingBehavior": "Email input works; no submission handler or service was present before the redesign",
+    "noHiddenContent": true,
+    "noHorizontalScroll": true
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "errors": [],
+    "protectedGeometry": true,
+    "trustColumns": 2,
+    "stats": [
+      20,
+      9,
+      5,
+      19
+    ],
+    "alignment": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "cartAndFly": true,
+    "wishlist": true,
+    "tabs": true,
+    "language": true,
+    "arabicReviews": true,
+    "newsletterExistingBehavior": "Email input works; no submission handler or service was present before the redesign",
+    "noHiddenContent": true,
+    "noHorizontalScroll": true
+  }
+]

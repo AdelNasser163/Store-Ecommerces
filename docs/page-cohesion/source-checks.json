@@ -1,0 +1,10 @@
+{
+  "hero-b.css": true,
+  "product-card.css": true,
+  "js/product-card.js": true,
+  "headerMarkup": true,
+  "heroMarkup": true,
+  "onlyStatsIslandChanged": true,
+  "mainOnlyTranslations": true,
+  "noNewLibraries": true
+}

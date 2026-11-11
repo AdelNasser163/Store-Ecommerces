@@ -1,0 +1,152 @@
+{
+  "linksAndChecks": [
+    {
+      "href": "http://127.0.0.1:8765/index.html",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/index.html?wishlist=1",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/auth.html",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/admin.html",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/accessories.html",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/about.html",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/blog.html",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/contact.html",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/product.html?id=macbook-pro-16-m3-max",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/product.html?id=apple-iphone-15-pro-max-256gb",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/product.html?id=playstation-5-slim-bundle",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/accessories.html?dept=mobiles",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/accessories.html?dept=audio",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/accessories.html?dept=appliances",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/accessories.html?sale=1",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/product.html?id=sony-wf-1000xm5",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/product.html?id=samsung-galaxy-watch-6-classic",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/product.html?id=dell-g15-i7-rtx4060",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/product.html?id=philips-barista-touch",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/product.html?id=anker-maggo-10000",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/accessories.html?q=laptop",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/accessories.html?q=OLED",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/accessories.html?q=PlayStation",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/product.html?id=samsung-odyssey-g9-oled",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/product.html?id=philips-xxl-airfryer",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:8765/checkout.html",
+      "status": 200
+    },
+    {
+      "realDeadlineClock": true,
+      "noDeadlineClockHidden": true
+    },
+    {
+      "fallback": {
+        "variant": "hb-card hb-card--light product-card catalog-product-card",
+        "rating": "View details",
+        "saving": "View details",
+        "disabled": true
+      }
+    },
+    {
+      "referenceIphone17MissingFromDefaultData": true
+    },
+    {
+      "page": "accessories.html",
+      "unchangedCard": {
+        "class": "hb-card product-card catalog-product-card",
+        "name": "Sony WF-1000XM5 Wireless Noise Canceling",
+        "price": "8,499 EGP11,300 EGPSave 2,801 EGP",
+        "background": "rgba(0, 0, 0, 0) linear-gradient(160deg, rgb(255, 255, 255) 65%, rgb(244, 246, 248)) repeat scroll 0% 0% / auto padding-box border-box",
+        "padding": "10px",
+        "radius": "24px",
+        "imageHeight": 230.234375,
+        "titleFont": "\"Bricolage Grotesque\", sans-serif"
+      }
+    },
+    {
+      "page": "product.html?id=sony-wf-1000xm5",
+      "opened": true
+    },
+    {
+      "page": "checkout.html",
+      "opened": true
+    },
+    {
+      "page": "auth.html",
+      "opened": true
+    },
+    {
+      "page": "admin.html",
+      "opened": true
+    }
+  ]
+}

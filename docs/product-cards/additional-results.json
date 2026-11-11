@@ -1,0 +1,20 @@
+{
+  "tabletColumns": 3,
+  "sort": true,
+  "filter": true,
+  "reduced": {
+    "animation": "none",
+    "transition": "0s",
+    "opacity": "1"
+  },
+  "dark": {
+    "background": "rgba(15, 30, 47, 0.94)",
+    "blur": "blur(14px)",
+    "price": "rgb(190, 242, 100)"
+  },
+  "outOfStock": true,
+  "expiry": true,
+  "otherPages": true,
+  "errors": [],
+  "noGsap": true
+}

@@ -1,0 +1,59 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "flashWidth": 268.5,
+    "featuredWidth": 269,
+    "flashHeight": 618.234375,
+    "featuredHeight": 618.703125,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 820,
+    "flashWidth": 190,
+    "featuredWidth": 190.65625,
+    "flashHeight": 567.328125,
+    "featuredHeight": 567.953125,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "flashWidth": 169,
+    "featuredWidth": 170,
+    "flashHeight": 500.3125,
+    "featuredHeight": 501.234375,
+    "errors": []
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "flashWidth": 268.5,
+    "featuredWidth": 269,
+    "flashHeight": 618.234375,
+    "featuredHeight": 618.703125,
+    "errors": []
+  },
+  {
+    "lang": "ar",
+    "width": 820,
+    "flashWidth": 190,
+    "featuredWidth": 190.65625,
+    "flashHeight": 567.328125,
+    "featuredHeight": 567.953125,
+    "errors": []
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "flashWidth": 169,
+    "featuredWidth": 170,
+    "flashHeight": 500.3125,
+    "featuredHeight": 501.234375,
+    "errors": []
+  },
+  {
+    "reducedMotion": true
+  }
+]

@@ -1,0 +1,361 @@
+{
+  "facts": {
+    "products": 20,
+    "brands": 7,
+    "departments": 6,
+    "offers": 5
+  },
+  "products": [
+    {
+      "id": "sony-wf-1000xm5",
+      "name": {
+        "en": "Sony WF-1000XM5 Wireless Noise Canceling",
+        "ar": "سوني WF-1000XM5 عزل ضوضاء لاسلكي"
+      },
+      "brand": {
+        "en": "Sony",
+        "ar": "Sony"
+      },
+      "image": "assets/images/sony-wf.jpg",
+      "rating": 4.8,
+      "reviews": 216,
+      "stock": 9,
+      "badge": "discount",
+      "placements": {
+        "home-flash": 1,
+        "all-products": 1
+      },
+      "effective": {
+        "active": true,
+        "pending": false,
+        "expired": false,
+        "price": 8499,
+        "originalPrice": 11300,
+        "saving": 2801,
+        "discountPercent": 25,
+        "claimed": 0,
+        "left": 9,
+        "endsAt": null,
+        "remaining": 0,
+        "variant": null
+      }
+    },
+    {
+      "id": "samsung-galaxy-watch-6-classic",
+      "name": {
+        "en": "Samsung Galaxy Watch 6 Classic 47mm LTE",
+        "ar": "سامسونج جالاكسي واتش 6 كلاسيك 47 مم LTE"
+      },
+      "brand": {
+        "en": "Samsung",
+        "ar": "Samsung"
+      },
+      "image": "assets/images/watch-6.jpg",
+      "rating": 4.7,
+      "reviews": 184,
+      "stock": 12,
+      "badge": "best-seller",
+      "placements": {
+        "home-flash": 2,
+        "all-products": 2
+      },
+      "effective": {
+        "active": true,
+        "pending": false,
+        "expired": false,
+        "price": 12199,
+        "originalPrice": 14900,
+        "saving": 2701,
+        "discountPercent": 18,
+        "claimed": 0,
+        "left": 12,
+        "endsAt": null,
+        "remaining": 0,
+        "variant": null
+      }
+    },
+    {
+      "id": "dell-g15-i7-rtx4060",
+      "name": {
+        "en": "Dell G15 Core i7 13th Gen RTX 4060 16GB",
+        "ar": "ديل G15 كور i7 الجيل 13 RTX 4060 16GB"
+      },
+      "brand": {
+        "en": "Dell",
+        "ar": "Dell"
+      },
+      "image": "assets/images/dell-g15.jpg",
+      "rating": 4.9,
+      "reviews": 91,
+      "stock": 5,
+      "badge": "discount",
+      "placements": {
+        "home-flash": 3,
+        "all-products": 3
+      },
+      "effective": {
+        "active": true,
+        "pending": false,
+        "expired": false,
+        "price": 46500,
+        "originalPrice": 66500,
+        "saving": 20000,
+        "discountPercent": 30,
+        "claimed": 0,
+        "left": 5,
+        "endsAt": null,
+        "remaining": 0,
+        "variant": null
+      }
+    },
+    {
+      "id": "philips-barista-touch",
+      "name": {
+        "en": "Philips Barista Touch Smart Coffee Machine",
+        "ar": "ماكينة قهوة فيليبس باريستا تاتش الذكية"
+      },
+      "brand": {
+        "en": "Philips",
+        "ar": "Philips"
+      },
+      "image": "assets/images/philips-coffee.jpg",
+      "rating": 4.6,
+      "reviews": 76,
+      "stock": 8,
+      "badge": "official-warranty",
+      "placements": {
+        "home-flash": 4,
+        "all-products": 4
+      },
+      "effective": {
+        "active": true,
+        "pending": false,
+        "expired": false,
+        "price": 16800,
+        "originalPrice": 19800,
+        "saving": 3000,
+        "discountPercent": 15,
+        "claimed": 0,
+        "left": 8,
+        "endsAt": null,
+        "remaining": 0,
+        "variant": null
+      }
+    },
+    {
+      "id": "anker-maggo-10000",
+      "name": {
+        "en": "Anker 10,000mAh MagGo Wireless Fast Pack",
+        "ar": "أنكر MagGo باور بانك لاسلكي 10000 مللي أمبير"
+      },
+      "brand": {
+        "en": "Anker",
+        "ar": "Anker"
+      },
+      "image": "assets/images/anker-pack.jpg",
+      "rating": 4.8,
+      "reviews": 302,
+      "stock": 18,
+      "badge": "best-seller",
+      "placements": {
+        "home-flash": 5,
+        "all-products": 5
+      },
+      "effective": {
+        "active": true,
+        "pending": false,
+        "expired": false,
+        "price": 2350,
+        "originalPrice": 2999,
+        "saving": 649,
+        "discountPercent": 22,
+        "claimed": 0,
+        "left": 18,
+        "endsAt": null,
+        "remaining": 0,
+        "variant": null
+      }
+    },
+    {
+      "id": "samsung-odyssey-g9-oled",
+      "name": {
+        "en": "Samsung Odyssey G9 49\" OLED 240Hz 0.03ms",
+        "ar": "سامسونج أوديسي G9 OLED مقاس 49 بوصة 240Hz"
+      },
+      "brand": {
+        "en": "Samsung",
+        "ar": "Samsung"
+      },
+      "image": "assets/images/odyssey.jpg",
+      "rating": 4.9,
+      "reviews": 44,
+      "stock": 4,
+      "badge": "new",
+      "placements": {
+        "home-featured": 1,
+        "all-products": 6
+      },
+      "effective": {
+        "active": true,
+        "pending": false,
+        "expired": false,
+        "price": 58900,
+        "originalPrice": 65000,
+        "saving": 6100,
+        "discountPercent": 9,
+        "claimed": 0,
+        "left": 4,
+        "endsAt": null,
+        "remaining": 0,
+        "variant": null
+      }
+    },
+    {
+      "id": "macbook-pro-16-m3-max",
+      "name": {
+        "en": "MacBook Pro 16\" M3 Max 36GB Unified 1TB",
+        "ar": "ماك بوك برو 16 بوصة M3 Max سعة 1TB"
+      },
+      "brand": {
+        "en": "Apple",
+        "ar": "Apple"
+      },
+      "image": "assets/images/macbook.jpg",
+      "rating": 4.9,
+      "reviews": 63,
+      "stock": 6,
+      "badge": "official-warranty",
+      "placements": {
+        "home-featured": 2,
+        "all-products": 7
+      },
+      "effective": {
+        "active": false,
+        "pending": false,
+        "expired": false,
+        "price": 124500,
+        "originalPrice": 0,
+        "saving": 0,
+        "discountPercent": 0,
+        "claimed": 0,
+        "left": 6,
+        "endsAt": null,
+        "remaining": 0,
+        "variant": null
+      }
+    },
+    {
+      "id": "playstation-5-slim-bundle",
+      "name": {
+        "en": "Sony PlayStation 5 Slim 1TB + Extra DualSense",
+        "ar": "سوني بلايستيشن 5 سليم 1TB مع يد إضافية"
+      },
+      "brand": {
+        "en": "Sony",
+        "ar": "Sony"
+      },
+      "image": "assets/images/ps5.jpg",
+      "rating": 4.9,
+      "reviews": 129,
+      "stock": 7,
+      "badge": "best-seller",
+      "placements": {
+        "home-featured": 3,
+        "all-products": 8
+      },
+      "effective": {
+        "active": true,
+        "pending": false,
+        "expired": false,
+        "price": 28990,
+        "originalPrice": 32000,
+        "saving": 3010,
+        "discountPercent": 9,
+        "claimed": 0,
+        "left": 7,
+        "endsAt": null,
+        "remaining": 0,
+        "variant": null
+      }
+    },
+    {
+      "id": "philips-xxl-airfryer",
+      "name": {
+        "en": "Philips XXL Smart Sensing Digital Airfryer",
+        "ar": "قلاية فيليبس XXL الذكية بدون زيت"
+      },
+      "brand": {
+        "en": "Philips",
+        "ar": "Philips"
+      },
+      "image": "assets/images/airfryer.jpg",
+      "rating": 4.7,
+      "reviews": 88,
+      "stock": 11,
+      "badge": "official-warranty",
+      "placements": {
+        "home-featured": 4,
+        "all-products": 9
+      },
+      "effective": {
+        "active": true,
+        "pending": false,
+        "expired": false,
+        "price": 11250,
+        "originalPrice": 12500,
+        "saving": 1250,
+        "discountPercent": 10,
+        "claimed": 0,
+        "left": 11,
+        "endsAt": null,
+        "remaining": 0,
+        "variant": null
+      }
+    },
+    {
+      "id": "apple-iphone-15-pro-max-256gb",
+      "name": {
+        "en": "iPhone 15 Pro Max",
+        "ar": "آيفون 15 برو ماكس"
+      },
+      "brand": {
+        "en": "Apple",
+        "ar": "Apple"
+      },
+      "image": "assets/images/accessory-iphone.jpg",
+      "rating": 4.9,
+      "reviews": 320,
+      "stock": 14,
+      "badge": "discount",
+      "placements": {
+        "accessories": 1,
+        "all-products": 10
+      },
+      "effective": {
+        "active": true,
+        "pending": false,
+        "expired": false,
+        "price": 58999,
+        "originalPrice": 65999,
+        "saving": 7000,
+        "discountPercent": 11,
+        "claimed": 0,
+        "left": 14,
+        "endsAt": null,
+        "remaining": 0,
+        "variant": {
+          "id": "256",
+          "label": {
+            "en": "256 GB",
+            "ar": "256 جيجابايت"
+          },
+          "priceDelta": 0,
+          "stock": 14,
+          "sku": "APPLE-IPHONE-15-PRO-MAX-256GB-1",
+          "default": true,
+          "order": 0
+        }
+      }
+    }
+  ]
+}

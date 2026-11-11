@@ -1,0 +1,22 @@
+[
+  {
+    "file": "index.html",
+    "languageInMenu": true,
+    "dashboardLabel": true,
+    "loginInMenu": true,
+    "cartDataUpdates": true,
+    "cartCopyHidden": true,
+    "wishlistWorks": true,
+    "menuIcon": "menu"
+  },
+  {
+    "file": "accessories.html",
+    "languageInMenu": true,
+    "dashboardLabel": true,
+    "loginInMenu": true,
+    "cartDataUpdates": true,
+    "cartCopyHidden": true,
+    "wishlistWorks": true,
+    "menuIcon": "menu"
+  }
+]

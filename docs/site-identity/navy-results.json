@@ -1,0 +1,122 @@
+[
+  {
+    "file": "index.html",
+    "width": 1440,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "width": 1440,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "width": 1440,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "width": 1440,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "width": 1440,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "width": 1440,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "width": 1440,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "width": 1440,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "width": 1440,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "width": 1440,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "width": 390,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "width": 390,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "width": 390,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "width": 390,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "width": 390,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "width": 390,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "width": 390,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "width": 390,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "width": 390,
+    "navy": "#0f354f",
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "width": 390,
+    "navy": "#0f354f",
+    "passed": true
+  }
+]

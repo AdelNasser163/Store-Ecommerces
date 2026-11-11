@@ -1,0 +1,126 @@
+[
+  {
+    "lang": "en",
+    "width": 1440,
+    "cards": 9,
+    "heights": {
+      "home-flash": 485.1875,
+      "home-featured": 485.1875
+    },
+    "flyToCart": true,
+    "newsletter": "existing input/button; no subscription service",
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 1024,
+    "cards": 9,
+    "heights": {
+      "home-flash": 485.1875,
+      "home-featured": 485.1875
+    },
+    "flyToCart": true,
+    "newsletter": "existing input/button; no subscription service",
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 820,
+    "cards": 9,
+    "heights": {
+      "home-flash": 505.4375,
+      "home-featured": 485.1875
+    },
+    "flyToCart": true,
+    "newsletter": "existing input/button; no subscription service",
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "cards": 9,
+    "heights": {
+      "home-flash": 528.28125,
+      "home-featured": 510.5
+    },
+    "flyToCart": true,
+    "newsletter": "existing input/button; no subscription service",
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "cards": 9,
+    "heights": {
+      "home-flash": 485.1875,
+      "home-featured": 485.1875
+    },
+    "flyToCart": true,
+    "newsletter": "existing input/button; no subscription service",
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 1024,
+    "cards": 9,
+    "heights": {
+      "home-flash": 485.1875,
+      "home-featured": 485.1875
+    },
+    "flyToCart": true,
+    "newsletter": "existing input/button; no subscription service",
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 820,
+    "cards": 9,
+    "heights": {
+      "home-flash": 485.1875,
+      "home-featured": 485.1875
+    },
+    "flyToCart": true,
+    "newsletter": "existing input/button; no subscription service",
+    "errors": [],
+    "passed": true
+  },
+  {
+    "lang": "ar",
+    "width": 390,
+    "cards": 9,
+    "heights": {
+      "home-flash": 510.5,
+      "home-featured": 510.5
+    },
+    "flyToCart": true,
+    "newsletter": "existing input/button; no subscription service",
+    "errors": [],
+    "passed": true
+  },
+  {
+    "mode": "reduce",
+    "passed": true
+  },
+  {
+    "mode": "observer-silent",
+    "passed": true
+  },
+  {
+    "mode": "no-gsap",
+    "passed": true
+  },
+  {
+    "mode": "no-islands",
+    "passed": true
+  },
+  {
+    "mode": "print",
+    "passed": true
+  }
+]

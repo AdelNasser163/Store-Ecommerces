@@ -1,0 +1,979 @@
+[
+  {
+    "file": "index.html",
+    "lang": "en",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "en",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "en",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "en",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "en",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "en",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "en",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "en",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "en",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "en",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "en",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "en",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "en",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "en",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "en",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "en",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "en",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "en",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "en",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "en",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "en",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "en",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "en",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "en",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "en",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "en",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "en",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "en",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "en",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "en",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "Search products..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "ar",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "ar",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "ar",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "ar",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "ar",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "ar",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "ar",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "ar",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "ar",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "ar",
+    "width": 1440,
+    "signature": {
+      "width": 1312,
+      "height": 76,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "ar",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "ar",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "ar",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "ar",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "ar",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "ar",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "ar",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "ar",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "ar",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "ar",
+    "width": 820,
+    "signature": {
+      "width": 780,
+      "height": 66,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 112,
+      "actions": 44,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "index.html",
+    "lang": "ar",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "accessories.html",
+    "lang": "ar",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "product.html?id=apple-iphone-15-pro-max-256gb",
+    "lang": "ar",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "about.html",
+    "lang": "ar",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "blog.html",
+    "lang": "ar",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "contact.html",
+    "lang": "ar",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "auth.html",
+    "lang": "ar",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "checkout.html",
+    "lang": "ar",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "forgot-password.html",
+    "lang": "ar",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "file": "reset-password.html",
+    "lang": "ar",
+    "width": 390,
+    "signature": {
+      "width": 370,
+      "height": 62,
+      "background": "rgb(15, 30, 47)",
+      "radius": "999px",
+      "logo": 74,
+      "actions": 38,
+      "search": "ابحث عن المنتجات..."
+    },
+    "errors": [],
+    "passed": true
+  },
+  {
+    "internalNavigation": "home/catalog/home",
+    "noRepeatedReveal": true,
+    "viewTransitions": true
+  },
+  {
+    "extraFunctionalCases": [
+      1440,
+      390
+    ],
+    "cartPersistence": true,
+    "account": true,
+    "badge15pxTopRight": true,
+    "search": true,
+    "sort": true,
+    "language": true
+  }
+]

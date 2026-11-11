@@ -1,0 +1,17 @@
+{
+  "name": "almumez-store",
+  "private": true,
+  "scripts": {
+    "build:fx": "node src-islands/build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "motion": "^11.18.2",
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.4"
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "muted / white",
+    "fg": "526176",
+    "bg": "ffffff",
+    "ratio": 6.31
+  },
+  {
+    "name": "eyebrow / white",
+    "fg": "4d7c0f",
+    "bg": "ffffff",
+    "ratio": 4.99
+  },
+  {
+    "name": "muted inverse / navy",
+    "fg": "c4cfdd",
+    "bg": "0b192e",
+    "ratio": 11.16
+  },
+  {
+    "name": "lime / navy",
+    "fg": "bef264",
+    "bg": "0b192e",
+    "ratio": 13.48
+  },
+  {
+    "name": "CTA navy / green",
+    "fg": "0b192e",
+    "bg": "8bc34a",
+    "ratio": 8.39
+  },
+  {
+    "name": "discount white / red",
+    "fg": "ffffff",
+    "bg": "dc2626",
+    "ratio": 4.83
+  },
+  {
+    "name": "stars / white",
+    "fg": "856100",
+    "bg": "ffffff",
+    "ratio": 5.66
+  },
+  {
+    "name": "dark card metadata",
+    "fg": "b6c2d4",
+    "bg": "162b43",
+    "ratio": 7.98
+  }
+]
