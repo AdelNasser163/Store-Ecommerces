@@ -2054,9 +2054,9 @@
  background:var(--hb-showcase-frame);border:1px solid var(--hb-showcase-edge);
  box-shadow:var(--hb-showcase-shadow);backdrop-filter:blur(8px);
 }
-.pg-unified .hb-carousel{inset-inline-start:calc(50% - 152px);top:26px;width:304px;padding:6px;border-radius:24px}
-/* Match the portrait artwork instead of letterboxing it in a wide frame. */
-.pg-unified .hb-slides{height:auto;aspect-ratio:941/1672;border-radius:18px;overflow:hidden}
+.pg-unified .hb-carousel{inset-inline-start:calc(50% - 152px);top:26px;width:304px;padding:10px;border-radius:28px}
+/* Keep the original showcase dimensions independent of the selected artwork. */
+.pg-unified .hb-slides{height:344px;aspect-ratio:auto;border-radius:18px;overflow:hidden}
 .pg-unified .hb-slide img{height:100%!important;border-radius:18px;scale:1}
 .pg-unified .hb-visual .hb-slide img{padding:0}
 .pg-unified .hb-side .hb-side-link{padding:6px;border-radius:20px;overflow:hidden}
@@ -2071,6 +2071,6 @@
 }
 @media(max-width:639px){
  .pg-unified .hb-carousel{width:calc(100% - 32px);max-width:278px;inset-inline-start:max(16px,calc(50% - 139px));margin-inline-start:0;top:26px}
- .pg-unified .hb-slides{height:auto!important}
+ .pg-unified .hb-slides{height:324px!important}
  .pg-unified .hb-side{display:none}
 }
