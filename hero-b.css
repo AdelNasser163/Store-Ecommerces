@@ -455,7 +455,7 @@
   animation: hb-bob 7s ease-in-out infinite reverse
 }
 
-.hb-side a {
+.hb-side .hb-side-link {
   display: block;
   border-radius: 24px;
   background: #ffffff17;
@@ -2050,7 +2050,7 @@
  --hb-showcase-edge:#c3e1eb38;
  --hb-showcase-shadow:0 22px 50px -24px #020c19bf,inset 0 1px 0 #ffffff12;
 }
-.pg-unified .hb-carousel,.pg-unified .hb-side a{
+.pg-unified .hb-carousel,.pg-unified .hb-side .hb-side-link{
  background:var(--hb-showcase-frame);border:1px solid var(--hb-showcase-edge);
  box-shadow:var(--hb-showcase-shadow);backdrop-filter:blur(8px);
 }
@@ -2060,7 +2060,7 @@
 .pg-unified .hb-visual .hb-slide img{padding:8px}
 /* The source has broad transparent margins; magnify only inside that margin. */
 .pg-unified .hb-slide img[src*="iPhone_17_Pro_Max"]{scale:1.48}
-.pg-unified .hb-side a{padding:9px;border-radius:22px;overflow:hidden}
+.pg-unified .hb-side .hb-side-link{padding:9px;border-radius:22px;overflow:hidden}
 .pg-unified .hb-mac{inset-inline-start:4px;top:248px;width:220px}
 .pg-unified .hb-ps{inset-inline-end:4px;top:232px;width:204px}
 .pg-unified .hb-visual .hb-mac img{height:auto;aspect-ratio:4/3;padding:0;border-radius:13px}
