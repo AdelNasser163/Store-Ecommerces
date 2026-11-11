@@ -2054,7 +2054,7 @@
  background:var(--hb-showcase-frame);border:1px solid var(--hb-showcase-edge);
  box-shadow:var(--hb-showcase-shadow);backdrop-filter:blur(8px);
 }
-.pg-unified .hb-carousel{inset-inline-start:calc(50% - 116px);top:26px;width:232px;padding:6px;border-radius:24px}
+.pg-unified .hb-carousel{inset-inline-start:calc(50% - 152px);top:26px;width:304px;padding:6px;border-radius:24px}
 /* Match the portrait artwork instead of letterboxing it in a wide frame. */
 .pg-unified .hb-slides{height:auto;aspect-ratio:941/1672;border-radius:18px;overflow:hidden}
 .pg-unified .hb-slide img{height:100%!important;border-radius:18px;scale:1}
@@ -2065,12 +2065,12 @@
 .pg-unified .hb-visual .hb-mac img{height:auto;aspect-ratio:auto;padding:0;border-radius:13px}
 .pg-unified .hb-visual .hb-ps img{height:auto;aspect-ratio:auto;padding:0;border-radius:13px}
 @media(min-width:640px) and (max-width:1199px){
- .pg-unified .hb-carousel{width:220px;inset-inline-start:calc(50% - 110px)}
+ .pg-unified .hb-carousel{width:280px;inset-inline-start:calc(50% - 140px)}
  .pg-unified .hb-mac{width:190px;top:258px}
  .pg-unified .hb-ps{width:176px;top:242px}
 }
 @media(max-width:639px){
- .pg-unified .hb-carousel{width:220px;max-width:calc(100% - 32px);inset-inline-start:50%;margin-inline-start:-110px;top:26px}
+ .pg-unified .hb-carousel{width:calc(100% - 32px);max-width:278px;inset-inline-start:max(16px,calc(50% - 139px));margin-inline-start:0;top:26px}
  .pg-unified .hb-slides{height:auto!important}
  .pg-unified .hb-side{display:none}
 }
