@@ -2061,13 +2061,12 @@
 .pg-unified .hb-visual .hb-slide img{padding:0;object-fit:cover!important;object-position:center!important}
 .pg-unified .hb-side .hb-side-link{padding:6px;border-radius:20px;overflow:hidden}
 .pg-unified .hb-mac{inset-inline-start:4px;top:248px;width:220px}
-.pg-unified .hb-ps{inset-inline-end:4px;top:232px;width:204px}
-.pg-unified .hb-visual .hb-mac img{height:auto;aspect-ratio:auto;padding:0;border-radius:13px}
-.pg-unified .hb-visual .hb-ps img{height:auto;aspect-ratio:auto;padding:0;border-radius:13px}
+.pg-unified .hb-ps{inset-inline-end:4px;top:232px;width:220px}
+.pg-unified .hb-visual :is(.hb-mac,.hb-ps) img{height:auto;aspect-ratio:4/3;padding:0;border-radius:13px;object-fit:cover!important}
 @media(min-width:640px) and (max-width:1199px){
  .pg-unified .hb-carousel{width:280px;inset-inline-start:calc(50% - 140px)}
  .pg-unified .hb-mac{width:190px;top:258px}
- .pg-unified .hb-ps{width:176px;top:242px}
+ .pg-unified .hb-ps{width:190px;top:242px}
 }
 @media(max-width:639px){
  .pg-unified .hb-carousel{width:calc(100% - 32px);max-width:278px;inset-inline-start:max(16px,calc(50% - 139px));margin-inline-start:0;top:26px}
