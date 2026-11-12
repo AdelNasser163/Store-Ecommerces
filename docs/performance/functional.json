@@ -1,0 +1,129 @@
+[
+  {
+    "width": 390,
+    "lang": "en",
+    "homeCart": true,
+    "wishlist": true,
+    "quantity": true,
+    "filters": true,
+    "language": true,
+    "mobileArrows": true,
+    "catalogCart": true,
+    "search": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "lang": "ar",
+    "homeCart": true,
+    "wishlist": true,
+    "quantity": true,
+    "filters": true,
+    "language": true,
+    "mobileArrows": true,
+    "catalogCart": true,
+    "search": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "lang": "en",
+    "homeCart": true,
+    "wishlist": true,
+    "quantity": true,
+    "filters": true,
+    "language": true,
+    "mobileArrows": true,
+    "catalogCart": true,
+    "search": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "lang": "ar",
+    "homeCart": true,
+    "wishlist": true,
+    "quantity": true,
+    "filters": true,
+    "language": true,
+    "mobileArrows": true,
+    "catalogCart": true,
+    "search": true,
+    "errors": []
+  },
+  {
+    "file": "about.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "accessories.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "admin-bundles.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "admin-orders.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "admin-product.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "admin-products.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "admin.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "auth.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "blog.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "checkout.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "contact.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "forgot-password.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "index.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "product.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "reset-password.html",
+    "status": 200,
+    "errors": []
+  }
+]

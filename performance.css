@@ -1,0 +1,48 @@
+/* Preserve the design while avoiding offscreen rendering and costly mobile layers. */
+.pg-flash,.pg-featured,.pg-reviews,.products-footer{content-visibility:auto;contain-intrinsic-size:auto 600px}
+.pg-reviews{contain-intrinsic-size:auto 460px}.products-footer{contain-intrinsic-size:auto 410px}
+[data-component="site-header"]{will-change:auto!important}
+.hb-card,.hb-card img,.pg-button,.pt-button,button,a{transition-property:transform,opacity!important}
+.fx-top[hidden]{display:none!important}.fx-progress{transform-origin:0 50%;transform:scaleX(0)}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+.hb-gradient{animation:none!important}
+@font-face{font-family:'Bricolage Fallback';src:local('Arial');size-adjust:90%;ascent-override:100%;descent-override:22%;line-gap-override:0%}
+@font-face{font-family:'Cairo Fallback';src:local('Arial');size-adjust:90%;ascent-override:130%;descent-override:35%;line-gap-override:0%}
+@font-face{font-family:'Cairo Fallback';font-weight:700 900;src:local('Arial Bold');size-adjust:90%;ascent-override:130%;descent-override:35%;line-gap-override:0%}
+[dir=ltr] .hb-home .hb-copy .hb-gradient{font-family:Cairo,'Cairo Fallback',Tajawal,sans-serif!important}
+[dir=ltr] .hb-home .hb-copy h1{font-family:'Bricolage Grotesque','Bricolage Fallback',Arial,sans-serif!important}
+@font-face{font-family:'Bricolage Fallback';src:local('Arial');size-adjust:90%;ascent-override:100%;descent-override:22%;line-gap-override:0%}
+[dir=ltr] .hb-home .hb-copy h1{font-family:'Bricolage Grotesque','Bricolage Fallback',Arial,sans-serif!important}
+.hb-hero:not(.perf-in-view) :is(.hb-ring,.hb-orbit,.hb-glow,.hb-carousel,.hb-side,.hb-delivery,.hb-warranty){animation-play-state:paused!important}
+[data-rb=brands]{overflow:hidden;direction:ltr}
+.perf-brands-track{display:flex;width:max-content;animation:perf-brands 36s linear infinite;animation-play-state:paused}
+.perf-in-view .perf-brands-track{animation-play-state:running}
+[data-rb=brands]:hover .perf-brands-track{animation-play-state:paused}
+.perf-brands-list{display:flex;align-items:center;gap:72px;padding-inline-end:72px;flex-shrink:0}
+@keyframes perf-brands{to{transform:translateX(-50%)}}
+.perf-particle{position:absolute;inset-inline-start:var(--x);bottom:0;width:3px;height:3px;border-radius:50%;background:#bef264;opacity:0;animation:perf-particle 16s linear infinite;animation-delay:var(--delay);animation-play-state:paused}
+.perf-in-view .perf-particle{animation-play-state:running}
+@keyframes perf-particle{0%{transform:translateY(0);opacity:0}15%,70%{opacity:.35}100%{transform:translateY(-500px);opacity:0}}
+.hb-card-grid[data-perf-pending]{min-height:460px}
+.perf-skeleton{height:460px;border-radius:24px;background:linear-gradient(#0f354f 0 45%,#143c55 45%);border:1px solid #8bc34a40}
+@media(max-width:767px){
+ .products-footer{contain-intrinsic-size:auto 1200px}
+ .pg-flash,.pg-featured{contain-intrinsic-size:auto 850px}
+ .pg-reviews{contain-intrinsic-size:auto 950px}
+ .hb-hero *,.hb-hero *::before,.hb-hero *::after{animation:none!important}
+ .hb-particles,.perf-particle{display:none!important}
+ .hb-header,.hb-carousel,.hb-side-link,.hb-eyebrow,.hb-stat,.pg-band,.home-header-actions{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+ .hb-glow{filter:none!important;opacity:.12!important}
+ .hb-card,.hb-carousel,.hb-side-link{box-shadow:0 8px 18px -12px #020c1960!important}
+ .hb-card,.hb-card img{transition:none!important}
+ .about-logo-card,.about-product-card{animation:none!important;will-change:auto!important}
+ .hb-card-grid[data-perf-pending],.perf-skeleton{min-height:600px;height:600px}
+ .hb-card-grid[data-perf-pending]{grid-template-columns:1fr!important}
+ .hb-card-grid[data-perf-pending]>.perf-skeleton:not(:first-child){display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto!important}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .perf-brands-track{transform:none!important}.perf-particle{display:none!important}
+}
+@media print{.pg-flash,.pg-featured,.pg-reviews,.products-footer{content-visibility:visible;contain-intrinsic-size:none}.perf-skeleton{display:none}}

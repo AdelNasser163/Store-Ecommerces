@@ -2,6 +2,7 @@
   "name": "almumez-store",
   "private": true,
   "scripts": {
+    "build:performance": "node tools/build-performance.mjs",
     "build:fx": "node src-islands/build.mjs"
   },
   "devDependencies": {

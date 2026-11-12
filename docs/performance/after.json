@@ -1,0 +1,182 @@
+[
+  {
+    "width": 390,
+    "run": 0,
+    "lcp": 2076,
+    "cls": 0,
+    "long": [
+      {
+        "start": 1838.2000000001863,
+        "duration": 84
+      },
+      {
+        "start": 1980.4000000003725,
+        "duration": 90
+      },
+      {
+        "start": 3941.100000000559,
+        "duration": 231
+      },
+      {
+        "start": 4867.300000000745,
+        "duration": 132
+      }
+    ],
+    "bytes": 784070,
+    "requests": 11,
+    "dcl": 4157.800000000745,
+    "dom": 458,
+    "blockingProxy": 337,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "run": 1,
+    "lcp": 1948,
+    "cls": 0,
+    "long": [
+      {
+        "start": 1826.2000000001863,
+        "duration": 78
+      },
+      {
+        "start": 1921.5999999996275,
+        "duration": 101
+      },
+      {
+        "start": 3928.4000000003725,
+        "duration": 237
+      },
+      {
+        "start": 4888.200000000186,
+        "duration": 127
+      }
+    ],
+    "bytes": 784070,
+    "requests": 11,
+    "dcl": 4153,
+    "dom": 458,
+    "blockingProxy": 343,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "run": 2,
+    "lcp": 2064,
+    "cls": 0,
+    "long": [
+      {
+        "start": 1832.7999999998137,
+        "duration": 84
+      },
+      {
+        "start": 1925.2000000001863,
+        "duration": 93
+      },
+      {
+        "start": 3911.2999999998137,
+        "duration": 234
+      },
+      {
+        "start": 4860.0999999996275,
+        "duration": 132
+      }
+    ],
+    "bytes": 784070,
+    "requests": 11,
+    "dcl": 4131.5999999996275,
+    "dom": 458,
+    "blockingProxy": 343,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "run": 0,
+    "lcp": 1952,
+    "cls": 0.00181852280521262,
+    "long": [
+      {
+        "start": 1820.9000000003725,
+        "duration": 110
+      },
+      {
+        "start": 1941.7000000001863,
+        "duration": 86
+      },
+      {
+        "start": 4147.799999999814,
+        "duration": 236
+      },
+      {
+        "start": 5094.9000000003725,
+        "duration": 151
+      }
+    ],
+    "bytes": 821452,
+    "requests": 13,
+    "dcl": 4369.100000000559,
+    "dom": 464,
+    "blockingProxy": 383,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "run": 1,
+    "lcp": 1964,
+    "cls": 0.00181852280521262,
+    "long": [
+      {
+        "start": 1816,
+        "duration": 119
+      },
+      {
+        "start": 1947.5999999996275,
+        "duration": 102
+      },
+      {
+        "start": 4095.4000000003725,
+        "duration": 242
+      },
+      {
+        "start": 5057.799999999814,
+        "duration": 146
+      }
+    ],
+    "bytes": 821452,
+    "requests": 13,
+    "dcl": 4322,
+    "dom": 464,
+    "blockingProxy": 409,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "run": 2,
+    "lcp": 2032,
+    "cls": 0.00181852280521262,
+    "long": [
+      {
+        "start": 1831.5,
+        "duration": 158
+      },
+      {
+        "start": 2011,
+        "duration": 97
+      },
+      {
+        "start": 4092.2000000001863,
+        "duration": 236
+      },
+      {
+        "start": 5057.799999999814,
+        "duration": 163
+      }
+    ],
+    "bytes": 821452,
+    "requests": 13,
+    "dcl": 4315.200000000186,
+    "dom": 464,
+    "blockingProxy": 454,
+    "errors": []
+  }
+]

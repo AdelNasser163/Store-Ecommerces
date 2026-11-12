@@ -22,17 +22,25 @@
     let all=section.querySelector("[data-section-view-all]");if(list.length>limit&&!all){all=document.createElement("a");all.dataset.sectionViewAll="";all.className="catalog-section-view-all";section.append(all)}if(all){all.hidden=list.length<=limit;all.href="accessories.html";all.textContent=language==="ar"?"عرض الكل":"View all"}
   }
   const page=document.body.dataset.page;
-  if(page==="home"||!page){renderPlacement("home-flash",findSection("Flash Deals"));renderPlacement("home-featured",findSection("Featured Tech Collections"))}
+  const pending=new Map();
+  const near=window.IntersectionObserver&&new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){near.unobserve(entry.target);const render=pending.get(entry.target);pending.delete(entry.target);render?.()}})},{rootMargin:"500px"});
+  function queuePlacement(placement,heading){const grid=document.querySelector(`[data-products-section="${placement}"]`);if(!grid)return;grid.dataset.perfPending="";grid.setAttribute("aria-busy","true");grid.innerHTML=Array.from({length:innerWidth<768?1:4},()=>'<div class="perf-skeleton" aria-hidden="true"></div>').join("");const render=()=>{renderPlacement(placement,findSection(heading));delete grid.dataset.perfPending;grid.removeAttribute("aria-busy");window.dispatchEvent(new Event("store:cards-rendered"))};if(near){pending.set(grid,render);near.observe(grid)}else render()}
+  function flush(){for(const [grid,render] of pending){near?.unobserve(grid);pending.delete(grid);render()}}
+  if(page==="home"||!page){queuePlacement("home-flash","Flash Deals");queuePlacement("home-featured","Featured Tech Collections")}
   if(page==="accessories"){
     const section=[...document.querySelectorAll("main section")].find(node=>node.querySelector("h3")&&node.querySelectorAll("h3").length>3);
     if(section){const grid=section.querySelector(".grid");if(grid){grid.dataset.productsSection="accessories";grid.innerHTML=unique(products().filter(product=>product.placements?.accessories!=null)).sort((a,b)=>a.placements.accessories-b.placements.accessories).map(card).join("")}}
   }
   const countdownText=remaining=>{const seconds=Math.max(0,Math.floor(remaining/1000)),days=Math.floor(seconds/86400),hours=Math.floor(seconds%86400/3600),minutes=Math.floor(seconds%3600/60),rest=seconds%60;return `${days}:${String(hours).padStart(2,"0")}:${String(minutes).padStart(2,"0")}:${String(rest).padStart(2,"0")}`};
   if(page==="home"||!page||page==="accessories"||page==="products"){
-    let expiredRendered=false;setInterval(()=>{document.querySelectorAll(".catalog-offer-countdown[data-offer-end]").forEach(node=>{const end=Number(node.dataset.offerEnd);if(!Number.isFinite(end)||end<=0)return;const remaining=end-Date.now();node.textContent=`${language==="ar"?"ينتهي خلال":"Ends in"} ${countdownText(remaining)}`;if(remaining<=0&&!expiredRendered){expiredRendered=true;setTimeout(()=>location.reload(),50)}})},1000);
-    let offerSignature=products().map(product=>`${product.id}:${offerState(product).active}`).join("|");setInterval(()=>{const next=products().map(product=>`${product.id}:${offerState(product).active}`).join("|");if(next!==offerSignature){offerSignature=next;location.reload()}},60000);
+    const signature=()=>products().map(product=>`${product.id}:${offerState(product).active}`).join("|");
+    let offerSignature=signature();
+    function checkOffers(){if(document.hidden)return;const next=signature();if(next!==offerSignature){offerSignature=next;location.reload()}}
+    const hasOffers=products().some(product=>product.offer?.enabled||product.oldPrice>product.price);
+    if(hasOffers)setInterval(checkOffers,60000);
+    document.addEventListener("visibilitychange",()=>{if(!document.hidden)checkOffers()});
   }
   document.addEventListener("click",event=>{const target=event.target.closest("[data-product-id] img, [data-product-id] h3");if(!target)return;location.href=`product.html?id=${encodeURIComponent(target.closest("[data-product-id]").dataset.productId)}`});
   document.addEventListener("keydown",event=>{if(!["Enter"," "].includes(event.key)||!event.target.matches("[data-product-id] h3"))return;event.preventDefault();location.href=`product.html?id=${encodeURIComponent(event.target.closest("[data-product-id]").dataset.productId)}`});
-  window.StoreCatalogUI={card,products,renderPlacement,unique};
+  window.StoreCatalogUI={card,products,renderPlacement,unique,flush};
 })();

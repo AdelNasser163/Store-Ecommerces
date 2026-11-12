@@ -33,14 +33,14 @@
     const isWished = options.wished ?? wished(id), url = `product.html?id=${encodeURIComponent(id)}`, fallback = store?.imageFallback || "assets/images/logo.png";
     let reference = String(source.image || fallback);
     if (variant && reference === "assets/images/accessory-iphone.jpg") reference = "assets/images/accessory-iphone_web.jpg";
-    const image = reference.startsWith("idb:") ? `src="${escape(fallback)}" data-image-ref="${escape(reference)}"` : `src="${escape(reference)}"`;
+    const image = reference.startsWith("idb:") ? `src="${escape(fallback)}" data-image-ref="${escape(reference)}"` : root.AlMumezImages?.attributes(reference) || `src="${escape(reference)}"`;
     const badge = text[source.badge] || "", flash = effective.active && source.placements?.["home-flash"] != null;
     const claim = Math.max(0, Math.min(100, Number(effective.claimed) || 0));
     const action = options.actionHtml || `<button class="hb-card-add product-action" type="button" data-add="${escape(id)}" data-add-to-cart="${escape(id)}" aria-label="${escape(stock ? text.add : text.out)} — ${escape(name)}" ${stock ? "" : "disabled"}><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span><span>${stock ? text.add : text.out}</span></button>`;
     const saving = old > price ? `${text.save} <bdi>${money(old - price, lang)}</bdi>` : source.badge === "official-warranty" ? text.warranty : text.details;
     const hasRating = variant ? rating > 0 : rating || reviews;
     return `<article class="hb-card${options.dark ? " hb-card--dark" : ""}${variant ? ` hb-card--${escape(variant)}` : ""} product-card catalog-product-card" data-product-card data-product-id="${escape(id)}" data-category="${escape(source.category || "")}" data-search="${escape(`${name} ${brand} ${category}`.toLowerCase())}">
-      <div class="hb-card-media"><a class="hb-card-image-link" href="${url}" aria-label="${escape(name)}"><img ${image} width="600" height="600" ${options.eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async" alt="${escape(name)}" onerror="this.onerror=null;this.src='${escape(fallback)}'"></a>
+      <div class="hb-card-media"><a class="hb-card-image-link" href="${url}" aria-label="${escape(name)}"><img ${image} width="600" height="600" ${options.eager ? 'loading="eager"' : 'loading="lazy"'} decoding="async" alt="${escape(name)}" onerror="this.onerror=null;this.srcset='';this.src='${escape(fallback)}'"></a>
       <button class="hb-card-wish product-wish${isWished ? " is-active" : ""}" type="button" data-wish="${escape(id)}" data-toggle-wishlist="${escape(id)}" aria-label="${escape(isWished ? text.unwish : text.wish)} — ${escape(name)}" aria-pressed="${Boolean(isWished)}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
       <div class="hb-card-badges">${discount ? `<span class="hb-card-badge hb-card-badge--sale"><bdi>${variant ? "−" : ""}${discount}%</bdi>${variant ? "" : ` ${text.off}`}</span>` : ""}${!stock ? `<span class="hb-card-badge hb-card-badge--out">${text.out}</span>` : badge ? `<span class="hb-card-badge">${escape(badge)}</span>` : ""}</div></div>
       <div class="hb-card-body"><div class="hb-card-meta"><bdi>${escape(brand)}</bdi><span>${escape(category)}</span></div>
@@ -85,6 +85,7 @@
   }
   new MutationObserver(refreshLanguage).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
   function tick() {
+    if (document.hidden) return;
     const text = copy[language()];
     let expired = false;
     document.querySelectorAll("[data-hb-offer-end]").forEach((node) => {
@@ -102,11 +103,16 @@
       if (records.some((record) => [...record.addedNodes].some((node) => node.nodeType === 1))) {
         decorate();
         tick();
+        if(!clock&&document.querySelector('[data-hb-offer-end]'))syncClock();
       }
     }).observe(document.querySelector("main") || document.body, { childList: true, subtree: true });
   }
   root.AlMumezProductCard = { render };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount);
   else mount();
-  setInterval(tick, 1e3);
+  let clock=0;
+  function syncClock(){if(clock)clearInterval(clock);clock=0;if(!document.hidden&&document.querySelector('[data-hb-offer-end]')){tick();clock=setInterval(tick,1000)}}
+  document.addEventListener('visibilitychange',syncClock);
+  window.addEventListener('store:cards-rendered',syncClock);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',syncClock);else syncClock();
 })(globalThis);

@@ -20,7 +20,9 @@
       ? (language === "ar" ? "آيفون 17 برو ماكس" : "iPhone 17 Pro Max")
       : local.name;
     const unified = document.body.classList.contains("pg-unified");
-    return `<div class="${side ? "hb-side-link" : "hb-slide is-active"}"><img src="assets/images/${escape(images[product.id])}" width="${side ? 210 : 296}" height="${side ? 130 : unified ? 290 : 382}" ${side ? 'loading="lazy"' : 'fetchpriority="high"'} alt="${escape(alt)}"></div>`;
+    const source = "assets/images/" + images[product.id];
+    const attributes = window.AlMumezImages?.attributes(source,{sizes:side?'220px':'(max-width:639px) 258px, 284px'}) || `src="${escape(source)}"`;
+    return `<div class="${side ? "hb-side-link" : "hb-slide is-active"}"><img ${attributes} width="${side ? 210 : 296}" height="${side ? 130 : unified ? 290 : 382}" decoding="async" ${side ? 'loading="lazy"' : 'fetchpriority="high"'} alt="${escape(alt)}"></div>`;
   }
 
   function render() {
