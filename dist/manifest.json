@@ -115,8 +115,8 @@
     "criticalBytes": 52989
   },
   "admin-orders.html": {
-    "css": "dist/admin-orders.29a11670487b.css",
-    "js": "dist/admin-orders.cf712fda1b27.js",
+    "css": "dist/admin-orders.81953f1a6fda.css",
+    "js": "dist/admin-orders.698d420dc58f.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -429,7 +429,7 @@
         "js/vendor/rb-islands.js"
       ]
     },
-    "criticalBytes": 149709
+    "criticalBytes": 149782
   },
   "reset-password.html": {
     "css": "dist/auth.d9c3f330d4ac.css",
