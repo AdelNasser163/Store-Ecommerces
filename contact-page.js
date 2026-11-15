@@ -13,7 +13,7 @@
     status.hidden=false;status.className="contact-status";
     if(!window.AlMumezSupport?.ready){status.textContent=text().notConnected;return}
     const submit=form.querySelector('[type="submit"]');if(submit.disabled)return;submit.disabled=true;status.textContent=text().sending;
-    try{await window.AlMumezSupport.submit(Object.fromEntries(new FormData(form)));status.classList.add("is-success");status.textContent=text().sent;form.reset();count.textContent="0"}
+    try{await window.AlMumezSupport.submit(Object.fromEntries(new FormData(form)));status.classList.add("is-success");status.textContent=window.AlMumezSupport.demo?(language()==='ar'?'تم حفظ الطلب التجريبي. هتلاقيه في رسائل الداشبورد في نفس المتصفح.':'Demo request saved. Find it in the dashboard inbox in this browser.'):text().sent;form.reset();count.textContent="0"}
     catch{status.classList.add("is-error");status.textContent=text().sendError}
     finally{submit.disabled=false;status.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:"nearest"})}
   });

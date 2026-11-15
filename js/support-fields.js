@@ -1,5 +1,6 @@
 (function(){
  const form=document.querySelector('[data-contact-form]');if(!form)return;
+ if(window.AlMumezSupport?.demo){const notice=document.createElement('p');notice.className='contact-status';notice.setAttribute('role','note');form.prepend(notice);const translateNotice=()=>notice.textContent=document.documentElement.lang==='ar'?'وضع تجريبي: الطلب يُحفظ في هذا المتصفح فقط. استخدم بيانات اختبار؛ لن يُرسل لفريق الدعم.':'Demo mode: requests stay in this browser only. Use test details; nothing is sent to the support team.';translateNotice();new MutationObserver(translateNotice).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});}
  const subject=form.elements.subject,order=form.elements.orderNumber,orderWrap=order.closest('.contact-field');
  form.elements.name.maxLength=100;form.elements.email.maxLength=254;order.maxLength=80;
  const wrap=document.createElement('div');wrap.className='contact-field';

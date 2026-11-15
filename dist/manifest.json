@@ -77,7 +77,7 @@
   },
   "admin-bundles.html": {
     "css": "dist/admin-bundles.d7d6332298f5.css",
-    "js": "dist/admin-bundles.9ded27619ddf.js",
+    "js": "dist/admin-bundles.f77a72db6a71.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -97,7 +97,7 @@
   },
   "admin-contact.html": {
     "css": "dist/admin-contact.bf1903ab5797.css",
-    "js": "dist/admin-contact.98afca9d9685.js",
+    "js": "dist/admin-contact.b3ea9359bafc.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -112,11 +112,11 @@
         "admin-contact.js"
       ]
     },
-    "criticalBytes": 50858
+    "criticalBytes": 50833
   },
   "admin-orders.html": {
     "css": "dist/admin-bundles.d7d6332298f5.css",
-    "js": "dist/admin-orders.a0fec5193e53.js",
+    "js": "dist/admin-orders.15de18b764dc.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -132,7 +132,7 @@
   },
   "admin-product.html": {
     "css": "dist/admin-bundles.d7d6332298f5.css",
-    "js": "dist/admin-product.21b6e503a29e.js",
+    "js": "dist/admin-product.044a50f6baf5.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -151,7 +151,7 @@
   },
   "admin-products.html": {
     "css": "dist/admin-bundles.d7d6332298f5.css",
-    "js": "dist/admin-products.85f307cafaca.js",
+    "js": "dist/admin-products.1c267faf7fa1.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -170,7 +170,7 @@
   },
   "admin.html": {
     "css": "dist/admin-bundles.d7d6332298f5.css",
-    "js": "dist/admin.931a31a1b8b9.js",
+    "js": "dist/admin.4a8d38b6023f.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -279,7 +279,7 @@
   },
   "contact.html": {
     "css": "dist/contact.8a8f78dc4331.css",
-    "js": "dist/contact.b44a4f5e70d8.js",
+    "js": "dist/contact.8161705b8651.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",

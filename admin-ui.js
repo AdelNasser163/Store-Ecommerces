@@ -159,7 +159,7 @@
     const nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach((node) => {
-      if (node.parentElement?.closest('script,style,[translate="no"]')) return;
+      if (node.parentElement?.closest('script,style,[translate="no"],[data-copy]')) return;
       const value = node.nodeValue.trim(),
         translated = ar[value];
       if (translated)
@@ -215,7 +215,7 @@
     records.forEach((record) =>
       record.addedNodes.forEach((node) => {
         if (node.nodeType === 1) translateRoot(node);
-        else if (node.nodeType === 3 && !node.parentElement?.closest('[translate="no"]') && ar[node.nodeValue.trim()])
+        else if (node.nodeType === 3 && !node.parentElement?.closest('[translate="no"],[data-copy]') && ar[node.nodeValue.trim()])
           node.nodeValue = ar[node.nodeValue.trim()];
       }),
     ),
@@ -518,7 +518,7 @@
       nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach((node) => {
-      if (!node.parentElement?.closest('script,style,[translate="no"]'))
+      if (!node.parentElement?.closest('script,style,[translate="no"],[data-copy]'))
         node.nodeValue = translateText(node.nodeValue);
     });
     root.querySelectorAll?.("input[placeholder]").forEach((input) => {
@@ -554,7 +554,7 @@
     records.forEach((record) =>
       record.addedNodes.forEach((node) => {
         if (node.nodeType === 1) translate(node);
-        else if (node.nodeType === 3 && !node.parentElement?.closest('[translate="no"]'))
+        else if (node.nodeType === 3 && !node.parentElement?.closest('[translate="no"],[data-copy]'))
           node.nodeValue = translateText(node.nodeValue);
       }),
     ),

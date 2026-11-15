@@ -1,6 +1,16 @@
 (function () {
   'use strict';
   const config = window.SupportConfig || {}, base = (config.url || '').replace(/\/$/, ''), key = config.publishableKey || '';
+  if(config.mode === 'demo') {
+    const demoKey='almumez-support-demo-v1';
+    const read=()=>{const data=JSON.parse(localStorage.getItem(demoKey)||'[]');if(!Array.isArray(data))throw new Error('DEMO_STORAGE_FAILED');return data;};
+    const write=rows=>{localStorage.setItem(demoKey,JSON.stringify(rows));window.dispatchEvent(new Event('support:updated'));};
+    window.AlMumezSupport={ready:true,demo:true,signedIn:()=>true,login:async()=>{},logout:async()=>{},
+      async submit(data){const rows=read();rows.unshift({id:crypto.randomUUID(),name:data.name.trim(),email:data.email.trim(),subject:data.subject,message:data.message.trim(),consent:!!data.consent,order_number:['order','returns'].includes(data.subject)?data.orderNumber?.trim()||null:null,product_name:['product','returns'].includes(data.subject)?data.productName?.trim()||null:null,status:'new',read_at:null,created_at:new Date().toISOString()});write(rows);},
+      async list({p_topic='',p_status='',p_query='',p_page=0}={}){const all=read(),query=p_query.toLowerCase(),rows=all.filter(r=>(!p_topic||r.subject===p_topic)&&(!p_status||r.status===p_status)&&[r.name,r.email,r.message,r.order_number,r.product_name].join(' ').toLowerCase().includes(query));return{rows:rows.slice(p_page*25,(p_page+1)*25),total:rows.length,unread:all.filter(r=>!r.read_at).length};},
+      async update(id,changes){const rows=read(),row=rows.find(r=>r.id===id);if(!row)throw new Error('REQUEST_FAILED');if(changes.status){if(!['new','in_progress','resolved'].includes(changes.status))throw new Error('REQUEST_FAILED');row.status=changes.status;}if(changes.read_at)row.read_at=changes.read_at;write(rows);return row;}
+    };return;
+  }
   let unsafe = key.startsWith('sb_secret_');
   try { unsafe ||= JSON.parse(atob(key.split('.')[1])).role === 'service_role'; } catch {}
   const ready = /^https:\/\/[^/]+$/.test(base) && !!key && !unsafe;
