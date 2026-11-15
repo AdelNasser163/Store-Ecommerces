@@ -96,8 +96,8 @@
     "criticalBytes": 53915
   },
   "admin-contact.html": {
-    "css": "dist/admin-contact.bf1903ab5797.css",
-    "js": "dist/admin-contact.b3ea9359bafc.js",
+    "css": "dist/admin-contact.b1b9fa35795b.css",
+    "js": "dist/admin-contact.78eae31d7785.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -112,7 +112,7 @@
         "admin-contact.js"
       ]
     },
-    "criticalBytes": 50833
+    "criticalBytes": 52989
   },
   "admin-orders.html": {
     "css": "dist/admin-bundles.d7d6332298f5.css",
@@ -427,7 +427,7 @@
         "js/vendor/rb-islands.js"
       ]
     },
-    "criticalBytes": 149782
+    "criticalBytes": 149709
   },
   "reset-password.html": {
     "css": "dist/auth.d9c3f330d4ac.css",
