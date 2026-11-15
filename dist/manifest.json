@@ -115,17 +115,19 @@
     "criticalBytes": 52989
   },
   "admin-orders.html": {
-    "css": "dist/admin-bundles.d7d6332298f5.css",
-    "js": "dist/admin-orders.15de18b764dc.js",
+    "css": "dist/admin-orders.29a11670487b.css",
+    "js": "dist/admin-orders.cf712fda1b27.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
         "style.css",
-        "admin-shell.css"
+        "admin-shell.css",
+        "admin-orders-theme.css"
       ],
       "scripts": [
         "admin-ui.js",
-        "admin-orders.js"
+        "admin-orders.js",
+        "admin-orders-view.js"
       ]
     },
     "criticalBytes": 53915

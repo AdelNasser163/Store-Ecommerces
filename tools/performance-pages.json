@@ -84,11 +84,13 @@
     "styles": [
       "assets/fonts/fonts.css",
       "style.css",
-      "admin-shell.css"
+      "admin-shell.css",
+      "admin-orders-theme.css"
     ],
     "scripts": [
       "admin-ui.js",
-      "admin-orders.js"
+      "admin-orders.js",
+      "admin-orders-view.js"
     ]
   },
   "admin-product.html": {
