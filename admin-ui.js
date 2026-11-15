@@ -159,7 +159,7 @@
     const nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach((node) => {
-      if (node.parentElement?.closest("script,style")) return;
+      if (node.parentElement?.closest('script,style,[translate="no"]')) return;
       const value = node.nodeValue.trim(),
         translated = ar[value];
       if (translated)
@@ -215,7 +215,7 @@
     records.forEach((record) =>
       record.addedNodes.forEach((node) => {
         if (node.nodeType === 1) translateRoot(node);
-        else if (node.nodeType === 3 && ar[node.nodeValue.trim()])
+        else if (node.nodeType === 3 && !node.parentElement?.closest('[translate="no"]') && ar[node.nodeValue.trim()])
           node.nodeValue = ar[node.nodeValue.trim()];
       }),
     ),
@@ -233,6 +233,14 @@
       if (!nav.querySelector('a[href="admin-contact.html"]')) {
         const link=document.createElement('a');link.href='admin-contact.html';link.innerHTML='<span class="material-symbols-outlined">mail</span><b>'+(arabic?'رسائل التواصل':'Contact inbox')+'</b>';nav.append(link);
       }
+      const messages = nav.querySelector('a[href="admin-contact.html"]');
+      const logout = nav.querySelector('[data-admin-logout]');
+      if (messages) {
+        messages.classList.toggle('is-active', document.body.dataset.page === 'admin-contact');
+        if (document.body.dataset.page === 'admin-contact') messages.setAttribute('aria-current','page');
+        if (logout) nav.insertBefore(messages, logout);
+      }
+      if (logout) nav.append(logout);
       if (!nav.querySelector(".admin-side-brand")) {
         const brand = document.createElement("div");
         brand.className = "admin-side-brand";
@@ -510,7 +518,7 @@
       nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach((node) => {
-      if (!node.parentElement?.closest("script,style"))
+      if (!node.parentElement?.closest('script,style,[translate="no"]'))
         node.nodeValue = translateText(node.nodeValue);
     });
     root.querySelectorAll?.("input[placeholder]").forEach((input) => {
@@ -546,7 +554,7 @@
     records.forEach((record) =>
       record.addedNodes.forEach((node) => {
         if (node.nodeType === 1) translate(node);
-        else if (node.nodeType === 3)
+        else if (node.nodeType === 3 && !node.parentElement?.closest('[translate="no"]'))
           node.nodeValue = translateText(node.nodeValue);
       }),
     ),

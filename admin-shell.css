@@ -1,0 +1,14 @@
+/* Keep the inbox and sign-out together at the foot of the shared sidebar. */
+@media(min-width:901px){
+ :is(.mobile-admin-dock,.orders-admin-dock){display:flex;flex-direction:column}
+ :is(.mobile-admin-dock,.orders-admin-dock)>*{flex-shrink:0}
+ :is(.mobile-admin-dock,.orders-admin-dock)>a[href="admin-contact.html"]{margin-top:auto!important}
+ :is(.mobile-admin-dock,.orders-admin-dock)>[data-admin-logout]{margin-top:0!important}
+}
+@media(max-width:900px){:is(.mobile-admin-dock,.orders-admin-dock){grid-template-columns:repeat(6,minmax(0,1fr))}}
+.ci-page .ci-main{max-width:none;margin:32px 0;padding:0 32px;min-height:65vh}
+.ci-page .ci-dashboard-footer{margin:32px;text-align:center}
+.ci-page .orders-admin-dock button{background:transparent;border:0;border-radius:12px}
+.ci-page .orders-admin-dock a{ text-decoration:none }
+.ci-page .dashboard-header button{font:inherit}
+@media(max-width:900px){.ci-page .ci-main{padding:0 16px;margin:28px 0}.ci-page .ci-dashboard-footer{margin:24px 16px 100px}}

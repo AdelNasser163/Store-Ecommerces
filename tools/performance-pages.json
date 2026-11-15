@@ -68,7 +68,8 @@
   "admin-bundles.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css"
+      "style.css",
+      "admin-shell.css"
     ],
     "scripts": [
       "admin-ui.js",
@@ -82,7 +83,8 @@
   "admin-orders.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css"
+      "style.css",
+      "admin-shell.css"
     ],
     "scripts": [
       "admin-ui.js",
@@ -92,7 +94,8 @@
   "admin-product.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css"
+      "style.css",
+      "admin-shell.css"
     ],
     "scripts": [
       "admin-ui.js",
@@ -105,7 +108,8 @@
   "admin-products.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css"
+      "style.css",
+      "admin-shell.css"
     ],
     "scripts": [
       "admin-ui.js",
@@ -118,7 +122,8 @@
   "admin.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css"
+      "style.css",
+      "admin-shell.css"
     ],
     "scripts": [
       "admin-ui.js",
@@ -363,12 +368,13 @@
     "styles": [
       "assets/fonts/fonts.css",
       "style.css",
-      "site-theme.css",
-      "admin-contact.css"
+      "admin-contact.css",
+      "admin-shell.css"
     ],
     "scripts": [
       "support-config.js",
       "js/support-api.js",
+      "admin-ui.js",
       "admin-contact.js"
     ]
   }

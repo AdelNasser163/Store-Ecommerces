@@ -1,6 +1,6 @@
 {
   "about.html": {
-    "css": "dist/about.0f4741849cc8.css",
+    "css": "dist/about.f12a949205dd.css",
     "js": "dist/about.a2518cf8d134.js",
     "sources": {
       "styles": [
@@ -36,7 +36,7 @@
     "criticalBytes": 92776
   },
   "accessories.html": {
-    "css": "dist/accessories.37850a86d99d.css",
+    "css": "dist/accessories.c940e40f789b.css",
     "js": "dist/accessories.36eaf0c9f89a.js",
     "sources": {
       "styles": [
@@ -76,12 +76,13 @@
     "criticalBytes": 147324
   },
   "admin-bundles.html": {
-    "css": "dist/admin-bundles.efe9c6838e88.css",
-    "js": "dist/admin-bundles.f1862ba1c632.js",
+    "css": "dist/admin-bundles.d7d6332298f5.css",
+    "js": "dist/admin-bundles.9ded27619ddf.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
-        "style.css"
+        "style.css",
+        "admin-shell.css"
       ],
       "scripts": [
         "admin-ui.js",
@@ -95,30 +96,32 @@
     "criticalBytes": 53915
   },
   "admin-contact.html": {
-    "css": "dist/admin-contact.10fa71e71455.css",
-    "js": "dist/admin-contact.a94d13225520.js",
+    "css": "dist/admin-contact.bf1903ab5797.css",
+    "js": "dist/admin-contact.98afca9d9685.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
         "style.css",
-        "site-theme.css",
-        "admin-contact.css"
+        "admin-contact.css",
+        "admin-shell.css"
       ],
       "scripts": [
         "support-config.js",
         "js/support-api.js",
+        "admin-ui.js",
         "admin-contact.js"
       ]
     },
-    "criticalBytes": 46921
+    "criticalBytes": 50858
   },
   "admin-orders.html": {
-    "css": "dist/admin-bundles.efe9c6838e88.css",
-    "js": "dist/admin-orders.aaa70885bf79.js",
+    "css": "dist/admin-bundles.d7d6332298f5.css",
+    "js": "dist/admin-orders.a0fec5193e53.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
-        "style.css"
+        "style.css",
+        "admin-shell.css"
       ],
       "scripts": [
         "admin-ui.js",
@@ -128,12 +131,13 @@
     "criticalBytes": 53915
   },
   "admin-product.html": {
-    "css": "dist/admin-bundles.efe9c6838e88.css",
-    "js": "dist/admin-product.a3985c8a2d52.js",
+    "css": "dist/admin-bundles.d7d6332298f5.css",
+    "js": "dist/admin-product.21b6e503a29e.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
-        "style.css"
+        "style.css",
+        "admin-shell.css"
       ],
       "scripts": [
         "admin-ui.js",
@@ -146,12 +150,13 @@
     "criticalBytes": 53915
   },
   "admin-products.html": {
-    "css": "dist/admin-bundles.efe9c6838e88.css",
-    "js": "dist/admin-products.f10c03b3e7bb.js",
+    "css": "dist/admin-bundles.d7d6332298f5.css",
+    "js": "dist/admin-products.85f307cafaca.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
-        "style.css"
+        "style.css",
+        "admin-shell.css"
       ],
       "scripts": [
         "admin-ui.js",
@@ -164,12 +169,13 @@
     "criticalBytes": 53915
   },
   "admin.html": {
-    "css": "dist/admin-bundles.efe9c6838e88.css",
-    "js": "dist/admin.ab681075e0b0.js",
+    "css": "dist/admin-bundles.d7d6332298f5.css",
+    "js": "dist/admin.931a31a1b8b9.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
-        "style.css"
+        "style.css",
+        "admin-shell.css"
       ],
       "scripts": [
         "admin-ui.js",
@@ -182,7 +188,7 @@
     "criticalBytes": 53915
   },
   "auth.html": {
-    "css": "dist/auth.08360999a1ed.css",
+    "css": "dist/auth.d9c3f330d4ac.css",
     "js": "dist/auth.5b9408038e42.js",
     "sources": {
       "styles": [
@@ -203,7 +209,7 @@
     "criticalBytes": 67840
   },
   "blog.html": {
-    "css": "dist/blog.4a2fbb82e371.css",
+    "css": "dist/blog.1f4033e69f4d.css",
     "js": "dist/blog.d4a8623b1f7c.js",
     "sources": {
       "styles": [
@@ -239,7 +245,7 @@
     "criticalBytes": 92409
   },
   "checkout.html": {
-    "css": "dist/auth.08360999a1ed.css",
+    "css": "dist/auth.d9c3f330d4ac.css",
     "js": "dist/checkout.87b84e26e4d3.js",
     "sources": {
       "styles": [
@@ -272,7 +278,7 @@
     "criticalBytes": 93147
   },
   "contact.html": {
-    "css": "dist/contact.89312e643ffd.css",
+    "css": "dist/contact.8a8f78dc4331.css",
     "js": "dist/contact.b44a4f5e70d8.js",
     "sources": {
       "styles": [
@@ -311,7 +317,7 @@
     "criticalBytes": 90398
   },
   "forgot-password.html": {
-    "css": "dist/auth.08360999a1ed.css",
+    "css": "dist/auth.d9c3f330d4ac.css",
     "js": "dist/forgot-password.be198c2aee6f.js",
     "sources": {
       "styles": [
@@ -340,7 +346,7 @@
     "criticalBytes": 88861
   },
   "index.html": {
-    "css": "dist/index.368c7cd4f0c8.css",
+    "css": "dist/index.0099a686b635.css",
     "js": "dist/index.baa705d957a9.js",
     "sources": {
       "styles": [
@@ -381,7 +387,7 @@
     "criticalBytes": 132631
   },
   "product.html": {
-    "css": "dist/product.111ad3f7b928.css",
+    "css": "dist/product.54df6e9de301.css",
     "js": "dist/product.45b2aa8289d5.js",
     "sources": {
       "styles": [
@@ -421,10 +427,10 @@
         "js/vendor/rb-islands.js"
       ]
     },
-    "criticalBytes": 149605
+    "criticalBytes": 149782
   },
   "reset-password.html": {
-    "css": "dist/auth.08360999a1ed.css",
+    "css": "dist/auth.d9c3f330d4ac.css",
     "js": "dist/forgot-password.be198c2aee6f.js",
     "sources": {
       "styles": [
