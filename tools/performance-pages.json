@@ -226,7 +226,10 @@
       "js/product-card.js",
       "catalog.js",
       "main.js",
+      "support-config.js",
+      "js/support-api.js",
       "contact-page.js",
+      "js/support-fields.js",
       "js/vendor/gsap.min.js",
       "js/vendor/ScrollTrigger.min.js",
       "js/vendor/lenis.min.js",
@@ -354,6 +357,19 @@
       "js/vendor/lenis.min.js",
       "js/fx.js",
       "js/vendor/rb-islands.js"
+    ]
+  },
+  "admin-contact.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "site-theme.css",
+      "admin-contact.css"
+    ],
+    "scripts": [
+      "support-config.js",
+      "js/support-api.js",
+      "admin-contact.js"
     ]
   }
 }

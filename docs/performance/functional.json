@@ -67,6 +67,11 @@
     "errors": []
   },
   {
+    "file": "admin-contact.html",
+    "status": 200,
+    "errors": []
+  },
+  {
     "file": "admin-orders.html",
     "status": 200,
     "errors": []

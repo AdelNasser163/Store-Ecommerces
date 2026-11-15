@@ -199,13 +199,14 @@
       .querySelector("[data-admin-logout]")
       .addEventListener("click", () => {
         sessionStorage.removeItem("almumez-admin");
+      Object.keys(sessionStorage).filter(key=>key.startsWith("almumez-support-session:")).forEach(key=>sessionStorage.removeItem(key));
         location.href = "admin.html";
       });
     header
       .querySelectorAll("[data-admin-notifications]")
       .forEach((button) =>
         button.addEventListener("click", () =>
-          alert(arabic ? "لا توجد إشعارات جديدة" : "No new notifications"),
+          location.assign("admin-contact.html"),
         ),
       );
   }
@@ -229,6 +230,9 @@
   document
     .querySelectorAll(".mobile-admin-dock,.orders-admin-dock")
     .forEach((nav) => {
+      if (!nav.querySelector('a[href="admin-contact.html"]')) {
+        const link=document.createElement('a');link.href='admin-contact.html';link.innerHTML='<span class="material-symbols-outlined">mail</span><b>'+(arabic?'رسائل التواصل':'Contact inbox')+'</b>';nav.append(link);
+      }
       if (!nav.querySelector(".admin-side-brand")) {
         const brand = document.createElement("div");
         brand.className = "admin-side-brand";
@@ -276,6 +280,7 @@
       event.preventDefault();
       event.stopImmediatePropagation();
       sessionStorage.removeItem("almumez-admin");
+      Object.keys(sessionStorage).filter(key=>key.startsWith("almumez-support-session:")).forEach(key=>sessionStorage.removeItem(key));
       location.replace("admin.html");
     },
     true,

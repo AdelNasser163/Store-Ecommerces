@@ -77,7 +77,7 @@
   },
   "admin-bundles.html": {
     "css": "dist/admin-bundles.efe9c6838e88.css",
-    "js": "dist/admin-bundles.787cc9123f5b.js",
+    "js": "dist/admin-bundles.f1862ba1c632.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -94,9 +94,27 @@
     },
     "criticalBytes": 53915
   },
+  "admin-contact.html": {
+    "css": "dist/admin-contact.10fa71e71455.css",
+    "js": "dist/admin-contact.a94d13225520.js",
+    "sources": {
+      "styles": [
+        "assets/fonts/fonts.css",
+        "style.css",
+        "site-theme.css",
+        "admin-contact.css"
+      ],
+      "scripts": [
+        "support-config.js",
+        "js/support-api.js",
+        "admin-contact.js"
+      ]
+    },
+    "criticalBytes": 46921
+  },
   "admin-orders.html": {
     "css": "dist/admin-bundles.efe9c6838e88.css",
-    "js": "dist/admin-orders.f249556d9a87.js",
+    "js": "dist/admin-orders.aaa70885bf79.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -111,7 +129,7 @@
   },
   "admin-product.html": {
     "css": "dist/admin-bundles.efe9c6838e88.css",
-    "js": "dist/admin-product.b75d5a995ca3.js",
+    "js": "dist/admin-product.a3985c8a2d52.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -129,7 +147,7 @@
   },
   "admin-products.html": {
     "css": "dist/admin-bundles.efe9c6838e88.css",
-    "js": "dist/admin-products.03b5e103f97f.js",
+    "js": "dist/admin-products.f10c03b3e7bb.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -147,7 +165,7 @@
   },
   "admin.html": {
     "css": "dist/admin-bundles.efe9c6838e88.css",
-    "js": "dist/admin.ef63a911439f.js",
+    "js": "dist/admin.ab681075e0b0.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -255,7 +273,7 @@
   },
   "contact.html": {
     "css": "dist/contact.89312e643ffd.css",
-    "js": "dist/contact.41b47580c6b1.js",
+    "js": "dist/contact.b44a4f5e70d8.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -279,7 +297,10 @@
         "js/product-card.js",
         "catalog.js",
         "main.js",
+        "support-config.js",
+        "js/support-api.js",
         "contact-page.js",
+        "js/support-fields.js",
         "js/vendor/gsap.min.js",
         "js/vendor/ScrollTrigger.min.js",
         "js/vendor/lenis.min.js",
@@ -400,7 +421,7 @@
         "js/vendor/rb-islands.js"
       ]
     },
-    "criticalBytes": 149709
+    "criticalBytes": 149605
   },
   "reset-password.html": {
     "css": "dist/auth.08360999a1ed.css",
