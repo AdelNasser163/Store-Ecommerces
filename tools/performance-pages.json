@@ -23,11 +23,7 @@
       "catalog.js",
       "main.js",
       "about-page.js",
-      "js/vendor/gsap.min.js",
-      "js/vendor/ScrollTrigger.min.js",
-      "js/vendor/lenis.min.js",
-      "js/fx.js",
-      "js/vendor/rb-islands.js"
+      "js/fx.js"
     ]
   },
   "accessories.html": {
@@ -58,11 +54,7 @@
       "js/products-data.js",
       "js/products-page.js",
       "js/site-chrome-theme.js",
-      "js/vendor/gsap.min.js",
-      "js/vendor/ScrollTrigger.min.js",
-      "js/vendor/lenis.min.js",
-      "js/fx.js",
-      "js/vendor/rb-islands.js"
+      "js/fx.js"
     ]
   },
   "admin-bundles.html": {
@@ -175,11 +167,7 @@
       "catalog.js",
       "main.js",
       "blog-page.js",
-      "js/vendor/gsap.min.js",
-      "js/vendor/ScrollTrigger.min.js",
-      "js/vendor/lenis.min.js",
-      "js/fx.js",
-      "js/vendor/rb-islands.js"
+      "js/fx.js"
     ]
   },
   "checkout.html": {
@@ -203,11 +191,7 @@
       "data/store.js",
       "catalog.js",
       "main.js",
-      "js/vendor/gsap.min.js",
-      "js/vendor/ScrollTrigger.min.js",
-      "js/vendor/lenis.min.js",
-      "js/fx.js",
-      "js/vendor/rb-islands.js"
+      "js/fx.js"
     ]
   },
   "contact.html": {
@@ -237,11 +221,7 @@
       "js/support-api.js",
       "contact-page.js",
       "js/support-fields.js",
-      "js/vendor/gsap.min.js",
-      "js/vendor/ScrollTrigger.min.js",
-      "js/vendor/lenis.min.js",
-      "js/fx.js",
-      "js/vendor/rb-islands.js"
+      "js/fx.js"
     ]
   },
   "forgot-password.html": {
@@ -261,11 +241,7 @@
       "shared-site-header.js",
       "shared-site-footer.js",
       "auth.js",
-      "js/vendor/gsap.min.js",
-      "js/vendor/ScrollTrigger.min.js",
-      "js/vendor/lenis.min.js",
-      "js/fx.js",
-      "js/vendor/rb-islands.js"
+      "js/fx.js"
     ]
   },
   "index.html": {
@@ -296,12 +272,8 @@
       "js/page-theme.js",
       "js/mobile-product-rails.js",
       "js/home-card-quantity.js",
-      "js/vendor/gsap.min.js",
-      "js/vendor/ScrollTrigger.min.js",
-      "js/vendor/lenis.min.js",
       "js/hero-b.js",
-      "js/fx.js",
-      "js/vendor/rb-islands.js"
+      "js/fx.js"
     ]
   },
   "product.html": {
@@ -335,11 +307,7 @@
       "bundle-cart.js",
       "js/site-chrome-theme.js",
       "js/product-detail-theme.js",
-      "js/vendor/gsap.min.js",
-      "js/vendor/ScrollTrigger.min.js",
-      "js/vendor/lenis.min.js",
-      "js/fx.js",
-      "js/vendor/rb-islands.js"
+      "js/fx.js"
     ]
   },
   "reset-password.html": {
@@ -359,11 +327,7 @@
       "shared-site-header.js",
       "shared-site-footer.js",
       "auth.js",
-      "js/vendor/gsap.min.js",
-      "js/vendor/ScrollTrigger.min.js",
-      "js/vendor/lenis.min.js",
-      "js/fx.js",
-      "js/vendor/rb-islands.js"
+      "js/fx.js"
     ]
   },
   "admin-contact.html": {

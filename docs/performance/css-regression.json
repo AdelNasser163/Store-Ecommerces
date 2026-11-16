@@ -14,31 +14,37 @@
   {
     "file": "admin-bundles.html",
     "width": 390,
-    "elements": 157,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-contact.html",
+    "width": 390,
+    "elements": 137,
     "differences": 0
   },
   {
     "file": "admin-orders.html",
     "width": 390,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
     "file": "admin-product.html",
     "width": 390,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
     "file": "admin-products.html",
     "width": 390,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
     "file": "admin.html",
     "width": 390,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
@@ -62,7 +68,7 @@
   {
     "file": "contact.html",
     "width": 390,
-    "elements": 253,
+    "elements": 257,
     "differences": 0
   },
   {
@@ -104,31 +110,37 @@
   {
     "file": "admin-bundles.html",
     "width": 820,
-    "elements": 157,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-contact.html",
+    "width": 820,
+    "elements": 137,
     "differences": 0
   },
   {
     "file": "admin-orders.html",
     "width": 820,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
     "file": "admin-product.html",
     "width": 820,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
     "file": "admin-products.html",
     "width": 820,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
     "file": "admin.html",
     "width": 820,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
@@ -152,7 +164,7 @@
   {
     "file": "contact.html",
     "width": 820,
-    "elements": 253,
+    "elements": 257,
     "differences": 0
   },
   {
@@ -194,31 +206,37 @@
   {
     "file": "admin-bundles.html",
     "width": 1440,
-    "elements": 157,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-contact.html",
+    "width": 1440,
+    "elements": 137,
     "differences": 0
   },
   {
     "file": "admin-orders.html",
     "width": 1440,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
     "file": "admin-product.html",
     "width": 1440,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
     "file": "admin-products.html",
     "width": 1440,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
     "file": "admin.html",
     "width": 1440,
-    "elements": 157,
+    "elements": 160,
     "differences": 0
   },
   {
@@ -242,7 +260,7 @@
   {
     "file": "contact.html",
     "width": 1440,
-    "elements": 253,
+    "elements": 257,
     "differences": 0
   },
   {

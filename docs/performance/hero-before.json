@@ -1,0 +1,62 @@
+[
+  {
+    "width": 390,
+    "run": 0,
+    "lcp": 2048,
+    "cls": 0,
+    "long": [
+      {
+        "start": 1829.7000000029802,
+        "duration": 104
+      },
+      {
+        "start": 1945.5,
+        "duration": 126
+      },
+      {
+        "start": 3959.5999999940395,
+        "duration": 251
+      },
+      {
+        "start": 4871.9000000059605,
+        "duration": 137
+      }
+    ],
+    "bytes": 784639,
+    "requests": 11,
+    "dcl": 4193.5,
+    "dom": 458,
+    "blockingProxy": 418,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "run": 0,
+    "lcp": 2248,
+    "cls": 0.003088567956157836,
+    "long": [
+      {
+        "start": 1810.2000000029802,
+        "duration": 94
+      },
+      {
+        "start": 1917,
+        "duration": 162
+      },
+      {
+        "start": 4176.70000000298,
+        "duration": 259
+      },
+      {
+        "start": 5062,
+        "duration": 144
+      }
+    ],
+    "bytes": 822021,
+    "requests": 13,
+    "dcl": 4422,
+    "dom": 464,
+    "blockingProxy": 459,
+    "errors": []
+  }
+]

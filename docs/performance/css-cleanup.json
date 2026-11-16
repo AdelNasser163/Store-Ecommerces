@@ -1,0 +1,104 @@
+[
+  {
+    "file": "about-page.css",
+    "duplicateRules": 0,
+    "beforeBytes": 7554,
+    "minifiedBytes": 7473
+  },
+  {
+    "file": "admin-contact.css",
+    "duplicateRules": 0,
+    "beforeBytes": 7866,
+    "minifiedBytes": 7854
+  },
+  {
+    "file": "admin-orders-theme.css",
+    "duplicateRules": 0,
+    "beforeBytes": 15146,
+    "minifiedBytes": 15137
+  },
+  {
+    "file": "admin-shell.css",
+    "duplicateRules": 0,
+    "beforeBytes": 1004,
+    "minifiedBytes": 907
+  },
+  {
+    "file": "blog-page.css",
+    "duplicateRules": 0,
+    "beforeBytes": 7316,
+    "minifiedBytes": 7281
+  },
+  {
+    "file": "catalog-theme.css",
+    "duplicateRules": 0,
+    "beforeBytes": 11585,
+    "minifiedBytes": 9837
+  },
+  {
+    "file": "contact-page.css",
+    "duplicateRules": 0,
+    "beforeBytes": 6787,
+    "minifiedBytes": 6741
+  },
+  {
+    "file": "fx.css",
+    "duplicateRules": 0,
+    "beforeBytes": 1724,
+    "minifiedBytes": 1258
+  },
+  {
+    "file": "hero-b.css",
+    "duplicateRules": 0,
+    "beforeBytes": 41831,
+    "minifiedBytes": 33878
+  },
+  {
+    "file": "mobile-product-rails.css",
+    "duplicateRules": 0,
+    "beforeBytes": 2247,
+    "minifiedBytes": 2098
+  },
+  {
+    "file": "page-theme.css",
+    "duplicateRules": 0,
+    "beforeBytes": 38814,
+    "minifiedBytes": 32227
+  },
+  {
+    "file": "performance.css",
+    "duplicateRules": 2,
+    "beforeBytes": 4344,
+    "minifiedBytes": 3915
+  },
+  {
+    "file": "product-card.css",
+    "duplicateRules": 0,
+    "beforeBytes": 22869,
+    "minifiedBytes": 20808
+  },
+  {
+    "file": "product-detail.css",
+    "duplicateRules": 0,
+    "beforeBytes": 15007,
+    "minifiedBytes": 14716
+  },
+  {
+    "file": "products-page.css",
+    "duplicateRules": 0,
+    "beforeBytes": 49996,
+    "minifiedBytes": 40209
+  },
+  {
+    "file": "site-navigation.css",
+    "duplicateRules": 0,
+    "beforeBytes": 18185,
+    "minifiedBytes": 17461
+  },
+  {
+    "file": "site-theme.css",
+    "duplicateRules": 0,
+    "beforeBytes": 10405,
+    "minifiedBytes": 8664
+  }
+]
