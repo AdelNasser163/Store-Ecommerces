@@ -1,7 +1,7 @@
 {
   "about.html": {
     "css": "dist/about.05123c96d0f2.css",
-    "js": "dist/about.ba077356b1d3.js",
+    "js": "dist/about.b2dd2b3757cb.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -36,7 +36,7 @@
   },
   "accessories.html": {
     "css": "dist/accessories.ff37fb230e41.css",
-    "js": "dist/accessories.733ba46f7107.js",
+    "js": "dist/accessories.d675a3c6f055.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -75,7 +75,7 @@
   },
   "admin-bundles.html": {
     "css": "dist/admin-bundles.af4215688be5.css",
-    "js": "dist/admin-bundles.f9db6342ec83.js",
+    "js": "dist/admin-bundles.65fff19f24c6.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -97,7 +97,7 @@
   },
   "admin-contact.html": {
     "css": "dist/admin-contact.4ad46d1b7c44.css",
-    "js": "dist/admin-contact.b31e1a08cdf6.js",
+    "js": "dist/admin-contact.099cd3dca00f.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -118,7 +118,7 @@
   },
   "admin-orders.html": {
     "css": "dist/admin-orders.c172cb78d2ed.css",
-    "js": "dist/admin-orders.b292788dac5a.js",
+    "js": "dist/admin-orders.78b40613ac24.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -138,7 +138,7 @@
   },
   "admin-product.html": {
     "css": "dist/admin-product.19a4e676dddc.css",
-    "js": "dist/admin-product.223d0359093b.js",
+    "js": "dist/admin-product.e70551829a5f.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -159,7 +159,7 @@
   },
   "admin-products.html": {
     "css": "dist/admin-products.f5b74ebde96b.css",
-    "js": "dist/admin-products.85bcb14f7fca.js",
+    "js": "dist/admin-products.41bd95bde822.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -180,7 +180,7 @@
   },
   "admin.html": {
     "css": "dist/admin.62bff89b4bef.css",
-    "js": "dist/admin.26028ac7d47e.js",
+    "js": "dist/admin.12313cde2e58.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -201,7 +201,7 @@
   },
   "auth.html": {
     "css": "dist/auth.a1c97eccd5f4.css",
-    "js": "dist/auth.8b625eb20ea7.js",
+    "js": "dist/auth.e23f2312563e.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -223,7 +223,7 @@
   },
   "blog.html": {
     "css": "dist/blog.6684ac345d9d.css",
-    "js": "dist/blog.d7f7cc58a05c.js",
+    "js": "dist/blog.26186cc5855d.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -258,7 +258,7 @@
   },
   "checkout.html": {
     "css": "dist/checkout.8949e8137ff8.css",
-    "js": "dist/checkout.c4225a0de2bd.js",
+    "js": "dist/checkout.43ed763c2929.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -290,7 +290,7 @@
   },
   "contact.html": {
     "css": "dist/contact.244f271f174b.css",
-    "js": "dist/contact.d0d897e1809b.js",
+    "js": "dist/contact.04723567c3f2.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -328,7 +328,7 @@
   },
   "forgot-password.html": {
     "css": "dist/forgot-password.4bc2f60e5de9.css",
-    "js": "dist/forgot-password.2909dd7d9671.js",
+    "js": "dist/forgot-password.459a55ff4d3b.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -354,7 +354,7 @@
   },
   "index.html": {
     "css": "dist/index.56f183dc1262.css",
-    "js": "dist/index.e572d1bd4139.js",
+    "js": "dist/index.bc8bf5599f89.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -394,7 +394,7 @@
   },
   "product.html": {
     "css": "dist/product.a63e45bcb4a0.css",
-    "js": "dist/product.b9752924fa5d.js",
+    "js": "dist/product.85e4312d27b9.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -436,7 +436,7 @@
   },
   "reset-password.html": {
     "css": "dist/reset-password.9e3814e836cc.css",
-    "js": "dist/forgot-password.2909dd7d9671.js",
+    "js": "dist/forgot-password.459a55ff4d3b.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
