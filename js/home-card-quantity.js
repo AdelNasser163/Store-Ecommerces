@@ -58,6 +58,7 @@
     new MutationObserver(schedule).observe(document.documentElement, {attributes:true, attributeFilter:['lang']});
     window.addEventListener('storage', schedule);
     window.addEventListener('pageshow', schedule);
+    window.addEventListener('store:cards-rendered', schedule);
     schedule();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);

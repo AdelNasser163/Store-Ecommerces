@@ -58,7 +58,7 @@
     if (footerLogo) footerLogo.src = 'assets/images/logo-footer.png';
     const clock = document.querySelector(".pg-deal-clock");
     function updateDealClock() {
-      if (!clock) return;
+      if (!clock || document.hidden) return;
       const deadlines = (window.StoreProducts?.read?.() || []).filter(product => product.placements?.["home-flash"] != null).map(product => window.StoreProducts.getEffectivePrice(product)).filter(offer => offer.active && offer.endsAt > Date.now()).map(offer => offer.endsAt);
       clock.hidden = !deadlines.length;
       if (!deadlines.length) return;
@@ -69,9 +69,12 @@
       clock.querySelectorAll("bdi").forEach((node, index) => { node.textContent = `${format(values[index])}${(ar ? ["س", "د", "ث"] : ["h", "m", "s"])[index]}`; });
     }
     updateDealClock();
-    setInterval(updateDealClock, 1000);
+    let clockTimer=0;
+    function resumeClock(){clearInterval(clockTimer);clockTimer=0;if(document.hidden)return;updateDealClock();if(!clock.hidden)clockTimer=setInterval(updateDealClock,1000)}
+    resumeClock();
+    document.addEventListener('visibilitychange',resumeClock);
     new MutationObserver(updateDealClock).observe(document.documentElement, {attributes:true, attributeFilter:["lang"]});
-    window.addEventListener("store:products-changed", updateDealClock);
+    window.addEventListener("store:products-changed", resumeClock);
   }
 
   // Placeholder footer destinations are text until a real page or social URL exists.
@@ -87,16 +90,16 @@
 
   const featured = document.querySelector('[data-products-section="home-featured"]');
   const tabs = document.querySelector(".pt-tabs");
-  let animation;
+  let featuredHeight=0;
+  if(featured&&window.ResizeObserver)new ResizeObserver(entries=>{featuredHeight=entries[0].contentRect.height}).observe(featured);
   tabs?.addEventListener("click", event => {
     if (!event.target.closest("button")) return;
     // Keep the existing filter handler and cached card nodes intact.
-    featured.style.minHeight = `${Math.ceil(featured.getBoundingClientRect().height)}px`;
+    featured.style.minHeight = `${Math.ceil(featuredHeight)}px`;
     requestAnimationFrame(() => {
-      animation?.kill();
       const cards = [...document.querySelectorAll('.pg-page .hb-card:not([hidden])')];
-      if (window.gsap && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        animation = window.gsap.fromTo(cards, { opacity: .3, y: 8 }, { opacity: 1, y: 0, duration: .28, stagger: .025, ease: "power3.out", clearProps: "opacity,visibility,transform" });
+      if (!matchMedia("(prefers-reduced-motion: reduce), (max-width:767px)").matches) {
+        cards.forEach((card,index)=>card.animate?.([{opacity:.3,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:280,delay:index*25,easing:'cubic-bezier(.22,1,.36,1)'}));
       }
       tabs.querySelectorAll("button").forEach(button => button.setAttribute("aria-pressed", String(button.classList.contains("filter-active"))));
       let empty = featured.querySelector(".pg-empty");
@@ -106,5 +109,6 @@
       } else empty?.remove();
     });
   }, true);
-  window.addEventListener("resize", () => { if (featured) featured.style.minHeight = ""; });
+  let resizeFrame=0;
+  window.addEventListener("resize", () => {if(!resizeFrame)resizeFrame=requestAnimationFrame(()=>{resizeFrame=0;if(featured)featured.style.minHeight=""})},{passive:true});
 })();

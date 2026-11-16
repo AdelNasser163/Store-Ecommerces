@@ -1,0 +1,55 @@
+{
+  "baselineCommit": "0b0fe3f",
+  "runsPerViewport": 3,
+  "method": "Chrome PerformanceObserver, local HTTP, CPU x4, latency 100ms, 200000 bytes/s download, fresh context, reduced motion, 18s after DCL. blockingProxy is not Lighthouse TBT.",
+  "viewports": [
+    {
+      "width": 390,
+      "before": {
+        "lcp": 9692,
+        "blockingProxy": 3154,
+        "cls": 0.004423950617283951,
+        "bytes": 1600842,
+        "requests": 35
+      },
+      "after": {
+        "lcp": 2064,
+        "blockingProxy": 343,
+        "cls": 0,
+        "bytes": 784070,
+        "requests": 11
+      },
+      "improvementPercent": {
+        "lcp": 78.70408584399505,
+        "blockingProxy": 89.12492073557388,
+        "cls": 100,
+        "bytes": 51.02139998825618,
+        "requests": 68.57142857142857
+      }
+    },
+    {
+      "width": 1440,
+      "before": {
+        "lcp": 9000,
+        "blockingProxy": 2233,
+        "cls": 0.0045018762659143514,
+        "bytes": 1756732,
+        "requests": 41
+      },
+      "after": {
+        "lcp": 1964,
+        "blockingProxy": 409,
+        "cls": 0.00181852280521262,
+        "bytes": 821452,
+        "requests": 13
+      },
+      "improvementPercent": {
+        "lcp": 78.17777777777778,
+        "blockingProxy": 81.68383340797133,
+        "cls": 59.60522462641985,
+        "bytes": 53.23976565577448,
+        "requests": 68.29268292682926
+      }
+    }
+  ]
+}

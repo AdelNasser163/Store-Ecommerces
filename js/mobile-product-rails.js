@@ -19,9 +19,10 @@
   rail.after(controls);
   const cards=()=>Array.from(rail.children).filter(node=>node.matches('.hb-card')&&!node.hidden);
   const rtl=()=>document.documentElement.dir==='rtl';
-  const offset=card=>{const box=rail.getBoundingClientRect(),item=card.getBoundingClientRect();return rtl()?item.right-box.right:item.left-box.left};
-  function nearest(items){let index=0,distance=Infinity;items.forEach((card,i)=>{const value=Math.abs(offset(card));if(value<distance){index=i;distance=value}});return index}
-  function align(card,behavior){if(card)rail.scrollBy({left:offset(card),behavior})}
+  let stride=1;
+  function measure(){stride=rail.clientWidth+(parseFloat(getComputedStyle(rail).columnGap)||0)}
+  function nearest(items){return Math.max(0,Math.min(items.length-1,Math.round(Math.abs(rail.scrollLeft)/stride)))}
+  function align(card,behavior){const index=cards().indexOf(card);if(index>=0)rail.scrollTo({left:index*stride*(rtl()?-1:1),behavior})}
   function move(step){if(!mobile.matches)return;const items=cards();align(items[Math.max(0,Math.min(items.length-1,nearest(items)+step))],reduce.matches?'auto':'smooth')}
   function sync(){
    const items=cards(),overflow=rail.scrollWidth>rail.clientWidth+2,current=nearest(items),ar=document.documentElement.lang==='ar';
@@ -30,17 +31,18 @@
    buttons[0].setAttribute('aria-label',ar?'المنتجات السابقة':'Previous products');
    buttons[1].setAttribute('aria-label',ar?'المنتجات التالية':'Next products');
    buttons[0].disabled=!overflow||current===0;buttons[1].disabled=!overflow||current>=items.length-1;
-   rail.classList.toggle('pg-product-rail--empty',items.length===0);
+   rail.classList.toggle('pg-product-rail--empty',items.length===0&&!rail.hasAttribute('data-perf-pending'));
   }
   let frame=0,resetPending=false;
-  function schedule(reset=false){resetPending=resetPending||reset;if(frame)return;frame=requestAnimationFrame(()=>{frame=0;if(resetPending&&mobile.matches)align(cards()[0],'auto');resetPending=false;sync()})}
+  function schedule(reset=false){resetPending=resetPending||reset;if(frame)return;frame=requestAnimationFrame(()=>{frame=0;if(resetPending){measure();if(mobile.matches)align(cards()[0],'auto')}resetPending=false;sync()})}
   rail.addEventListener('scroll',()=>schedule(),{passive:true});
   rail.addEventListener('keydown',event=>{if(event.target!==rail||!mobile.matches||!['ArrowLeft','ArrowRight'].includes(event.key))return;event.preventDefault();move((event.key==='ArrowRight'?1:-1)*(rtl()?-1:1))});
-  new MutationObserver(()=>schedule(true)).observe(rail,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']});
-  if(window.ResizeObserver)new ResizeObserver(()=>schedule()).observe(rail);
+  new MutationObserver(records=>{if(records.some(record=>record.type==='attributes'&&record.target.matches('.hb-card')||record.type==='childList'&&record.target===rail)){rail.classList.toggle('pg-product-rail--empty',cards().length===0&&!rail.hasAttribute('data-perf-pending'));schedule(true)}}).observe(rail,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']});
+  let measuredWidth=0;
+  if(window.ResizeObserver)new ResizeObserver(entries=>{const width=entries[0].contentRect.width;const changed=Math.abs(width-measuredWidth)>.5;measuredWidth=width;schedule(changed)}).observe(rail);
   instances.push(schedule);schedule(true);
  });
  new MutationObserver(()=>instances.forEach(schedule=>schedule(true))).observe(document.documentElement,{attributes:true,attributeFilter:['lang','dir']});
  mobile.addEventListener('change',()=>instances.forEach(schedule=>schedule(true)));
- window.addEventListener('resize',()=>instances.forEach(schedule=>schedule()));
+ window.addEventListener('resize',()=>instances.forEach(schedule=>schedule(true)),{passive:true});
 })();

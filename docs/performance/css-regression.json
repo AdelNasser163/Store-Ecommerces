@@ -1,0 +1,290 @@
+[
+  {
+    "file": "about.html",
+    "width": 390,
+    "elements": 213,
+    "differences": 0
+  },
+  {
+    "file": "accessories.html",
+    "width": 390,
+    "elements": 804,
+    "differences": 0
+  },
+  {
+    "file": "admin-bundles.html",
+    "width": 390,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-contact.html",
+    "width": 390,
+    "elements": 137,
+    "differences": 0
+  },
+  {
+    "file": "admin-orders.html",
+    "width": 390,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-product.html",
+    "width": 390,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-products.html",
+    "width": 390,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin.html",
+    "width": 390,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "auth.html",
+    "width": 390,
+    "elements": 66,
+    "differences": 0
+  },
+  {
+    "file": "blog.html",
+    "width": 390,
+    "elements": 252,
+    "differences": 0
+  },
+  {
+    "file": "checkout.html",
+    "width": 390,
+    "elements": 297,
+    "differences": 0
+  },
+  {
+    "file": "contact.html",
+    "width": 390,
+    "elements": 257,
+    "differences": 0
+  },
+  {
+    "file": "forgot-password.html",
+    "width": 390,
+    "elements": 125,
+    "differences": 0
+  },
+  {
+    "file": "index.html",
+    "width": 390,
+    "elements": 803,
+    "differences": 0
+  },
+  {
+    "file": "product.html",
+    "width": 390,
+    "elements": 353,
+    "differences": 0
+  },
+  {
+    "file": "reset-password.html",
+    "width": 390,
+    "elements": 135,
+    "differences": 0
+  },
+  {
+    "file": "about.html",
+    "width": 820,
+    "elements": 213,
+    "differences": 0
+  },
+  {
+    "file": "accessories.html",
+    "width": 820,
+    "elements": 804,
+    "differences": 0
+  },
+  {
+    "file": "admin-bundles.html",
+    "width": 820,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-contact.html",
+    "width": 820,
+    "elements": 137,
+    "differences": 0
+  },
+  {
+    "file": "admin-orders.html",
+    "width": 820,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-product.html",
+    "width": 820,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-products.html",
+    "width": 820,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin.html",
+    "width": 820,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "auth.html",
+    "width": 820,
+    "elements": 66,
+    "differences": 0
+  },
+  {
+    "file": "blog.html",
+    "width": 820,
+    "elements": 252,
+    "differences": 0
+  },
+  {
+    "file": "checkout.html",
+    "width": 820,
+    "elements": 297,
+    "differences": 0
+  },
+  {
+    "file": "contact.html",
+    "width": 820,
+    "elements": 257,
+    "differences": 0
+  },
+  {
+    "file": "forgot-password.html",
+    "width": 820,
+    "elements": 125,
+    "differences": 0
+  },
+  {
+    "file": "index.html",
+    "width": 820,
+    "elements": 803,
+    "differences": 0
+  },
+  {
+    "file": "product.html",
+    "width": 820,
+    "elements": 353,
+    "differences": 0
+  },
+  {
+    "file": "reset-password.html",
+    "width": 820,
+    "elements": 135,
+    "differences": 0
+  },
+  {
+    "file": "about.html",
+    "width": 1440,
+    "elements": 213,
+    "differences": 0
+  },
+  {
+    "file": "accessories.html",
+    "width": 1440,
+    "elements": 804,
+    "differences": 0
+  },
+  {
+    "file": "admin-bundles.html",
+    "width": 1440,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-contact.html",
+    "width": 1440,
+    "elements": 137,
+    "differences": 0
+  },
+  {
+    "file": "admin-orders.html",
+    "width": 1440,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-product.html",
+    "width": 1440,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin-products.html",
+    "width": 1440,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "admin.html",
+    "width": 1440,
+    "elements": 160,
+    "differences": 0
+  },
+  {
+    "file": "auth.html",
+    "width": 1440,
+    "elements": 66,
+    "differences": 0
+  },
+  {
+    "file": "blog.html",
+    "width": 1440,
+    "elements": 252,
+    "differences": 0
+  },
+  {
+    "file": "checkout.html",
+    "width": 1440,
+    "elements": 297,
+    "differences": 0
+  },
+  {
+    "file": "contact.html",
+    "width": 1440,
+    "elements": 257,
+    "differences": 0
+  },
+  {
+    "file": "forgot-password.html",
+    "width": 1440,
+    "elements": 125,
+    "differences": 0
+  },
+  {
+    "file": "index.html",
+    "width": 1440,
+    "elements": 803,
+    "differences": 0
+  },
+  {
+    "file": "product.html",
+    "width": 1440,
+    "elements": 353,
+    "differences": 0
+  },
+  {
+    "file": "reset-password.html",
+    "width": 1440,
+    "elements": 135,
+    "differences": 0
+  }
+]

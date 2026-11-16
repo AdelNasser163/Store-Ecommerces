@@ -35,21 +35,6 @@ html.lenis, html.lenis body { height: auto; }
   transform-origin: center center;
 }
 
-/* page transition curtain */
-.fx-curtain {
-  position: fixed; inset: 0; z-index: 4000; pointer-events: none;
-  background: radial-gradient(1200px 600px at 50% 40%, #12305a 0%, #0b192e 60%);
-}
-.fx-curtain[style*="visibility: visible"] { pointer-events: all; }
-
-/* hero particles layer */
-.rb-hero-particles { position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .75; }
-
-/* click sparks (full-viewport, click-through) */
-.rb-sparks-root { position: fixed; inset: 0; z-index: 3500; pointer-events: none; }
-.rb-sparks, .rb-sparks * { width: 100%; height: 100%; pointer-events: none !important; }
-html.fx-reduce .rb-sparks-root { display: none; }
-
 /* stats section */
 .rb-stats { margin-block: .25rem; }
 

@@ -1,0 +1,361 @@
+{
+  "about.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "about-page.css",
+      "site-navigation.css",
+      "site-theme.css",
+      "cart-drawer.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "js/site-navigation.js",
+      "js/site-theme.js",
+      "shared-site-header.js",
+      "shared-site-footer.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "js/product-card.js",
+      "catalog.js",
+      "main.js",
+      "about-page.js",
+      "js/fx.js",
+      "js/cart-drawer-view.js"
+    ]
+  },
+  "accessories.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "product-card.css",
+      "hero-b.css",
+      "page-theme.css",
+      "catalog-theme.css",
+      "site-navigation.css",
+      "site-theme.css",
+      "cart-drawer.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "js/site-navigation.js",
+      "js/site-theme.js",
+      "shared-site-header.js",
+      "shared-site-footer.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "js/product-card.js",
+      "js/products-logic.js",
+      "js/products-data.js",
+      "js/products-page.js",
+      "js/site-chrome-theme.js",
+      "js/fx.js",
+      "js/cart-drawer-view.js"
+    ]
+  },
+  "admin-bundles.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "admin-shell.css"
+    ],
+    "scripts": [
+      "admin-ui.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "data/bundles.js",
+      "admin-bundles.js"
+    ]
+  },
+  "admin-orders.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "admin-shell.css",
+      "admin-orders-theme.css"
+    ],
+    "scripts": [
+      "admin-ui.js",
+      "admin-orders.js",
+      "admin-orders-view.js"
+    ]
+  },
+  "admin-product.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "admin-shell.css"
+    ],
+    "scripts": [
+      "admin-ui.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "admin.js"
+    ]
+  },
+  "admin-products.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "admin-shell.css"
+    ],
+    "scripts": [
+      "admin-ui.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "admin-products.js"
+    ]
+  },
+  "admin.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "admin-shell.css"
+    ],
+    "scripts": [
+      "admin-ui.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "admin-dashboard.js"
+    ]
+  },
+  "auth.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "site-navigation.css",
+      "site-theme.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "js/site-theme.js",
+      "auth.js"
+    ]
+  },
+  "blog.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "blog-page.css",
+      "site-navigation.css",
+      "site-theme.css",
+      "cart-drawer.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "js/site-navigation.js",
+      "js/site-theme.js",
+      "shared-site-header.js",
+      "shared-site-footer.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "js/product-card.js",
+      "catalog.js",
+      "main.js",
+      "blog-page.js",
+      "js/fx.js",
+      "js/cart-drawer-view.js"
+    ]
+  },
+  "checkout.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "site-navigation.css",
+      "site-theme.css",
+      "cart-drawer.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "js/site-navigation.js",
+      "js/site-theme.js",
+      "shared-site-header.js",
+      "shared-site-footer.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "catalog.js",
+      "main.js",
+      "js/fx.js",
+      "js/cart-drawer-view.js"
+    ]
+  },
+  "contact.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "contact-page.css",
+      "site-navigation.css",
+      "site-theme.css",
+      "cart-drawer.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "js/site-navigation.js",
+      "js/site-theme.js",
+      "shared-site-header.js",
+      "shared-site-footer.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "js/product-card.js",
+      "catalog.js",
+      "main.js",
+      "support-config.js",
+      "js/support-api.js",
+      "contact-page.js",
+      "js/support-fields.js",
+      "js/fx.js",
+      "js/cart-drawer-view.js"
+    ]
+  },
+  "forgot-password.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "site-navigation.css",
+      "site-theme.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "js/site-navigation.js",
+      "js/site-theme.js",
+      "shared-site-header.js",
+      "shared-site-footer.js",
+      "auth.js",
+      "js/fx.js"
+    ]
+  },
+  "index.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "hero-b.css",
+      "product-card.css",
+      "page-theme.css",
+      "site-navigation.css",
+      "site-theme.css",
+      "mobile-product-rails.css",
+      "cart-drawer.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "js/site-navigation.js",
+      "js/site-theme.js",
+      "shared-site-footer.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "js/product-card.js",
+      "catalog.js",
+      "main.js",
+      "js/page-theme.js",
+      "js/mobile-product-rails.js",
+      "js/home-card-quantity.js",
+      "js/hero-b.js",
+      "js/fx.js",
+      "js/cart-drawer-view.js"
+    ]
+  },
+  "product.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "product-card.css",
+      "hero-b.css",
+      "page-theme.css",
+      "catalog-theme.css",
+      "product-detail.css",
+      "site-navigation.css",
+      "site-theme.css",
+      "cart-drawer.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "js/site-navigation.js",
+      "js/site-theme.js",
+      "shared-site-header.js",
+      "shared-site-footer.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "data/bundles.js",
+      "js/product-card.js",
+      "catalog.js",
+      "main.js",
+      "bundle-cart.js",
+      "js/site-chrome-theme.js",
+      "js/product-detail-theme.js",
+      "js/fx.js",
+      "js/cart-drawer-view.js"
+    ]
+  },
+  "reset-password.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "site-navigation.css",
+      "site-theme.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "js/site-navigation.js",
+      "js/site-theme.js",
+      "shared-site-header.js",
+      "shared-site-footer.js",
+      "auth.js",
+      "js/fx.js"
+    ]
+  },
+  "admin-contact.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "admin-contact.css",
+      "admin-shell.css"
+    ],
+    "scripts": [
+      "support-config.js",
+      "js/support-api.js",
+      "admin-ui.js",
+      "admin-contact.js"
+    ]
+  }
+}
