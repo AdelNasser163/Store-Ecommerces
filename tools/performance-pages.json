@@ -8,7 +8,8 @@
       "products-page.css",
       "about-page.css",
       "site-navigation.css",
-      "site-theme.css"
+      "site-theme.css",
+      "cart-drawer.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
@@ -23,7 +24,8 @@
       "catalog.js",
       "main.js",
       "about-page.js",
-      "js/fx.js"
+      "js/fx.js",
+      "js/cart-drawer-view.js"
     ]
   },
   "accessories.html": {
@@ -38,7 +40,8 @@
       "page-theme.css",
       "catalog-theme.css",
       "site-navigation.css",
-      "site-theme.css"
+      "site-theme.css",
+      "cart-drawer.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
@@ -54,7 +57,8 @@
       "js/products-data.js",
       "js/products-page.js",
       "js/site-chrome-theme.js",
-      "js/fx.js"
+      "js/fx.js",
+      "js/cart-drawer-view.js"
     ]
   },
   "admin-bundles.html": {
@@ -152,7 +156,8 @@
       "products-page.css",
       "blog-page.css",
       "site-navigation.css",
-      "site-theme.css"
+      "site-theme.css",
+      "cart-drawer.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
@@ -167,7 +172,8 @@
       "catalog.js",
       "main.js",
       "blog-page.js",
-      "js/fx.js"
+      "js/fx.js",
+      "js/cart-drawer-view.js"
     ]
   },
   "checkout.html": {
@@ -178,7 +184,8 @@
       "js/vendor/rb-islands.css",
       "products-page.css",
       "site-navigation.css",
-      "site-theme.css"
+      "site-theme.css",
+      "cart-drawer.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
@@ -191,7 +198,8 @@
       "data/store.js",
       "catalog.js",
       "main.js",
-      "js/fx.js"
+      "js/fx.js",
+      "js/cart-drawer-view.js"
     ]
   },
   "contact.html": {
@@ -203,7 +211,8 @@
       "products-page.css",
       "contact-page.css",
       "site-navigation.css",
-      "site-theme.css"
+      "site-theme.css",
+      "cart-drawer.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
@@ -221,7 +230,8 @@
       "js/support-api.js",
       "contact-page.js",
       "js/support-fields.js",
-      "js/fx.js"
+      "js/fx.js",
+      "js/cart-drawer-view.js"
     ]
   },
   "forgot-password.html": {
@@ -256,7 +266,8 @@
       "page-theme.css",
       "site-navigation.css",
       "site-theme.css",
-      "mobile-product-rails.css"
+      "mobile-product-rails.css",
+      "cart-drawer.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
@@ -273,7 +284,8 @@
       "js/mobile-product-rails.js",
       "js/home-card-quantity.js",
       "js/hero-b.js",
-      "js/fx.js"
+      "js/fx.js",
+      "js/cart-drawer-view.js"
     ]
   },
   "product.html": {
@@ -289,7 +301,8 @@
       "catalog-theme.css",
       "product-detail.css",
       "site-navigation.css",
-      "site-theme.css"
+      "site-theme.css",
+      "cart-drawer.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
@@ -307,7 +320,8 @@
       "bundle-cart.js",
       "js/site-chrome-theme.js",
       "js/product-detail-theme.js",
-      "js/fx.js"
+      "js/fx.js",
+      "js/cart-drawer-view.js"
     ]
   },
   "reset-password.html": {
