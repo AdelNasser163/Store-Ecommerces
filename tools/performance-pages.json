@@ -25,7 +25,7 @@
       "main.js",
       "about-page.js",
       "js/fx.js",
-      "js/cart-drawer-view.js",
+      "js/shared-drawers.js",
       "js/page-entry.js"
     ]
   },
@@ -59,7 +59,7 @@
       "js/products-page.js",
       "js/site-chrome-theme.js",
       "js/fx.js",
-      "js/cart-drawer-view.js",
+      "js/shared-drawers.js",
       "js/page-entry.js"
     ]
   },
@@ -186,7 +186,7 @@
       "main.js",
       "blog-page.js",
       "js/fx.js",
-      "js/cart-drawer-view.js",
+      "js/shared-drawers.js",
       "js/page-entry.js"
     ]
   },
@@ -213,7 +213,7 @@
       "catalog.js",
       "main.js",
       "js/fx.js",
-      "js/cart-drawer-view.js",
+      "js/shared-drawers.js",
       "js/page-entry.js"
     ]
   },
@@ -246,7 +246,7 @@
       "contact-page.js",
       "js/support-fields.js",
       "js/fx.js",
-      "js/cart-drawer-view.js",
+      "js/shared-drawers.js",
       "js/page-entry.js"
     ]
   },
@@ -302,7 +302,7 @@
       "js/home-card-quantity.js",
       "js/hero-b.js",
       "js/fx.js",
-      "js/cart-drawer-view.js",
+      "js/shared-drawers.js",
       "js/page-entry.js"
     ]
   },
@@ -339,7 +339,7 @@
       "js/site-chrome-theme.js",
       "js/product-detail-theme.js",
       "js/fx.js",
-      "js/cart-drawer-view.js",
+      "js/shared-drawers.js",
       "js/page-entry.js"
     ]
   },

@@ -1,7 +1,7 @@
 {
   "about.html": {
-    "css": "dist/about.05123c96d0f2.css",
-    "js": "dist/about.b2dd2b3757cb.js",
+    "css": "dist/about.a2606b6825d5.css",
+    "js": "dist/about.df13090eb214.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -28,15 +28,15 @@
         "main.js",
         "about-page.js",
         "js/fx.js",
-        "js/cart-drawer-view.js",
+        "js/shared-drawers.js",
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 84169
+    "criticalBytes": 84284
   },
   "accessories.html": {
-    "css": "dist/accessories.ff37fb230e41.css",
-    "js": "dist/accessories.d675a3c6f055.js",
+    "css": "dist/accessories.1099c52f5ca8.css",
+    "js": "dist/accessories.fc237e45bed1.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -67,11 +67,11 @@
         "js/products-page.js",
         "js/site-chrome-theme.js",
         "js/fx.js",
-        "js/cart-drawer-view.js",
+        "js/shared-drawers.js",
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 141767
+    "criticalBytes": 143066
   },
   "admin-bundles.html": {
     "css": "dist/admin-bundles.af4215688be5.css",
@@ -222,8 +222,8 @@
     "criticalBytes": 45594
   },
   "blog.html": {
-    "css": "dist/blog.6684ac345d9d.css",
-    "js": "dist/blog.26186cc5855d.js",
+    "css": "dist/blog.9492e636ba9e.css",
+    "js": "dist/blog.189fa5b3a674.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -250,15 +250,15 @@
         "main.js",
         "blog-page.js",
         "js/fx.js",
-        "js/cart-drawer-view.js",
+        "js/shared-drawers.js",
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 83802
+    "criticalBytes": 83917
   },
   "checkout.html": {
-    "css": "dist/checkout.8949e8137ff8.css",
-    "js": "dist/checkout.43ed763c2929.js",
+    "css": "dist/checkout.d294afa81e7d.css",
+    "js": "dist/checkout.da0caf922b9c.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -282,15 +282,15 @@
         "catalog.js",
         "main.js",
         "js/fx.js",
-        "js/cart-drawer-view.js",
+        "js/shared-drawers.js",
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 84049
+    "criticalBytes": 84164
   },
   "contact.html": {
-    "css": "dist/contact.244f271f174b.css",
-    "js": "dist/contact.04723567c3f2.js",
+    "css": "dist/contact.8e37683dbdb3.css",
+    "js": "dist/contact.2d004c254fb4.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -320,11 +320,11 @@
         "contact-page.js",
         "js/support-fields.js",
         "js/fx.js",
-        "js/cart-drawer-view.js",
+        "js/shared-drawers.js",
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 81791
+    "criticalBytes": 81906
   },
   "forgot-password.html": {
     "css": "dist/forgot-password.4bc2f60e5de9.css",
@@ -353,8 +353,8 @@
     "criticalBytes": 73144
   },
   "index.html": {
-    "css": "dist/index.56f183dc1262.css",
-    "js": "dist/index.bc8bf5599f89.js",
+    "css": "dist/index.fa1e0b0338a9.css",
+    "js": "dist/index.fe5033f0006d.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -386,15 +386,15 @@
         "js/home-card-quantity.js",
         "js/hero-b.js",
         "js/fx.js",
-        "js/cart-drawer-view.js",
+        "js/shared-drawers.js",
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 122112
+    "criticalBytes": 122227
   },
   "product.html": {
-    "css": "dist/product.a63e45bcb4a0.css",
-    "js": "dist/product.85e4312d27b9.js",
+    "css": "dist/product.94825ee1c3b8.css",
+    "js": "dist/product.89316f651d19.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -428,11 +428,11 @@
         "js/site-chrome-theme.js",
         "js/product-detail-theme.js",
         "js/fx.js",
-        "js/cart-drawer-view.js",
+        "js/shared-drawers.js",
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 138265
+    "criticalBytes": 138380
   },
   "reset-password.html": {
     "css": "dist/reset-password.9e3814e836cc.css",

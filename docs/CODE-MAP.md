@@ -10,7 +10,7 @@
 | هيرو الرئيسية | `hero-b.css`, `js/hero-b.js` |
 | باقي الرئيسية | `page-theme.css`, `js/page-theme.js`, `mobile-product-rails.css` |
 | كروت المنتجات المشتركة | `product-card.css`, `js/product-card.js` |
-| مظهر درج السلة المشترك | `cart-drawer.css`, `js/cart-drawer-view.js`؛ منطق السلة يظل في ملفات الصفحة الأصلية |
+| عرض السلة والمفضلة المشترك | `cart-drawer.css`, `js/shared-drawers.js`؛ بناء الصفوف واحد لكل الصفحات، وأزراره تستخدم معالجات الصفحة الأصلية دون تغيير حساب الأسعار أو بيانات المنتجات |
 | الكتالوج وصفحة المنتج | `products-page.css`, `js/products-page.js`, `product-detail.css` |
 | صفحات المحتوى | `about-page.*`, `blog-page.*`, `contact-page.*` |
 | إدارة الطلبات | `admin-orders.js` للوظائف، `admin-orders-view.js` للعرض، `admin-orders-theme.css` |
