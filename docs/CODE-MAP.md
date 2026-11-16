@@ -17,6 +17,7 @@
 | الرسائل | `admin-contact.*`, `js/support-api.js`, `js/support-fields.js`, `support-config.js` |
 | الداشبورد المشترك | `admin-ui.js`, `admin-shell.css` |
 | الحركة وتعديلات الأداء | `js/fx.js`, `fx.css`, `performance.css` |
+| الظهور الأول والتنقل الهادئ | `js/page-bootstrap.js` يحدد أول زيارة قبل الرسم، و`js/page-entry.js` يطبق 300ms/8px على عنصرين كحد أقصى؛ التنقل الداخلي والرجوع لا يعيدان حركة الدخول |
 | الصور المتجاوبة | `assets/images/image-manifest.json`, `js/image-manifest.js`, `js/image-performance.js` |
 
 `style.css` مدخل قديم مولّد من Tailwind؛ لا يعدل يدويًا. ترتيب ملفات التنسيق مهم: القواعد اللاحقة قد تكون تعديلات RTL أو موبايل، وليست تكرارًا يمكن حذفه.

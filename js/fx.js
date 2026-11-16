@@ -18,7 +18,7 @@
  if(window.ResizeObserver)new ResizeObserver(scheduleResize).observe(document.body);
  resize();
  const seen=new WeakSet();
- const reveal=window.IntersectionObserver&&new IntersectionObserver(entries=>{for(const e of entries){if(!e.isIntersecting)continue;reveal.unobserve(e.target);if(!reduce.matches&&!mobile.matches&&e.target.animate)e.target.animate([{opacity:.35,transform:'translateY(14px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,easing:'cubic-bezier(.22,1,.36,1)'})}},{threshold:.03});
+ const reveal=window.IntersectionObserver&&new IntersectionObserver(entries=>{for(const e of entries){if(!e.isIntersecting)continue;reveal.unobserve(e.target);const quietEntry=document.documentElement.dataset.pageEntry==='internal'&&scrollY<24;if(!quietEntry&&!reduce.matches&&!mobile.matches&&e.target.animate)e.target.animate([{opacity:.9,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:300,easing:'cubic-bezier(.22,1,.36,1)'})}},{threshold:.03});
  function scan(root=document){if(!reveal)return;const nodes=root.matches?.('.hb-card,.pt-heading,.pt-review')?[root]:Array.from(root.querySelectorAll?.('.hb-card,.pt-heading,.pt-review')||[]);for(const node of nodes){if(seen.has(node)||node.closest('[data-fx-skip]'))continue;seen.add(node);reveal.observe(node)}}
  // Initial content remains still; only later sections reveal, never hidden by CSS.
  document.querySelectorAll('main>section:not([data-fx-skip])').forEach(scan);

@@ -25,7 +25,8 @@
       "main.js",
       "about-page.js",
       "js/fx.js",
-      "js/cart-drawer-view.js"
+      "js/cart-drawer-view.js",
+      "js/page-entry.js"
     ]
   },
   "accessories.html": {
@@ -58,7 +59,8 @@
       "js/products-page.js",
       "js/site-chrome-theme.js",
       "js/fx.js",
-      "js/cart-drawer-view.js"
+      "js/cart-drawer-view.js",
+      "js/page-entry.js"
     ]
   },
   "admin-bundles.html": {
@@ -68,12 +70,14 @@
       "admin-shell.css"
     ],
     "scripts": [
+      "js/page-bootstrap.js",
       "admin-ui.js",
       "data/products.js",
       "js/image-store.js",
       "data/store.js",
       "data/bundles.js",
-      "admin-bundles.js"
+      "admin-bundles.js",
+      "js/page-entry.js"
     ]
   },
   "admin-orders.html": {
@@ -84,9 +88,11 @@
       "admin-orders-theme.css"
     ],
     "scripts": [
+      "js/page-bootstrap.js",
       "admin-ui.js",
       "admin-orders.js",
-      "admin-orders-view.js"
+      "admin-orders-view.js",
+      "js/page-entry.js"
     ]
   },
   "admin-product.html": {
@@ -96,11 +102,13 @@
       "admin-shell.css"
     ],
     "scripts": [
+      "js/page-bootstrap.js",
       "admin-ui.js",
       "data/products.js",
       "js/image-store.js",
       "data/store.js",
-      "admin.js"
+      "admin.js",
+      "js/page-entry.js"
     ]
   },
   "admin-products.html": {
@@ -110,11 +118,13 @@
       "admin-shell.css"
     ],
     "scripts": [
+      "js/page-bootstrap.js",
       "admin-ui.js",
       "data/products.js",
       "js/image-store.js",
       "data/store.js",
-      "admin-products.js"
+      "admin-products.js",
+      "js/page-entry.js"
     ]
   },
   "admin.html": {
@@ -124,11 +134,13 @@
       "admin-shell.css"
     ],
     "scripts": [
+      "js/page-bootstrap.js",
       "admin-ui.js",
       "data/products.js",
       "js/image-store.js",
       "data/store.js",
-      "admin-dashboard.js"
+      "admin-dashboard.js",
+      "js/page-entry.js"
     ]
   },
   "auth.html": {
@@ -144,7 +156,8 @@
     "scripts": [
       "js/page-bootstrap.js",
       "js/site-theme.js",
-      "auth.js"
+      "auth.js",
+      "js/page-entry.js"
     ]
   },
   "blog.html": {
@@ -173,7 +186,8 @@
       "main.js",
       "blog-page.js",
       "js/fx.js",
-      "js/cart-drawer-view.js"
+      "js/cart-drawer-view.js",
+      "js/page-entry.js"
     ]
   },
   "checkout.html": {
@@ -199,7 +213,8 @@
       "catalog.js",
       "main.js",
       "js/fx.js",
-      "js/cart-drawer-view.js"
+      "js/cart-drawer-view.js",
+      "js/page-entry.js"
     ]
   },
   "contact.html": {
@@ -231,7 +246,8 @@
       "contact-page.js",
       "js/support-fields.js",
       "js/fx.js",
-      "js/cart-drawer-view.js"
+      "js/cart-drawer-view.js",
+      "js/page-entry.js"
     ]
   },
   "forgot-password.html": {
@@ -251,7 +267,8 @@
       "shared-site-header.js",
       "shared-site-footer.js",
       "auth.js",
-      "js/fx.js"
+      "js/fx.js",
+      "js/page-entry.js"
     ]
   },
   "index.html": {
@@ -285,7 +302,8 @@
       "js/home-card-quantity.js",
       "js/hero-b.js",
       "js/fx.js",
-      "js/cart-drawer-view.js"
+      "js/cart-drawer-view.js",
+      "js/page-entry.js"
     ]
   },
   "product.html": {
@@ -321,7 +339,8 @@
       "js/site-chrome-theme.js",
       "js/product-detail-theme.js",
       "js/fx.js",
-      "js/cart-drawer-view.js"
+      "js/cart-drawer-view.js",
+      "js/page-entry.js"
     ]
   },
   "reset-password.html": {
@@ -341,7 +360,8 @@
       "shared-site-header.js",
       "shared-site-footer.js",
       "auth.js",
-      "js/fx.js"
+      "js/fx.js",
+      "js/page-entry.js"
     ]
   },
   "admin-contact.html": {
@@ -352,10 +372,12 @@
       "admin-shell.css"
     ],
     "scripts": [
+      "js/page-bootstrap.js",
       "support-config.js",
       "js/support-api.js",
       "admin-ui.js",
-      "admin-contact.js"
+      "admin-contact.js",
+      "js/page-entry.js"
     ]
   }
 }

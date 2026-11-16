@@ -245,3 +245,10 @@ html[data-page-hidden] :is(.hb-hero *, .perf-brands-track) {
     display: none;
   }
 }
+
+/* Navigation keeps its layout still; first-visit motion is scoped in page-entry.js. */
+@view-transition{navigation:none}
+::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
+.dashboard-page-ready body:is(.admin-mobile-dashboard,.admin-orders-page,.admin-products-page,.admin-bundles-page)>:not(.mobile-admin-dock):not(.orders-admin-dock){animation:none!important}
+.dashboard-page-leaving body:is(.admin-mobile-dashboard,.admin-orders-page,.admin-products-page,.admin-bundles-page)>:not(.mobile-admin-dock):not(.orders-admin-dock){opacity:1;transform:none;transition:none}
+html[data-page-entry=internal] :is(.mobile-admin-dock,.orders-admin-dock){animation:none!important}

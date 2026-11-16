@@ -293,29 +293,7 @@
     },
     true,
   );
-  document.addEventListener("click", (event) => {
-    const link = event.target.closest(
-      ".mobile-admin-dock a,.orders-admin-dock a",
-    );
-    if (
-      !link ||
-      event.defaultPrevented ||
-      event.button !== 0 ||
-      event.metaKey ||
-      event.ctrlKey ||
-      event.shiftKey ||
-      event.altKey
-    )
-      return;
-    const target = new URL(link.href, location.href);
-    if (target.origin !== location.origin) return;
-    if (target.pathname === location.pathname && target.hash) return;
-    event.preventDefault();
-    document.documentElement.classList.add("dashboard-page-leaving");
-    setTimeout(() => {
-      location.href = target.href;
-    }, 180);
-  });
+  // Use native links: no delayed exit animation or whole-page translation.
 })();
 
 // Keep the shared legacy dashboard navigation copy readable in Arabic.
