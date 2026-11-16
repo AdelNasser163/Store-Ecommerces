@@ -5,9 +5,9 @@
 
   const store = window.StoreProducts;
   const images = {
-    "apple-iphone-15-pro-max-256gb": "iPhone_17_Pro_Max-hero.webp",
-    "macbook-pro-16-m3-max": "macbook-m3-cutout.png",
-    "playstation-5-slim-bundle": "ps5-slim-hero.png"
+    "apple-iphone-15-pro-max-256gb": "f1.png",
+    "macbook-pro-16-m3-max": "galaxy-s24.jpg",
+    "playstation-5-slim-bundle": "dell-g15-3.jpg"
   };
   const escape = value => String(value).replace(/[&<>"']/g, character => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
