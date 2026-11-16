@@ -1,7 +1,7 @@
 {
   "about.html": {
-    "css": "dist/about.f12a949205dd.css",
-    "js": "dist/about.a2518cf8d134.js",
+    "css": "dist/about.9087aee84c3e.css",
+    "js": "dist/about.5055a9742675.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -11,7 +11,8 @@
         "products-page.css",
         "about-page.css",
         "site-navigation.css",
-        "site-theme.css"
+        "site-theme.css",
+        "cart-drawer.css"
       ],
       "scripts": [
         "js/page-bootstrap.js",
@@ -26,18 +27,15 @@
         "catalog.js",
         "main.js",
         "about-page.js",
-        "js/vendor/gsap.min.js",
-        "js/vendor/ScrollTrigger.min.js",
-        "js/vendor/lenis.min.js",
         "js/fx.js",
-        "js/vendor/rb-islands.js"
+        "js/cart-drawer-view.js"
       ]
     },
-    "criticalBytes": 92776
+    "criticalBytes": 83847
   },
   "accessories.html": {
-    "css": "dist/accessories.c940e40f789b.css",
-    "js": "dist/accessories.36eaf0c9f89a.js",
+    "css": "dist/accessories.7ab16a56a390.css",
+    "js": "dist/accessories.e14ded11c898.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -50,7 +48,8 @@
         "page-theme.css",
         "catalog-theme.css",
         "site-navigation.css",
-        "site-theme.css"
+        "site-theme.css",
+        "cart-drawer.css"
       ],
       "scripts": [
         "js/page-bootstrap.js",
@@ -66,17 +65,14 @@
         "js/products-data.js",
         "js/products-page.js",
         "js/site-chrome-theme.js",
-        "js/vendor/gsap.min.js",
-        "js/vendor/ScrollTrigger.min.js",
-        "js/vendor/lenis.min.js",
         "js/fx.js",
-        "js/vendor/rb-islands.js"
+        "js/cart-drawer-view.js"
       ]
     },
-    "criticalBytes": 147324
+    "criticalBytes": 141538
   },
   "admin-bundles.html": {
-    "css": "dist/admin-bundles.d7d6332298f5.css",
+    "css": "dist/admin-bundles.917e3acb7d61.css",
     "js": "dist/admin-bundles.f77a72db6a71.js",
     "sources": {
       "styles": [
@@ -93,10 +89,10 @@
         "admin-bundles.js"
       ]
     },
-    "criticalBytes": 53915
+    "criticalBytes": 45066
   },
   "admin-contact.html": {
-    "css": "dist/admin-contact.b1b9fa35795b.css",
+    "css": "dist/admin-contact.ea4d1a561798.css",
     "js": "dist/admin-contact.78eae31d7785.js",
     "sources": {
       "styles": [
@@ -112,10 +108,10 @@
         "admin-contact.js"
       ]
     },
-    "criticalBytes": 52989
+    "criticalBytes": 43116
   },
   "admin-orders.html": {
-    "css": "dist/admin-orders.81953f1a6fda.css",
+    "css": "dist/admin-orders.bce5edb180e3.css",
     "js": "dist/admin-orders.698d420dc58f.js",
     "sources": {
       "styles": [
@@ -130,10 +126,10 @@
         "admin-orders-view.js"
       ]
     },
-    "criticalBytes": 53915
+    "criticalBytes": 45066
   },
   "admin-product.html": {
-    "css": "dist/admin-bundles.d7d6332298f5.css",
+    "css": "dist/admin-product.818a33afdea7.css",
     "js": "dist/admin-product.044a50f6baf5.js",
     "sources": {
       "styles": [
@@ -149,10 +145,10 @@
         "admin.js"
       ]
     },
-    "criticalBytes": 53915
+    "criticalBytes": 45066
   },
   "admin-products.html": {
-    "css": "dist/admin-bundles.d7d6332298f5.css",
+    "css": "dist/admin-products.a75baf52c19c.css",
     "js": "dist/admin-products.1c267faf7fa1.js",
     "sources": {
       "styles": [
@@ -168,10 +164,10 @@
         "admin-products.js"
       ]
     },
-    "criticalBytes": 53915
+    "criticalBytes": 45066
   },
   "admin.html": {
-    "css": "dist/admin-bundles.d7d6332298f5.css",
+    "css": "dist/admin.a90dd3c8da33.css",
     "js": "dist/admin.4a8d38b6023f.js",
     "sources": {
       "styles": [
@@ -187,10 +183,10 @@
         "admin-dashboard.js"
       ]
     },
-    "criticalBytes": 53915
+    "criticalBytes": 45066
   },
   "auth.html": {
-    "css": "dist/auth.d9c3f330d4ac.css",
+    "css": "dist/auth.070fde0869ec.css",
     "js": "dist/auth.5b9408038e42.js",
     "sources": {
       "styles": [
@@ -208,11 +204,11 @@
         "auth.js"
       ]
     },
-    "criticalBytes": 67840
+    "criticalBytes": 45248
   },
   "blog.html": {
-    "css": "dist/blog.1f4033e69f4d.css",
-    "js": "dist/blog.d4a8623b1f7c.js",
+    "css": "dist/blog.ba0bad9bda3e.css",
+    "js": "dist/blog.54206a89b5d2.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -222,7 +218,8 @@
         "products-page.css",
         "blog-page.css",
         "site-navigation.css",
-        "site-theme.css"
+        "site-theme.css",
+        "cart-drawer.css"
       ],
       "scripts": [
         "js/page-bootstrap.js",
@@ -237,18 +234,15 @@
         "catalog.js",
         "main.js",
         "blog-page.js",
-        "js/vendor/gsap.min.js",
-        "js/vendor/ScrollTrigger.min.js",
-        "js/vendor/lenis.min.js",
         "js/fx.js",
-        "js/vendor/rb-islands.js"
+        "js/cart-drawer-view.js"
       ]
     },
-    "criticalBytes": 92409
+    "criticalBytes": 83480
   },
   "checkout.html": {
-    "css": "dist/auth.d9c3f330d4ac.css",
-    "js": "dist/checkout.87b84e26e4d3.js",
+    "css": "dist/checkout.44ef768b6b05.css",
+    "js": "dist/checkout.15df48f8ddf4.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -257,7 +251,8 @@
         "js/vendor/rb-islands.css",
         "products-page.css",
         "site-navigation.css",
-        "site-theme.css"
+        "site-theme.css",
+        "cart-drawer.css"
       ],
       "scripts": [
         "js/page-bootstrap.js",
@@ -270,18 +265,15 @@
         "data/store.js",
         "catalog.js",
         "main.js",
-        "js/vendor/gsap.min.js",
-        "js/vendor/ScrollTrigger.min.js",
-        "js/vendor/lenis.min.js",
         "js/fx.js",
-        "js/vendor/rb-islands.js"
+        "js/cart-drawer-view.js"
       ]
     },
-    "criticalBytes": 93147
+    "criticalBytes": 83687
   },
   "contact.html": {
-    "css": "dist/contact.8a8f78dc4331.css",
-    "js": "dist/contact.8161705b8651.js",
+    "css": "dist/contact.d9c61684a75a.css",
+    "js": "dist/contact.54571f802a18.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -291,7 +283,8 @@
         "products-page.css",
         "contact-page.css",
         "site-navigation.css",
-        "site-theme.css"
+        "site-theme.css",
+        "cart-drawer.css"
       ],
       "scripts": [
         "js/page-bootstrap.js",
@@ -309,18 +302,15 @@
         "js/support-api.js",
         "contact-page.js",
         "js/support-fields.js",
-        "js/vendor/gsap.min.js",
-        "js/vendor/ScrollTrigger.min.js",
-        "js/vendor/lenis.min.js",
         "js/fx.js",
-        "js/vendor/rb-islands.js"
+        "js/cart-drawer-view.js"
       ]
     },
-    "criticalBytes": 90398
+    "criticalBytes": 81469
   },
   "forgot-password.html": {
-    "css": "dist/auth.d9c3f330d4ac.css",
-    "js": "dist/forgot-password.be198c2aee6f.js",
+    "css": "dist/forgot-password.edd28c859ebb.css",
+    "js": "dist/forgot-password.e9df665ac1bc.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -338,18 +328,14 @@
         "shared-site-header.js",
         "shared-site-footer.js",
         "auth.js",
-        "js/vendor/gsap.min.js",
-        "js/vendor/ScrollTrigger.min.js",
-        "js/vendor/lenis.min.js",
-        "js/fx.js",
-        "js/vendor/rb-islands.js"
+        "js/fx.js"
       ]
     },
-    "criticalBytes": 88861
+    "criticalBytes": 72569
   },
   "index.html": {
-    "css": "dist/index.0099a686b635.css",
-    "js": "dist/index.baa705d957a9.js",
+    "css": "dist/index.5801f136459b.css",
+    "js": "dist/index.616ff56d0b02.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -362,7 +348,8 @@
         "page-theme.css",
         "site-navigation.css",
         "site-theme.css",
-        "mobile-product-rails.css"
+        "mobile-product-rails.css",
+        "cart-drawer.css"
       ],
       "scripts": [
         "js/page-bootstrap.js",
@@ -378,19 +365,16 @@
         "js/page-theme.js",
         "js/mobile-product-rails.js",
         "js/home-card-quantity.js",
-        "js/vendor/gsap.min.js",
-        "js/vendor/ScrollTrigger.min.js",
-        "js/vendor/lenis.min.js",
         "js/hero-b.js",
         "js/fx.js",
-        "js/vendor/rb-islands.js"
+        "js/cart-drawer-view.js"
       ]
     },
-    "criticalBytes": 132631
+    "criticalBytes": 121790
   },
   "product.html": {
-    "css": "dist/product.54df6e9de301.css",
-    "js": "dist/product.45b2aa8289d5.js",
+    "css": "dist/product.5af54f77cd26.css",
+    "js": "dist/product.a227e82493e2.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -404,7 +388,8 @@
         "catalog-theme.css",
         "product-detail.css",
         "site-navigation.css",
-        "site-theme.css"
+        "site-theme.css",
+        "cart-drawer.css"
       ],
       "scripts": [
         "js/page-bootstrap.js",
@@ -422,18 +407,15 @@
         "bundle-cart.js",
         "js/site-chrome-theme.js",
         "js/product-detail-theme.js",
-        "js/vendor/gsap.min.js",
-        "js/vendor/ScrollTrigger.min.js",
-        "js/vendor/lenis.min.js",
         "js/fx.js",
-        "js/vendor/rb-islands.js"
+        "js/cart-drawer-view.js"
       ]
     },
-    "criticalBytes": 149782
+    "criticalBytes": 138007
   },
   "reset-password.html": {
-    "css": "dist/auth.d9c3f330d4ac.css",
-    "js": "dist/forgot-password.be198c2aee6f.js",
+    "css": "dist/reset-password.747bbb6f861a.css",
+    "js": "dist/forgot-password.e9df665ac1bc.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -451,13 +433,9 @@
         "shared-site-header.js",
         "shared-site-footer.js",
         "auth.js",
-        "js/vendor/gsap.min.js",
-        "js/vendor/ScrollTrigger.min.js",
-        "js/vendor/lenis.min.js",
-        "js/fx.js",
-        "js/vendor/rb-islands.js"
+        "js/fx.js"
       ]
     },
-    "criticalBytes": 88305
+    "criticalBytes": 72013
   }
 }

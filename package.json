@@ -3,7 +3,11 @@
   "private": true,
   "scripts": {
     "build:performance": "node tools/build-performance.mjs",
-    "build:fx": "node src-islands/build.mjs"
+    "build:fx": "node src-islands/build.mjs",
+    "check:hero": "node tools/hero-performance-verify.cjs",
+    "check:cart": "node tools/cart-drawer-verify.cjs",
+    "check:site": "node tools/perf-verify.cjs",
+    "css:audit": "node tools/clean-css.cjs"
   },
   "devDependencies": {
     "esbuild": "^0.25.0"

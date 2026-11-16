@@ -6,6 +6,7 @@ import {transform} from 'esbuild';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url),{serve,chromium,browserPath}=require('./perf-measure.cjs');
 const {prune}=require('./prune-utilities.cjs');
+const {dedupe}=require('./clean-css.cjs');
 const hash=value=>crypto.createHash('sha256').update(value).digest('hex').slice(0,12);
 const metaFile='tools/performance-pages.json';
 const metadata=fs.existsSync(metaFile)?JSON.parse(fs.readFileSync(metaFile,'utf8')):{};
@@ -13,8 +14,6 @@ const images=JSON.parse(fs.readFileSync('assets/images/image-manifest.json','utf
 const manifest={},fontCSS=fs.readFileSync('assets/fonts/fonts-performance.css','utf8');
 fs.mkdirSync('dist',{recursive:true});
 const generated=new Set();
-const sourceFiles=[...fs.readdirSync('.').filter(n=>/\.(html|js)$/.test(n)),...fs.readdirSync('js').filter(n=>n.endsWith('.js')).map(n=>'js/'+n)];
-const sourcePool=sourceFiles.map(file=>fs.readFileSync(file,'utf8').replace(/<style id="perf-critical">[\s\S]*?<\/style>/g,'')).join('\n');
 const identicalAssets=new Map();
 const mainSource=fs.readFileSync('main.js','utf8');
 const dictionaryStart=mainSource.indexOf('{',mainSource.indexOf('Object.entries({',mainSource.indexOf('const translations')));
@@ -30,16 +29,21 @@ function staticImages(html){return html.replace(/<img\b[^>]*>/g,tag=>{
  if(!/\bdecoding=/.test(tag))tag=tag.replace(/>$/,' decoding="async">');
  if(/optimized\/logo-\d+/.test(tag))tag=tag.replace(/\sloading=["']lazy["']/,'');
  if(!/optimized\/logo-\d+|logo\.png|id=["']mainProductImage/.test(tag)&&!/\bloading=/.test(tag))tag=tag.replace(/>$/,' loading="lazy">');
+ // Priority artwork must never become lazy during the generic image pass.
+ if(/\bfetchpriority=["']high["']/.test(tag))tag=tag.replace(/\sloading=["'][^"']*["']/,'').replace(/>$/,' loading="eager">');
  return tag;
 })}
 for(const page of fs.readdirSync('.').filter(n=>n.endsWith('.html')&&n!=='products.html')){
  let html=fs.readFileSync(page,'utf8');
  if(!metadata[page])metadata[page]={styles:[...html.matchAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*>/g)].map(m=>m[0].match(/href=["']([^"']+)/)?.[1]).filter(Boolean).map(s=>s.split('?')[0]).filter(s=>!s.startsWith('http')),scripts:[...html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["'][^>]*>\s*<\/script>/g)].map(m=>m[1].split('?')[0])};
  const meta=metadata[page];
+ // Scope utility rules to this page's markup and its actual JS dependencies.
+ // Dynamic/stateful selectors are retained conservatively by the pruner.
+ const pagePool=html.replace(/<style id="perf-critical">[\s\S]*?<\/style>/g,'')+'\n'+[...new Set([...meta.scripts,'js/image-performance.js'])].filter(s=>fs.existsSync(s)).map(s=>fs.readFileSync(s,'utf8')).join('\n');
  let css='';
- for(let source of meta.styles){if(source==='assets/fonts/fonts.css')source='assets/fonts/fonts-performance.css';if(source==='js/vendor/rb-islands.css')source='src-islands/islands.css';let value=fs.readFileSync(source,'utf8');if(source==='style.css')value=prune(value,sourcePool);value=value.replace(/url\((["']?)(?!data:|https?:|\/)([^)'"\s]+)\1\)/g,(_,q,url)=>`url(${q}../${path.posix.normalize(path.posix.join(path.posix.dirname(source),url))}${q})`);css+='\n'+value}
+ for(let source of new Set(meta.styles)){if(source==='assets/fonts/fonts.css')source='assets/fonts/fonts-performance.css';if(source==='js/vendor/rb-islands.css')source='src-islands/islands.css';let value=fs.readFileSync(source,'utf8');value=prune(value,pagePool);value=value.replace(/url\((["']?)(?!data:|https?:|\/)([^)'"\s]+)\1\)/g,(_,q,url)=>`url(${q}../${path.posix.normalize(path.posix.join(path.posix.dirname(source),url))}${q})`);css+='\n'+value}
  css+='\n'+fs.readFileSync('performance.css','utf8');
- const compiled=(await transform(css,{loader:'css',minify:true,target:'es2020',legalComments:'none',charset:'utf8'})).code;
+ const compiled=dedupe((await transform(css,{loader:'css',minify:true,target:'es2020',legalComments:'none',charset:'utf8'})).code).css;
  const cssFile=asset(page.replace('.html',''),compiled,'css');
  const moveLast=['js/site-navigation.js','js/site-theme.js'];
  const informational=['about.html','blog.html','contact.html','checkout.html'].includes(page);

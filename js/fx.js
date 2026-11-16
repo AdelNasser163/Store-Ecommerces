@@ -23,7 +23,10 @@
  // Initial content remains still; only later sections reveal, never hidden by CSS.
  document.querySelectorAll('main>section:not([data-fx-skip])').forEach(scan);
  const main=document.querySelector('main');if(main)new MutationObserver(records=>{for(const r of records)for(const node of r.addedNodes)if(node.nodeType===1)scan(node)}).observe(main,{childList:true,subtree:true});
- const active=window.IntersectionObserver&&new IntersectionObserver(entries=>entries.forEach(e=>e.target.classList.toggle('perf-in-view',e.isIntersecting)),{rootMargin:'80px'});
+ const active=window.IntersectionObserver&&new IntersectionObserver(entries=>entries.forEach(e=>{e.target.classList.toggle('perf-in-view',e.isIntersecting);e.target.classList.toggle('perf-offscreen',!e.isIntersecting)}),{rootMargin:'80px'});
+ function visibility(){document.documentElement.toggleAttribute('data-page-hidden',document.hidden)}
+ document.addEventListener('visibilitychange',visibility);visibility();
+ if(!active)document.querySelectorAll('.hb-hero,[data-rb="brands"]').forEach(n=>n.classList.add('perf-in-view'));
  document.querySelectorAll('.hb-hero,[data-rb="brands"]').forEach(n=>active?.observe(n));
  document.querySelectorAll('[data-rb="brands"]').forEach(host=>{
   const names=['Apple','SAMSUNG','DELL','SONY','Lenovo','LG','PHILIPS'];

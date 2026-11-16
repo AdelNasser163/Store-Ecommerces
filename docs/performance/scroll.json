@@ -2,15 +2,15 @@
   {
     "width": 390,
     "p95FrameMs": 16.80000000000001,
-    "maxFrameMs": 16.90000000000009,
+    "maxFrameMs": 33.19999999999993,
     "canvasCount": 0,
     "cartFlight": "disabled on mobile",
     "errors": []
   },
   {
     "width": 1440,
-    "p95FrameMs": 16.799999999999955,
-    "maxFrameMs": 16.90000000000009,
+    "p95FrameMs": 16.700000000000273,
+    "maxFrameMs": 33.099999999999966,
     "canvasCount": 0,
     "cartFlight": "passed",
     "errors": []

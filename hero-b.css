@@ -1305,11 +1305,6 @@
   }
 }
 
-.hb-carousel:hover,
-.hb-carousel:focus-within {
-  animation-play-state: paused
-}
-
 .hb-home .hb-copy h1 {
   font-size: 66px;
   line-height: .98 !important
