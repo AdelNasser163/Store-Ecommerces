@@ -16,6 +16,44 @@
   const languageControl=nav.querySelector('.mobile-menu-language');
   nav.insertBefore(mobileDashboard,languageControl);
  }
+ const account=header.querySelector('.home-account-menu'),accountTrigger=account?.querySelector('.home-account-trigger'),accountDropdown=account?.querySelector('.home-account-dropdown');
+ const accountLinks=accountDropdown?[...accountDropdown.querySelectorAll('a')]:[];
+ if(accountDropdown&&accountTrigger){
+  accountDropdown.id='site-account-menu';
+  accountTrigger.setAttribute('aria-controls',accountDropdown.id);
+  const closeAccount=(restoreFocus=false)=>{accountDropdown.hidden=true;accountTrigger.setAttribute('aria-expanded','false');if(restoreFocus)accountTrigger.focus({preventScroll:true})};
+  accountTrigger.addEventListener('keydown',event=>{
+   if(!['ArrowDown','ArrowUp'].includes(event.key))return;
+   event.preventDefault();accountDropdown.hidden=false;accountTrigger.setAttribute('aria-expanded','true');
+   (event.key==='ArrowUp'?accountLinks.at(-1):accountLinks[0])?.focus();
+  });
+  accountDropdown.addEventListener('keydown',event=>{
+   const index=accountLinks.indexOf(document.activeElement);let next;
+   if(event.key==='ArrowDown')next=(index+1)%accountLinks.length;
+   if(event.key==='ArrowUp')next=(index-1+accountLinks.length)%accountLinks.length;
+   if(event.key==='Home')next=0;if(event.key==='End')next=accountLinks.length-1;
+   if(next!==undefined){event.preventDefault();accountLinks[next]?.focus()}
+  });
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!accountDropdown.hidden){event.preventDefault();closeAccount(true)}});
+  account.addEventListener('focusout',event=>{if(!account.contains(event.relatedTarget))closeAccount()});
+  accountDropdown.addEventListener('click',event=>{if(event.target.closest('a'))closeAccount()});
+ }
+ function accountCopy(ar){
+  const labels=[ar?'تسجيل الدخول':'Sign in',ar?'لوحة التحكم':'Dashboard'];
+  accountLinks.forEach((link,index)=>{
+   if(index>1)return;
+   link.setAttribute('href',index?'admin.html':'auth.html');
+   let label=link.querySelector('.site-account-label');
+   if(!label){
+    const icon=document.createElement('span');icon.className='material-symbols-outlined site-account-icon';icon.setAttribute('aria-hidden','true');icon.textContent=index?'dashboard':'login';
+    label=document.createElement('span');label.className='site-account-label';
+    const arrow=document.createElement('span');arrow.className='material-symbols-outlined site-account-arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent='arrow_outward';
+    link.replaceChildren(icon,label,arrow);
+   }
+   if(label.textContent!==labels[index])label.textContent=labels[index];
+  });
+  accountTrigger?.setAttribute('aria-label',ar?'قائمة الحساب':'Account navigation');
+ }
  const wish=header.querySelector('.home-header-wishlist');
  // The catalog owns the wishlist drawer; keep the anchor from reloading it.
  if(wish&&document.querySelector('[data-wishlist-drawer]'))wish.addEventListener('click',event=>event.preventDefault());
@@ -29,6 +67,7 @@
  });
  function syncCopy(){
   const ar=document.documentElement.lang==='ar';
+  accountCopy(ar);
   if(mobileDashboard)mobileDashboard.textContent=ar?'لوحة التحكم':'Dashboard';
   header.querySelector('.home-cart-button')?.setAttribute('aria-label',ar?'فتح السلة':'Open cart');
   const menuIcon=header.querySelector('.mobile-menu-button .material-symbols-outlined');

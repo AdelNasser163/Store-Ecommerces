@@ -1,7 +1,7 @@
 {
   "about.html": {
-    "css": "dist/about.c81a95ce29a7.css",
-    "js": "dist/about.c6bfebb21b34.js",
+    "css": "dist/about.10bd05902d1d.css",
+    "js": "dist/about.180ac90ca8da.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -33,11 +33,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 73028
+    "criticalBytes": 73984
   },
   "accessories.html": {
-    "css": "dist/accessories.c6e6e4c0bccc.css",
-    "js": "dist/accessories.9c5ea14962b1.js",
+    "css": "dist/accessories.ccee01c7f6bd.css",
+    "js": "dist/accessories.a965806d8a8d.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -73,7 +73,7 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 130931
+    "criticalBytes": 131887
   },
   "admin-bundles.html": {
     "css": "dist/admin-bundles.3dcbf484576b.css",
@@ -224,8 +224,8 @@
     "criticalBytes": 34905
   },
   "blog.html": {
-    "css": "dist/blog.7701e0e6f82b.css",
-    "js": "dist/blog.d19eec340e70.js",
+    "css": "dist/blog.d0957907e207.css",
+    "js": "dist/blog.f834d2fea48c.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -257,11 +257,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 72744
+    "criticalBytes": 73700
   },
   "checkout.html": {
-    "css": "dist/checkout.723fcb7c79bf.css",
-    "js": "dist/checkout.92f511d3fd00.js",
+    "css": "dist/checkout.90b1b3347acf.css",
+    "js": "dist/checkout.b57f548ad0db.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -289,11 +289,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 73350
+    "criticalBytes": 74306
   },
   "contact.html": {
-    "css": "dist/contact.1079d2542748.css",
-    "js": "dist/contact.ff349982a57f.js",
+    "css": "dist/contact.69d0cefbc0da.css",
+    "js": "dist/contact.8de66e7e6ea7.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -327,11 +327,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 70591
+    "criticalBytes": 71547
   },
   "forgot-password.html": {
-    "css": "dist/forgot-password.55d16444dd60.css",
-    "js": "dist/forgot-password.1a61af364da5.js",
+    "css": "dist/forgot-password.e7b4c7240388.css",
+    "js": "dist/forgot-password.675604a7b2e5.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -353,11 +353,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 62397
+    "criticalBytes": 63353
   },
   "index.html": {
-    "css": "dist/index.3734f86c8879.css",
-    "js": "dist/index.98f87d74817b.js",
+    "css": "dist/index.fed829c81191.css",
+    "js": "dist/index.338158cdabde.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -394,11 +394,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 111135
+    "criticalBytes": 112091
   },
   "product.html": {
-    "css": "dist/product.498e12526309.css",
-    "js": "dist/product.ed81fae5b99c.js",
+    "css": "dist/product.a43817753440.css",
+    "js": "dist/product.427df712f408.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -437,11 +437,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 127433
+    "criticalBytes": 128389
   },
   "reset-password.html": {
-    "css": "dist/reset-password.45cbcf789c0d.css",
-    "js": "dist/forgot-password.1a61af364da5.js",
+    "css": "dist/reset-password.ace16df60b62.css",
+    "js": "dist/forgot-password.675604a7b2e5.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -463,6 +463,6 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 61791
+    "criticalBytes": 62747
   }
 }

@@ -1,0 +1,198 @@
+[
+  {
+    "file": "index.html",
+    "width": 390,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "accessories.html",
+    "width": 390,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "about.html",
+    "width": 390,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "blog.html",
+    "width": 390,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "contact.html",
+    "width": 390,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "checkout.html",
+    "width": 390,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "product.html?id=sony-wf-1000xm5",
+    "width": 390,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "index.html",
+    "width": 390,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "accessories.html",
+    "width": 390,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "about.html",
+    "width": 390,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "blog.html",
+    "width": 390,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "contact.html",
+    "width": 390,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "checkout.html",
+    "width": 390,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "product.html?id=sony-wf-1000xm5",
+    "width": 390,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": false
+  },
+  {
+    "file": "index.html",
+    "width": 1440,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "accessories.html",
+    "width": 1440,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "about.html",
+    "width": 1440,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "blog.html",
+    "width": 1440,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "contact.html",
+    "width": 1440,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "checkout.html",
+    "width": 1440,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "product.html?id=sony-wf-1000xm5",
+    "width": 1440,
+    "lang": "ar",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "index.html",
+    "width": 1440,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "accessories.html",
+    "width": 1440,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "about.html",
+    "width": 1440,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "blog.html",
+    "width": 1440,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "contact.html",
+    "width": 1440,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "checkout.html",
+    "width": 1440,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  },
+  {
+    "file": "product.html?id=sony-wf-1000xm5",
+    "width": 1440,
+    "lang": "en",
+    "twoWorkingLinks": true,
+    "keyboard": true
+  }
+]
