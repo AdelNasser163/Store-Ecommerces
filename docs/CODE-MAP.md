@@ -52,3 +52,6 @@ node tools/support-verify.cjs
 للمقارنة البصرية المحسوبة قبل تعديل CSS شغّل `node tools/perf-css-regression.cjs record`، وبعد البناء شغّل `node tools/perf-css-regression.cjs`. المقارنة تشمل الصفحات الـ16 عند 390/820/1440. يلزم Playwright/Chromium محليان؛ لا يتحملهما زائر الموقع.
 
 الصور الأصلية محفوظة، والعرض يستخدم WebP وsrcset. عند إضافة صور جديدة حدّث manifest بالأداة `node tools/prepare-assets.cjs --images-only` ثم أعد البناء. صورة الهيرو الرئيسية eager/high priority؛ بقية الصور خارج الشاشة lazy. تغييرات اللغة والبيانات تحدث وصف صورة الهيرو مع إعادة استخدام عنصرها نفسه.
+# Shared templates
+
+See [SHARED-COMPONENTS.md](SHARED-COMPONENTS.md) for the single header/footer sources, shared button foundation, build output rules and verification commands.

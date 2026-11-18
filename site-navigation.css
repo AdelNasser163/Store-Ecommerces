@@ -13,6 +13,9 @@ html{background:#f4f6f8}
   font-family:'Plus Jakarta Sans',sans-serif!important;
 }
 [dir=rtl] [data-component="site-header"]{font-family:Cairo,Tajawal,sans-serif!important}
+/* Match the homepage button base instead of inheriting page-specific form sizes. */
+[data-component="site-header"][data-component] :is(.home-cart-button,.home-account-trigger){font-size:15px!important}
+@media(min-width:768px){[data-component="site-header"][data-component] .home-language-toggle{font-size:16px!important}}
 [data-component="site-header"][data-component]>div{
   width:100%!important;max-width:none!important;margin:0!important;box-sizing:border-box!important;
   display:grid!important;grid-template-columns:132px auto minmax(150px,1fr) auto!important;
@@ -25,7 +28,7 @@ html{background:#f4f6f8}
   width:132px!important;height:44px!important;margin:0!important;padding:4px 10px!important;border-radius:999px!important;background:white!important;
 }
 [data-component="site-header"][data-component] a:has(img)>div{background:transparent!important;padding:0!important}
-[data-component="site-header"][data-component] img{display:block!important;width:112px!important;height:36px!important;object-fit:contain!important}
+[data-component="site-header"][data-component] img{display:block!important;width:95px!important;height:36px!important;object-fit:cover!important}
 [data-component="site-header"][data-component] .home-navigation{
   grid-column:2!important;grid-row:1!important;display:block!important;position:static!important;
   width:auto!important;min-height:0!important;height:auto!important;margin:0!important;padding:0!important;

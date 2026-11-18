@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {transform} from 'esbuild';
+import {siteComponents} from './site-components.mjs';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url),{serve,chromium,browserPath}=require('./perf-measure.cjs');
 const {prune}=require('./prune-utilities.cjs');
@@ -28,7 +29,7 @@ function staticImages(html){return html.replace(/<img\b[^>]*>/g,tag=>{
   const sizes=logo.source.includes('footer')?'145px':'(max-width:767px) 88px, 112px';
   tag=tag.replace(/\bsrc=["'][^"']+["']/,`src="${logo.item.src}"`).replace(/\ssrcset=["'][^"']*["']/,'').replace(/\ssizes=["'][^"']*["']/,'').replace(/>$/,` srcset="${logo.item.variants.map(v=>`${v.src} ${v.width}w`).join(',')}" sizes="${sizes}">`);
  }
- if(item){tag=tag.replace(/\bsrc=["'][^"']+["']/,`src="${item.src}"`);if(!/\bsrcset=/.test(tag))tag=tag.replace(/\s*\/?>$/,` srcset="${item.variants.map(v=>`${v.src} ${v.width}w`).join(',')}" sizes="${/logo/.test(source)?'150px':'(max-width:767px) 90vw, 600px'}">`)}
+ if(item){tag=tag.replace(/\bsrc=["'][^"']+["']/,`src="${item.src}"`);if(!/\bsrcset=/.test(tag))tag=tag.replace(/\s*\/?>$/,` srcset="${item.variants.map(v=>`${v.src} ${v.width}w`).join(',')}">`);if(!/\bsizes=/.test(tag))tag=tag.replace(/>$/,` sizes="${/logo/.test(source)?'150px':'(max-width:767px) 90vw, 600px'}">`)}
  if(!/\bwidth=/.test(tag))tag=tag.replace(/>$/,` width="${item?.width||600}">`);
  if(!/\bheight=/.test(tag))tag=tag.replace(/>$/,` height="${item?.height||600}">`);
  if(!/\bdecoding=/.test(tag))tag=tag.replace(/>$/,' decoding="async">');
@@ -42,6 +43,7 @@ for(const page of fs.readdirSync('.').filter(n=>n.endsWith('.html')&&n!=='produc
  let html=fs.readFileSync(page,'utf8');
  if(!metadata[page])metadata[page]={styles:[...html.matchAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*>/g)].map(m=>m[0].match(/href=["']([^"']+)/)?.[1]).filter(Boolean).map(s=>s.split('?')[0]).filter(s=>!s.startsWith('http')),scripts:[...html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["'][^>]*>\s*<\/script>/g)].map(m=>m[1].split('?')[0])};
  const meta=metadata[page];
+ html=siteComponents(html,page,meta);
  // Scope utility rules to this page's markup and its actual JS dependencies.
  // Dynamic/stateful selectors are retained conservatively by the pruner.
  const pagePool=html.replace(/<style id="perf-critical">[\s\S]*?<\/style>/g,'')+'\n'+[...new Set([...meta.scripts,'js/image-performance.js'])].filter(s=>fs.existsSync(s)).map(s=>fs.readFileSync(s,'utf8')).join('\n');

@@ -173,9 +173,6 @@
 }
 
 .pt-page .pt-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   flex: none;
   min-height: 44px;
@@ -186,7 +183,6 @@
   font-size: 12px !important;
   font-weight: 700 !important;
   line-height: 1.4 !important;
-  text-decoration: none;
   text-align: center;
   cursor: pointer;
   transition: background var(--pt-duration) var(--pt-ease), color var(--pt-duration) var(--pt-ease), border-color var(--pt-duration) var(--pt-ease), box-shadow var(--pt-duration) var(--pt-ease) !important

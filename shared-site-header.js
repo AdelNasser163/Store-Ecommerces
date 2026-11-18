@@ -30,32 +30,24 @@
     return selectedLanguage === "ar" ? `${amount} \u062c.\u0645` : `EGP ${amount}`;
   };
   window.AlMumezFormatCurrency = formatCurrency;
-  const nav = [
-    ["index.html", copy.home],
-    ["about.html", copy.about],
-    ["accessories.html", copy.products],
-    ["blog.html", language === "ar" ? "المدونة" : "Blog"],
-    ["contact.html", copy.contact]
-  ];
-  const isActive = href => page === href || (page === "products.html" && href === "accessories.html");
-  const links = nav.map(([href,label,icon]) => `<a href="${href}" class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1${isActive(href)?" is-active text-primary font-bold border-b-2 border-mumez-green":""}"${isActive(href)?' aria-current="page"':""}>${icon?`<span class="material-symbols-outlined">${icon}</span>`:""}<span>${label}</span></a>`).join("");
-
-  host.dataset.component = "site-header";
-  host.className = "sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm";
-  host.innerHTML = `<div class="site-header-layout w-full max-w-7xl mx-auto px-margin py-3 flex flex-col gap-3">
-    <div class="flex items-center justify-between gap-space-lg">
-      <button class="mobile-menu-button md:hidden inline-flex items-center justify-center size-10 rounded-full border border-slate-200 text-navy-dark" type="button" aria-label="${copy.menu}" aria-expanded="false" aria-controls="mobile-navigation"><span class="material-symbols-outlined">menu</span></button>
-      <a class="flex items-center shrink-0 transition-transform duration-200 active:scale-95" href="index.html" title="AlMumez Online Store"><div class="bg-white rounded-lg px-2 py-0.5 flex items-center justify-center"><img alt="AlMumez Online Store" class="h-10 md:h-12 w-auto object-contain block" src="assets/images/logo.png"></div></a>
-      <form class="products-search flex-1 max-w-xl hidden md:flex items-center bg-slate-50 hover:bg-slate-100/90 rounded-full border border-slate-200 focus-within:border-mumez-green focus-within:ring-2 focus-within:ring-mumez-green/25 transition-all duration-200 px-4 py-1.5 shadow-inner" role="search" data-search-form><span class="material-symbols-outlined text-slate-400 text-xl mr-2">search</span><label class="sr-only" for="products-search-input">${copy.search}</label><input id="products-search-input" class="bg-transparent border-0 text-slate-800 placeholder:text-slate-400 focus:ring-0 w-full text-sm font-medium py-0.5" name="q" autocomplete="off" placeholder="${copy.search}" aria-controls="search-suggestions"><button class="products-search-clear" type="button" data-search-clear aria-label="Clear" hidden>×</button><button class="bg-mumez-green hover:bg-mumez-green-dark text-navy-dark hover:text-white font-extrabold px-5 py-1.5 rounded-full text-xs transition-all ml-1 shadow-sm flex items-center gap-1" type="submit"><span>${copy.searchButton}</span></button><div class="products-suggestions" id="search-suggestions" role="listbox" hidden></div></form>
-      <div class="home-header-actions flex items-center gap-space-md shrink-0">
-        <a class="home-header-wishlist home-action-icon" href="#" data-wishlist-open title="${copy.wishlist}" aria-label="${copy.wishlist}"><span class="material-symbols-outlined">favorite</span><span class="home-wishlist-count" data-wishlist-count>0</span></a>
-        <div class="home-account-menu"><button class="home-action-icon home-account-trigger" type="button" title="${copy.account}" aria-label="${copy.account}" aria-expanded="false"><span class="material-symbols-outlined">person</span></button><div class="home-account-dropdown" hidden><a href="auth.html">${language === "ar" ? "تسجيل الدخول" : "Login"}</a><a href="admin.html">${copy.dashboard}</a></div></div>
-        <button class="home-action-icon home-language-toggle" data-language-toggle title="${copy.language}" aria-label="${copy.language}" type="button"><span class="material-symbols-outlined">language</span><b class="home-language-badge" data-language-label>${language === "ar" ? "EN" : "AR"}</b></button>
-        <button class="home-cart-button" type="button" data-cart-open title="${copy.cart}"><span class="material-symbols-outlined home-cart-icon">shopping_bag</span><span class="home-cart-copy"><span class="home-cart-meta" data-cart-count>0 ${copy.item}</span><strong class="home-cart-total" data-cart-total>${formatCurrency(0)}</strong></span></button>
-      </div>
-    </div>
-    <nav id="mobile-navigation" class="home-navigation flex items-center justify-between border-t border-slate-100 pt-2 text-sm overflow-x-auto no-scrollbar" aria-label="${language === "ar" ? "التنقل الرئيسي" : "Main navigation"}"><div class="flex items-center gap-space-lg whitespace-nowrap">${links}<a class="mobile-menu-login text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1" href="auth.html"><span class="material-symbols-outlined">login</span><span>${language === "ar" ? "تسجيل الدخول" : "Login"}</span></a><button class="mobile-menu-language" type="button" data-language-toggle><span class="material-symbols-outlined">language</span><span>${language === "ar" ? "English" : "العربية"}</span><b>${language === "ar" ? "EN" : "AR"}</b></button></div></nav>
-  </div>`;
+  // Markup is generated from templates/site-header.html at build time.
+  const labels=[copy.home,copy.products,copy.about,language==='ar'?'المدونة':'Blog',copy.contact];
+  host.querySelectorAll('.home-navigation>div>a:not(.mobile-menu-login)').forEach((link,index)=>{link.textContent=labels[index]||link.textContent});
+  host.querySelector('.mobile-menu-button').setAttribute('aria-label',copy.menu);
+  host.querySelector('.home-navigation').setAttribute('aria-label',language==='ar'?'التنقل الرئيسي':'Main navigation');
+  const search=host.querySelector('input');search.placeholder=copy.search;
+  host.querySelector('label').textContent=copy.search;
+  host.querySelector('[data-search-form] button[type=submit] span').textContent=copy.searchButton;
+  const wish=host.querySelector('[data-wishlist-open]');wish.title=copy.wishlist;wish.setAttribute('aria-label',copy.wishlist);
+  const account=host.querySelector('.home-account-trigger');account.title=copy.account;account.setAttribute('aria-label',copy.account);
+  const login=language==='ar'?'تسجيل الدخول':'Login';
+  host.querySelector('.home-account-dropdown a').textContent=login;
+  host.querySelector('.home-account-dropdown a[href="admin.html"]').textContent=copy.dashboard;
+  host.querySelector('.mobile-menu-login span:last-child').textContent=login;
+  host.querySelector('[data-language-label]').textContent=language==='ar'?'EN':'AR';
+  host.querySelector('.mobile-menu-language span:not(.material-symbols-outlined)').textContent=language==='ar'?'English':'العربية';
+  host.querySelector('.mobile-menu-language b').textContent=language==='ar'?'EN':'AR';
+  host.querySelector('.home-language-toggle').setAttribute('aria-label',copy.language);
   const syncWishlistCount = () => {
     let items = [];
     try {

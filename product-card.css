@@ -314,8 +314,6 @@ scoped so the finished header/hero stay untouched. */
 .hb-card .hb-card-add[hidden]{display:none!important}
 .hb-card .hb-card-add{
   display:flex;
-  align-items:center;
-  justify-content:center;
   gap:6px;
   min-height:44px!important;
   height:auto;

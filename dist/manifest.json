@@ -1,11 +1,12 @@
 {
   "about.html": {
-    "css": "dist/about.893ee184a2af.css",
-    "js": "dist/about.b5262f35b684.js",
+    "css": "dist/about.ef60c70180bb.css",
+    "js": "dist/about.c6bfebb21b34.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
         "style.css",
+        "shared-ui.css",
         "fx.css",
         "js/vendor/rb-islands.css",
         "products-page.css",
@@ -32,15 +33,16 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 72731
+    "criticalBytes": 72829
   },
   "accessories.html": {
-    "css": "dist/accessories.ab6ce3b96601.css",
-    "js": "dist/accessories.bdfe937fd85a.js",
+    "css": "dist/accessories.1f1f37a7b4ab.css",
+    "js": "dist/accessories.6b32c0ead337.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
         "style.css",
+        "shared-ui.css",
         "fx.css",
         "js/vendor/rb-islands.css",
         "products-page.css",
@@ -71,7 +73,7 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 131696
+    "criticalBytes": 130845
   },
   "admin-bundles.html": {
     "css": "dist/admin-bundles.3dcbf484576b.css",
@@ -200,7 +202,7 @@
     "criticalBytes": 33972
   },
   "auth.html": {
-    "css": "dist/auth.3771994a6055.css",
+    "css": "dist/auth.12822827cba2.css",
     "js": "dist/auth.bc290939d89d.js",
     "sources": {
       "styles": [
@@ -219,15 +221,16 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 34636
+    "criticalBytes": 34751
   },
   "blog.html": {
-    "css": "dist/blog.abc72a7d072a.css",
-    "js": "dist/blog.14f9b4a6090a.js",
+    "css": "dist/blog.1f7414842e63.css",
+    "js": "dist/blog.d19eec340e70.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
         "style.css",
+        "shared-ui.css",
         "fx.css",
         "js/vendor/rb-islands.css",
         "products-page.css",
@@ -254,11 +257,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 72364
+    "criticalBytes": 72545
   },
   "checkout.html": {
-    "css": "dist/checkout.85cc5f919b26.css",
-    "js": "dist/checkout.a7a689fe4d65.js",
+    "css": "dist/checkout.17d5d9091e37.css",
+    "js": "dist/checkout.92f511d3fd00.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -286,11 +289,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 72883
+    "criticalBytes": 73151
   },
   "contact.html": {
-    "css": "dist/contact.39f8cd9a9bde.css",
-    "js": "dist/contact.d9f043bb2888.js",
+    "css": "dist/contact.b6abe9d65c4c.css",
+    "js": "dist/contact.ff349982a57f.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -324,11 +327,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 70353
+    "criticalBytes": 70392
   },
   "forgot-password.html": {
-    "css": "dist/forgot-password.02c76de0c598.css",
-    "js": "dist/forgot-password.bee5e807635d.js",
+    "css": "dist/forgot-password.3f46bdd2bdc5.css",
+    "js": "dist/forgot-password.1a61af364da5.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -350,15 +353,16 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 61915
+    "criticalBytes": 62198
   },
   "index.html": {
-    "css": "dist/index.6bd698702b3c.css",
-    "js": "dist/index.1c2e63dd816b.js",
+    "css": "dist/index.c947b5a904bb.css",
+    "js": "dist/index.98f87d74817b.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
         "style.css",
+        "shared-ui.css",
         "fx.css",
         "js/vendor/rb-islands.css",
         "products-page.css",
@@ -390,15 +394,16 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 111074
+    "criticalBytes": 111203
   },
   "product.html": {
-    "css": "dist/product.d5361581f5e6.css",
-    "js": "dist/product.9f74fb05b9a8.js",
+    "css": "dist/product.0ee1bad0f4ad.css",
+    "js": "dist/product.4ce09a63c710.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
         "style.css",
+        "shared-ui.css",
         "fx.css",
         "js/vendor/rb-islands.css",
         "products-page.css",
@@ -432,11 +437,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 127113
+    "criticalBytes": 127501
   },
   "reset-password.html": {
-    "css": "dist/reset-password.44148d8ab382.css",
-    "js": "dist/forgot-password.bee5e807635d.js",
+    "css": "dist/reset-password.2d9e9edb5842.css",
+    "js": "dist/forgot-password.1a61af364da5.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -458,6 +463,6 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 61309
+    "criticalBytes": 61592
   }
 }

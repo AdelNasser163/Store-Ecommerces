@@ -36,7 +36,7 @@
     const image = reference.startsWith("idb:") ? `src="${escape(fallback)}" data-image-ref="${escape(reference)}"` : root.AlMumezImages?.attributes(reference) || `src="${escape(reference)}"`;
     const badge = text[source.badge] || "", flash = effective.active && source.placements?.["home-flash"] != null;
     const claim = Math.max(0, Math.min(100, Number(effective.claimed) || 0));
-    const action = options.actionHtml || `<button class="hb-card-add product-action" type="button" data-add="${escape(id)}" data-add-to-cart="${escape(id)}" aria-label="${escape(stock ? text.add : text.out)} — ${escape(name)}" ${stock ? "" : "disabled"}><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span><span>${stock ? text.add : text.out}</span></button>`;
+    const action = options.actionHtml || `<button class="site-button hb-card-add product-action" type="button" data-add="${escape(id)}" data-add-to-cart="${escape(id)}" aria-label="${escape(stock ? text.add : text.out)} — ${escape(name)}" ${stock ? "" : "disabled"}><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span><span>${stock ? text.add : text.out}</span></button>`;
     const saving = old > price ? `${text.save} <bdi>${money(old - price, lang)}</bdi>` : source.badge === "official-warranty" ? text.warranty : text.details;
     const hasRating = variant ? rating > 0 : rating || reviews;
     return `<article class="hb-card${options.dark ? " hb-card--dark" : ""}${variant ? ` hb-card--${escape(variant)}` : ""} product-card catalog-product-card" data-product-card data-product-id="${escape(id)}" data-category="${escape(source.category || "")}" data-search="${escape(`${name} ${brand} ${category}`.toLowerCase())}">

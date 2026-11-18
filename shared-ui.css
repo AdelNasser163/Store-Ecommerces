@@ -1,0 +1,7 @@
+/* Shared button foundation; size, color and interaction variants stay page-owned. */
+:is(.pt-page, .about-page, .blog-page, .hb-card) .site-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
