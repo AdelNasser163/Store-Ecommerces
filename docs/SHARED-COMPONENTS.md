@@ -25,4 +25,4 @@ node tools/shared-drawers-verify.cjs
 
 The content-only CSS comparison excludes the header whose source is being unified, while retaining all other content, buttons, cards and footer. The separate shell comparison checks the header/footer against the homepage on nine pages, in both languages at 390, 820 and 1440 pixels.
 
-The homepage screenshot comparison uses commit `c7c23f9` as the pre-refactor reference (or a commit passed as its first argument). The published logo's original 95px desktop width and cover fit are now represented in the source stylesheet, so rebuilding cannot discard that adjustment.
+The homepage screenshot comparison uses commit `e6a4a0a` as the pre-refactor reference (or a commit passed as its first argument). The published logo's original 95px desktop width and cover fit are now represented in the source stylesheet, so rebuilding cannot discard that adjustment.

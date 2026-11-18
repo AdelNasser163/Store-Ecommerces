@@ -1,7 +1,7 @@
 /* Compare the refactored homepage header with the committed pre-refactor output. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),{execFileSync}=require('node:child_process');
 const {serve,chromium,browserPath}=require('./perf-measure.cjs');
-const cache=new Map(),baselineRef=process.argv[2]||'c7c23f9';
+const cache=new Map(),baselineRef=process.argv[2]||'e6a4a0a';
 function original(name){if(!cache.has(name))cache.set(name,execFileSync('git',['show',baselineRef+':'+name],{maxBuffer:6000000}));return cache.get(name)}
 (async()=>{const server=serve(8786),browser=await chromium.launch({executablePath:browserPath}),results=[];try{
  for(const width of [390,820,1440])for(const lang of ['ar','en']){
