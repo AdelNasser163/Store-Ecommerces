@@ -1878,25 +1878,7 @@
   }
 }
 
-/* A clean heart silhouette, with a filled state when the wishlist has items. */
-.hb-home .hb-header .hb-wishlist-heart {
-  display: block;
-  width: 24px;
-  height: 24px;
-  flex: none;
-  transition: fill .2s, stroke .2s;
-  fill: transparent
-}
-
-.hb-home .hb-header .home-header-wishlist:hover .hb-wishlist-heart {
-  fill: #a5d66e20;
-  stroke: #bef264
-}
-
-.hb-home .hb-header .home-header-wishlist:has(.home-wishlist-count:not([hidden])) .hb-wishlist-heart {
-  fill: #a5d66e;
-  stroke: #a5d66e
-}
+/* Shared heart states live in site-navigation.css for every storefront page. */
 
 .hb-home .hb-header .home-header-wishlist .home-wishlist-count:not([hidden]) {
   position: absolute;

@@ -1,6 +1,6 @@
 {
   "about.html": {
-    "css": "dist/about.ef60c70180bb.css",
+    "css": "dist/about.c81a95ce29a7.css",
     "js": "dist/about.c6bfebb21b34.js",
     "sources": {
       "styles": [
@@ -33,10 +33,10 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 72829
+    "criticalBytes": 73028
   },
   "accessories.html": {
-    "css": "dist/accessories.1f1f37a7b4ab.css",
+    "css": "dist/accessories.c6e6e4c0bccc.css",
     "js": "dist/accessories.9c5ea14962b1.js",
     "sources": {
       "styles": [
@@ -73,7 +73,7 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 130999
+    "criticalBytes": 130931
   },
   "admin-bundles.html": {
     "css": "dist/admin-bundles.3dcbf484576b.css",
@@ -202,7 +202,7 @@
     "criticalBytes": 33972
   },
   "auth.html": {
-    "css": "dist/auth.12822827cba2.css",
+    "css": "dist/auth.0e3cc21dd31f.css",
     "js": "dist/auth.bc290939d89d.js",
     "sources": {
       "styles": [
@@ -221,10 +221,10 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 34751
+    "criticalBytes": 34905
   },
   "blog.html": {
-    "css": "dist/blog.1f7414842e63.css",
+    "css": "dist/blog.7701e0e6f82b.css",
     "js": "dist/blog.d19eec340e70.js",
     "sources": {
       "styles": [
@@ -257,10 +257,10 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 72545
+    "criticalBytes": 72744
   },
   "checkout.html": {
-    "css": "dist/checkout.17d5d9091e37.css",
+    "css": "dist/checkout.723fcb7c79bf.css",
     "js": "dist/checkout.92f511d3fd00.js",
     "sources": {
       "styles": [
@@ -289,10 +289,10 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 73151
+    "criticalBytes": 73350
   },
   "contact.html": {
-    "css": "dist/contact.b6abe9d65c4c.css",
+    "css": "dist/contact.1079d2542748.css",
     "js": "dist/contact.ff349982a57f.js",
     "sources": {
       "styles": [
@@ -327,10 +327,10 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 70392
+    "criticalBytes": 70591
   },
   "forgot-password.html": {
-    "css": "dist/forgot-password.3f46bdd2bdc5.css",
+    "css": "dist/forgot-password.55d16444dd60.css",
     "js": "dist/forgot-password.1a61af364da5.js",
     "sources": {
       "styles": [
@@ -353,10 +353,10 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 62198
+    "criticalBytes": 62397
   },
   "index.html": {
-    "css": "dist/index.c947b5a904bb.css",
+    "css": "dist/index.3734f86c8879.css",
     "js": "dist/index.98f87d74817b.js",
     "sources": {
       "styles": [
@@ -394,10 +394,10 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 111203
+    "criticalBytes": 111135
   },
   "product.html": {
-    "css": "dist/product.0ee1bad0f4ad.css",
+    "css": "dist/product.498e12526309.css",
     "js": "dist/product.ed81fae5b99c.js",
     "sources": {
       "styles": [
@@ -437,10 +437,10 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 127501
+    "criticalBytes": 127433
   },
   "reset-password.html": {
-    "css": "dist/reset-password.2d9e9edb5842.css",
+    "css": "dist/reset-password.45cbcf789c0d.css",
     "js": "dist/forgot-password.1a61af364da5.js",
     "sources": {
       "styles": [
@@ -463,6 +463,6 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 61592
+    "criticalBytes": 61791
   }
 }
