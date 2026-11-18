@@ -24,7 +24,7 @@
   const page=document.body.dataset.page;
   const pending=new Map();
   const near=window.IntersectionObserver&&new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){near.unobserve(entry.target);const render=pending.get(entry.target);pending.delete(entry.target);render?.()}})},{rootMargin:"500px"});
-  function queuePlacement(placement,heading){const grid=document.querySelector(`[data-products-section="${placement}"]`);if(!grid)return;grid.dataset.perfPending="";grid.setAttribute("aria-busy","true");grid.innerHTML=Array.from({length:innerWidth<768?1:4},()=>'<div class="perf-skeleton" aria-hidden="true"></div>').join("");const render=()=>{renderPlacement(placement,findSection(heading));delete grid.dataset.perfPending;grid.removeAttribute("aria-busy");window.dispatchEvent(new Event("store:cards-rendered"))};if(near){pending.set(grid,render);near.observe(grid)}else render()}
+  function queuePlacement(placement,heading){const grid=document.querySelector(`[data-products-section="${placement}"]`);if(!grid)return;grid.dataset.perfPending="";grid.setAttribute("aria-busy","true");grid.innerHTML=Array.from({length:4},()=>'<div class="perf-skeleton" aria-hidden="true"></div>').join("");const render=()=>{renderPlacement(placement,findSection(heading));delete grid.dataset.perfPending;grid.removeAttribute("aria-busy");window.dispatchEvent(new Event("store:cards-rendered"))};if(near){pending.set(grid,render);near.observe(grid)}else render()}
   function flush(){for(const [grid,render] of pending){near?.unobserve(grid);pending.delete(grid);render()}}
   if(page==="home"||!page){queuePlacement("home-flash","Flash Deals");queuePlacement("home-featured","Featured Tech Collections")}
   if(page==="accessories"){

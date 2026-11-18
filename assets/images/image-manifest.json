@@ -1416,11 +1416,23 @@
     "originalBytes": 770847
   },
   "assets/images/logo-footer.png": {
-    "src": "assets/images/optimized/logo-footer-400-5bdae7e3f5.webp",
-    "width": 400,
-    "height": 225,
-    "bytes": 13358,
+    "src": "assets/images/optimized/logo-footer-240-a16684455d.webp",
+    "width": 240,
+    "height": 135,
+    "bytes": 6082,
     "variants": [
+      {
+        "src": "assets/images/optimized/logo-footer-120-6f458db4fa.webp",
+        "width": 120,
+        "height": 68,
+        "bytes": 2496
+      },
+      {
+        "src": "assets/images/optimized/logo-footer-240-a16684455d.webp",
+        "width": 240,
+        "height": 135,
+        "bytes": 6082
+      },
       {
         "src": "assets/images/optimized/logo-footer-400-5bdae7e3f5.webp",
         "width": 400,
@@ -1431,11 +1443,23 @@
     "originalBytes": 395577
   },
   "assets/images/logo.png": {
-    "src": "assets/images/optimized/logo-400-3a6bba8c0a.webp",
-    "width": 400,
-    "height": 225,
-    "bytes": 15438,
+    "src": "assets/images/optimized/logo-240-7689552dea.webp",
+    "width": 240,
+    "height": 135,
+    "bytes": 8862,
     "variants": [
+      {
+        "src": "assets/images/optimized/logo-120-042be56d43.webp",
+        "width": 120,
+        "height": 68,
+        "bytes": 3798
+      },
+      {
+        "src": "assets/images/optimized/logo-240-7689552dea.webp",
+        "width": 240,
+        "height": 135,
+        "bytes": 8862
+      },
       {
         "src": "assets/images/optimized/logo-400-3a6bba8c0a.webp",
         "width": 400,

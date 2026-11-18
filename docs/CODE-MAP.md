@@ -19,6 +19,7 @@
 | الحركة وتعديلات الأداء | `js/fx.js`, `fx.css`, `performance.css` |
 | الظهور الأول والتنقل الهادئ | `js/page-bootstrap.js` يحدد أول زيارة قبل الرسم، و`js/page-entry.js` يطبق ظهورًا متتابعًا 520ms/16–24px على 5 عناصر كحد أقصى؛ التنقل الداخلي والرجوع لا يعيدان حركة الدخول |
 | الصور المتجاوبة | `assets/images/image-manifest.json`, `js/image-manifest.js`, `js/image-performance.js` |
+| تحسينات PageSpeed دون تعديل التصميم | `tools/font-faces.cjs` لتعريفات الخطوط المتغيرة، و`tools/optimize-logos.cjs` لمقاسات اللوجو، والنتائج في `docs/performance/PAGESPEED-FIXES.md` |
 
 `style.css` مدخل قديم مولّد من Tailwind؛ لا يعدل يدويًا. ترتيب ملفات التنسيق مهم: القواعد اللاحقة قد تكون تعديلات RTL أو موبايل، وليست تكرارًا يمكن حذفه.
 
@@ -42,6 +43,8 @@ npm run build:performance
 npm run css:audit
 npm run check:hero
 npm run check:site
+node tools/font-faces.test.cjs
+node tools/css-cleanup.test.cjs
 node tools/orders-view-verify.cjs
 node tools/support-verify.cjs
 ```

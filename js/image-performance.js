@@ -12,11 +12,11 @@
  }
  function decorate(image){
   image.decoding='async';
-  const source=image.getAttribute('src')||'',item=manifest[source];
+  const source=image.getAttribute('src')||'',item=manifest[source]||optimized.get(source);
   if(responsive.has(image)&&!item&&!optimized.has(source)){image.removeAttribute('srcset');image.removeAttribute('sizes');responsive.delete(image)}
-  if(item && source!==item.src){
+  if(item && (manifest[source] || !image.hasAttribute('srcset'))){
    image.srcset=item.variants.map(v=>`${v.src} ${v.width}w`).join(',');
-   image.sizes=image.closest('.hb-visual')?'(max-width:639px) 258px, 284px':image.closest('header,footer')?'150px':image.id==='mainProductImage'?'(max-width:767px) 90vw, 600px':sizes;
+   image.sizes=image.closest('.hb-visual')?'(max-width:639px) 258px, 284px':image.closest('header')?'(max-width:767px) 88px, 112px':image.closest('footer')?'145px':image.id==='mainProductImage'?'(max-width:767px) 90vw, 600px':sizes;
    image.src=item.src;
    responsive.add(image);
   }

@@ -11,6 +11,7 @@ const hash=value=>crypto.createHash('sha256').update(value).digest('hex').slice(
 const metaFile='tools/performance-pages.json';
 const metadata=fs.existsSync(metaFile)?JSON.parse(fs.readFileSync(metaFile,'utf8')):{};
 const images=JSON.parse(fs.readFileSync('assets/images/image-manifest.json','utf8'));
+const imageLookup=new Map(Object.entries(images).flatMap(([source,item])=>item.variants.map(v=>[v.src,{source,item}])));
 const manifest={},fontCSS=fs.readFileSync('assets/fonts/fonts-performance.css','utf8');
 fs.mkdirSync('dist',{recursive:true});
 const generated=new Set();
@@ -23,6 +24,10 @@ const dictionary=Function('return ('+mainSource.slice(dictionaryStart,dictionary
 function asset(name,code,extension){const key=hash(code)+'.'+extension;if(identicalAssets.has(key))return identicalAssets.get(key);const file=`dist/${name}.${key}`;fs.writeFileSync(file,code);generated.add(file);identicalAssets.set(key,file);return file}
 function staticImages(html){return html.replace(/<img\b[^>]*>/g,tag=>{
  const source=tag.match(/\bsrc=["']([^"']+)["']/)?.[1],item=images[source];
+ const logo=imageLookup.get(source);if(logo&&/\/logo(?:-footer)?\.png$/.test(logo.source)){
+  const sizes=logo.source.includes('footer')?'145px':'(max-width:767px) 88px, 112px';
+  tag=tag.replace(/\bsrc=["'][^"']+["']/,`src="${logo.item.src}"`).replace(/\ssrcset=["'][^"']*["']/,'').replace(/\ssizes=["'][^"']*["']/,'').replace(/>$/,` srcset="${logo.item.variants.map(v=>`${v.src} ${v.width}w`).join(',')}" sizes="${sizes}">`);
+ }
  if(item){tag=tag.replace(/\bsrc=["'][^"']+["']/,`src="${item.src}"`);if(!/\bsrcset=/.test(tag))tag=tag.replace(/\s*\/?>$/,` srcset="${item.variants.map(v=>`${v.src} ${v.width}w`).join(',')}" sizes="${/logo/.test(source)?'150px':'(max-width:767px) 90vw, 600px'}">`)}
  if(!/\bwidth=/.test(tag))tag=tag.replace(/>$/,` width="${item?.width||600}">`);
  if(!/\bheight=/.test(tag))tag=tag.replace(/>$/,` height="${item?.height||600}">`);
@@ -58,7 +63,10 @@ for(const page of fs.readdirSync('.').filter(n=>n.endsWith('.html')&&n!=='produc
  const jsFile=asset(page.replace('.html',''),(await transform(code,{loader:'js',minify:true,target:'es2020',legalComments:'none',charset:'utf8'})).code,'js');
  html=html.replace(/<!--perf-assets:start-->[\s\S]*?<!--perf-assets:end-->/g,'').replace(/<!--perf-bootstrap:start-->[\s\S]*?<!--perf-bootstrap:end-->/g,'').replace(/<!--perf-early:start-->[\s\S]*?<!--perf-early:end-->/g,'').replace(/<!--perf-hero:start-->[\s\S]*?<!--perf-hero:end-->/g,'').replace(/<!--perf-skeleton:start-->[\s\S]*?<!--perf-skeleton:end-->/g,'').replace(/<style id="perf-critical">[\s\S]*?<\/style>/g,'');
  html=html.replace(/<script\b[^>]*\bsrc=["'][^"']+["'][^>]*>\s*<\/script>/g,'').replace(/<link\b[^>]*rel=["']stylesheet["'][^>]*>/g,'').replace(/<noscript>\s*<\/noscript>/g,'');
- if(meta.scripts.includes('js/page-bootstrap.js')){const boot=(await transform(fs.readFileSync('js/page-bootstrap.js','utf8'),{minify:true,loader:'js'})).code;html=html.replace(/<head>/,'<head><!--perf-bootstrap:start--><script>'+boot+'</script><!--perf-bootstrap:end-->')}
+ // The encoding declaration must precede the bootstrap and be inside the first 1024 bytes.
+ html=html.replace(/<meta\s+charset=["'][^"']+["'][^>]*>/i,'');
+ html=html.replace(/<head>/,'<head><meta charset="utf-8">');
+ if(meta.scripts.includes('js/page-bootstrap.js')){const boot=(await transform(fs.readFileSync('js/page-bootstrap.js','utf8'),{minify:true,loader:'js'})).code;html=html.replace('<meta charset="utf-8">','<meta charset="utf-8"><!--perf-bootstrap:start--><script>'+boot+'</script><!--perf-bootstrap:end-->')}
  const iconFont=fontCSS.match(/url\((icons-[^)]+)\)/)?.[1];
  const arabicFont=fontCSS.match(/src: url\((arabic-[^)]+)\)[^}]*unicode-range: U\+0600/)?.[1];
  const cairoLatin=fontCSS.split('}').find(block=>/font-family: 'Cairo'/.test(block)&&/unicode-range: U\+0000/.test(block))?.match(/url\(([^)]+)\)/)?.[1];

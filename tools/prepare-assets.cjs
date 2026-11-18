@@ -19,7 +19,7 @@ async function fonts(){
  local+='\n'+await localize(iconCSS,'icons');
  const arabic=(await get('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap')).toString();
  local+='\n'+await localize(arabic,'arabic');
- fs.writeFileSync('assets/fonts/fonts-performance.css',local);
+ fs.writeFileSync('assets/fonts/fonts-performance.css',require('./font-faces.cjs').compact(local,'assets/fonts'));
  console.log('Prepared '+names.length+' icon glyphs and local Arabic fonts');
 }
 async function images(){
@@ -27,7 +27,7 @@ async function images(){
  const browser=await chromium.launch({executablePath:browserPath}),page=await browser.newPage(),map={};
  try{for(const name of fs.readdirSync('assets/images').filter(n=>/\.(png|jpe?g)$/i.test(n))){
   const file='assets/images/'+name,source=fs.readFileSync(file),ext=path.extname(name).toLowerCase(),base=path.basename(name,ext).replace(/[^a-zA-Z0-9_-]/g,'_');
-  const data=await page.evaluate(async({src,widths})=>{const i=new Image();i.src=src;await i.decode();const variants=[];for(const max of widths){const w=Math.min(max,i.naturalWidth),h=Math.round(i.naturalHeight*w/i.naturalWidth),c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(i,0,0,w,h);variants.push({width:w,height:h,data:c.toDataURL('image/webp',.84).split(',')[1]})}return variants},{src:'data:image/'+(ext==='.png'?'png':'jpeg')+';base64,'+source.toString('base64'),widths:name.includes('logo')?[400]:[480,960,1280]});
+  const data=await page.evaluate(async({src,widths})=>{const i=new Image();i.src=src;await i.decode();const variants=[];for(const max of widths){const w=Math.min(max,i.naturalWidth),h=Math.round(i.naturalHeight*w/i.naturalWidth),c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(i,0,0,w,h);variants.push({width:w,height:h,data:c.toDataURL('image/webp',.84).split(',')[1]})}return variants},{src:'data:image/'+(ext==='.png'?'png':'jpeg')+';base64,'+source.toString('base64'),widths:name.includes('logo')?[120,240,400]:[480,960,1280]});
   const variants=[];for(const item of data){if(variants.some(v=>v.width===item.width))continue;const bytes=Buffer.from(item.data,'base64');if(bytes.length>150000&&item.width>960)continue;const out='assets/images/optimized/'+base+'-'+item.width+'-'+hash(bytes)+'.webp';fs.writeFileSync(out,bytes);variants.push({src:out,width:item.width,height:item.height,bytes:bytes.length})}
   const main=variants.find(v=>v.width>=960)||variants[variants.length-1];map[file]={...main,variants,originalBytes:source.length};
  }

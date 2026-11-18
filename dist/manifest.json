@@ -1,7 +1,7 @@
 {
   "about.html": {
-    "css": "dist/about.a2606b6825d5.css",
-    "js": "dist/about.df13090eb214.js",
+    "css": "dist/about.893ee184a2af.css",
+    "js": "dist/about.b5262f35b684.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -32,11 +32,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 84284
+    "criticalBytes": 72731
   },
   "accessories.html": {
-    "css": "dist/accessories.1099c52f5ca8.css",
-    "js": "dist/accessories.fc237e45bed1.js",
+    "css": "dist/accessories.ab6ce3b96601.css",
+    "js": "dist/accessories.bdfe937fd85a.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -71,11 +71,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 143066
+    "criticalBytes": 131696
   },
   "admin-bundles.html": {
-    "css": "dist/admin-bundles.af4215688be5.css",
-    "js": "dist/admin-bundles.65fff19f24c6.js",
+    "css": "dist/admin-bundles.3dcbf484576b.css",
+    "js": "dist/admin-bundles.d4ac64e4227c.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -93,11 +93,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 45290
+    "criticalBytes": 33972
   },
   "admin-contact.html": {
-    "css": "dist/admin-contact.4ad46d1b7c44.css",
-    "js": "dist/admin-contact.099cd3dca00f.js",
+    "css": "dist/admin-contact.81ca76a6df7a.css",
+    "js": "dist/admin-contact.b4390353ca9c.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -114,11 +114,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 43776
+    "criticalBytes": 32339
   },
   "admin-orders.html": {
-    "css": "dist/admin-orders.c172cb78d2ed.css",
-    "js": "dist/admin-orders.78b40613ac24.js",
+    "css": "dist/admin-orders.99a47b2a389f.css",
+    "js": "dist/admin-orders.12789d3c174d.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -134,11 +134,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 45290
+    "criticalBytes": 33972
   },
   "admin-product.html": {
-    "css": "dist/admin-product.19a4e676dddc.css",
-    "js": "dist/admin-product.e70551829a5f.js",
+    "css": "dist/admin-product.dd9926f44bab.css",
+    "js": "dist/admin-product.d1c586e13c14.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -155,11 +155,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 45290
+    "criticalBytes": 33972
   },
   "admin-products.html": {
-    "css": "dist/admin-products.f5b74ebde96b.css",
-    "js": "dist/admin-products.41bd95bde822.js",
+    "css": "dist/admin-products.20e6efb4aafb.css",
+    "js": "dist/admin-products.e868ba0dae35.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -176,11 +176,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 45290
+    "criticalBytes": 33972
   },
   "admin.html": {
-    "css": "dist/admin.62bff89b4bef.css",
-    "js": "dist/admin.12313cde2e58.js",
+    "css": "dist/admin.10fda6a75afa.css",
+    "js": "dist/admin.0292679ff350.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -197,11 +197,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 45290
+    "criticalBytes": 33972
   },
   "auth.html": {
-    "css": "dist/auth.a1c97eccd5f4.css",
-    "js": "dist/auth.e23f2312563e.js",
+    "css": "dist/auth.3771994a6055.css",
+    "js": "dist/auth.bc290939d89d.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -219,11 +219,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 45594
+    "criticalBytes": 34636
   },
   "blog.html": {
-    "css": "dist/blog.9492e636ba9e.css",
-    "js": "dist/blog.189fa5b3a674.js",
+    "css": "dist/blog.abc72a7d072a.css",
+    "js": "dist/blog.14f9b4a6090a.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -254,11 +254,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 83917
+    "criticalBytes": 72364
   },
   "checkout.html": {
-    "css": "dist/checkout.d294afa81e7d.css",
-    "js": "dist/checkout.da0caf922b9c.js",
+    "css": "dist/checkout.85cc5f919b26.css",
+    "js": "dist/checkout.a7a689fe4d65.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -286,11 +286,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 84164
+    "criticalBytes": 72883
   },
   "contact.html": {
-    "css": "dist/contact.8e37683dbdb3.css",
-    "js": "dist/contact.2d004c254fb4.js",
+    "css": "dist/contact.39f8cd9a9bde.css",
+    "js": "dist/contact.d9f043bb2888.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -324,11 +324,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 81906
+    "criticalBytes": 70353
   },
   "forgot-password.html": {
-    "css": "dist/forgot-password.4bc2f60e5de9.css",
-    "js": "dist/forgot-password.459a55ff4d3b.js",
+    "css": "dist/forgot-password.02c76de0c598.css",
+    "js": "dist/forgot-password.bee5e807635d.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -350,11 +350,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 73144
+    "criticalBytes": 61915
   },
   "index.html": {
-    "css": "dist/index.fa1e0b0338a9.css",
-    "js": "dist/index.fe5033f0006d.js",
+    "css": "dist/index.6bd698702b3c.css",
+    "js": "dist/index.1c2e63dd816b.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -390,11 +390,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 122227
+    "criticalBytes": 111074
   },
   "product.html": {
-    "css": "dist/product.94825ee1c3b8.css",
-    "js": "dist/product.89316f651d19.js",
+    "css": "dist/product.d5361581f5e6.css",
+    "js": "dist/product.9f74fb05b9a8.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -432,11 +432,11 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 138380
+    "criticalBytes": 127113
   },
   "reset-password.html": {
-    "css": "dist/reset-password.9e3814e836cc.css",
-    "js": "dist/forgot-password.459a55ff4d3b.js",
+    "css": "dist/reset-password.44148d8ab382.css",
+    "js": "dist/forgot-password.bee5e807635d.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -458,6 +458,6 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 72588
+    "criticalBytes": 61309
   }
 }

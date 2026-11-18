@@ -210,7 +210,23 @@
   height: 8px;
   border-radius: 50%;
   background: #8bc34a;
-  animation: hb-ping 2s infinite
+  position: relative
+}
+
+.hb-eyebrow i::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: #8bc34a88;
+  opacity: 0;
+  pointer-events: none;
+  animation: hb-ping-composited 2s ease infinite;
+}
+
+@keyframes hb-ping-composited {
+  from { transform: scale(.25); opacity: 1 }
+  to { transform: scale(1); opacity: 0 }
 }
 
 .hb-copy h1 {
@@ -614,16 +630,6 @@
 @keyframes hb-shimmer {
   to {
     background-position: 200% 50%
-  }
-}
-
-@keyframes hb-ping {
-  to {
-    box-shadow: 0 0 0 12px #8bc34a00
-  }
-
-  from {
-    box-shadow: 0 0 0 0 #8bc34a88
   }
 }
 

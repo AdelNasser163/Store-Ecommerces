@@ -5,3 +5,8 @@ assert.equal(dedupe('@layer a;@layer b;@layer a;').removed,0);
 assert.equal(dedupe('.x{content:"{hi}"}.x{content:"{hi}"}').removed,1);
 assert.equal(dedupe('/* a brace { and an apostrophe \' */.x{color:red}.x{color:red}').css.includes('brace'),true);
 console.log('PASS CSS cleanup: cascade order, conditional rules, layers, strings and comments.');
+const {prune}=require('./prune-utilities.cjs');
+assert.equal(prune('.used,.unused{color:red}','used'),'.used{color:red}');
+assert.equal(prune('@media(max-width:600px){.used,.unused{color:red}}','used'),'@media(max-width:600px){.used{color:red}}');
+assert.equal(prune('.used:has(.runtime-state){color:red}','used'),'.used:has(.runtime-state){color:red}');
+console.log('PASS selector filtering: grouped rules, responsive context and conservative dynamic states.');

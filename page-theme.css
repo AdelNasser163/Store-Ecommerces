@@ -103,11 +103,11 @@
   color: var(--pt-lime) !important
 }
 
-.pt-page .pt-trust :is(h4, p, span:not(.material-symbols-outlined)) {
+.pt-page .pt-trust :is(h2,h4, p, span:not(.material-symbols-outlined)) {
   font-family: var(--pt-body) !important
 }
 
-.pt-page .pt-trust h4 {
+.pt-page .pt-trust :is(h2,h4) {
   font-size: 12px;
   line-height: 1.6;
   color: var(--pt-white) !important
@@ -774,7 +774,7 @@ only the homepage receives this palette. */
     font-size: 18px
   }
 
-  .pt-page .pt-trust h4 {
+  .pt-page .pt-trust :is(h2,h4) {
     font-size: 10px
   }
 
@@ -933,7 +933,7 @@ follow that inner edge. */
 }
 
 @media(max-width:639px) {
-  .pt-page .pt-trust h4 {
+  .pt-page .pt-trust :is(h2,h4) {
     font-size: 11px
   }
 
@@ -1027,7 +1027,7 @@ follow that inner edge. */
   gap: 24px;
 }
 
-.pg-page .pg-trust h4 {
+.pg-page .pg-trust :is(h2,h4) {
   font: 700 14px/1.5 var(--pg-body) !important;
   color: #fff !important
 }
