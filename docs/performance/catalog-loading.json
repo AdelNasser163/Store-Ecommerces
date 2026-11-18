@@ -1,0 +1,38 @@
+[
+  {
+    "width": 390,
+    "lang": "ar",
+    "slowCSS": true,
+    "oneHeart": true,
+    "noReload": true,
+    "stableHeader": true,
+    "stableMain": true
+  },
+  {
+    "width": 390,
+    "lang": "en",
+    "slowCSS": true,
+    "oneHeart": true,
+    "noReload": true,
+    "stableHeader": true,
+    "stableMain": true
+  },
+  {
+    "width": 1440,
+    "lang": "ar",
+    "slowCSS": true,
+    "oneHeart": true,
+    "noReload": true,
+    "stableHeader": true,
+    "stableMain": true
+  },
+  {
+    "width": 1440,
+    "lang": "en",
+    "slowCSS": true,
+    "oneHeart": true,
+    "noReload": true,
+    "stableHeader": true,
+    "stableMain": true
+  }
+]

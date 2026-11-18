@@ -37,7 +37,7 @@
   },
   "accessories.html": {
     "css": "dist/accessories.1f1f37a7b4ab.css",
-    "js": "dist/accessories.6b32c0ead337.js",
+    "js": "dist/accessories.9c5ea14962b1.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -73,7 +73,7 @@
         "js/page-entry.js"
       ]
     },
-    "criticalBytes": 130845
+    "criticalBytes": 130999
   },
   "admin-bundles.html": {
     "css": "dist/admin-bundles.3dcbf484576b.css",
@@ -398,7 +398,7 @@
   },
   "product.html": {
     "css": "dist/product.0ee1bad0f4ad.css",
-    "js": "dist/product.4ce09a63c710.js",
+    "js": "dist/product.ed81fae5b99c.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",

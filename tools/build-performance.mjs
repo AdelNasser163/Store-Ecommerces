@@ -103,7 +103,7 @@ try{
  await page.goto('http://127.0.0.1:8767/'+documentName,{waitUntil:'domcontentloaded'});
  if(documentName==='index.html')await page.waitForSelector('.hb-slide img');
  const critical=await page.evaluate(()=>{
-  const nodes=[...new Set([...document.querySelectorAll('html,body,main,header,header *,.hb-hero,.hb-hero *'),...[...document.querySelectorAll('main *')].filter(n=>{const r=n.getBoundingClientRect();return r.width&&r.height&&r.top<innerHeight})])];
+  const nodes=[...new Set([...document.querySelectorAll('html,body,.products-skip,main,header,header *,.hb-hero,.hb-hero *'),...[...document.querySelectorAll('main *')].filter(n=>{const r=n.getBoundingClientRect();return r.width&&r.height&&r.top<innerHeight})])];
   function used(selector){if(/drawer|overlay|modal|menu|filter|search|account|toast|suggest|skeleton|pending|\[hidden\]/.test(selector))return true;return selector.split(',').some(s=>{try{const normalized=s.replace(/\[(?:dir|lang)[^\]]*\]/g,'').replace(/::(?:before|after)/g,'').trim();return normalized&&nodes.some(n=>n.matches(normalized))}catch{return /\.hb-|site-header|:root/.test(s)}})}
   function extract(rules){let text='';for(const rule of rules){if(rule.type===CSSRule.FONT_FACE_RULE)text+=rule.cssText;else if(rule.type===CSSRule.STYLE_RULE){if(used(rule.selectorText))text+=rule.cssText}else if(rule.type===CSSRule.KEYFRAMES_RULE){if(/^hb-|^perf-/.test(rule.name))text+=rule.cssText}else if(rule.cssRules){const child=extract(rule.cssRules);if(child)text+=rule.cssText.slice(0,rule.cssText.indexOf('{')+1)+child+'}'} }return text}
   return [...document.styleSheets].map(sheet=>{try{return extract(sheet.cssRules)}catch{return ''}}).join('');
