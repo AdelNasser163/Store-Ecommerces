@@ -1,0 +1,92 @@
+[
+  {
+    "file": "admin.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "file": "admin-orders.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "file": "admin-products.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "file": "admin-bundles.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "file": "admin-contact.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "file": "admin-customers.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "file": "admin-reports.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "file": "admin-settings.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "file": "admin-login.html",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "file": "admin.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "file": "admin-orders.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "file": "admin-products.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "file": "admin-bundles.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "file": "admin-contact.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "file": "admin-customers.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "file": "admin-reports.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "file": "admin-settings.html",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "file": "admin-login.html",
+    "theme": "dark",
+    "violations": []
+  }
+]

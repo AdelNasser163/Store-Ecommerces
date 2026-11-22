@@ -118,7 +118,7 @@
   let productCards = collectProductCards();
   window.addEventListener("store:cards-rendered", () => { productCards = collectProductCards(); renderState(); });
   const centralProducts = window.StoreProducts
-    ? window.StoreProducts.read().map((product) => window.StoreProducts.localized(product, localStorage.getItem(LANGUAGE_KEY) === "ar" ? "ar" : "en"))
+    ? window.StoreProducts.read().filter(product=>product.published!==false).map((product) => window.StoreProducts.localized(product, localStorage.getItem(LANGUAGE_KEY) === "ar" ? "ar" : "en"))
     : [];
   const products = centralProducts.length
     ? centralProducts.map(product => {
@@ -1680,8 +1680,8 @@
       success = document.querySelector(".checkout-success");
     let currentStep = 1,
       delivery = "express",
-      shipping = 150,
-      payment = "card",
+      shipping = Number(window.StorefrontSettings?.shipping?.express ?? 150),
+      payment = window.StorefrontSettings?.defaultPayment || "card",
       discount = 0;
     const esc = (value) =>
       String(value ?? "").replace(
@@ -1937,12 +1937,17 @@
           subtotal,
           shipping,
           discount,
+          coupon: promoInput.value.trim().toUpperCase(),
           total: Math.max(0, subtotal + shipping - discount),
           delivery,
           payment,
           status: payment === "cod" ? "طلب جديد" : "مدفوع",
         },
         orders = load("store-orders-v1", []);
+      if(window.StoreCloud?.enabled){
+        try{Object.assign(order,await window.StoreCloud.submitOrder(order))}
+        catch(error){return toast(error.message)}
+      }
       orders.unshift(order);
       if (!save("store-orders-v1", orders)) {
         return toast(
@@ -1952,6 +1957,7 @@
         );
       }
       try {
+        if(!window.StoreCloud?.enabled){
         const updatedProducts = StoreProducts.read();
         order.items.flatMap((orderedItem) => orderedItem.isBundle
           ? orderedItem.components.map((component) => ({ ...component, quantity: Number(component.quantity || 1) * Number(orderedItem.quantity || 1) }))
@@ -1969,6 +1975,7 @@
             );
         });
         await StoreProducts.write(updatedProducts);
+        }
       } catch (error) {
         console.warn("The order was saved, but stock could not be updated.", error);
       }

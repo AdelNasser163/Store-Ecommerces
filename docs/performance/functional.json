@@ -62,12 +62,27 @@
     "errors": []
   },
   {
+    "file": "admin-404.html",
+    "status": 200,
+    "errors": []
+  },
+  {
     "file": "admin-bundles.html",
     "status": 200,
     "errors": []
   },
   {
     "file": "admin-contact.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "admin-customers.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "admin-login.html",
     "status": 200,
     "errors": []
   },
@@ -83,6 +98,16 @@
   },
   {
     "file": "admin-products.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "admin-reports.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "admin-settings.html",
     "status": 200,
     "errors": []
   },

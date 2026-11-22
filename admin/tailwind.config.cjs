@@ -1,0 +1,2 @@
+/* Optional Tailwind integration. The static dashboard uses index.css directly. */
+module.exports={darkMode:['selector','[data-admin-theme="dark"]'],content:['./js/admin/**/*.js','./admin-*.html'],theme:{extend:{colors:Object.fromEntries(['primary','secondary','background','foreground','card','muted','muted-foreground','border','success','warning','danger','info'].map(name=>[name,`var(--${name})`])),borderRadius:{card:'var(--radius)',inner:'var(--radius-inner)'},fontFamily:{body:['var(--body-font)'],heading:['var(--heading-font)']}}}};

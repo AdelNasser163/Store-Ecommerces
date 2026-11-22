@@ -1,0 +1,14 @@
+{
+  "engine": "PostgreSQL via PGlite (development only)",
+  "schema": true,
+  "seed": true,
+  "publicCatalogRLS": true,
+  "privateOrdersRLS": true,
+  "serverPricing": true,
+  "stockAtomicity": true,
+  "idempotency": true,
+  "staffRole": true,
+  "adminRole": true,
+  "messageRLS": true,
+  "realtimeTransport": "Requires configured Supabase project"
+}

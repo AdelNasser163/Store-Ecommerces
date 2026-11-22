@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "overview",
+    "orders",
+    "products",
+    "bundles",
+    "messages",
+    "customers",
+    "reports",
+    "settings",
+    "login",
+    "notfound"
+  ],
+  "localMode": true,
+  "supabaseEnabled": false,
+  "responsiveCases": 80,
+  "accessibilityChecks": 18,
+  "storefrontCSSComparisons": 30,
+  "storefrontFunctionalChecks": 25,
+  "storefrontDrawerCases": 14,
+  "actualCheckoutToAdmin": true,
+  "rtlAndEnglish": true,
+  "lightAndDark": true,
+  "tests": [
+    "admin-logic.test.cjs",
+    "admin-workspace-verify.cjs",
+    "admin-actions-verify.cjs",
+    "admin-login-verify.cjs",
+    "admin-store-integration.cjs",
+    "admin-accessibility.cjs",
+    "admin-schema.test.cjs",
+    "perf-verify.cjs",
+    "shared-drawers-verify.cjs"
+  ],
+  "deferred": [
+    "Live Supabase provisioning and credentials",
+    "Cross-device authorization and realtime delivery",
+    "Real email delivery and payment-provider settlement"
+  ],
+  "performance": "See performance-summary.json; production 99 is not verified."
+}

@@ -55,3 +55,7 @@ node tools/support-verify.cjs
 # Shared templates
 
 See [SHARED-COMPONENTS.md](SHARED-COMPONENTS.md) for the single header/footer sources, shared button foundation, build output rules and verification commands.
+
+## Administration workspace v2
+
+The active admin pages now use `admin/index.css`, `js/admin/app.js`, `js/admin/auth.js`, `js/admin/data.js`, `js/admin/core.js`, and the lazily loaded modules in `js/admin/pages/`. See [dashboard-redesign/README.md](dashboard-redesign/README.md) for page behavior, local login setup, deferred cloud configuration and validation. Older root `admin-*.js`/admin theme files remain as migration references and are no longer dependencies of these pages. The storefront does not load admin modules. `js/storefront-settings.js` reads checkout preferences, and catalog publication checks hide draft products without changing public styles.

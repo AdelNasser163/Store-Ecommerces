@@ -1,0 +1,12 @@
+{
+  "filteredCSV": true,
+  "bulkStatus": true,
+  "duplicateProduct": true,
+  "deleteAndUndo": true,
+  "imageUploadAndCompression": true,
+  "messageArchive": true,
+  "messageDeleteAndUndo": true,
+  "reportExport": true,
+  "persistentCustomization": true,
+  "errors": []
+}

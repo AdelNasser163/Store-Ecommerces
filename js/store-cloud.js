@@ -1,0 +1,8 @@
+/* Loaded only when cloud mode is enabled at build time. Public key, never admin JWT. */
+(function(){
+ 'use strict';const c=window.AdminCloudConfig||{},base=(c.url||'').replace(/\/$/,''),key=c.publishableKey||'';if(c.mode!=='cloud')return;
+ async function request(path,options={}){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);try{const r=await fetch(base+path,{...options,signal:controller.signal,headers:{apikey:key,'Content-Type':'application/json',...options.headers}});if(!r.ok){const e=await r.json().catch(()=>({}));throw Error(e.message||'The store service is unavailable. Please try again.')}return r.status===204?null:r.json()}finally{clearTimeout(timer)}}
+ async function refresh(){const [products,bundles,settings]=await Promise.all(['products','bundles','settings'].map(table=>request('/rest/v1/'+table+'?select=*')));await StoreProducts.write(products.map(row=>({...row.payload,id:row.id,published:row.published})));StoreBundles.write(bundles.map(row=>({...row.payload,id:row.id})));const existing=JSON.parse(localStorage.getItem('almumez-site-settings')||'{}');localStorage.setItem('almumez-site-settings',JSON.stringify({...existing,...Object.fromEntries(settings.map(row=>[row.key,row.value]))}));}
+ window.StoreCloud={enabled:true,refresh,submitOrder:async order=>{const saved=await request('/rest/v1/rpc/submit_store_order',{method:'POST',body:JSON.stringify({p_order:{...order,requestId:order.requestId||crypto.randomUUID(),language:document.documentElement.lang}})});await refresh();return saved}};
+ window.StoreCloud.ready=Promise.resolve(StoreProducts.ready).then(refresh).catch(error=>{window.StoreCloud.error=error.message;return false});
+})();

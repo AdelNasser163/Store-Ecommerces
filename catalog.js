@@ -4,7 +4,7 @@
   const language=localStorage.getItem("almumez-language")==="ar"?"ar":"en",money=value=>window.AlMumezFormatCurrency?window.AlMumezFormatCurrency(value,language):(language==="ar"?`${new Intl.NumberFormat("ar-EG").format(Number(value)||0)} ج.م`:`EGP ${new Intl.NumberFormat("en-EG").format(Number(value)||0)}`),text=value=>typeof value==="object"?value?.[language]||value?.en||"":value||"";
   const badgeLabels={new:["New Arrival","وصل حديثًا"],"best-seller":["Best Seller","الأكثر مبيعًا"],"official-warranty":["Official Warranty","ضمان رسمي"],discount:["Sale","خصم"],none:["",""]};
   const offerState=product=>StoreProducts.getEffectivePrice(product);
-  const products=()=>StoreProducts.read();
+  const products=()=>StoreProducts.read().filter(product=>product.published!==false);
   const identity=product=>String(product.name?.en||product.name||product.id).toLowerCase().replace(/\s+copy(?:\s+\d+)?$/," ").trim();
   const unique=list=>{const seen=new Set();return list.filter(product=>{const key=identity(product);if(seen.has(key))return false;seen.add(key);return true})};
   const renderedOnPage=new Set(),imageError=`this.onerror=null;this.src='${StoreProducts.imageFallback}'`;
@@ -43,4 +43,10 @@
   document.addEventListener("click",event=>{const target=event.target.closest("[data-product-id] img, [data-product-id] h3");if(!target)return;location.href=`product.html?id=${encodeURIComponent(target.closest("[data-product-id]").dataset.productId)}`});
   document.addEventListener("keydown",event=>{if(!["Enter"," "].includes(event.key)||!event.target.matches("[data-product-id] h3"))return;event.preventDefault();location.href=`product.html?id=${encodeURIComponent(event.target.closest("[data-product-id]").dataset.productId)}`});
   window.StoreCatalogUI={card,products,renderPlacement,unique,flush};
+  StoreProducts.ready?.then(()=>{
+    let signature=JSON.stringify(products());
+    const refresh=()=>{const next=JSON.stringify(products());if(next===signature)return;signature=next;pending.forEach((_,grid)=>near?.unobserve(grid));pending.clear();renderedOnPage.clear();document.querySelectorAll('[data-products-section]').forEach(grid=>{renderPlacement(grid.dataset.productsSection);delete grid.dataset.perfPending;grid.removeAttribute('aria-busy')});window.dispatchEvent(new Event('store:cards-rendered'))};
+    window.addEventListener('storage',event=>{if(event.key===StoreProducts.KEY)refresh()});
+    window.addEventListener('store:products-changed',refresh);
+  });
 })();

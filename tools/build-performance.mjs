@@ -18,11 +18,17 @@ fs.mkdirSync('dist',{recursive:true});
 const generated=new Set();
 const identicalAssets=new Map();
 const mainSource=fs.readFileSync('main.js','utf8');
+const cloudEnabled=/mode\s*:\s*['"]cloud['"]/.test(fs.readFileSync('admin-config.js','utf8'));
 const dictionaryStart=mainSource.indexOf('{',mainSource.indexOf('Object.entries({',mainSource.indexOf('const translations')));
 let depth=0,quote='',escaped=false,dictionaryEnd=dictionaryStart;
 for(let i=dictionaryStart;i<mainSource.length;i++){const ch=mainSource[i];if(quote){if(escaped)escaped=false;else if(ch==='\\')escaped=true;else if(ch===quote)quote='';continue}if(ch==='"'||ch==="'"){quote=ch;continue}if(ch==='{')depth++;if(ch==='}'&&!--depth){dictionaryEnd=i+1;break}}
 const dictionary=Function('return ('+mainSource.slice(dictionaryStart,dictionaryEnd)+')')();
 function asset(name,code,extension){const key=hash(code)+'.'+extension;if(identicalAssets.has(key))return identicalAssets.get(key);const file=`dist/${name}.${key}`;fs.writeFileSync(file,code);generated.add(file);identicalAssets.set(key,file);return file}
+const adminModules={};
+if(fs.existsSync('js/admin/pages'))for(const name of fs.readdirSync('js/admin/pages').filter(n=>n.endsWith('.js'))){
+ const source=fs.readFileSync('js/admin/pages/'+name,'utf8');
+ adminModules[name.replace('.js','')]=asset('admin-view-'+name.replace('.js',''),(await transform(source,{loader:'js',format:'esm',minify:true,target:'es2020',legalComments:'none',charset:'utf8'})).code,'js');
+}
 function staticImages(html){return html.replace(/<img\b[^>]*>/g,tag=>{
  const source=tag.match(/\bsrc=["']([^"']+)["']/)?.[1],item=images[source];
  const logo=imageLookup.get(source);if(logo&&/\/logo(?:-footer)?\.png$/.test(logo.source)){
@@ -48,7 +54,7 @@ for(const page of fs.readdirSync('.').filter(n=>n.endsWith('.html')&&n!=='produc
  // Dynamic/stateful selectors are retained conservatively by the pruner.
  const pagePool=html.replace(/<style id="perf-critical">[\s\S]*?<\/style>/g,'')+'\n'+[...new Set([...meta.scripts,'js/image-performance.js'])].filter(s=>fs.existsSync(s)).map(s=>fs.readFileSync(s,'utf8')).join('\n');
  let css='';
- for(let source of new Set(meta.styles)){if(source==='assets/fonts/fonts.css')source='assets/fonts/fonts-performance.css';if(source==='js/vendor/rb-islands.css')source='src-islands/islands.css';let value=fs.readFileSync(source,'utf8');value=prune(value,pagePool);value=value.replace(/url\((["']?)(?!data:|https?:|\/)([^)'"\s]+)\1\)/g,(_,q,url)=>`url(${q}../${path.posix.normalize(path.posix.join(path.posix.dirname(source),url))}${q})`);css+='\n'+value}
+ for(let source of new Set(meta.styles)){if(source==='assets/fonts/fonts.css')source='assets/fonts/fonts-performance.css';if(source==='js/vendor/rb-islands.css')source='src-islands/islands.css';let value=fs.readFileSync(source,'utf8');if(source!=='admin/index.css')value=prune(value,pagePool);value=value.replace(/url\((["']?)(?!data:|https?:|\/)([^)'"\s]+)\1\)/g,(_,q,url)=>`url(${q}../${path.posix.normalize(path.posix.join(path.posix.dirname(source),url))}${q})`);css+='\n'+value}
  css+='\n'+fs.readFileSync('performance.css','utf8');
  const compiled=dedupe((await transform(css,{loader:'css',minify:true,target:'es2020',legalComments:'none',charset:'utf8'})).code).css;
  const cssFile=asset(page.replace('.html',''),compiled,'css');
@@ -60,19 +66,22 @@ for(const page of fs.readdirSync('.').filter(n=>n.endsWith('.html')&&n!=='produc
  if(hasStore)scripts.unshift('js/image-manifest.js','js/image-performance.js');
  scripts.push(...moveLast.filter(s=>meta.scripts.includes(s)));
  if(meta.scripts.includes('js/fx.js'))scripts.push('js/fx.js');
- let code='';
- for(const source of [...new Set(scripts)]){let text=fs.readFileSync(source,'utf8');if(!source.startsWith('data/')&&source!=='js/image-manifest.js')for(const original of ['assets/images/logo.png','assets/images/logo-footer.png'])text=text.split(original).join(images[original]?.src||original);code+=';\n'+text}
+ const cloudStore=cloudEnabled&&!page.startsWith('admin')&&hasStore;
+ if(cloudStore){const storeIndex=scripts.indexOf('data/store.js');scripts.splice(storeIndex+1,0,'admin-config.js','data/bundles.js','js/store-cloud.js')}
+ let code=meta.scripts.includes('js/admin/app.js')?'window.AdminPageModules='+JSON.stringify(adminModules)+';\n':'';
+ for(const source of [...new Set(scripts)]){let text=fs.readFileSync(source,'utf8');if(cloudStore&&source==='support-config.js')text="window.SupportConfig=Object.freeze({mode:'cloud',url:AdminCloudConfig.url,publishableKey:AdminCloudConfig.publishableKey});";if(!source.startsWith('data/')&&source!=='js/image-manifest.js')for(const original of ['assets/images/logo.png','assets/images/logo-footer.png'])text=text.split(original).join(images[original]?.src||original);code+=';\n'+text;if(source==='js/store-cloud.js')code+=';await window.StoreCloud.ready;'}
+ if(cloudStore)code='(async()=>{'+code+'})();';
  const jsFile=asset(page.replace('.html',''),(await transform(code,{loader:'js',minify:true,target:'es2020',legalComments:'none',charset:'utf8'})).code,'js');
  html=html.replace(/<!--perf-assets:start-->[\s\S]*?<!--perf-assets:end-->/g,'').replace(/<!--perf-bootstrap:start-->[\s\S]*?<!--perf-bootstrap:end-->/g,'').replace(/<!--perf-early:start-->[\s\S]*?<!--perf-early:end-->/g,'').replace(/<!--perf-hero:start-->[\s\S]*?<!--perf-hero:end-->/g,'').replace(/<!--perf-skeleton:start-->[\s\S]*?<!--perf-skeleton:end-->/g,'').replace(/<style id="perf-critical">[\s\S]*?<\/style>/g,'');
  html=html.replace(/<script\b[^>]*\bsrc=["'][^"']+["'][^>]*>\s*<\/script>/g,'').replace(/<link\b[^>]*rel=["']stylesheet["'][^>]*>/g,'').replace(/<noscript>\s*<\/noscript>/g,'');
  // The encoding declaration must precede the bootstrap and be inside the first 1024 bytes.
  html=html.replace(/<meta\s+charset=["'][^"']+["'][^>]*>/i,'');
  html=html.replace(/<head>/,'<head><meta charset="utf-8">');
- if(meta.scripts.includes('js/page-bootstrap.js')){const boot=(await transform(fs.readFileSync('js/page-bootstrap.js','utf8'),{minify:true,loader:'js'})).code;html=html.replace('<meta charset="utf-8">','<meta charset="utf-8"><!--perf-bootstrap:start--><script>'+boot+'</script><!--perf-bootstrap:end-->')}
+ if(meta.scripts.includes('js/page-bootstrap.js')){const boot=(await transform(fs.readFileSync('js/page-bootstrap.js','utf8')+(meta.scripts.includes('js/admin/app.js')?fs.readFileSync('js/admin/bootstrap.js','utf8'):''),{minify:true,loader:'js'})).code;html=html.replace('<meta charset="utf-8">','<meta charset="utf-8"><!--perf-bootstrap:start--><script>'+boot+'</script><!--perf-bootstrap:end-->')}
  const iconFont=fontCSS.match(/url\((icons-[^)]+)\)/)?.[1];
  const arabicFont=fontCSS.match(/src: url\((arabic-[^)]+)\)[^}]*unicode-range: U\+0600/)?.[1];
  const cairoLatin=fontCSS.split('}').find(block=>/font-family: 'Cairo'/.test(block)&&/unicode-range: U\+0000/.test(block))?.match(/url\(([^)]+)\)/)?.[1];
- const preloads=[iconFont&&`assets/fonts/${iconFont}`,'assets/fonts/font-2.woff2','assets/fonts/font-6.woff2',arabicFont&&`assets/fonts/${arabicFont}`,cairoLatin&&`assets/fonts/${cairoLatin}`].filter(Boolean).map(src=>`<link rel="preload" href="${src}" as="font" type="font/woff2" crossorigin>`).join('');
+ const preloads=[!meta.scripts.includes('js/admin/app.js')&&iconFont&&`assets/fonts/${iconFont}`,'assets/fonts/font-2.woff2','assets/fonts/font-6.woff2',arabicFont&&`assets/fonts/${arabicFont}`,cairoLatin&&`assets/fonts/${cairoLatin}`].filter(Boolean).map(src=>`<link rel="preload" href="${src}" as="font" type="font/woff2" crossorigin>`).join('');
  let hero='';
  if(page==='index.html'){
   html=html.replace(/<div\b[^>]*data-products-section="home-(?:flash|featured)"[^>]*>/g,tag=>{if(!tag.includes('data-perf-pending'))tag=tag.replace(/>$/,' data-perf-pending aria-busy="true">');return tag+'<!--perf-skeleton:start-->'+Array.from({length:4},()=>'<div class="perf-skeleton" aria-hidden="true"></div>').join('')+'<!--perf-skeleton:end-->'});
@@ -99,10 +108,13 @@ const server=serve(),browser=await chromium.launch({executablePath:browserPath})
 try{
  for(const [documentName,assets] of Object.entries(manifest)){
  const page=await browser.newPage({viewport:{width:1440,height:1000}});
+ if(documentName.startsWith('admin'))await page.addInitScript(()=>sessionStorage.setItem('almumez-admin','1'));
  await page.route('https://**/*',r=>r.abort());
  await page.goto('http://127.0.0.1:8767/'+documentName,{waitUntil:'domcontentloaded'});
  if(documentName==='index.html')await page.waitForSelector('.hb-slide img');
+ if(assets.sources.scripts.includes('js/admin/app.js')&&documentName!=='admin-login.html')await page.waitForSelector('.aw-topbar');
  const critical=await page.evaluate(()=>{
+  if(document.body.matches('.aw-app'))return [...document.styleSheets].map(sheet=>{try{return [...sheet.cssRules].map(rule=>rule.cssText).join('')}catch{return ''}}).join('');
   const nodes=[...new Set([...document.querySelectorAll('html,body,.products-skip,main,header,header *,.hb-hero,.hb-hero *'),...[...document.querySelectorAll('main *')].filter(n=>{const r=n.getBoundingClientRect();return r.width&&r.height&&r.top<innerHeight})])];
   function used(selector){if(/drawer|overlay|modal|menu|filter|search|account|toast|suggest|skeleton|pending|\[hidden\]/.test(selector))return true;return selector.split(',').some(s=>{try{const normalized=s.replace(/\[(?:dir|lang)[^\]]*\]/g,'').replace(/::(?:before|after)/g,'').trim();return normalized&&nodes.some(n=>n.matches(normalized))}catch{return /\.hb-|site-header|:root/.test(s)}})}
   function extract(rules){let text='';for(const rule of rules){if(rule.type===CSSRule.FONT_FACE_RULE)text+=rule.cssText;else if(rule.type===CSSRule.STYLE_RULE){if(used(rule.selectorText))text+=rule.cssText}else if(rule.type===CSSRule.KEYFRAMES_RULE){if(/^hb-|^perf-/.test(rule.name))text+=rule.cssText}else if(rule.cssRules){const child=extract(rule.cssRules);if(child)text+=rule.cssText.slice(0,rule.cssText.indexOf('{')+1)+child+'}'} }return text}

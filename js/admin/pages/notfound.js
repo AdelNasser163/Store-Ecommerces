@@ -1,0 +1,1 @@
+export function render(c){c.main.innerHTML=c.empty(c.t('الصفحة غير موجودة','Page not found'),c.t('قد يكون الرابط تغيّر. ارجع إلى الرئيسية أو استخدم البحث العام.','The link may have changed. Return to the overview or use global search.'),`<a class="aw-button" href="admin.html">${c.names.dashboard}</a>`)}

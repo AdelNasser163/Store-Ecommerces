@@ -1,0 +1,1 @@
+function a(e){e.main.innerHTML=e.empty(e.t("الصفحة غير موجودة","Page not found"),e.t("قد يكون الرابط تغيّر. ارجع إلى الرئيسية أو استخدم البحث العام.","The link may have changed. Return to the overview or use global search."),`<a class="aw-button" href="admin.html">${e.names.dashboard}</a>`)}export{a as render};

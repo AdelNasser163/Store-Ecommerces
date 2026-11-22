@@ -68,81 +68,91 @@
   "admin-bundles.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css",
-      "admin-shell.css"
+      "admin/index.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
-      "admin-ui.js",
+      "admin-config.js",
       "data/products.js",
       "js/image-store.js",
       "data/store.js",
       "data/bundles.js",
-      "admin-bundles.js",
-      "js/page-entry.js"
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
     ]
   },
   "admin-orders.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css",
-      "admin-shell.css",
-      "admin-orders-theme.css"
+      "admin/index.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
-      "admin-ui.js",
-      "admin-orders.js",
-      "admin-orders-view.js",
-      "js/page-entry.js"
+      "admin-config.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
     ]
   },
   "admin-product.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css",
-      "admin-shell.css"
+      "admin/index.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
-      "admin-ui.js",
+      "admin-config.js",
       "data/products.js",
       "js/image-store.js",
       "data/store.js",
-      "admin.js",
-      "js/page-entry.js"
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
     ]
   },
   "admin-products.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css",
-      "admin-shell.css"
+      "admin/index.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
-      "admin-ui.js",
+      "admin-config.js",
       "data/products.js",
       "js/image-store.js",
       "data/store.js",
-      "admin-products.js",
-      "js/page-entry.js"
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
     ]
   },
   "admin.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css",
-      "admin-shell.css"
+      "admin/index.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
-      "admin-ui.js",
+      "admin-config.js",
       "data/products.js",
       "js/image-store.js",
       "data/store.js",
-      "admin-dashboard.js",
-      "js/page-entry.js"
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
     ]
   },
   "auth.html": {
@@ -214,6 +224,7 @@
       "js/image-store.js",
       "data/store.js",
       "catalog.js",
+      "js/storefront-settings.js",
       "main.js",
       "js/fx.js",
       "js/shared-drawers.js",
@@ -340,6 +351,7 @@
       "js/product-card.js",
       "catalog.js",
       "main.js",
+      "js/product-visibility.js",
       "bundle-cart.js",
       "js/site-chrome-theme.js",
       "js/product-detail-theme.js",
@@ -372,17 +384,109 @@
   "admin-contact.html": {
     "styles": [
       "assets/fonts/fonts.css",
-      "style.css",
-      "admin-contact.css",
-      "admin-shell.css"
+      "admin/index.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
-      "support-config.js",
-      "js/support-api.js",
-      "admin-ui.js",
-      "admin-contact.js",
-      "js/page-entry.js"
+      "admin-config.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
+    ]
+  },
+  "admin-login.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "admin/index.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "admin-config.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
+    ]
+  },
+  "admin-customers.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "admin/index.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "admin-config.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
+    ]
+  },
+  "admin-reports.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "admin/index.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "admin-config.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
+    ]
+  },
+  "admin-settings.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "admin/index.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "admin-config.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
+    ]
+  },
+  "admin-404.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "admin/index.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "admin-config.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
     ]
   }
 }

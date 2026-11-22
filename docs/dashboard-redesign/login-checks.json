@@ -1,0 +1,10 @@
+{
+  "firstSetup": true,
+  "returnToRequestedPage": true,
+  "remember": true,
+  "wrongPasswordValidation": true,
+  "recoveryCode": true,
+  "passwordHashing": true,
+  "language": true,
+  "darkMode": true
+}

@@ -1,0 +1,5 @@
+(function(){
+ 'use strict';const id=new URLSearchParams(location.search).get('id');if(!id)return;const p=window.StoreProducts?.read().find(row=>String(row.id)===id);if(!p||p.published!==false)return;
+ const main=document.querySelector('main');if(!main)return;
+ const render=()=>{const ar=document.documentElement.lang==='ar';main.replaceChildren();const section=document.createElement('section');section.style.cssText='max-width:700px;margin:60px auto;padding:40px 24px;text-align:center';const heading=document.createElement('h1');heading.textContent=ar?'المنتج غير متاح حاليًا':'This product is currently unavailable';const link=document.createElement('a');link.href='accessories.html';link.textContent=ar?'تصفح المنتجات المتاحة':'Browse available products';link.style.cssText='display:inline-block;margin-top:24px;text-decoration:underline';section.append(heading,link);main.append(section)};render();new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+})();

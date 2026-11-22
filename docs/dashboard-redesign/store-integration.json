@@ -1,0 +1,9 @@
+{
+  "productPublishingAcrossTabs": true,
+  "stockAcrossTabs": true,
+  "contactInbox": true,
+  "shippingSettings": true,
+  "paymentSettings": true,
+  "checkoutOrderReachedAdmin": true,
+  "errors": []
+}

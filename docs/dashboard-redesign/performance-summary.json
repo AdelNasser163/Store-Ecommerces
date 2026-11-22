@@ -1,0 +1,41 @@
+{
+  "before": {
+    "scores": {
+      "performance": 52,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "LCPms": 3795,
+    "TBTms": 7377,
+    "CLS": 0,
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.0.0 Safari/537.36",
+      "benchmarkIndex": 2062.5,
+      "credits": {
+        "axe-core": "4.14.0"
+      }
+    }
+  },
+  "after": {
+    "scores": {
+      "performance": 51,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "LCPms": 4438,
+    "TBTms": 2108,
+    "CLS": 0,
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.0.0 Safari/537.36",
+      "benchmarkIndex": 693.5,
+      "credits": {
+        "axe-core": "4.14.0"
+      }
+    }
+  },
+  "note": "Local Lighthouse runs, not production PageSpeed. Large timing variance was observed across repeated runs. Production 99 is not verified. Storefront CSS regression tests passed; admin page chunks are not loaded by storefront pages."
+}

@@ -1,0 +1,497 @@
+{
+  "responsive": [
+    {
+      "file": "admin.html",
+      "width": 360,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-orders.html",
+      "width": 360,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-products.html",
+      "width": 360,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-bundles.html",
+      "width": 360,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-contact.html",
+      "width": 360,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-customers.html",
+      "width": 360,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-reports.html",
+      "width": 360,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-settings.html",
+      "width": 360,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin.html",
+      "width": 360,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-orders.html",
+      "width": 360,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-products.html",
+      "width": 360,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-bundles.html",
+      "width": 360,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-contact.html",
+      "width": 360,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-customers.html",
+      "width": 360,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-reports.html",
+      "width": 360,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-settings.html",
+      "width": 360,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin.html",
+      "width": 390,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-orders.html",
+      "width": 390,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-products.html",
+      "width": 390,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-bundles.html",
+      "width": 390,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-contact.html",
+      "width": 390,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-customers.html",
+      "width": 390,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-reports.html",
+      "width": 390,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-settings.html",
+      "width": 390,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin.html",
+      "width": 390,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-orders.html",
+      "width": 390,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-products.html",
+      "width": 390,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-bundles.html",
+      "width": 390,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-contact.html",
+      "width": 390,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-customers.html",
+      "width": 390,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-reports.html",
+      "width": 390,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-settings.html",
+      "width": 390,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin.html",
+      "width": 768,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-orders.html",
+      "width": 768,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-products.html",
+      "width": 768,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-bundles.html",
+      "width": 768,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-contact.html",
+      "width": 768,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-customers.html",
+      "width": 768,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-reports.html",
+      "width": 768,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-settings.html",
+      "width": 768,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin.html",
+      "width": 768,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-orders.html",
+      "width": 768,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-products.html",
+      "width": 768,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-bundles.html",
+      "width": 768,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-contact.html",
+      "width": 768,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-customers.html",
+      "width": 768,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-reports.html",
+      "width": 768,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-settings.html",
+      "width": 768,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin.html",
+      "width": 1024,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-orders.html",
+      "width": 1024,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-products.html",
+      "width": 1024,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-bundles.html",
+      "width": 1024,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-contact.html",
+      "width": 1024,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-customers.html",
+      "width": 1024,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-reports.html",
+      "width": 1024,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-settings.html",
+      "width": 1024,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin.html",
+      "width": 1024,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-orders.html",
+      "width": 1024,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-products.html",
+      "width": 1024,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-bundles.html",
+      "width": 1024,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-contact.html",
+      "width": 1024,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-customers.html",
+      "width": 1024,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-reports.html",
+      "width": 1024,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-settings.html",
+      "width": 1024,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin.html",
+      "width": 1440,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-orders.html",
+      "width": 1440,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-products.html",
+      "width": 1440,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-bundles.html",
+      "width": 1440,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-contact.html",
+      "width": 1440,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-customers.html",
+      "width": 1440,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-reports.html",
+      "width": 1440,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin-settings.html",
+      "width": 1440,
+      "lang": "ar",
+      "overflow": false
+    },
+    {
+      "file": "admin.html",
+      "width": 1440,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-orders.html",
+      "width": 1440,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-products.html",
+      "width": 1440,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-bundles.html",
+      "width": 1440,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-contact.html",
+      "width": 1440,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-customers.html",
+      "width": 1440,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-reports.html",
+      "width": 1440,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "admin-settings.html",
+      "width": 1440,
+      "lang": "en",
+      "overflow": false
+    }
+  ],
+  "operations": {
+    "orderStatusAndNotes": true,
+    "inlineStock": true,
+    "productEdit": true,
+    "bundleCreate": true,
+    "messageStarAndResolve": true,
+    "settings": true,
+    "search": true,
+    "darkMode": true,
+    "routeGuard": true,
+    "localAccountSetup": true
+  },
+  "errors": []
+}

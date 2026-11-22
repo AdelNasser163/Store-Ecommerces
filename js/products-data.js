@@ -3,7 +3,7 @@
   const departments=[],brands=[],storages=[];
   const pair=(value,fallback="")=>typeof value==="object"&&value?{ar:value.ar||value.en||fallback,en:value.en||value.ar||fallback}:{ar:String(value||fallback),en:String(value||fallback)};
   const slug=value=>String(value||"").toLowerCase().trim().replace(/[^a-z0-9\u0600-\u06ff]+/g,"-").replace(/^-|-$/g,"");
-  function source(){return root.StoreProducts?.read?.()||[]}
+  function source(){return(root.StoreProducts?.read?.()||[]).filter(product=>product.published!==false)}
   function effective(product){return root.StoreProducts?.getEffectivePrice?.(product)||{price:Number(product.price)||0,originalPrice:Number(product.oldPrice)||0,active:Number(product.oldPrice)>Number(product.price)}}
   function mapProduct(product){
     const state=effective(product),category=product.category||"other",categoryLabel=pair(product.categoryLabel||product.subcategory,category),brand=pair(product.brand,""),variants=Array.isArray(product.variants)?product.variants:[],storageOptions=variants.map(item=>String(item.label?.en||item.label?.ar||item.id||"")).filter(Boolean);
