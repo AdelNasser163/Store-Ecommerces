@@ -1,5 +1,22 @@
 # Verified platform RLS event trigger exception — 2026-11-24
 
+## Latest control-flow clarification
+
+The former ELSIF belonged to `IF candidate_oid IS NOT NULL`, not to the inner
+trigger-validation IF. It therefore did not execute after a valid configuration.
+Nevertheless, the nesting obscured the rule and allowed the platform routine and
+trigger to be absent together. The generator now uses sequential fail-closed
+checks: reject a missing candidate, verify the exact function, verify the trigger
+and attachment count, then authorize only that verified OID. No ELSIF remains.
+
+The regenerated deployment passed **187/187 checks on isolated PostgreSQL 17.12**,
+including the previous 185 checks plus rejection of both missing objects and a
+missing zero-argument function while a trigger remains. The exact tested SQL
+SHA256 is `3f84c25c4cca4d832e00abbcb0879d2224f7a4619bda08dd23e44bf39e63f15d`.
+Function fingerprint, owner, language, SECURITY DEFINER, search_path, zero-argument
+and event-trigger checks are unchanged. Generated SQL contains no mutation of the
+existing platform function or trigger. Earlier counts/hashes below are historical.
+
 No production connection, SQL execution on production, migration application,
 Supabase setting change, deletion, Git staging, commit or push was performed.
 No migration source was modified for this correction. Existing migration edits
@@ -29,7 +46,8 @@ Acceptance requires ALL of:
   OID, event ddl_command_end, mode O, and exactly CREATE TABLE / CREATE TABLE AS /
   SELECT INTO command tags. No additional event trigger may attach to this OID.
 
-If no zero-argument routine exists, a dangling ensure_rls name is refused. Any
+If no zero-argument routine exists, deployment is refused even if no trigger
+exists. A missing/misdirected ensure_rls is always refused. Any
 unrecognized public/support_private routine remains rejected under the original
 rules; extension-member platform functions retain their preexisting treatment.
 

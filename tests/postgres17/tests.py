@@ -58,6 +58,17 @@ def main():
         run('pg_ctl','-D',directory/'data','-l',directory/'server.log','-o','-h 127.0.0.1 -p '+str(port)+' -c wal_level=logical','-w','start')
         started = True
         file(ROOT/'tests/postgres16/stub.sql')
+        deployment_text = (ROOT/'supabase/DEPLOY_TO_SUPABASE.sql').read_text(encoding='utf-8')
+        guard = deployment_text.split('do $first_deployment_guard$',1)[1].split('end $first_deployment_guard$;',1)[0]
+        guard = 'do $first_deployment_guard$' + guard + 'end $first_deployment_guard$;'
+        try:
+            sql(guard)
+        except RuntimeError as error:
+            if 'verified platform function public.rls_auto_enable() is missing' not in str(error):
+                raise
+            passed('platform guard rejects both missing function and missing trigger')
+        else:
+            raise AssertionError('Guard accepted absent platform function/trigger')
         # Trusted platform fixture from the verified backup, not from production.
         # Preserve LF exactly: the guard checks pg_get_functiondef without any
         # whitespace normalization and leaves the function/event trigger intact.
@@ -72,6 +83,7 @@ def main():
         # role exists only inside the disposable cluster, never in deployment SQL.
         sql('create role fixture_platform_owner superuser;')
         cases = [
+            ('zero-argument function missing while trigger still exists','alter function public.rls_auto_enable() rename to fixture_saved_rls;'),
             ('changed definition',"create or replace function public.rls_auto_enable() returns event_trigger language plpgsql security definer set search_path=pg_catalog as $$begin null;end$$;"),
             ('wrong function owner','alter function public.rls_auto_enable() owner to fixture_platform_owner;'),
             ('security invoker','alter function public.rls_auto_enable() security invoker;'),

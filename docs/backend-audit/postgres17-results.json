@@ -6,11 +6,19 @@
   "failure": null,
   "checks": [
     {
+      "name": "platform guard rejects both missing function and missing trigger",
+      "status": "Passed and tested"
+    },
+    {
       "name": "platform fingerprint algorithm is MD5(pg_get_functiondef)",
       "status": "Passed and tested"
     },
     {
       "name": "platform exact definition/owner/security/trigger accepted by actual generated guard",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects zero-argument function missing while trigger still exists",
       "status": "Passed and tested"
     },
     {

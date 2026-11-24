@@ -43,7 +43,11 @@ do $first_deployment_guard$ declare existing text;target text;verified_platform_
  -- fingerprint is MD5(pg_catalog.pg_get_functiondef(oid)), NOT MD5(prosrc).
  -- Do not normalize whitespace, replace the function, or disable its event trigger.
  candidate_oid=to_regprocedure('public.rls_auto_enable()');
- if candidate_oid is not null then
+ -- Fail closed before inspecting the trigger. A valid function and trigger are
+ -- required; there is no optional/ELSE branch after successful verification.
+ if candidate_oid is null then
+  raise exception 'First deployment refused: verified platform function public.rls_auto_enable() is missing';
+ end if;
   if not exists(
    select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace
    join pg_language l on l.oid=p.prolang join pg_roles owner_role on owner_role.oid=p.proowner
@@ -61,10 +65,8 @@ do $first_deployment_guard$ declare existing text;target text;verified_platform_
    and (select array_agg(tag order by tag) from unnest(e.evttags) tag)=array['CREATE TABLE','CREATE TABLE AS','SELECT INTO']::text[]
   ) or (select count(*) from pg_event_trigger where evtfoid=candidate_oid)<>1
   then raise exception 'First deployment refused: ensure_rls event trigger missing or configuration mismatch';end if;
-  verified_platform_oid=candidate_oid;
- elsif exists(select 1 from pg_event_trigger where evtname='ensure_rls') then
-  raise exception 'First deployment refused: ensure_rls does not reference the verified platform function';
- end if;
+ -- Only both successful checks authorize exclusion of this exact OID.
+ verified_platform_oid=candidate_oid;
  select string_agg(n.nspname||'.'||p.proname,', ') into existing from pg_proc p join pg_namespace n on n.oid=p.pronamespace
  where n.nspname in ('public','support_private')
  and p.oid<>verified_platform_oid

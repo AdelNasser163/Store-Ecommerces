@@ -1,5 +1,10 @@
 # PostgreSQL 17 first-deployment gate
 
+Current control-flow regression run: 187/187 PASS. The exact platform configuration
+must pass; a missing zero-argument routine, missing trigger, wrong trigger OID,
+owner/event/enabled/tags and extra attachments must fail. No optional platform
+branch is allowed in the generated first-install guard.
+
 The runner additionally loads the exact LF-only rls_auto_enable/ensure_rls fixture
 from the verified pre-deployment backup. It proves the MD5(pg_get_functiondef)
 algorithm, exercises the generated guard under valid and altered platform states,

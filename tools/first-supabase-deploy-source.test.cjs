@@ -10,6 +10,11 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),parser=require(
  assert.equal((deploy.match(/^BEGIN;$/gm)||[]).length,1);
  assert.equal((deploy.match(/^COMMIT;$/gm)||[]).length,1);
  assert(deploy.indexOf('$first_deployment_guard$')<deploy.indexOf('-- FILE: preflight.sql'));
+ const platformGuard=deploy.split('do $first_deployment_guard$')[1].split('end $first_deployment_guard$;')[0];
+ assert(!/elsif\s+exists\s*\(select 1 from pg_event_trigger/i.test(platformGuard));
+ assert(platformGuard.includes('if candidate_oid is null then'));
+ assert(platformGuard.indexOf('if candidate_oid is null then')<platformGuard.indexOf('pg_catalog.md5(pg_catalog.pg_get_functiondef'));
+ assert(platformGuard.indexOf('verified_platform_oid=candidate_oid')>platformGuard.indexOf('ensure_rls event trigger missing or configuration mismatch'));
  assert(deploy.includes("pg_catalog.md5(pg_catalog.pg_get_functiondef(p.oid))='846ec2fbff751d24b890656d63c3a9bf'"));
  for(const text of ["owner_role.rolname='postgres'","l.lanname='plpgsql'","p.prosecdef","p.pronargs=0","p.proconfig=array['search_path=pg_catalog']","e.evtname='ensure_rls'","e.evtfoid=candidate_oid","e.evtevent='ddl_command_end'","e.evtenabled='O'","and p.oid<>verified_platform_oid"]){assert(deploy.includes(text),text)}
  assert(!/drop\s+(?:event\s+trigger\s+ensure_rls|function\s+public\.rls_auto_enable)|alter\s+(?:event\s+trigger\s+ensure_rls|function\s+public\.rls_auto_enable)|create\s+(?:or\s+replace\s+)?function\s+public\.rls_auto_enable/i.test(deploy));
