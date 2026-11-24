@@ -1058,6 +1058,12 @@ grant execute on function public.restore_deleted_support_message(uuid) to authen
 -- Remove its authorization; never weaken the guard or remove order history.
 drop policy if exists order_delete on public.orders;
 revoke delete on public.orders from anon,authenticated;
+-- The dashboard subscribes to category changes as well as product/order changes.
+do $categories_realtime$ begin
+ if not exists(select 1 from pg_publication_tables where pubname='supabase_realtime' and schemaname='public' and tablename='categories') then
+  alter publication supabase_realtime add table public.categories;
+ end if;
+end $categories_realtime$;
 insert into public.store_schema_migrations(version) values('202611230011') on conflict(version) do nothing;
 
 

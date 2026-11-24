@@ -1,0 +1,8 @@
+node_modules/
+dist/
+assets/
+js/vendor/
+data/
+style.css
+supabase/
+docs/

@@ -8,10 +8,10 @@ const {serve,chromium,browserPath}=require('./perf-measure.cjs');
   await page.route('**/dist/*.js',async route=>{await new Promise(resolve=>setTimeout(resolve,600));await route.continue()});
   await page.addInitScript(l=>{
    localStorage.setItem('almumez-language',l);window.loadingSamples=[];const start=performance.now();
-   function sample(){const h=document.querySelector('[data-component=site-header]'),m=document.querySelector('main');if(h&&m)window.loadingSamples.push({time:Math.round(performance.now()-start),headerY:h.getBoundingClientRect().y,headerHeight:h.getBoundingClientRect().height,mainY:m.getBoundingClientRect().y,hearts:h.querySelectorAll('.home-header-wishlist svg').length});if(performance.now()-start<2600)requestAnimationFrame(sample)}requestAnimationFrame(sample);
+   function sample(){const h=document.querySelector('[data-component=site-header]'),m=document.querySelector('main');if(h&&m)window.loadingSamples.push({time:Math.round(performance.now()-start),styled:[...document.styleSheets].some(s=>s.href?.includes('/dist/')),headerY:h.getBoundingClientRect().y,headerHeight:h.getBoundingClientRect().height,mainY:m.getBoundingClientRect().y,hearts:h.querySelectorAll('.home-header-wishlist svg').length});if(performance.now()-start<2600)requestAnimationFrame(sample)}requestAnimationFrame(sample);
   },lang);
   await page.goto('http://127.0.0.1:8790/accessories.html');await page.waitForFunction(()=>window.loadingSamples?.at(-1)?.time>=2500);
-  const samples=await page.evaluate(()=>loadingSamples);assert.ok(samples.some(s=>s.time<1200),'Captured the critical-CSS-only frame');
+  const samples=await page.evaluate(()=>loadingSamples);assert(samples.length>1,'Captured repeated loading frames');assert(samples.every(s=>s.styled),'External render-blocking CSS is applied before the first visible frame');
   for(const key of ['headerY','headerHeight','mainY'])assert.equal(new Set(samples.map(s=>s[key])).size,1,`${width} ${lang}: ${key} shifted`);
   assert.ok(samples.every(s=>s.hearts===1),'Exactly one heart throughout loading');assert.equal(navigations,1,'No reload');
   const nav=page.locator('.home-navigation');assert.equal((await nav.locator('a[href="accessories.html"]').textContent()).trim(),lang==='ar'?'المنتجات':'Products');assert.equal((await nav.locator('a[href="about.html"]').textContent()).trim(),lang==='ar'?'من نحن':'About');

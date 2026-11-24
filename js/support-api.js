@@ -11,37 +11,17 @@
       async update(id,changes){const rows=read(),row=rows.find(r=>r.id===id);if(!row)throw new Error('REQUEST_FAILED');if(changes.status){if(!['new','in_progress','resolved'].includes(changes.status))throw new Error('REQUEST_FAILED');row.status=changes.status;}if(changes.read_at)row.read_at=changes.read_at;write(rows);return row;}
     };return;
   }
-  let unsafe = key.startsWith('sb_secret_');
-  try { unsafe ||= JSON.parse(atob(key.split('.')[1])).role === 'service_role'; } catch {}
-  const ready = /^https:\/\/[^/]+$/.test(base) && !!key && !unsafe;
-  const storageKey = 'almumez-support-session:' + base;
-  let session; try { session = JSON.parse(sessionStorage.getItem(storageKey)); } catch {}
-  function save(value) { session = value; if(value) sessionStorage.setItem(storageKey, JSON.stringify(value)); else sessionStorage.removeItem(storageKey); }
-  let refreshing;
-  async function request(path, options = {}, authenticated = false, retry = true) {
-    if (!ready) throw new Error('SETUP_REQUIRED');
-    if (authenticated && !session?.access_token) throw new Error('LOGIN_REQUIRED');
-    const response = await fetch(base + path, { ...options, cache: 'no-store', headers: { apikey: key, 'Content-Type': 'application/json', ...(authenticated ? { Authorization: 'Bearer ' + session.access_token } : {}), ...options.headers } });
-    if(response.status === 401 && authenticated && retry && session?.refresh_token) {
-      refreshing ||= request('/auth/v1/token?grant_type=refresh_token', {method:'POST', body:JSON.stringify({refresh_token:session.refresh_token})}).then(save).catch(error=>{save(null);throw error;}).finally(()=>{refreshing=null;});
-      await refreshing; return request(path, options, true, false);
-    }
-    if(!response.ok) { if(authenticated && response.status===401)save(null); throw new Error(response.status === 401 ? 'LOGIN_REQUIRED' : 'REQUEST_FAILED'); }
-    const body = await response.text();
-    return body ? JSON.parse(body) : null;
-  }
-  window.AlMumezSupport = {
-    ready, signedIn:()=>!!session?.access_token,
-    async login(email,password) { save(await request('/auth/v1/token?grant_type=password',{method:'POST',body:JSON.stringify({email,password})})); try { if(!await request('/rest/v1/rpc/is_support_admin',{method:'POST',body:'{}'},true))throw new Error('ADMIN_REQUIRED'); } catch(error){save(null);throw error;} },
-    async logout(){try{if(session)await request('/auth/v1/logout',{method:'POST'},true);}finally{save(null);}},
-    async submit(data) {
-      const subject=data.subject;
-      const payload={name:data.name.trim(),email:data.email.trim(),subject,message:data.message.trim(),consent:!!data.consent,
-        order_number:['order','returns'].includes(subject)?data.orderNumber?.trim()||null:null,
-        product_name:['product','returns'].includes(subject)?data.productName?.trim()||null:null};
-      await request('/rest/v1/support_messages',{method:'POST',headers:{Prefer:'return=minimal'},body:JSON.stringify(payload)});
-    },
-    list:filters=>request('/rest/v1/rpc/list_support_messages',{method:'POST',body:JSON.stringify(filters)},true),
-    async update(id, changes) { const rows=await request('/rest/v1/support_messages?id=eq.'+encodeURIComponent(id),{method:'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify(changes)},true);if(!rows?.length)throw new Error('REQUEST_FAILED');return rows[0]; }
+
+  const shared=window.StoreSupabase,sdk=shared?.client;
+  let session=null;
+  if(sdk){shared.session().then(value=>{session=value}).catch(()=>{});shared.subscribe(value=>{session=value.session})}
+  const check=()=>{if(!shared?.enabled||!sdk||!shared.configured)throw Error('SETUP_REQUIRED')};
+  window.AlMumezSupport={
+    ready:!!(shared?.enabled&&shared.configured&&sdk),signedIn:()=>!!session?.access_token,
+    async login(email,password){check();const {data,error}=await sdk.auth.signInWithPassword({email,password});if(error)throw error;session=data.session;if(!await shared.rpc('is_support_admin')){await sdk.auth.signOut();throw Error('ADMIN_REQUIRED')}},
+    async logout(){check();const {error}=await sdk.auth.signOut();if(error)throw error;session=null},
+    async submit(data){check();const subject=data.subject;const {error}=await sdk.from('support_messages').insert({name:data.name.trim(),email:data.email.trim(),subject,message:data.message.trim(),consent:!!data.consent,order_number:['order','returns'].includes(subject)?data.orderNumber?.trim()||null:null,product_name:['product','returns'].includes(subject)?data.productName?.trim()||null:null});if(error)throw error},
+    async list(filters={}){check();return shared.rpc('list_support_messages',filters)},
+    async update(id,changes){check();const allowed=Object.fromEntries(['status','read_at','starred','archived'].filter(key=>key in changes).map(key=>[key,changes[key]]));const {data,error}=await sdk.from('support_messages').update(allowed).eq('id',id).select().single();if(error)throw error;return data}
   };
 })();

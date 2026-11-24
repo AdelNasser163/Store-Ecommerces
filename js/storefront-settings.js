@@ -1,8 +1,9 @@
 /* Shared commerce preferences. Defaults preserve the existing checkout behavior. */
 (function(){
- 'use strict';let settings={};try{settings=JSON.parse(localStorage.getItem('almumez-site-settings')||'{}')}catch{}
+ 'use strict';let settings=window.StorefrontBackendSettings||{};if(!window.StoreBackendConfig?.enabled)try{settings=JSON.parse(localStorage.getItem('almumez-site-settings')||'{}')}catch{}
  const shipping={express:150,standard:0,pickup:0,...settings.shipping},paymentMethods={card:true,cod:true,valu:true,...settings.paymentMethods};
- if(!Object.values(paymentMethods).some(Boolean))paymentMethods.card=true;
+ paymentMethods.card=false;paymentMethods.valu=false;paymentMethods.cod=true;
+ if(!Object.values(paymentMethods).some(Boolean)&&!window.StoreBackendConfig?.enabled)paymentMethods.card=true;
  window.StorefrontSettings={shipping,paymentMethods};
  document.querySelectorAll('[data-delivery]').forEach(button=>{const price=Number(shipping[button.dataset.delivery])||0;button.dataset.price=String(price);const copy=button.querySelector('strong');if(copy)copy.textContent=price?`${price.toLocaleString('en-EG')} EGP`:'Free'});
  const defaultPayment=Object.keys(paymentMethods).find(key=>paymentMethods[key]);

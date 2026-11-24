@@ -14,7 +14,7 @@
     products.forEach(product=>{if(!departmentMap.has(product.department))departmentMap.set(product.department,{id:product.department,ar:product.departmentLabel.ar,en:product.departmentLabel.en,icon:"category"});if(product.brand)brandSet.add(product.brand);product.storageOptions.forEach(item=>storageSet.add(item))});
     departments.splice(0,departments.length,...departmentMap.values());brands.splice(0,brands.length,...brandSet);storages.splice(0,storages.length,...storageSet);api.products=products;return products;
   }
-  function getProducts(params){const run=()=>root.AlMumezProductsLogic.queryProducts(refresh(),params);return root.StoreProducts?.ready?Promise.resolve(root.StoreProducts.ready).then(run):Promise.resolve(run())}
+  async function getProducts(params){if(root.StoreCloud?.enabled){const result=await root.StoreCloud.catalog(params);refresh();departments.splice(0,departments.length,...result.departments);brands.splice(0,brands.length,...result.brands.filter(Boolean));storages.splice(0,storages.length,...result.storages.filter(Boolean));return{...result,items:result.rows.map(mapProduct)}}const run=()=>root.AlMumezProductsLogic.queryProducts(refresh(),params);return root.StoreProducts?.ready?Promise.resolve(root.StoreProducts.ready).then(run):Promise.resolve(run())}
   const api={products:[],departments,brands,storages,getProducts,refresh};refresh();root.AlMumezProductsData=api;
   root.addEventListener?.("storage",event=>{if(event.key===root.StoreProducts?.KEY)refresh()});
 })(globalThis);

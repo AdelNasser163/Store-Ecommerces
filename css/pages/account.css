@@ -1,0 +1,7 @@
+.customer-account { max-width: 840px; width: 100%; color: #0f354f; }
+.customer-account form, .customer-account section { display: grid; gap: 12px; margin-block: 24px; }
+.customer-account input, .customer-account textarea { width: 100%; padding: 12px 16px; border: 1px solid #e5e9ef; border-radius: 16px; background: #f4f6f8; color: #0f354f; }
+.customer-account button, .customer-account .account-link { padding: 10px 18px; border-radius: 999px; background: #8bc34a; color: #0f354f; font-weight: 700; }
+.customer-account article { padding: 16px; border: 1px solid #e5e9ef; border-radius: 24px; overflow-wrap: anywhere; }
+.customer-account :focus-visible { outline: 3px solid #8bc34a; outline-offset: 3px; }
+.customer-account nav { display: flex; gap: 12px; flex-wrap: wrap; }

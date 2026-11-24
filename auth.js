@@ -1,38 +1,26 @@
-(function () {
+(async function () {
   "use strict";
 
   const SESSION_KEY = "almumez-customer-session";
   const RESET_KEY = "almumez-password-reset";
-  const wait = (ms = 650) => new Promise((resolve) => setTimeout(resolve, ms));
+  // Customer authentication never fabricates an identity when disconnected.
+  const unavailable = async () => { throw new Error('BACKEND_NOT_CONFIGURED'); };
+  const AuthAPI = {login:unavailable,register:unavailable,googleSignIn:unavailable,requestPasswordReset:unavailable,resetPassword:unavailable};
 
-  // Replace the bodies of these methods with real backend requests when an auth API is available.
-  const AuthAPI = {
-    async login({ email }) {
-      await wait();
-      return { user: { name: email.split("@")[0], email } };
-    },
-    async register({ name, email }) {
-      await wait();
-      return { user: { name, email } };
-    },
-    async googleSignIn() {
-      await wait();
-      return { user: { name: "Google User", email: "google-user@example.com" } };
-    },
-    async requestPasswordReset({ email }) {
-      await wait();
-      localStorage.setItem(RESET_KEY, JSON.stringify({ token: "demo-reset-token", email, expiresAt: Date.now() + 60 * 60 * 1000 }));
-      return { ok: true };
-    },
-    async resetPassword({ token }) {
-      await wait();
-      const request = readResetRequest();
-      if (!request || request.token !== token || request.expiresAt < Date.now()) throw new Error("INVALID_TOKEN");
-      localStorage.removeItem(RESET_KEY);
-      return { ok: true };
-    },
-  };
-
+  const cloud = window.StoreSupabase;
+  if (cloud?.enabled) {
+    const auth = cloud.client.auth;
+    const profile = user => ({id:user.id,name:user.user_metadata?.name||user.email.split('@')[0],email:user.email});
+    Object.assign(AuthAPI, {
+      async login({email,password}) {const {data,error}=await auth.signInWithPassword({email,password});if(error)throw error;return {user:profile(data.user)}},
+      async register({name,email,password}) {const {data,error}=await auth.signUp({email,password,options:{data:{name},emailRedirectTo:new URL('auth.html',location.href).href}});if(error)throw error;return {user:data.session?profile(data.user):null,confirmationRequired:!data.session}},
+      async googleSignIn() {const {error}=await auth.signInWithOAuth({provider:'google',options:{redirectTo:new URL('auth.html',location.href).href}});if(error)throw error;return {redirecting:true}},
+      async requestPasswordReset({email}) {const {error}=await auth.resetPasswordForEmail(email,{redirectTo:new URL('reset-password.html',location.href).href});if(error)throw error;return {ok:true}},
+      async resetPassword({password}) {if(!cloud.isRecovery())throw Error('INVALID_TOKEN');const {error}=await auth.updateUser({password});if(error)throw error;await auth.signOut();return {ok:true}},
+      async logout() {const {error}=await auth.signOut();if(error)throw error;localStorage.removeItem(SESSION_KEY)}
+    });
+    cloud.subscribe(({event,session})=>{if(session?.user)setSession(profile(session.user));else if(event==='SIGNED_OUT')localStorage.removeItem(SESSION_KEY)});
+  }
   const page = document.body.dataset.authPage;
   const message = document.querySelector("[data-auth-message]");
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -118,7 +106,7 @@
       try {
         const result = await AuthAPI.login({ email: email.value.trim(), password: password.value });
         setSession(result.user); showMessage("تم تسجيل الدخول بنجاح. جاري تحويلك للمتجر…");
-        setTimeout(() => location.replace("index.html"), 700);
+        setTimeout(() => location.replace(cloud?.enabled?"account.html":"index.html"), 700);
       } catch { showMessage("تعذر تسجيل الدخول. حاول مرة أخرى.", "error"); setLoading(form, false); }
     });
 
@@ -132,14 +120,15 @@
       setLoading(form, true);
       try {
         const result = await AuthAPI.register({ name: name.value.trim(), email: email.value.trim(), password: password.value });
+        if(result.confirmationRequired){showMessage(document.documentElement.lang==='ar'?'راجع بريدك الإلكتروني لتأكيد الحساب قبل تسجيل الدخول.':'Check your email to confirm your account before signing in.');setLoading(form,false);return}
         setSession(result.user); showMessage("تم إنشاء حسابك بنجاح. جاري تحويلك للمتجر…");
-        setTimeout(() => location.replace("index.html"), 700);
+        setTimeout(() => location.replace(cloud?.enabled?"account.html":"index.html"), 700);
       } catch { showMessage("تعذر إنشاء الحساب. حاول مرة أخرى.", "error"); setLoading(form, false); }
     });
 
     document.querySelector("[data-google-auth]").addEventListener("click", async (event) => {
       const button = event.currentTarget; clearMessage(); button.disabled = true; button.classList.add("is-loading");
-      try { const result = await AuthAPI.googleSignIn(); setSession(result.user); showMessage("تم تسجيل الدخول بواسطة جوجل."); setTimeout(() => location.replace("index.html"), 700); }
+      try { const result = await AuthAPI.googleSignIn(); if(result.redirecting)return;setSession(result.user); showMessage("تم تسجيل الدخول بواسطة جوجل."); setTimeout(() => location.replace(cloud?.enabled?"account.html":"index.html"), 700); }
       catch { showMessage("تعذر تسجيل الدخول بواسطة جوجل.", "error"); button.disabled = false; button.classList.remove("is-loading"); }
     });
   }
@@ -156,6 +145,7 @@
     async function send(email) {
       setLoading(form, true);
       try { await AuthAPI.requestPasswordReset({ email }); showMessage("لو البريد ده مسجّل عندنا هيوصلك رابط خلال دقايق"); startCooldown(); }
+      catch { showMessage(document.documentElement.lang==='ar'?'تعذر إرسال رابط الاستعادة؛ خدمة الحساب غير متاحة.':'The reset link could not be sent; the account service is unavailable.', 'error'); }
       finally { setLoading(form, false); }
     }
     form.addEventListener("submit", async (event) => { event.preventDefault(); clearMessage(); const email = form.elements.email; if (!validateEmail(email)) return; lastEmail = email.value.trim(); await send(lastEmail); });
@@ -164,7 +154,8 @@
 
   if (page === "reset-password") {
     const form = document.querySelector('[data-auth-form="reset"]'), invalid = document.querySelector("[data-invalid-token]"), token = new URLSearchParams(location.search).get("token"), request = readResetRequest();
-    const validToken = Boolean(token && request && request.token === token && request.expiresAt >= Date.now());
+    if(cloud?.enabled)await cloud.session();
+    const validToken = cloud?.enabled?cloud.isRecovery():Boolean(token && request && request.token === token && request.expiresAt >= Date.now());
     form.hidden = !validToken; invalid.hidden = validToken;
     if (validToken) form.addEventListener("submit", async (event) => {
       event.preventDefault(); clearMessage();
@@ -177,5 +168,6 @@
     });
   }
 
+  if(cloud?.enabled&&page==='auth'&&await cloud.session()){const link=document.createElement('a');link.href='account.html';link.textContent=document.documentElement.lang==='ar'?'حسابي وطلباتي':'My account and orders';document.querySelector('.auth-card')?.append(link);}
   window.AlMumezAuthAPI = AuthAPI;
 })();

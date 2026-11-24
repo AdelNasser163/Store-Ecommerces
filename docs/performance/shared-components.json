@@ -45,13 +45,15 @@
     "file": "forgot-password.html",
     "width": 390,
     "lang": "ar",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "reset-password.html",
     "width": 390,
     "lang": "ar",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "index.html",
@@ -99,13 +101,15 @@
     "file": "forgot-password.html",
     "width": 390,
     "lang": "en",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "reset-password.html",
     "width": 390,
     "lang": "en",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "index.html",
@@ -153,13 +157,15 @@
     "file": "forgot-password.html",
     "width": 820,
     "lang": "ar",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "reset-password.html",
     "width": 820,
     "lang": "ar",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "index.html",
@@ -207,13 +213,15 @@
     "file": "forgot-password.html",
     "width": 820,
     "lang": "en",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "reset-password.html",
     "width": 820,
     "lang": "en",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "index.html",
@@ -261,13 +269,15 @@
     "file": "forgot-password.html",
     "width": 1440,
     "lang": "ar",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "reset-password.html",
     "width": 1440,
     "lang": "ar",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "index.html",
@@ -315,12 +325,14 @@
     "file": "forgot-password.html",
     "width": 1440,
     "lang": "en",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   },
   {
     "file": "reset-password.html",
     "width": 1440,
     "lang": "en",
-    "sharedShell": true
+    "sharedFooter": true,
+    "navbarRemoved": true
   }
 ]

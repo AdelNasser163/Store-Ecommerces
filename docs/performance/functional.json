@@ -62,12 +62,22 @@
     "errors": []
   },
   {
+    "file": "account.html",
+    "status": 200,
+    "errors": []
+  },
+  {
     "file": "admin-404.html",
     "status": 200,
     "errors": []
   },
   {
     "file": "admin-bundles.html",
+    "status": 200,
+    "errors": []
+  },
+  {
+    "file": "admin-categories.html",
     "status": 200,
     "errors": []
   },

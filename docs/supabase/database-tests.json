@@ -1,0 +1,17 @@
+{
+  "migrations": [
+    "202611220001_existing_model.sql",
+    "202611220002_relations_and_queries.sql",
+    "202611220003_overview.sql",
+    "202611220004_safe_operations.sql",
+    "202611220005_customer_privacy.sql"
+  ],
+  "repeatable": true,
+  "serverPagination": true,
+  "summary": true,
+  "reports": true,
+  "overview": true,
+  "customerPrivateOrders": true,
+  "unauthorizedAdminBlocked": true,
+  "hostedDatabase": "NOT TESTED — migration deployment required"
+}

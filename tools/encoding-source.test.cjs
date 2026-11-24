@@ -1,0 +1,3 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const bad=[];function walk(dir){for(const item of fs.readdirSync(dir,{withFileTypes:true})){if(['node_modules','.git','dist','assets','docs','.codex','.agents'].includes(item.name))continue;const file=path.join(dir,item.name);if(item.isDirectory())walk(file);else if(/\.(js|sql|html|json|md)$/.test(file)){const text=fs.readFileSync(file,'utf8');if(/[\u00c3\u00c2\u00d8\u00d9\ufffd]/.test(text))bad.push(file)}}}
+walk('.');assert.deepEqual(bad,[],'Potential mojibake in source files: '+bad.join(', '));console.log('PASS Arabic source encoding scan');

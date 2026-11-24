@@ -1,0 +1,166 @@
+{
+  "results": [
+    {
+      "test": "account-menu-verify.cjs",
+      "status": "PASS",
+      "output": "PASS 28 account menu cases"
+    },
+    {
+      "test": "admin-actions-verify.cjs",
+      "status": "PASS",
+      "output": "PASS exports, bulk changes, image upload, archive, undo and customization"
+    },
+    {
+      "test": "admin-logic.test.cjs",
+      "status": "PASS",
+      "output": "PASS admin aggregation, previous periods, chart totals and escaping"
+    },
+    {
+      "test": "admin-login-verify.cjs",
+      "status": "PASS",
+      "output": "PASS local setup, login validation, recovery, remember and language"
+    },
+    {
+      "test": "admin-workspace-verify.cjs",
+      "status": "PASS",
+      "output": "PASS 80 responsive cases and admin workflows"
+    },
+    {
+      "test": "backend-database.test.cjs",
+      "status": "PASS",
+      "output": "PASS disposable setup pass 1\nPASS disposable setup pass 2\nPASS disposable scenarios checkout-identity.sql\nPASS disposable scenarios final-security-regressions.sql\nPASS disposable scenarios guest-backfill.sql\nPASS disposable scenarios live-queries.sql\nPASS disposable SQL support permissions, customer isolation, bundle validation, metadata preservation, failed/repeated/late payment restoration\nPASS conflicting legacy orders preflight aborts without changing either record\nPASS conflicting legacy products preflight aborts without changing either record"
+    },
+    {
+      "test": "cart-drawer-verify.cjs",
+      "status": "PASS",
+      "output": "PASS cart drawers: [{\"file\":\"index.html\",\"width\":390,\"lang\":\"ar\",\"passed\":true},{\"file\":\"index.html\",\"width\":390,\"lang\":\"en\",\"passed\":true},{\"file\":\"index.html\",\"width\":1440,\"lang\":\"ar\",\"passed\":true},{\"file\":\"index.html\",\"width\":1440,\"lang\":\"en\",\"passed\":true},{\"file\":\"accessories.html\",\"width\":390,\"lang\":\"ar\",\"passed\":true},{\"file\":\"accessories.html\",\"width\":390,\"lang\":\"en\",\"passed\":true},{\"file\":\"accessories.html\",\"width\":1440,\"lang\":\"ar\",\"passed\":true},{\"file\":\"accessories.html\",\"width\":1440,\"lang\":\"en\",\"passed\":true}]"
+    },
+    {
+      "test": "catalog-loading-verify.cjs",
+      "status": "PASS",
+      "output": "PASS 4 slow-loading catalog cases"
+    },
+    {
+      "test": "cloud-frontend-verify.cjs",
+      "status": "PASS",
+      "output": "PASS MOCK HTTP + official SDK/browser: cloud catalogue/search, accepted contact POST, invalid/valid login, paged dashboard modules, own account and no demo fallback. Hosted Supabase NOT EXECUTED."
+    },
+    {
+      "test": "css-cleanup.test.cjs",
+      "status": "PASS",
+      "output": "PASS CSS cleanup: cascade order, conditional rules, layers, strings and comments.\nPASS selector filtering: grouped rules, responsive context and conservative dynamic states."
+    },
+    {
+      "test": "customer-auth-boundary.test.cjs",
+      "status": "PASS",
+      "output": "PASS disconnected customer login/signup/Google/reset cannot fabricate success or a session."
+    },
+    {
+      "test": "encoding-source.test.cjs",
+      "status": "PASS",
+      "output": "PASS Arabic source encoding scan"
+    },
+    {
+      "test": "font-faces.test.cjs",
+      "status": "PASS",
+      "output": "PASS variable font consolidation, static weights, subsets and idempotence."
+    },
+    {
+      "test": "hero-performance-verify.cjs",
+      "status": "PASS",
+      "output": "PASS hero image reuse, normal/mobile motion, hover, hidden-tab pause/resume, reduced motion, no-JS artwork and console: [{\"width\":390,\"reducedMotion\":false,\"imageReused\":true,\"animation\":true},{\"width\":390,\"reducedMotion\":true,\"imageReused\":true,\"animation\":false},{\"width\":1440,\"reducedMotion\":false,\"imageReused\":true,\"animation\":true},{\"width\":1440,\"reducedMotion\":true,\"imageReused\":true,\"animation\":false}]"
+    },
+    {
+      "test": "orders-view-verify.cjs",
+      "status": "PASS",
+      "output": "PASS current order table: persisted status/notes, sort, filters/reset, search, details, CSV, AR/EN and mobile. LOCAL data only."
+    },
+    {
+      "test": "page-entry-verify.cjs",
+      "status": "PASS",
+      "output": "PASS: subtle first visit, 520ms stagger / 16–24px, native internal links without repeated entry, stable header/layout, mobile and reduced motion."
+    },
+    {
+      "test": "pagespeed-visual-verify.cjs",
+      "status": "PASS",
+      "output": "PASS: identical hero text pixels before/after in AR/EN at 390/820/1440."
+    },
+    {
+      "test": "perf-verify.cjs",
+      "status": "PASS",
+      "output": "PASS 27 checks"
+    },
+    {
+      "test": "product-search-security-verify.cjs",
+      "status": "PASS",
+      "output": "PASS search query/filter/recent-history injection stays text; unknown categories do not crash."
+    },
+    {
+      "test": "provider-contract.test.cjs",
+      "status": "PASS",
+      "output": "PASS mocked server adapter contract: unconfigured/signature/event/settlement failures and no fake tracking. Real provider signature integration NOT EXECUTED."
+    },
+    {
+      "test": "shared-drawers-verify.cjs",
+      "status": "PASS",
+      "output": "PASS shared cart/wishlist: [{\"file\":\"index.html\",\"width\":390,\"lang\":\"ar\",\"stylesMatchHome\":true},{\"file\":\"accessories.html\",\"width\":390,\"lang\":\"ar\",\"stylesMatchHome\":true},{\"file\":\"about.html\",\"width\":390,\"lang\":\"ar\",\"stylesMatchHome\":true},{\"file\":\"blog.html\",\"width\":390,\"lang\":\"ar\",\"stylesMatchHome\":true},{\"file\":\"contact.html\",\"width\":390,\"lang\":\"ar\",\"stylesMatchHome\":true},{\"file\":\"checkout.html\",\"width\":390,\"lang\":\"ar\",\"stylesMatchHome\":true},{\"file\":\"product.html?id=sony-wf-1000xm5\",\"width\":390,\"lang\":\"ar\",\"stylesMatchHome\":true},{\"file\":\"index.html\",\"width\":1440,\"lang\":\"en\",\"stylesMatchHome\":true},{\"file\":\"accessories.html\",\"width\":1440,\"lang\":\"en\",\"stylesMatchHome\":true},{\"file\":\"about.html\",\"width\":1440,\"lang\":\"en\",\"stylesMatchHome\":true},{\"file\":\"blog.html\",\"width\":1440,\"lang\":\"en\",\"stylesMatchHome\":true},{\"file\":\"contact.html\",\"width\":1440,\"lang\":\"en\",\"stylesMatchHome\":true},{\"file\":\"checkout.html\",\"width\":1440,\"lang\":\"en\",\"stylesMatchHome\":true},{\"file\":\"product.html?id=sony-wf-1000xm5\",\"width\":1440,\"lang\":\"en\",\"stylesMatchHome\":true}]"
+    },
+    {
+      "test": "site-components-home-verify.cjs",
+      "status": "PASS",
+      "output": "PASS 6 unchanged homepage header screenshots"
+    },
+    {
+      "test": "site-components-verify.cjs",
+      "status": "PASS",
+      "output": "PASS 54 shared header/footer comparisons"
+    },
+    {
+      "test": "supabase-final-correction.test.cjs",
+      "status": "PASS",
+      "output": "PASS source-only permissions, isolation guards, preservation, bundle validation, payment settings, shipping scaffold and settlement/stock invariants. Deferred SQL scenarios parse; NOT executed."
+    },
+    {
+      "test": "supabase-source.test.cjs",
+      "status": "PASS",
+      "output": "PASS source-only SQL/PLpgSQL grammar (12 files, 96 function definitions), source guards and MOCKED SDK support contract. No database was executed or contacted."
+    },
+    {
+      "test": "support-permissions-verify.cjs",
+      "status": "PASS",
+      "output": "PASS MOCKED UI identities: staff sees read/update controls without delete; admin sees delete. Database RLS NOT executed."
+    },
+    {
+      "test": "support-verify.cjs",
+      "status": "PASS",
+      "output": "PASS current support form/inbox: LOCAL demo acknowledgement, escaping, read/status, topic/search, shared shell, language and logout. Hosted Supabase NOT tested; SDK mock is covered separately by supabase-source.test.cjs."
+    },
+    {
+      "test": "wishlist-header-verify.cjs",
+      "status": "PASS",
+      "output": "PASS 28 shared wishlist heart state cases"
+    },
+    {
+      "test": "admin-accessibility.cjs",
+      "status": "PASS",
+      "output": "PASS 18 light/dark accessibility checks"
+    },
+    {
+      "test": "admin-store-integration.cjs",
+      "status": "PASS",
+      "output": "PASS storefront/admin local integration"
+    },
+    {
+      "test": "html-separation.test.mjs",
+      "status": "PASS",
+      "output": "PASS 24 HTML pages: external CSS/JS only, no inline events/styles, valid asset links, tab logos, formatting and password pages without navbar."
+    },
+    {
+      "test": "page-build-repeatability.test.mjs",
+      "status": "PASS",
+      "output": "PASS repeatable build: formatted HTML and external assets remain byte-identical."
+    }
+  ],
+  "sqlExecution": "Disposable PGlite only; legacy SQL suites superseded by backend-database.test.cjs",
+  "hostedIntegration": "NOT EXECUTED"
+}

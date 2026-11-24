@@ -1,5 +1,12 @@
 # Deployment and activation gates
 
+**First deployment update:** for the reviewed empty MyStore application schema,
+use `supabase/DEPLOY_TO_SUPABASE.sql` as the single entry point, AFTER explicit
+approval. It embeds setup.sql and adds first-install guards and verification.
+Do not run both files. See [FIRST_DATABASE_DEPLOYMENT.md](FIRST_DATABASE_DEPLOYMENT.md).
+The new entry point/category publication correction has only been source-parsed;
+no SQL was executed for this revision.
+
 Production database execution is prohibited in this task. The checked-in browser
 configuration remains `enabled:false`; public URL/key are not secrets. No website
 release or backend deployment is implied by successful local tests.

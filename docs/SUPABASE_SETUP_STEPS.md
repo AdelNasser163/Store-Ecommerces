@@ -1,5 +1,12 @@
 # Existing MyStore: manual setup
 
+**Current first-install instructions:** use
+[FIRST_DATABASE_DEPLOYMENT.md](FIRST_DATABASE_DEPLOYMENT.md) and the complete
+`supabase/DEPLOY_TO_SUPABASE.sql` after approval. It embeds the setup described
+below; do not execute both. New guard/assertion and category-publication changes
+have been source-validated only, not executed. Earlier local test results apply
+to the preceding setup revision.
+
 No production connection or migration was performed. Do not run this until the
 PostgreSQL 16 gate reports `passed:true` in `backend-audit/postgres16-results.json`.
 

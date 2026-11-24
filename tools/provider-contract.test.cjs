@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict');
+(async()=>{const {processPaymentWebhook,requestCarrierShipment}=await import('../supabase/functions/_shared/provider-contract.mjs');let calls=0;
+ const request=()=>new Request('http://fixture.invalid/webhook',{method:'POST',body:'fixture raw bytes'}),settle=async()=>{calls++};
+ assert.equal((await processPaymentWebhook(request(),{adapter:null,settle})).status,503);
+ assert.equal((await processPaymentWebhook(request(),{adapter:{name:'fixture',verifyAndDecode:async()=>{throw Error('bad signature')}},settle})).status,401);assert.equal(calls,0);
+ const event={id:'event',providerId:'payment',status:'paid',amount:100,currency:'EGP',signedAt:Date.now()};
+ const adapter={name:'fixture',verifyAndDecode:async()=>event};assert.equal((await processPaymentWebhook(request(),{adapter,settle})).status,204);assert.equal(calls,1);
+ assert.equal((await processPaymentWebhook(request(),{adapter:{...adapter,verifyAndDecode:async()=>({...event,currency:'USD'})},settle})).status,400);
+ assert.equal((await processPaymentWebhook(request(),{adapter,settle:async()=>{throw Error('wrong amount')}})).status,409);
+ assert.deepEqual(await requestCarrierShipment({adapter:null}),{state:'unconfigured',provider:null,provider_reference:null,tracking_number:null});
+ await assert.rejects(()=>requestCarrierShipment({adapter:{name:'fixture',createShipment:async()=>({})},order:{id:'fixture'},idempotencyKey:'fixture'}));
+ console.log('PASS mocked server adapter contract: unconfigured/signature/event/settlement failures and no fake tracking. Real provider signature integration NOT EXECUTED.');
+})().catch(e=>{console.error(e);process.exitCode=1});
