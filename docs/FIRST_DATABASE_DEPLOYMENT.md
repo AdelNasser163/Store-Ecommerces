@@ -1,5 +1,13 @@
 # MyStore first database deployment — prepared, NOT executed
 
+**2026-11-24 update:** the revised full deployment was executed successfully on
+isolated PostgreSQL 17.12, not production. See POSTGRES17_DEPLOYMENT_REVIEW.md and
+backend-audit/postgres17-results.json. Migration 009 now projects public catalog
+fields and adds public_products/public_bundles views; 011 safely bypasses the
+ordinary rate limit for exact admin restores. There are now 45 public routine
+names (including public_catalog_json), plus the internal support routine. The
+earlier source-only validation statements below describe the preceding revision.
+
 Current task: source inspection and generation only. No production connection,
 SQL execution (including local SQL), migration, restore, push, bucket creation or
 settings change was performed. Do not interpret grammar parsing as deployment.

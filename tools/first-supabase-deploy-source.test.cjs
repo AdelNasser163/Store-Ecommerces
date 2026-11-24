@@ -10,8 +10,13 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),parser=require(
  assert.equal((deploy.match(/^BEGIN;$/gm)||[]).length,1);
  assert.equal((deploy.match(/^COMMIT;$/gm)||[]).length,1);
  assert(deploy.indexOf('$first_deployment_guard$')<deploy.indexOf('-- FILE: preflight.sql'));
+ assert(deploy.includes("pg_catalog.md5(pg_catalog.pg_get_functiondef(p.oid))='846ec2fbff751d24b890656d63c3a9bf'"));
+ for(const text of ["owner_role.rolname='postgres'","l.lanname='plpgsql'","p.prosecdef","p.pronargs=0","p.proconfig=array['search_path=pg_catalog']","e.evtname='ensure_rls'","e.evtfoid=candidate_oid","e.evtevent='ddl_command_end'","e.evtenabled='O'","and p.oid<>verified_platform_oid"]){assert(deploy.includes(text),text)}
+ assert(!/drop\s+(?:event\s+trigger\s+ensure_rls|function\s+public\.rls_auto_enable)|alter\s+(?:event\s+trigger\s+ensure_rls|function\s+public\.rls_auto_enable)|create\s+(?:or\s+replace\s+)?function\s+public\.rls_auto_enable/i.test(deploy));
  assert(deploy.indexOf('$deployment_assertions$')<deploy.indexOf('\nCOMMIT;'));
- assert(deploy.endsWith(verify));
+ assert(deploy.includes(verify));
+ assert(deploy.indexOf("SELECT 'MIGRATION_COMMITTED'")>deploy.indexOf('\nCOMMIT;'));
+ assert(deploy.indexOf("SELECT 'POST_DEPLOY_QUERIES_COMPLETED_REVIEW_RESULTS'")>deploy.indexOf(verify));
  assert(!/drop\s+(table|schema|view|function)\b|truncate\s+/i.test(deploy));
  for(const message of ['existing relations','existing routines','Existing application Auth trigger','Existing named application Storage policies','Storage no longer matches'])assert(deploy.includes(message));
  const files=fs.readdirSync('supabase/migrations').filter(n=>n.endsWith('.sql')).sort();

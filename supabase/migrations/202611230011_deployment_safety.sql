@@ -1,4 +1,14 @@
 begin;
+-- Only the administrator restore RPC, for an exact archived row, bypasses the
+-- ordinary submission rate limit. GUC alone and customer/admin INSERT do not.
+create or replace function support_private.limit_submissions() returns trigger language plpgsql security definer set search_path='' as $$begin
+ if public.admin_role()='admin' and current_setting('almumez.support_restore',true)='yes'
+ and exists(select 1 from public.deleted_support_messages d where d.message_id=new.id and d.restored_at is null and d.payload=to_jsonb(new)) then return new;end if;
+ perform pg_advisory_xact_lock(hashtextextended(lower(new.email),0));
+ if (select count(*) from public.support_messages where lower(email)=lower(new.email) and created_at>now()-interval '10 minutes')>=3 then raise exception 'Please wait before submitting another request';end if;
+ return new;
+end$$;
+revoke all on function support_private.limit_submissions() from public,anon,authenticated;
 -- Refresh the expanded projection AFTER customer_id and other fields exist.
 create or replace view public.messages with(security_invoker=true) as select * from public.support_messages;
 revoke all on public.messages from anon;

@@ -8,22 +8,49 @@ BEGIN;
 -- replacing existing application objects. Existing Supabase platform objects
 -- (auth/storage/realtime/extensions) are retained.
 select pg_advisory_xact_lock(hashtextextended('almumez-schema-migration',0));
-do $first_deployment_guard$ declare existing text;target text;begin
+do $first_deployment_guard$ declare existing text;target text;verified_platform_oid oid=0;candidate_oid oid;begin
  if current_database()<>'postgres' then raise exception 'Expected the reviewed postgres database';end if;
  if current_setting('server_version_num')::int<170000 then raise exception 'This entry point targets the reviewed PostgreSQL 17+ environment';end if;
  if to_regclass('auth.users') is null or to_regclass('storage.buckets') is null or to_regclass('storage.objects') is null then raise exception 'Required existing Supabase platform schema is missing';end if;
  if not exists(select 1 from pg_roles where rolname='anon') or not exists(select 1 from pg_roles where rolname='authenticated') or not exists(select 1 from pg_roles where rolname='service_role') then raise exception 'Required Supabase roles are missing';end if;
  if not exists(select 1 from pg_publication where pubname='supabase_realtime') then raise exception 'Existing Supabase Realtime publication required';end if;
- foreach target in array array['store_schema_migrations','profiles','user_roles','categories','products','bundles','bundle_items','customers','orders','order_items','notifications','settings','support_messages','product_images','inventory_transactions','message_replies','payment_transactions','provider_events','shipments','order_stock_reservations','shipment_requests','deleted_support_messages','messages'] loop
+ foreach target in array array['store_schema_migrations','profiles','user_roles','categories','products','bundles','bundle_items','customers','orders','order_items','notifications','settings','support_messages','product_images','inventory_transactions','message_replies','payment_transactions','provider_events','shipments','order_stock_reservations','shipment_requests','deleted_support_messages','messages','public_products','public_bundles'] loop
   if to_regclass('public.'||target) is not null then raise exception 'Existing target relation public.%; preserve and review separately',target;end if;
  end loop;
- if exists(select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='public' and p.proname=any(array['admin_access','admin_analytics','admin_category_page','admin_customer_detail','admin_notifications','admin_operational_summary','admin_overview','admin_page','admin_report','admin_role','admin_search','admin_set_order_status','admin_summary','apply_verified_payment','archive_deleted_support_message','backfill_guest_customers','catalog_match','catalog_page','customer_orders','customer_summary','customer_support_messages','effective_product_price','guard_catalog_shape','guard_category_delete','guard_payment_settings','guard_preserved_children','is_support_admin','list_support_messages','message_customer_sync','new_admin_profile','order_customer_sync','product_relations_sync','protect_reserved_variants','reserve_order_record','restore_deleted_support_message','restore_order_stock','site_bootstrap','submit_store_order','support_submission_guard','verified_administrative_role','workspace_bundle_sync','workspace_order_items','workspace_order_sync','workspace_product_sync'])) or to_regprocedure('support_private.limit_submissions()') is not null then raise exception 'Existing target routines; preserve and review separately';end if;
+ if exists(select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='public' and p.proname=any(array['admin_access','admin_analytics','admin_category_page','admin_customer_detail','admin_notifications','admin_operational_summary','admin_overview','admin_page','admin_report','admin_role','admin_search','admin_set_order_status','admin_summary','apply_verified_payment','archive_deleted_support_message','backfill_guest_customers','catalog_match','catalog_page','customer_orders','customer_summary','customer_support_messages','effective_product_price','guard_catalog_shape','guard_category_delete','guard_payment_settings','guard_preserved_children','is_support_admin','list_support_messages','message_customer_sync','new_admin_profile','order_customer_sync','product_relations_sync','protect_reserved_variants','public_catalog_json','reserve_order_record','restore_deleted_support_message','restore_order_stock','site_bootstrap','submit_store_order','support_submission_guard','verified_administrative_role','workspace_bundle_sync','workspace_order_items','workspace_order_sync','workspace_product_sync'])) or to_regprocedure('support_private.limit_submissions()') is not null then raise exception 'Existing target routines; preserve and review separately';end if;
  select string_agg(n.nspname||'.'||c.relname,', ') into existing from pg_class c join pg_namespace n on n.oid=c.relnamespace
  where n.nspname in ('public','support_private') and c.relkind in ('r','p','v','m','S','f')
  and not exists(select 1 from pg_depend d where d.classid='pg_class'::regclass and d.objid=c.oid and d.deptype='e');
  if existing is not null then raise exception 'First deployment refused: existing relations %. Nothing replaced; review separately.',existing;end if;
+ -- Verified against PostgreSQL 17.12 and the pre-deployment backup: the supplied
+ -- fingerprint is MD5(pg_catalog.pg_get_functiondef(oid)), NOT MD5(prosrc).
+ -- Do not normalize whitespace, replace the function, or disable its event trigger.
+ candidate_oid=to_regprocedure('public.rls_auto_enable()');
+ if candidate_oid is not null then
+  if not exists(
+   select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace
+   join pg_language l on l.oid=p.prolang join pg_roles owner_role on owner_role.oid=p.proowner
+   where p.oid=candidate_oid and n.nspname='public' and p.proname='rls_auto_enable'
+   and p.prokind='f' and p.pronargs=0 and p.pronargdefaults=0 and p.provariadic=0
+   and p.proallargtypes is null and not p.proretset and p.prorettype='pg_catalog.event_trigger'::regtype
+   and owner_role.rolname='postgres' and l.lanname='plpgsql' and p.prosecdef
+   and p.proconfig=array['search_path=pg_catalog']::text[]
+   and pg_catalog.md5(pg_catalog.pg_get_functiondef(p.oid))='846ec2fbff751d24b890656d63c3a9bf'
+  ) then raise exception 'First deployment refused: rls_auto_enable definition, owner or security settings mismatch';end if;
+  if not exists(
+   select 1 from pg_event_trigger e join pg_roles owner_role on owner_role.oid=e.evtowner
+   where e.evtname='ensure_rls' and e.evtfoid=candidate_oid
+   and e.evtevent='ddl_command_end' and e.evtenabled='O' and owner_role.rolname='postgres'
+   and (select array_agg(tag order by tag) from unnest(e.evttags) tag)=array['CREATE TABLE','CREATE TABLE AS','SELECT INTO']::text[]
+  ) or (select count(*) from pg_event_trigger where evtfoid=candidate_oid)<>1
+  then raise exception 'First deployment refused: ensure_rls event trigger missing or configuration mismatch';end if;
+  verified_platform_oid=candidate_oid;
+ elsif exists(select 1 from pg_event_trigger where evtname='ensure_rls') then
+  raise exception 'First deployment refused: ensure_rls does not reference the verified platform function';
+ end if;
  select string_agg(n.nspname||'.'||p.proname,', ') into existing from pg_proc p join pg_namespace n on n.oid=p.pronamespace
  where n.nspname in ('public','support_private')
+ and p.oid<>verified_platform_oid
  and not exists(select 1 from pg_depend d where d.classid='pg_proc'::regclass and d.objid=p.oid and d.deptype='e');
  if existing is not null then raise exception 'First deployment refused: existing routines %. Nothing replaced.',existing;end if;
  if exists(select 1 from pg_trigger where tgrelid='auth.users'::regclass and tgname='almumez_new_profile') then raise exception 'Existing application Auth trigger; review separately';end if;
@@ -887,6 +914,43 @@ insert into public.store_schema_migrations(version) values('202611230008') on co
 
 -- FILE: 202611230009_live_queries.sql
 
+
+-- Public JSON is an allowlist, including nested structures. Unknown/private keys
+-- are not forwarded even when added to product payloads later.
+create or replace function public.public_catalog_json(p jsonb,scope text default 'product') returns jsonb language plpgsql immutable security invoker set search_path='' as $$declare k text;v jsonb;result jsonb='{}';allowed text[];begin
+ allowed=case scope
+ when 'localized' then array['ar','en']
+ when 'offer' then array['enabled','type','value','newPrice','oldPrice','startsAt','endsAt','sold','claimed','total','quantity','label']
+ when 'variant' then array['id','label','stock','priceDelta','price','oldPrice','default','color','image']
+ when 'placements' then array['home-flash','home-featured','all-products','accessories']
+ when 'spec' then array['name','label','value','icon']
+ when 'bundle' then array['id','title','description','price','oldPrice','productIds','enabled','startsAt','endsAt','image','badge','placements']
+ else array['id','name','brand','category','categoryLabel','subcategory','price','oldPrice','stock','image','gallery','relatedIds','rating','reviews','reviewsCount','badge','express','description','specs','features','variants','offer','placements','createdAt','published','sku','warranty','delivery'] end;
+ if jsonb_typeof(p) is distinct from 'object' then return '{}'::jsonb;end if;
+ for k,v in select key,value from jsonb_each(p) where key=any(allowed) loop
+  if k in ('name','title','description','brand','categoryLabel','subcategory','label','value','warranty','delivery') and jsonb_typeof(v)='object' then v=public.public_catalog_json(v,'localized');
+  elsif k='offer' then v=public.public_catalog_json(v,'offer');
+  elsif k='placements' then v=public.public_catalog_json(v,'placements');
+  elsif k in ('variants','specs') then
+   if jsonb_typeof(v)='array' then select coalesce(jsonb_agg(public.public_catalog_json(e,case when k='variants' then 'variant' else 'spec' end)),'[]') into v from jsonb_array_elements(v)e;else v='[]';end if;
+  elsif k in ('gallery','productIds','relatedIds','features') then
+   if jsonb_typeof(v)='array' then select coalesce(jsonb_agg(case when jsonb_typeof(e)='object' then public.public_catalog_json(e,'localized') else e end),'[]') into v from jsonb_array_elements(v)e where jsonb_typeof(e) in ('string','number','boolean','object');else v='[]';end if;
+  elsif jsonb_typeof(v) in ('object','array') then continue;
+  end if;
+  result=result||jsonb_build_object(k,v);
+ end loop;return result;
+end$$;
+revoke all on function public.public_catalog_json(jsonb,text) from public,anon,authenticated;
+grant execute on function public.public_catalog_json(jsonb,text) to anon,authenticated;
+-- Explicit owner-rights views expose only sanitized published/active records.
+-- They are read-only to browser roles and do not forward private raw payloads.
+create or replace view public.public_products with(security_barrier=true) as
+ select id,published,public.public_catalog_json(payload)||jsonb_build_object('id',id,'published',published) payload from public.products where published;
+create or replace view public.public_bundles with(security_barrier=true) as
+ select id,updated_at,public.public_catalog_json(payload,'bundle')||jsonb_build_object('id',id) payload from public.bundles where coalesce((payload->>'enabled')::boolean,false) and (nullif(payload->>'startsAt','') is null or (payload->>'startsAt')::timestamptz<=now()) and (nullif(payload->>'endsAt','') is null or (payload->>'endsAt')::timestamptz>now());
+revoke all on public.public_products,public.public_bundles from public,anon,authenticated;
+grant select on public.public_products,public.public_bundles to anon,authenticated;
+
 create or replace function public.catalog_match(p jsonb,f jsonb,skip text default '') returns boolean language plpgsql stable security invoker set search_path='' as $$declare amount numeric=public.effective_product_price(p);brand text=coalesce(p->'brand'->>'en',p->>'brand','');begin
  if skip<>'q' and coalesce(f->>'q','')<>'' and strpos(translate(lower(p::text),'أإآىة','ااايه'),translate(lower(f->>'q'),'أإآىة','ااايه'))=0 then return false;end if;
  if skip<>'dept' and coalesce(f->>'dept','')<>'' and p->>'category' is distinct from f->>'dept' then return false;end if;
@@ -903,7 +967,7 @@ revoke all on function public.catalog_match(jsonb,jsonb,text) from public,anon,a
 grant execute on function public.catalog_match(jsonb,jsonb,text),public.effective_product_price(jsonb,text) to anon,authenticated;
 
 create or replace function public.catalog_page(p_filter jsonb default '{}',p_page int default 1,p_per int default 12) returns jsonb language plpgsql stable security invoker set search_path='' as $$declare result jsonb;begin
- with base as(select id,payload,public.effective_product_price(payload) price from public.products where published),matched as(select * from base where public.catalog_match(payload,p_filter)),counts as(select count(*) total from matched),bounds as(select total,greatest(1,least(coalesce(p_per,12),48)) per,greatest(1,least(greatest(1,coalesce(p_page,1)),ceil(total::numeric/greatest(1,least(coalesce(p_per,12),48)))::int)) page from counts),rows as(select m.* from matched m order by
+ with base as(select id,payload,public.effective_product_price(payload) price from public.public_products where published),matched as(select * from base where public.catalog_match(payload,p_filter)),counts as(select count(*) total from matched),bounds as(select total,greatest(1,least(coalesce(p_per,12),48)) per,greatest(1,least(greatest(1,coalesce(p_page,1)),ceil(total::numeric/greatest(1,least(coalesce(p_per,12),48)))::int)) page from counts),rows as(select m.* from matched m order by
  case when p_filter->>'sort'='price-asc' then price end asc,
  case when p_filter->>'sort'='price-desc' then price end desc,
  case when p_filter->>'sort'='rating' then (payload->>'rating')::numeric end desc nulls last,
@@ -916,7 +980,7 @@ revoke all on function public.catalog_page(jsonb,int,int) from public,anon,authe
 grant execute on function public.catalog_page(jsonb,int,int) to anon,authenticated;
 
 create or replace function public.site_bootstrap(p_ids text[] default '{}') returns jsonb language sql stable security invoker set search_path='' as $$
- with chosen as(select id,payload from public.products where published and (id=any(p_ids[1:100]) or id in(select id from public.products where published and payload->'placements' ? 'home-flash' order by (payload->'placements'->>'home-flash')::numeric,id limit 8) or id in(select id from public.products where published and payload->'placements' ? 'home-featured' order by (payload->'placements'->>'home-featured')::numeric,id limit 8)) order by (id=any(p_ids[1:100])) desc,id limit 116),b as(select id,payload from public.bundles order by updated_at desc limit 12)
+ with chosen as(select id,payload from public.public_products where published and (id=any(p_ids[1:100]) or id in(select id from public.public_products where published and payload->'placements' ? 'home-flash' order by (payload->'placements'->>'home-flash')::numeric,id limit 8) or id in(select id from public.public_products where published and payload->'placements' ? 'home-featured' order by (payload->'placements'->>'home-featured')::numeric,id limit 8)) order by (id=any(p_ids[1:100])) desc,id limit 116),b as(select id,payload from public.public_bundles order by updated_at desc limit 12)
  select jsonb_build_object('products',coalesce((select jsonb_agg(payload||jsonb_build_object('id',id)) from chosen),'[]'),'bundles',coalesce((select jsonb_agg(payload||jsonb_build_object('id',id)) from b),'[]'),'settings',coalesce((select jsonb_object_agg(key,value) from public.settings where key in ('storeName','supportEmail','whatsappNumber','shipping','paymentMethods')),'{}'));
 $$;
 revoke all on function public.site_bootstrap(text[]) from public,anon,authenticated;
@@ -928,6 +992,12 @@ create or replace function public.admin_operational_summary() returns jsonb lang
 end$$;
 revoke all on function public.admin_operational_summary() from public,anon,authenticated;
 grant execute on function public.admin_operational_summary() to authenticated;
+-- Raw product/bundle JSON is operational-only; views/RPCs are the public API.
+revoke select on public.products,public.bundles from anon;
+drop policy if exists catalog_public on public.products;
+drop policy if exists bundle_public on public.bundles;
+drop policy if exists image_public_read on public.product_images;
+create policy image_public_read on public.product_images for select to anon,authenticated using(exists(select 1 from public.public_products p where p.id=product_id));
 insert into public.store_schema_migrations(version) values('202611230009') on conflict(version) do nothing;
 
 
@@ -1015,6 +1085,16 @@ insert into public.store_schema_migrations(version) values('202611230010') on co
 
 -- FILE: 202611230011_deployment_safety.sql
 
+-- Only the administrator restore RPC, for an exact archived row, bypasses the
+-- ordinary submission rate limit. GUC alone and customer/admin INSERT do not.
+create or replace function support_private.limit_submissions() returns trigger language plpgsql security definer set search_path='' as $$begin
+ if public.admin_role()='admin' and current_setting('almumez.support_restore',true)='yes'
+ and exists(select 1 from public.deleted_support_messages d where d.message_id=new.id and d.restored_at is null and d.payload=to_jsonb(new)) then return new;end if;
+ perform pg_advisory_xact_lock(hashtextextended(lower(new.email),0));
+ if (select count(*) from public.support_messages where lower(email)=lower(new.email) and created_at>now()-interval '10 minutes')>=3 then raise exception 'Please wait before submitting another request';end if;
+ return new;
+end$$;
+revoke all on function support_private.limit_submissions() from public,anon,authenticated;
 -- Refresh the expanded projection AFTER customer_id and other fields exist.
 create or replace view public.messages with(security_invoker=true) as select * from public.support_messages;
 revoke all on public.messages from anon;
@@ -1104,10 +1184,10 @@ do $deployment_assertions$ declare name text;begin
  foreach name in array array['store_schema_migrations','profiles','user_roles','categories','products','bundles','bundle_items','customers','orders','order_items','notifications','settings','support_messages','product_images','inventory_transactions','message_replies','payment_transactions','provider_events','shipments','order_stock_reservations','shipment_requests','deleted_support_messages'] loop
   if not exists(select 1 from pg_class where oid=to_regclass('public.'||name) and relrowsecurity) then raise exception 'Missing table/RLS: %',name;end if;
  end loop;
- foreach name in array array['admin_access','admin_analytics','admin_category_page','admin_customer_detail','admin_notifications','admin_operational_summary','admin_overview','admin_page','admin_report','admin_role','admin_search','admin_set_order_status','admin_summary','apply_verified_payment','archive_deleted_support_message','backfill_guest_customers','catalog_match','catalog_page','customer_orders','customer_summary','customer_support_messages','effective_product_price','guard_catalog_shape','guard_category_delete','guard_payment_settings','guard_preserved_children','is_support_admin','list_support_messages','message_customer_sync','new_admin_profile','order_customer_sync','product_relations_sync','protect_reserved_variants','reserve_order_record','restore_deleted_support_message','restore_order_stock','site_bootstrap','submit_store_order','support_submission_guard','verified_administrative_role','workspace_bundle_sync','workspace_order_items','workspace_order_sync','workspace_product_sync'] loop
+ foreach name in array array['admin_access','admin_analytics','admin_category_page','admin_customer_detail','admin_notifications','admin_operational_summary','admin_overview','admin_page','admin_report','admin_role','admin_search','admin_set_order_status','admin_summary','apply_verified_payment','archive_deleted_support_message','backfill_guest_customers','catalog_match','catalog_page','customer_orders','customer_summary','customer_support_messages','effective_product_price','guard_catalog_shape','guard_category_delete','guard_payment_settings','guard_preserved_children','is_support_admin','list_support_messages','message_customer_sync','new_admin_profile','order_customer_sync','product_relations_sync','protect_reserved_variants','public_catalog_json','reserve_order_record','restore_deleted_support_message','restore_order_stock','site_bootstrap','submit_store_order','support_submission_guard','verified_administrative_role','workspace_bundle_sync','workspace_order_items','workspace_order_sync','workspace_product_sync'] loop
   if not exists(select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='public' and p.proname=name) then raise exception 'Missing routine: %',name;end if;
  end loop;
- foreach name in array array['public.profiles.profile_read','public.profiles.profile_update','public.user_roles.role_read','public.user_roles.role_manage','public.products.catalog_public','public.categories.category_public','public.bundles.bundle_public','public.settings.settings_public','public.orders.order_insert','public.orders.order_update','public.settings.settings_manage','public.notifications.notifications_manage','public.support_messages.support_submit','storage.objects.admin_image_read','storage.objects.admin_image_insert','storage.objects.admin_image_update','storage.objects.admin_image_delete','public.payment_transactions.payment_read','public.shipments.shipment_read','public.inventory_transactions.inventory_read','public.message_replies.replies_read','public.message_replies.replies_send','public.customers.customer_own_read','public.customers.customer_update','public.support_messages.support_own_read','public.support_messages.support_customer_submit','public.product_images.image_public_read','public.product_images.image_staff_read','public.order_stock_reservations.reservation_staff_read','public.support_messages.support_staff_read','public.support_messages.support_staff_update','public.support_messages.support_admin_delete','public.support_messages.support_admin_restore','public.shipment_requests.shipment_request_staff_read','public.deleted_support_messages.deleted_support_admin_read','public.categories.workspace_read','public.products.workspace_read','public.bundles.workspace_read','public.bundle_items.workspace_read','public.customers.workspace_read','public.orders.workspace_read','public.order_items.workspace_read','public.notifications.workspace_read','public.settings.workspace_read','public.support_messages.workspace_read','public.products.workspace_insert','public.products.workspace_update','public.products.workspace_delete','public.categories.workspace_insert','public.categories.workspace_update','public.categories.workspace_delete','public.bundles.workspace_insert','public.bundles.workspace_update','public.bundles.workspace_delete'] loop
+ foreach name in array array['public.profiles.profile_read','public.profiles.profile_update','public.user_roles.role_read','public.user_roles.role_manage','public.categories.category_public','public.settings.settings_public','public.orders.order_insert','public.orders.order_update','public.settings.settings_manage','public.notifications.notifications_manage','public.support_messages.support_submit','storage.objects.admin_image_read','storage.objects.admin_image_insert','storage.objects.admin_image_update','storage.objects.admin_image_delete','public.payment_transactions.payment_read','public.shipments.shipment_read','public.inventory_transactions.inventory_read','public.message_replies.replies_read','public.message_replies.replies_send','public.customers.customer_own_read','public.customers.customer_update','public.support_messages.support_own_read','public.support_messages.support_customer_submit','public.product_images.image_public_read','public.product_images.image_staff_read','public.order_stock_reservations.reservation_staff_read','public.support_messages.support_staff_read','public.support_messages.support_staff_update','public.support_messages.support_admin_delete','public.support_messages.support_admin_restore','public.shipment_requests.shipment_request_staff_read','public.deleted_support_messages.deleted_support_admin_read','public.categories.workspace_read','public.products.workspace_read','public.bundles.workspace_read','public.bundle_items.workspace_read','public.customers.workspace_read','public.orders.workspace_read','public.order_items.workspace_read','public.notifications.workspace_read','public.settings.workspace_read','public.support_messages.workspace_read','public.products.workspace_insert','public.products.workspace_update','public.products.workspace_delete','public.categories.workspace_insert','public.categories.workspace_update','public.categories.workspace_delete','public.bundles.workspace_insert','public.bundles.workspace_update','public.bundles.workspace_delete'] loop
   if not exists(select 1 from pg_policies p where p.schemaname||'.'||p.tablename||'.'||p.policyname=name) then raise exception 'Missing policy: %',name;end if;
  end loop;
  foreach name in array array['almumez_new_profile','workspace_product_sync','workspace_bundle_sync','workspace_order_guard','workspace_order_items','product_relations_sync','order_customer_sync','message_customer_sync','reserve_order_record','protect_reserved_variants','limit_support_submissions','support_submission_guard','guard_payment_settings','guard_preserved_product','guard_preserved_bundle','guard_preserved_order','verified_administrative_role','guard_catalog_shape','guard_category_delete','archive_deleted_support_message'] loop
@@ -1119,9 +1199,13 @@ do $deployment_assertions$ declare name text;begin
  if not exists(select 1 from public.settings where key='paymentMethods' and value @> '{"cod":true,"card":false,"valu":false}'::jsonb) then raise exception 'COD-only settings missing';end if;
  if not exists(select 1 from storage.buckets where id='product-images' and public and file_size_limit=12582912 and allowed_mime_types=array['image/webp']) then raise exception 'Product image bucket configuration mismatch';end if;
  if not exists(select 1 from pg_publication_tables where pubname='supabase_realtime' and schemaname='public' and tablename='categories') then raise exception 'Category Realtime publication missing';end if;
+ if has_table_privilege('anon','public.products','SELECT') or has_table_privilege('anon','public.bundles','SELECT') or not has_table_privilege('anon','public.public_products','SELECT') then raise exception 'Unsafe public product privileges';end if;
 end $deployment_assertions$;
 
 COMMIT;
+-- MIGRATION COMMITTED. Following SELECTs verify the committed schema only.
+-- A verification error does NOT undo the COMMIT. Do not rerun first-install SQL.
+SELECT 'MIGRATION_COMMITTED'::text AS migration_status;
 
 -- READ-ONLY VERIFICATION. Never creates orders, assigns roles or edits records.
 -- Run this AFTER an approved deployment; all present/RLS/PK/valid checks should be true.
@@ -1129,10 +1213,10 @@ with expected(name) as(select unnest(array['store_schema_migrations','profiles',
 select e.name,to_regclass('public.'||e.name) is not null present,coalesce(c.relrowsecurity,false) rls_enabled,
  exists(select 1 from pg_constraint k where k.conrelid=c.oid and k.contype='p') primary_key
 from expected e left join pg_class c on c.oid=to_regclass('public.'||e.name) order by e.name;
-with expected(name) as(select unnest(array['admin_access','admin_analytics','admin_category_page','admin_customer_detail','admin_notifications','admin_operational_summary','admin_overview','admin_page','admin_report','admin_role','admin_search','admin_set_order_status','admin_summary','apply_verified_payment','archive_deleted_support_message','backfill_guest_customers','catalog_match','catalog_page','customer_orders','customer_summary','customer_support_messages','effective_product_price','guard_catalog_shape','guard_category_delete','guard_payment_settings','guard_preserved_children','is_support_admin','list_support_messages','message_customer_sync','new_admin_profile','order_customer_sync','product_relations_sync','protect_reserved_variants','reserve_order_record','restore_deleted_support_message','restore_order_stock','site_bootstrap','submit_store_order','support_submission_guard','verified_administrative_role','workspace_bundle_sync','workspace_order_items','workspace_order_sync','workspace_product_sync']))
+with expected(name) as(select unnest(array['admin_access','admin_analytics','admin_category_page','admin_customer_detail','admin_notifications','admin_operational_summary','admin_overview','admin_page','admin_report','admin_role','admin_search','admin_set_order_status','admin_summary','apply_verified_payment','archive_deleted_support_message','backfill_guest_customers','catalog_match','catalog_page','customer_orders','customer_summary','customer_support_messages','effective_product_price','guard_catalog_shape','guard_category_delete','guard_payment_settings','guard_preserved_children','is_support_admin','list_support_messages','message_customer_sync','new_admin_profile','order_customer_sync','product_relations_sync','protect_reserved_variants','public_catalog_json','reserve_order_record','restore_deleted_support_message','restore_order_stock','site_bootstrap','submit_store_order','support_submission_guard','verified_administrative_role','workspace_bundle_sync','workspace_order_items','workspace_order_sync','workspace_product_sync']))
 select e.name,count(p.oid)>0 present,bool_and(not p.prosecdef or coalesce(p.proconfig,array[]::text[]) @> array['search_path=""']) definer_path_pinned
 from expected e left join pg_namespace n on n.nspname='public' left join pg_proc p on p.pronamespace=n.oid and p.proname=e.name group by e.name order by e.name;
-with expected(name) as(select unnest(array['public.profiles.profile_read','public.profiles.profile_update','public.user_roles.role_read','public.user_roles.role_manage','public.products.catalog_public','public.categories.category_public','public.bundles.bundle_public','public.settings.settings_public','public.orders.order_insert','public.orders.order_update','public.settings.settings_manage','public.notifications.notifications_manage','public.support_messages.support_submit','storage.objects.admin_image_read','storage.objects.admin_image_insert','storage.objects.admin_image_update','storage.objects.admin_image_delete','public.payment_transactions.payment_read','public.shipments.shipment_read','public.inventory_transactions.inventory_read','public.message_replies.replies_read','public.message_replies.replies_send','public.customers.customer_own_read','public.customers.customer_update','public.support_messages.support_own_read','public.support_messages.support_customer_submit','public.product_images.image_public_read','public.product_images.image_staff_read','public.order_stock_reservations.reservation_staff_read','public.support_messages.support_staff_read','public.support_messages.support_staff_update','public.support_messages.support_admin_delete','public.support_messages.support_admin_restore','public.shipment_requests.shipment_request_staff_read','public.deleted_support_messages.deleted_support_admin_read','public.categories.workspace_read','public.products.workspace_read','public.bundles.workspace_read','public.bundle_items.workspace_read','public.customers.workspace_read','public.orders.workspace_read','public.order_items.workspace_read','public.notifications.workspace_read','public.settings.workspace_read','public.support_messages.workspace_read','public.products.workspace_insert','public.products.workspace_update','public.products.workspace_delete','public.categories.workspace_insert','public.categories.workspace_update','public.categories.workspace_delete','public.bundles.workspace_insert','public.bundles.workspace_update','public.bundles.workspace_delete']))
+with expected(name) as(select unnest(array['public.profiles.profile_read','public.profiles.profile_update','public.user_roles.role_read','public.user_roles.role_manage','public.categories.category_public','public.settings.settings_public','public.orders.order_insert','public.orders.order_update','public.settings.settings_manage','public.notifications.notifications_manage','public.support_messages.support_submit','storage.objects.admin_image_read','storage.objects.admin_image_insert','storage.objects.admin_image_update','storage.objects.admin_image_delete','public.payment_transactions.payment_read','public.shipments.shipment_read','public.inventory_transactions.inventory_read','public.message_replies.replies_read','public.message_replies.replies_send','public.customers.customer_own_read','public.customers.customer_update','public.support_messages.support_own_read','public.support_messages.support_customer_submit','public.product_images.image_public_read','public.product_images.image_staff_read','public.order_stock_reservations.reservation_staff_read','public.support_messages.support_staff_read','public.support_messages.support_staff_update','public.support_messages.support_admin_delete','public.support_messages.support_admin_restore','public.shipment_requests.shipment_request_staff_read','public.deleted_support_messages.deleted_support_admin_read','public.categories.workspace_read','public.products.workspace_read','public.bundles.workspace_read','public.bundle_items.workspace_read','public.customers.workspace_read','public.orders.workspace_read','public.order_items.workspace_read','public.notifications.workspace_read','public.settings.workspace_read','public.support_messages.workspace_read','public.products.workspace_insert','public.products.workspace_update','public.products.workspace_delete','public.categories.workspace_insert','public.categories.workspace_update','public.categories.workspace_delete','public.bundles.workspace_insert','public.bundles.workspace_update','public.bundles.workspace_delete']))
 select e.name,exists(select 1 from pg_policies p where p.schemaname||'.'||p.tablename||'.'||p.policyname=e.name) present from expected e order by e.name;
 select version,applied_at from public.store_schema_migrations order by version;
 -- Expected 11 versions: 202611220001, 202611220002, 202611220003, 202611220004, 202611220005, 202611220006, 202611220007, 202611230008, 202611230009, 202611230010, 202611230011.
@@ -1148,6 +1232,11 @@ select t.relname relation,i.relname index_name,x.indisvalid,x.indisready,pg_get_
 from pg_index x join pg_class t on t.oid=x.indrelid join pg_class i on i.oid=x.indexrelid join pg_namespace n on n.oid=t.relnamespace where n.nspname='public' order by 1,2;
 select column_name from information_schema.columns where table_schema='public' and table_name='messages' and column_name='customer_id';
 select reloptions from pg_class where oid='public.messages'::regclass; -- security_invoker=true
+select has_table_privilege('anon','public.products','SELECT') anonymous_raw_products,
+ has_table_privilege('anon','public.bundles','SELECT') anonymous_raw_bundles,
+ has_table_privilege('anon','public.public_products','SELECT') sanitized_products,
+ has_table_privilege('anon','public.public_bundles','SELECT') sanitized_bundles;
+-- Expected false,false,true,true. Customer raw SELECT is filtered by operational RLS.
 select has_table_privilege('anon','public.messages','SELECT') anon_message_read,
  has_table_privilege('anon','public.messages','INSERT') anon_all_column_insert,
  has_column_privilege('anon','public.messages','message','INSERT') anon_message_insert,
@@ -1164,3 +1253,5 @@ select id,name,public,file_size_limit,allowed_mime_types from storage.buckets; -
 select schemaname,tablename from pg_publication_tables where pubname='supabase_realtime' order by 1,2;
 select table_name,grantee,privilege_type from information_schema.table_privileges where table_schema='public' and grantee in ('anon','authenticated') order by 1,2,3;
 select routine_name,grantee,privilege_type from information_schema.routine_privileges where specific_schema='public' and grantee in ('PUBLIC','anon','authenticated') order by 1,2;
+
+SELECT 'POST_DEPLOY_QUERIES_COMPLETED_REVIEW_RESULTS'::text AS verification_status;

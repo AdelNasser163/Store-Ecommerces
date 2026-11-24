@@ -21,6 +21,19 @@ reset role;
 select set_config('request.jwt.claim.sub','a0110000-0000-4000-8000-000000000001',true);
 set local role authenticated;
 delete from public.support_messages where id='a0111000-0000-4000-8000-000000000001';
+reset role;
+-- Three ordinary recent messages now occupy the full customer rate allowance.
+insert into public.support_messages(name,email,subject,message,consent) select 'Rate fixture','archive-customer@fixture.invalid','other','Existing recent message '||n,true from generate_series(1,3)n;
+select set_config('request.jwt.claim.sub','a0110000-0000-4000-8000-000000000003',true);
+set local role authenticated;
+do $$begin
+ perform set_config('almumez.support_restore','yes',true);
+ begin insert into public.support_messages(name,email,subject,message,consent) values('Archive customer','archive-customer@fixture.invalid','other','Customer cannot bypass the limit.',true);raise exception 'Customer bypass accepted';exception when raise_exception then if SQLERRM<>'Please wait before submitting another request' then raise;end if;end;
+ perform set_config('almumez.support_restore','',true);
+end$$;
+reset role;
+select set_config('request.jwt.claim.sub','a0110000-0000-4000-8000-000000000001',true);
+set local role authenticated;
 do $$declare saved public.deleted_support_messages;restored uuid;begin
  select * into strict saved from public.deleted_support_messages where message_id='a0111000-0000-4000-8000-000000000001';
  if saved.payload->>'customer_id' is null or jsonb_array_length(saved.replies)<>1 or saved.deleted_by<>auth.uid() then raise exception 'Incomplete archive';end if;

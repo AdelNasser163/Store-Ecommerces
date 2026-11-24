@@ -20,7 +20,7 @@ const rebuild=()=>{const result=spawnSync(process.execPath,['tools/build-perform
   else if(kind==='site_bootstrap')value={products,bundles:[bundle],settings};
   else if(kind==='catalog_page'){if(failCatalog)return route.fulfill({status:503,headers,body:JSON.stringify({message:'Fixture catalogue unavailable'})});value={rows:products,total:3,page:1,pages:1,facets:{departments:{mobiles:3},brands:{Apple:3},storages:{}},departments:[{id:'mobiles',ar:'هواتف',en:'Mobiles'}],brands:['Apple'],storages:[]}}
   else if(url.pathname.includes('/storage/v1/object/'))value={Key:'product-images/fixture/image.webp',Id:'fixture-image'};
-  else if(kind==='products')value=products.map(p=>({id:p.id,published:true,payload:p}));
+  else if(kind==='products'||kind==='public_products')value=products.map(p=>({id:p.id,published:true,payload:p}));
   else if(kind==='bundles')value=[{id:bundle.id,payload:bundle}];
   else if(kind==='settings')value=Object.entries(settings).map(([key,value])=>({key,value}));
   else if(kind==='categories')value=[{id:'mobiles',name:{ar:'هواتف',en:'Mobiles'}}];

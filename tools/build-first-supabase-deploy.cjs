@@ -25,13 +25,13 @@ const guard=`
 -- replacing existing application objects. Existing Supabase platform objects
 -- (auth/storage/realtime/extensions) are retained.
 select pg_advisory_xact_lock(hashtextextended('almumez-schema-migration',0));
-do $first_deployment_guard$ declare existing text;target text;begin
+do $first_deployment_guard$ declare existing text;target text;verified_platform_oid oid=0;candidate_oid oid;begin
  if current_database()<>'postgres' then raise exception 'Expected the reviewed postgres database';end if;
  if current_setting('server_version_num')::int<170000 then raise exception 'This entry point targets the reviewed PostgreSQL 17+ environment';end if;
  if to_regclass('auth.users') is null or to_regclass('storage.buckets') is null or to_regclass('storage.objects') is null then raise exception 'Required existing Supabase platform schema is missing';end if;
  if not exists(select 1 from pg_roles where rolname='anon') or not exists(select 1 from pg_roles where rolname='authenticated') or not exists(select 1 from pg_roles where rolname='service_role') then raise exception 'Required Supabase roles are missing';end if;
  if not exists(select 1 from pg_publication where pubname='supabase_realtime') then raise exception 'Existing Supabase Realtime publication required';end if;
- foreach target in array array[${quote([...tables,'messages'])}] loop
+ foreach target in array array[${quote([...tables,'messages','public_products','public_bundles'])}] loop
   if to_regclass('public.'||target) is not null then raise exception 'Existing target relation public.%; preserve and review separately',target;end if;
  end loop;
  if exists(select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='public' and p.proname=any(array[${quote(names)}])) or to_regprocedure('support_private.limit_submissions()') is not null then raise exception 'Existing target routines; preserve and review separately';end if;
@@ -39,8 +39,35 @@ do $first_deployment_guard$ declare existing text;target text;begin
  where n.nspname in ('public','support_private') and c.relkind in ('r','p','v','m','S','f')
  and not exists(select 1 from pg_depend d where d.classid='pg_class'::regclass and d.objid=c.oid and d.deptype='e');
  if existing is not null then raise exception 'First deployment refused: existing relations %. Nothing replaced; review separately.',existing;end if;
+ -- Verified against PostgreSQL 17.12 and the pre-deployment backup: the supplied
+ -- fingerprint is MD5(pg_catalog.pg_get_functiondef(oid)), NOT MD5(prosrc).
+ -- Do not normalize whitespace, replace the function, or disable its event trigger.
+ candidate_oid=to_regprocedure('public.rls_auto_enable()');
+ if candidate_oid is not null then
+  if not exists(
+   select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace
+   join pg_language l on l.oid=p.prolang join pg_roles owner_role on owner_role.oid=p.proowner
+   where p.oid=candidate_oid and n.nspname='public' and p.proname='rls_auto_enable'
+   and p.prokind='f' and p.pronargs=0 and p.pronargdefaults=0 and p.provariadic=0
+   and p.proallargtypes is null and not p.proretset and p.prorettype='pg_catalog.event_trigger'::regtype
+   and owner_role.rolname='postgres' and l.lanname='plpgsql' and p.prosecdef
+   and p.proconfig=array['search_path=pg_catalog']::text[]
+   and pg_catalog.md5(pg_catalog.pg_get_functiondef(p.oid))='846ec2fbff751d24b890656d63c3a9bf'
+  ) then raise exception 'First deployment refused: rls_auto_enable definition, owner or security settings mismatch';end if;
+  if not exists(
+   select 1 from pg_event_trigger e join pg_roles owner_role on owner_role.oid=e.evtowner
+   where e.evtname='ensure_rls' and e.evtfoid=candidate_oid
+   and e.evtevent='ddl_command_end' and e.evtenabled='O' and owner_role.rolname='postgres'
+   and (select array_agg(tag order by tag) from unnest(e.evttags) tag)=array['CREATE TABLE','CREATE TABLE AS','SELECT INTO']::text[]
+  ) or (select count(*) from pg_event_trigger where evtfoid=candidate_oid)<>1
+  then raise exception 'First deployment refused: ensure_rls event trigger missing or configuration mismatch';end if;
+  verified_platform_oid=candidate_oid;
+ elsif exists(select 1 from pg_event_trigger where evtname='ensure_rls') then
+  raise exception 'First deployment refused: ensure_rls does not reference the verified platform function';
+ end if;
  select string_agg(n.nspname||'.'||p.proname,', ') into existing from pg_proc p join pg_namespace n on n.oid=p.pronamespace
  where n.nspname in ('public','support_private')
+ and p.oid<>verified_platform_oid
  and not exists(select 1 from pg_depend d where d.classid='pg_proc'::regclass and d.objid=p.oid and d.deptype='e');
  if existing is not null then raise exception 'First deployment refused: existing routines %. Nothing replaced.',existing;end if;
  if exists(select 1 from pg_trigger where tgrelid='auth.users'::regclass and tgname='almumez_new_profile') then raise exception 'Existing application Auth trigger; review separately';end if;
@@ -73,6 +100,11 @@ select t.relname relation,i.relname index_name,x.indisvalid,x.indisready,pg_get_
 from pg_index x join pg_class t on t.oid=x.indrelid join pg_class i on i.oid=x.indexrelid join pg_namespace n on n.oid=t.relnamespace where n.nspname='public' order by 1,2;
 select column_name from information_schema.columns where table_schema='public' and table_name='messages' and column_name='customer_id';
 select reloptions from pg_class where oid='public.messages'::regclass; -- security_invoker=true
+select has_table_privilege('anon','public.products','SELECT') anonymous_raw_products,
+ has_table_privilege('anon','public.bundles','SELECT') anonymous_raw_bundles,
+ has_table_privilege('anon','public.public_products','SELECT') sanitized_products,
+ has_table_privilege('anon','public.public_bundles','SELECT') sanitized_bundles;
+-- Expected false,false,true,true. Customer raw SELECT is filtered by operational RLS.
 select has_table_privilege('anon','public.messages','SELECT') anon_message_read,
  has_table_privilege('anon','public.messages','INSERT') anon_all_column_insert,
  has_column_privilege('anon','public.messages','message','INSERT') anon_message_insert,
@@ -111,10 +143,11 @@ do $deployment_assertions$ declare name text;begin
  if not exists(select 1 from public.settings where key='paymentMethods' and value @> '{"cod":true,"card":false,"valu":false}'::jsonb) then raise exception 'COD-only settings missing';end if;
  if not exists(select 1 from storage.buckets where id='product-images' and public and file_size_limit=12582912 and allowed_mime_types=array['image/webp']) then raise exception 'Product image bucket configuration mismatch';end if;
  if not exists(select 1 from pg_publication_tables where pubname='supabase_realtime' and schemaname='public' and tablename='categories') then raise exception 'Category Realtime publication missing';end if;
+ if has_table_privilege('anon','public.products','SELECT') or has_table_privilege('anon','public.bundles','SELECT') or not has_table_privilege('anon','public.public_products','SELECT') then raise exception 'Unsafe public product privileges';end if;
 end $deployment_assertions$;
 `;
 if(!/^--[^\n]*\nBEGIN;/i.test(setup)||!setup.trimEnd().endsWith('COMMIT;'))throw Error('Unexpected setup transaction envelope');
-const result='-- FIRST MyStore APPLICATION DEPLOYMENT; SOURCE PREPARED, NOT EXECUTED.\n-- Requires explicit owner approval and the verified external database backup.\n-- Never run this and setup.sql as two deployments. This entry point includes it.\n'+setup.replace(/BEGIN;/,()=>('BEGIN;\n'+guard)).replace(/COMMIT;\s*$/,()=>sanity+'\nCOMMIT;\n\n'+verify);
+const result='-- FIRST MyStore APPLICATION DEPLOYMENT; SOURCE PREPARED, NOT EXECUTED.\n-- Requires explicit owner approval and the verified external database backup.\n-- Never run this and setup.sql as two deployments. This entry point includes it.\n'+setup.replace(/BEGIN;/,()=>('BEGIN;\n'+guard)).replace(/COMMIT;\s*$/,()=>sanity+'\nCOMMIT;\n-- MIGRATION COMMITTED. Following SELECTs verify the committed schema only.\n-- A verification error does NOT undo the COMMIT. Do not rerun first-install SQL.\nSELECT \'MIGRATION_COMMITTED\'::text AS migration_status;\n\n'+verify+'\nSELECT \'POST_DEPLOY_QUERIES_COMPLETED_REVIEW_RESULTS\'::text AS verification_status;\n');
 fs.writeFileSync('supabase/DEPLOY_TO_SUPABASE.sql',result);
 fs.writeFileSync('supabase/VERIFY_DEPLOYMENT.sql',verify);
 console.log(JSON.stringify({generated:'supabase/DEPLOY_TO_SUPABASE.sql',sha256:crypto.createHash('sha256').update(result).digest('hex'),tables,functions:names,migrations:files},null,2));
