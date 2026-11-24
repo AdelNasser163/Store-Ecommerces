@@ -1,0 +1,1672 @@
+[
+  {
+    "path": "about-page.css",
+    "bytes": 7472,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "about-page.js",
+    "bytes": 6155,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "about.html",
+    "bytes": 93010,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 1,
+    "buttons": 7,
+    "routes": [
+      "auth.html",
+      "index.html",
+      "index.html?wishlist=1",
+      "admin.html",
+      "accessories.html",
+      "about.html",
+      "blog.html",
+      "contact.html"
+    ]
+  },
+  {
+    "path": "accessories.html",
+    "bytes": 149986,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 1,
+    "buttons": 20,
+    "routes": [
+      "index.html",
+      "accessories.html",
+      "auth.html",
+      "index.html?wishlist=1",
+      "admin.html",
+      "about.html",
+      "blog.html",
+      "contact.html",
+      "checkout.html"
+    ]
+  },
+  {
+    "path": "admin\\index.css",
+    "bytes": 25735,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin\\tailwind.config.cjs",
+    "bytes": 544,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-404.html",
+    "bytes": 41082,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-bundles.html",
+    "bytes": 41078,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-bundles.js",
+    "bytes": 5903,
+    "storage": [
+      "almumez-admin"
+    ],
+    "forms": 0,
+    "buttons": 2,
+    "routes": []
+  },
+  {
+    "path": "admin-config.js",
+    "bytes": 184,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-contact.css",
+    "bytes": 7868,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-contact.html",
+    "bytes": 41082,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-contact.js",
+    "bytes": 11022,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 2,
+    "routes": []
+  },
+  {
+    "path": "admin-customers.html",
+    "bytes": 41086,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-dashboard.js",
+    "bytes": 18975,
+    "storage": [
+      "almumez-language",
+      "almumez-admin"
+    ],
+    "forms": 0,
+    "buttons": 2,
+    "routes": [
+      "admin-product.html?id=${encodeURIComponent(product.id)}"
+    ]
+  },
+  {
+    "path": "admin-login.html",
+    "bytes": 41070,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-orders-theme.css",
+    "bytes": 15151,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-orders-view.js",
+    "bytes": 11483,
+    "storage": [
+      "almumez-admin",
+      "store-orders-v1"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-orders.html",
+    "bytes": 41074,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-orders.js",
+    "bytes": 7501,
+    "storage": [
+      "almumez-admin"
+    ],
+    "forms": 0,
+    "buttons": 3,
+    "routes": [
+      "admin.html"
+    ]
+  },
+  {
+    "path": "admin-product.html",
+    "bytes": 41082,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-products.html",
+    "bytes": 41082,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-products.js",
+    "bytes": 6886,
+    "storage": [
+      "almumez-admin"
+    ],
+    "forms": 0,
+    "buttons": 2,
+    "routes": [
+      "product.html?id=${encodeURIComponent(product.id)}",
+      "admin-product.html?id=${encodeURIComponent(product.id)}",
+      "admin.html"
+    ]
+  },
+  {
+    "path": "admin-reports.html",
+    "bytes": 41078,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-settings.html",
+    "bytes": 41082,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin-shell.css",
+    "bytes": 1018,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "admin-contact.html"
+    ]
+  },
+  {
+    "path": "admin-ui.js",
+    "bytes": 27848,
+    "storage": [
+      "almumez-admin-language",
+      "almumez-language",
+      "almumez-admin"
+    ],
+    "forms": 0,
+    "buttons": 6,
+    "routes": [
+      "admin.html",
+      "index.html",
+      "admin-contact.html",
+      "admin.html#sales"
+    ]
+  },
+  {
+    "path": "admin.html",
+    "bytes": 41086,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "admin.js",
+    "bytes": 19000,
+    "storage": [
+      "almumez-admin"
+    ],
+    "forms": 0,
+    "buttons": 6,
+    "routes": []
+  },
+  {
+    "path": "auth.html",
+    "bytes": 43055,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 2,
+    "buttons": 8,
+    "routes": [
+      "auth.html",
+      "index.html",
+      "forgot-password.html",
+      "index.html#terms",
+      "index.html#privacy"
+    ]
+  },
+  {
+    "path": "auth.js",
+    "bytes": 9425,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "blog-page.css",
+    "bytes": 7233,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "blog-page.js",
+    "bytes": 7965,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "blog.html",
+    "bytes": 96419,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 2,
+    "buttons": 13,
+    "routes": [
+      "auth.html",
+      "index.html",
+      "index.html?wishlist=1",
+      "admin.html",
+      "accessories.html",
+      "about.html",
+      "blog.html",
+      "contact.html"
+    ]
+  },
+  {
+    "path": "bundle-cart.js",
+    "bytes": 4366,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "cart-drawer.css",
+    "bytes": 6543,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "catalog-theme.css",
+    "bytes": 11585,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "catalog.js",
+    "bytes": 7142,
+    "storage": [
+      "almumez-language",
+      "almumez-wishlist"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "accessories.html"
+    ]
+  },
+  {
+    "path": "checkout.html",
+    "bytes": 92891,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 2,
+    "buttons": 22,
+    "routes": [
+      "auth.html",
+      "index.html",
+      "index.html?wishlist=1",
+      "admin.html",
+      "accessories.html",
+      "about.html",
+      "blog.html",
+      "contact.html"
+    ]
+  },
+  {
+    "path": "contact-page.css",
+    "bytes": 6787,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "contact-page.js",
+    "bytes": 8856,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "contact.html",
+    "bytes": 91368,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 2,
+    "buttons": 11,
+    "routes": [
+      "auth.html",
+      "index.html",
+      "index.html?wishlist=1",
+      "admin.html",
+      "accessories.html",
+      "about.html",
+      "blog.html",
+      "contact.html",
+      "index.html#privacy"
+    ]
+  },
+  {
+    "path": "data\\bundles.js",
+    "bytes": 1953,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "data\\products.js",
+    "bytes": 10725,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "data\\store.js",
+    "bytes": 16663,
+    "storage": [
+      "almumez-catalog",
+      "almumez-selected-product"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "forgot-password.html",
+    "bytes": 76397,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 2,
+    "buttons": 9,
+    "routes": [
+      "auth.html",
+      "index.html",
+      "index.html?wishlist=1",
+      "admin.html",
+      "accessories.html",
+      "about.html",
+      "blog.html",
+      "contact.html"
+    ]
+  },
+  {
+    "path": "fx.css",
+    "bytes": 1770,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "hero-b.css",
+    "bytes": 43680,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "index.html"
+    ]
+  },
+  {
+    "path": "index.html",
+    "bytes": 145578,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 0,
+    "buttons": 8,
+    "routes": [
+      "auth.html",
+      "index.html",
+      "index.html?wishlist=1",
+      "accessories.html",
+      "about.html",
+      "blog.html",
+      "contact.html",
+      "accessories.html?dept=mobiles",
+      "accessories.html?dept=audio",
+      "accessories.html?dept=appliances",
+      "accessories.html?sale=1",
+      "accessories.html?q=laptop",
+      "accessories.html?q=OLED",
+      "accessories.html?q=PlayStation"
+    ]
+  },
+  {
+    "path": "js\\admin\\app.js",
+    "bytes": 26787,
+    "storage": [
+      "almumez-language",
+      "almumez-admin-theme",
+      "almumez-admin-collapsed",
+      "almumez-admin-notifications-read"
+    ],
+    "forms": 2,
+    "buttons": 16,
+    "routes": [
+      "index.html",
+      "admin.html",
+      "admin-login.html",
+      "admin-settings.html#sales",
+      "admin-contact.html",
+      "admin-settings.html#profile",
+      "admin-settings.html"
+    ]
+  },
+  {
+    "path": "js\\admin\\auth.js",
+    "bytes": 5436,
+    "storage": [
+      "almumez-admin-cloud-session",
+      "almumez-admin",
+      "almumez-admin-profile-v2",
+      "almumez-admin-remember-v2"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\admin\\bootstrap.js",
+    "bytes": 329,
+    "storage": [
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\admin\\core.js",
+    "bytes": 6639,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\admin\\data.js",
+    "bytes": 9402,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\admin\\pages\\bundles.js",
+    "bytes": 9436,
+    "storage": [],
+    "forms": 1,
+    "buttons": 4,
+    "routes": []
+  },
+  {
+    "path": "js\\admin\\pages\\customers.js",
+    "bytes": 3252,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "admin-orders.html?q=${encodeURIComponent(r.email||r.phone||r.name)}"
+    ]
+  },
+  {
+    "path": "js\\admin\\pages\\dashboard.js",
+    "bytes": 17193,
+    "storage": [
+      "almumez-admin-sections-"
+    ],
+    "forms": 2,
+    "buttons": 8,
+    "routes": [
+      "admin-orders.html?payment=${encodeURIComponent(key)}&${periodQuery}",
+      "admin-orders.html",
+      "admin-products.html?id=${encodeURIComponent(p.id)}",
+      "admin-products.html?stock=low",
+      "admin-orders.html?id=${encodeURIComponent(o.id)}"
+    ]
+  },
+  {
+    "path": "js\\admin\\pages\\messages.js",
+    "bytes": 8080,
+    "storage": [],
+    "forms": 0,
+    "buttons": 7,
+    "routes": [
+      "admin-orders.html?q=${encodeURIComponent(active.order_number)}"
+    ]
+  },
+  {
+    "path": "js\\admin\\pages\\notfound.js",
+    "bytes": 371,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "admin.html"
+    ]
+  },
+  {
+    "path": "js\\admin\\pages\\orders.js",
+    "bytes": 13053,
+    "storage": [],
+    "forms": 0,
+    "buttons": 8,
+    "routes": []
+  },
+  {
+    "path": "js\\admin\\pages\\products.js",
+    "bytes": 16248,
+    "storage": [
+      "almumez-admin-product-view"
+    ],
+    "forms": 1,
+    "buttons": 8,
+    "routes": [
+      "product.html?id=${encodeURIComponent(p.id)}"
+    ]
+  },
+  {
+    "path": "js\\admin\\pages\\reports.js",
+    "bytes": 6301,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\admin\\pages\\settings.js",
+    "bytes": 12870,
+    "storage": [
+      "almumez-admin-profile-v2",
+      "almumez-admin-sound"
+    ],
+    "forms": 5,
+    "buttons": 5,
+    "routes": []
+  },
+  {
+    "path": "js\\fx.js",
+    "bytes": 5855,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\hero-b.js",
+    "bytes": 3533,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\home-card-quantity.js",
+    "bytes": 3548,
+    "storage": [
+      "cartItems"
+    ],
+    "forms": 0,
+    "buttons": 2,
+    "routes": []
+  },
+  {
+    "path": "js\\image-manifest.js",
+    "bytes": 28653,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\image-performance.js",
+    "bytes": 2870,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\image-store.js",
+    "bytes": 7565,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\mobile-product-rails.js",
+    "bytes": 4560,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\page-bootstrap.js",
+    "bytes": 1785,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\page-entry.js",
+    "bytes": 1676,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\page-theme.js",
+    "bytes": 8599,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\product-card.js",
+    "bytes": 11707,
+    "storage": [
+      "almumez-wishlist"
+    ],
+    "forms": 0,
+    "buttons": 2,
+    "routes": []
+  },
+  {
+    "path": "js\\product-detail-theme.js",
+    "bytes": 2441,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "accessories.html",
+      "contact.html"
+    ]
+  },
+  {
+    "path": "js\\product-visibility.js",
+    "bytes": 1060,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "accessories.html"
+    ]
+  },
+  {
+    "path": "js\\products-data.js",
+    "bytes": 3066,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\products-logic.js",
+    "bytes": 5001,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\products-page.js",
+    "bytes": 28553,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 12,
+    "routes": [
+      "product.html?id=${encodeURIComponent(p?.id||item.id)}"
+    ]
+  },
+  {
+    "path": "js\\shared-drawers.js",
+    "bytes": 10962,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\site-chrome-theme.js",
+    "bytes": 1874,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "about.html",
+      "accessories.html"
+    ]
+  },
+  {
+    "path": "js\\site-navigation.js",
+    "bytes": 7242,
+    "storage": [
+      "cartItems",
+      "almumez-pending-navigation"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "accessories.html",
+      "about.html"
+    ]
+  },
+  {
+    "path": "js\\site-theme.js",
+    "bytes": 3431,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\store-cloud.js",
+    "bytes": 1718,
+    "storage": [
+      "almumez-site-settings"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\storefront-settings.js",
+    "bytes": 1240,
+    "storage": [
+      "almumez-site-settings"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\support-api.js",
+    "bytes": 4936,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\support-fields.js",
+    "bytes": 2020,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\vendor\\gsap.min.js",
+    "bytes": 73357,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\vendor\\lenis.min.js",
+    "bytes": 18815,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\vendor\\rb-islands.css",
+    "bytes": 5910,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\vendor\\rb-islands.js",
+    "bytes": 265614,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "js\\vendor\\ScrollTrigger.min.js",
+    "bytes": 44683,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "main.js",
+    "bytes": 132335,
+    "storage": [],
+    "forms": 0,
+    "buttons": 14,
+    "routes": [
+      "checkout.html",
+      "auth.html",
+      "admin.html"
+    ]
+  },
+  {
+    "path": "mobile-product-rails.css",
+    "bytes": 2247,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "page-theme.css",
+    "bytes": 38750,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "performance.css",
+    "bytes": 5890,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "product-bundle.js",
+    "bytes": 6537,
+    "storage": [],
+    "forms": 0,
+    "buttons": 1,
+    "routes": [
+      "checkout.html"
+    ]
+  },
+  {
+    "path": "product-card.css",
+    "bytes": 22821,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "product-detail.css",
+    "bytes": 15007,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "product.html",
+    "bytes": 175029,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 1,
+    "buttons": 24,
+    "routes": [
+      "auth.html",
+      "index.html",
+      "index.html?wishlist=1",
+      "admin.html",
+      "accessories.html",
+      "about.html",
+      "blog.html",
+      "contact.html",
+      "accessories.html?dept=mobiles",
+      "accessories.html?brand=Apple"
+    ]
+  },
+  {
+    "path": "products-logic.test.cjs",
+    "bytes": 2014,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "products-page.css",
+    "bytes": 49996,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "products.html",
+    "bytes": 545,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "accessories.html"
+    ]
+  },
+  {
+    "path": "products.js",
+    "bytes": 4518,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 2,
+    "routes": []
+  },
+  {
+    "path": "reset-password.html",
+    "bytes": 76482,
+    "storage": [
+      "almumez-language",
+      "almumez-next-page"
+    ],
+    "forms": 2,
+    "buttons": 10,
+    "routes": [
+      "auth.html",
+      "index.html",
+      "index.html?wishlist=1",
+      "admin.html",
+      "accessories.html",
+      "about.html",
+      "blog.html",
+      "contact.html",
+      "forgot-password.html"
+    ]
+  },
+  {
+    "path": "shared-site-footer.js",
+    "bytes": 303,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "shared-site-header.js",
+    "bytes": 8085,
+    "storage": [
+      "almumez-wishlist",
+      "almumez-site-settings",
+      "almumez-whatsapp-number"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "admin.html"
+    ]
+  },
+  {
+    "path": "shared-ui.css",
+    "bytes": 251,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "site-navigation.css",
+    "bytes": 19801,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "index.html",
+      "auth.html"
+    ]
+  },
+  {
+    "path": "site-theme.css",
+    "bytes": 10405,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "src-islands\\build.mjs",
+    "bytes": 351,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "src-islands\\islands.css",
+    "bytes": 1398,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "src-islands\\rb\\LogoLoop.css",
+    "bytes": 4508,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "src-islands\\rb\\Particles.css",
+    "bytes": 204,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "src-islands\\rb\\ShinyText.css",
+    "bytes": 469,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "src-islands\\rb\\SpotlightCard.css",
+    "bytes": 980,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "storage-test.cjs",
+    "bytes": 5439,
+    "storage": [
+      "store-products-v1"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "style.css",
+    "bytes": 303599,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "index.html",
+      "accessories.html",
+      "auth.html"
+    ]
+  },
+  {
+    "path": "support-config.js",
+    "bytes": 160,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "templates\\site-footer.html",
+    "bytes": 1868,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "about.html",
+      "contact.html"
+    ]
+  },
+  {
+    "path": "templates\\site-header.html",
+    "bytes": 5408,
+    "storage": [],
+    "forms": 0,
+    "buttons": 3,
+    "routes": [
+      "index.html",
+      "index.html?wishlist=1",
+      "auth.html",
+      "accessories.html",
+      "about.html",
+      "blog.html",
+      "contact.html"
+    ]
+  },
+  {
+    "path": "tools\\account-menu-verify.cjs",
+    "bytes": 3185,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\admin-accessibility.cjs",
+    "bytes": 1908,
+    "storage": [
+      "almumez-admin",
+      "almumez-admin-theme"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\admin-actions-verify.cjs",
+    "bytes": 4843,
+    "storage": [
+      "almumez-admin",
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\admin-logic.test.cjs",
+    "bytes": 1299,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\admin-login-verify.cjs",
+    "bytes": 3220,
+    "storage": [
+      "almumez-admin-remember-v2",
+      "almumez-admin-profile-v2"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\admin-redesign-audit.cjs",
+    "bytes": 1623,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\admin-schema.test.cjs",
+    "bytes": 6610,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\admin-store-integration.cjs",
+    "bytes": 3662,
+    "storage": [
+      "almumez-admin",
+      "cartItems"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\admin-workspace-verify.cjs",
+    "bytes": 6531,
+    "storage": [
+      "fixture",
+      "almumez-admin",
+      "almumez-language",
+      "store-orders-v1",
+      "almumez-support-demo-v1"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "admin-orders.html"
+    ]
+  },
+  {
+    "path": "tools\\build-performance.mjs",
+    "bytes": 16090,
+    "storage": [
+      "almumez-admin"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\cart-drawer-verify.cjs",
+    "bytes": 3432,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\catalog-loading-verify.cjs",
+    "bytes": 2985,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "accessories.html",
+      "about.html"
+    ]
+  },
+  {
+    "path": "tools\\clean-css.cjs",
+    "bytes": 2358,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\css-cleanup.test.cjs",
+    "bytes": 1095,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\font-faces.cjs",
+    "bytes": 2589,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\font-faces.test.cjs",
+    "bytes": 1006,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\hero-performance-verify.cjs",
+    "bytes": 3319,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\optimize-logos.cjs",
+    "bytes": 2123,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\orders-view-verify.cjs",
+    "bytes": 3735,
+    "storage": [
+      "almumez-admin",
+      "store-orders-v1",
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\page-entry-verify.cjs",
+    "bytes": 3498,
+    "storage": [
+      "almumez-admin"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": [
+      "accessories.html",
+      "admin-contact.html"
+    ]
+  },
+  {
+    "path": "tools\\pagespeed-server.cjs",
+    "bytes": 1018,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\pagespeed-summary.cjs",
+    "bytes": 6764,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\pagespeed-visual-verify.cjs",
+    "bytes": 1346,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\perf-css-regression.cjs",
+    "bytes": 3396,
+    "storage": [
+      "almumez-admin"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\perf-layout.cjs",
+    "bytes": 1251,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\perf-measure.cjs",
+    "bytes": 4495,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\perf-scroll.cjs",
+    "bytes": 1607,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\perf-summary.cjs",
+    "bytes": 1851,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\perf-verify.cjs",
+    "bytes": 5505,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\prepare-assets.cjs",
+    "bytes": 5483,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\prune-utilities.cjs",
+    "bytes": 2215,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\run-pagespeed.cjs",
+    "bytes": 1704,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\shared-drawers-verify.cjs",
+    "bytes": 4250,
+    "storage": [
+      "almumez-language",
+      "cartItems",
+      "almumez-wishlist"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\site-components-home-verify.cjs",
+    "bytes": 2138,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\site-components-verify.cjs",
+    "bytes": 3864,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 1,
+    "routes": [
+      "blog.html"
+    ]
+  },
+  {
+    "path": "tools\\site-components.mjs",
+    "bytes": 3888,
+    "storage": [],
+    "forms": 4,
+    "buttons": 6,
+    "routes": [
+      "auth.html",
+      "admin.html",
+      "(?:index|accessories|about|blog|contact)\\.html"
+    ]
+  },
+  {
+    "path": "tools\\support-verify.cjs",
+    "bytes": 6459,
+    "storage": [
+      "almumez-language"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "tools\\wishlist-header-verify.cjs",
+    "bytes": 2057,
+    "storage": [
+      "almumez-language",
+      "almumez-wishlist"
+    ],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  },
+  {
+    "path": "variant-prices-check.cjs",
+    "bytes": 1976,
+    "storage": [],
+    "forms": 0,
+    "buttons": 0,
+    "routes": []
+  }
+]

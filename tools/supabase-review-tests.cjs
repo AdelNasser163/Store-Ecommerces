@@ -1,0 +1,6 @@
+// Runs local browser/source checks and the isolated PGlite backend test. No production SQL.
+const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),{spawnSync}=require('node:child_process');
+const files=fs.readdirSync('tools').filter(f=>/\.test\.cjs$|-verify\.cjs$/.test(f)&&!['supabase-migrations.test.cjs','admin-schema.test.cjs'].includes(f));
+for(const name of ['admin-accessibility.cjs','admin-store-integration.cjs','html-separation.test.mjs','page-build-repeatability.test.mjs'])files.push(name);
+const results=[];for(const file of files){const args=['tools/'+file,...(file==='perf-css-regression.cjs'?['--storefront-only']:[])];const result=spawnSync(process.execPath,args,{encoding:'utf8',timeout:240000,maxBuffer:1024*1024});const row={test:file,status:result.status===0?'PASS':'FAIL',output:(result.stdout+'\n'+result.stderr).trim().slice(-6000),error:result.error?.message};results.push(row);console.log(row.status,file,row.output.slice(-500));fs.writeFileSync(path.join(os.tmpdir(),'almumez-supabase-review-tests.json'),JSON.stringify({results,sqlExecution:'Disposable PGlite only; legacy SQL suites superseded by backend-database.test.cjs',hostedIntegration:'NOT EXECUTED'},null,2));}
+console.log('TOTAL',results.filter(r=>r.status==='PASS').length,'/',results.length);process.exitCode=results.some(r=>r.status==='FAIL')?1:0;

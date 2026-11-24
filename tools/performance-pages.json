@@ -14,6 +14,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "js/site-navigation.js",
       "js/site-theme.js",
       "shared-site-header.js",
@@ -48,6 +50,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "js/site-navigation.js",
       "js/site-theme.js",
       "shared-site-header.js",
@@ -72,6 +76,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -79,6 +85,7 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
     ]
@@ -90,6 +97,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -97,6 +106,7 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
     ]
@@ -108,6 +118,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -115,6 +127,7 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
     ]
@@ -126,6 +139,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -133,6 +148,7 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
     ]
@@ -144,6 +160,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -151,6 +169,7 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
     ]
@@ -167,9 +186,12 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "js/site-theme.js",
       "auth.js",
-      "js/page-entry.js"
+      "js/page-entry.js",
+      "js/auth-language.js"
     ]
   },
   "blog.html": {
@@ -187,6 +209,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "js/site-navigation.js",
       "js/site-theme.js",
       "shared-site-header.js",
@@ -216,6 +240,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "js/site-navigation.js",
       "js/site-theme.js",
       "shared-site-header.js",
@@ -245,6 +271,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "js/site-navigation.js",
       "js/site-theme.js",
       "shared-site-header.js",
@@ -276,13 +304,15 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "js/site-navigation.js",
       "js/site-theme.js",
-      "shared-site-header.js",
       "shared-site-footer.js",
       "auth.js",
       "js/fx.js",
-      "js/page-entry.js"
+      "js/page-entry.js",
+      "js/auth-language.js"
     ]
   },
   "index.html": {
@@ -303,6 +333,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "js/site-navigation.js",
       "js/site-theme.js",
       "shared-site-footer.js",
@@ -336,10 +368,13 @@
       "product-detail.css",
       "site-navigation.css",
       "site-theme.css",
-      "cart-drawer.css"
+      "cart-drawer.css",
+      "css/pages/product.css"
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "js/site-navigation.js",
       "js/site-theme.js",
       "shared-site-header.js",
@@ -372,13 +407,15 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "js/site-navigation.js",
       "js/site-theme.js",
-      "shared-site-header.js",
       "shared-site-footer.js",
       "auth.js",
       "js/fx.js",
-      "js/page-entry.js"
+      "js/page-entry.js",
+      "js/auth-language.js"
     ]
   },
   "admin-contact.html": {
@@ -388,6 +425,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -395,6 +434,7 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
     ]
@@ -406,6 +446,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -413,6 +455,7 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
     ]
@@ -424,6 +467,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -431,6 +476,7 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
     ]
@@ -442,6 +488,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -449,6 +497,7 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
     ]
@@ -460,6 +509,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -467,6 +518,7 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
     ]
@@ -478,6 +530,8 @@
     ],
     "scripts": [
       "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
       "admin-config.js",
       "data/products.js",
       "js/image-store.js",
@@ -485,8 +539,48 @@
       "data/bundles.js",
       "js/admin/auth.js",
       "js/admin/data.js",
+      "js/admin/cloud-operations.js",
       "js/admin/core.js",
       "js/admin/app.js"
+    ]
+  },
+  "admin-categories.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "admin/index.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
+      "admin-config.js",
+      "data/products.js",
+      "js/image-store.js",
+      "data/store.js",
+      "data/bundles.js",
+      "js/admin/auth.js",
+      "js/admin/data.js",
+      "js/admin/cloud-operations.js",
+      "js/admin/core.js",
+      "js/admin/app.js"
+    ]
+  },
+  "account.html": {
+    "styles": [
+      "assets/fonts/fonts.css",
+      "style.css",
+      "fx.css",
+      "js/vendor/rb-islands.css",
+      "products-page.css",
+      "site-navigation.css",
+      "site-theme.css",
+      "css/pages/account.css"
+    ],
+    "scripts": [
+      "js/page-bootstrap.js",
+      "supabase-config.js",
+      "js/supabase-client.js",
+      "js/customer-account.js"
     ]
   }
 }

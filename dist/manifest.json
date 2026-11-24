@@ -1,7 +1,7 @@
 {
   "about.html": {
     "css": "dist/about.10bd05902d1d.css",
-    "js": "dist/about.88c5331f7cf8.js",
+    "js": "dist/about.05ee4bdbbf5d.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -17,6 +17,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "js/site-navigation.js",
         "js/site-theme.js",
         "shared-site-header.js",
@@ -32,12 +34,11 @@
         "js/shared-drawers.js",
         "js/page-entry.js"
       ]
-    },
-    "criticalBytes": 73984
+    }
   },
   "accessories.html": {
     "css": "dist/accessories.ccee01c7f6bd.css",
-    "js": "dist/accessories.c98485c51ee6.js",
+    "js": "dist/accessories.5947f5bfd58c.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -56,6 +57,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "js/site-navigation.js",
         "js/site-theme.js",
         "shared-site-header.js",
@@ -72,12 +75,33 @@
         "js/shared-drawers.js",
         "js/page-entry.js"
       ]
-    },
-    "criticalBytes": 131887
+    }
+  },
+  "account.html": {
+    "css": "dist/account.236e86fa6a9f.css",
+    "js": "dist/account.820aa99e8212.js",
+    "sources": {
+      "styles": [
+        "assets/fonts/fonts.css",
+        "style.css",
+        "fx.css",
+        "js/vendor/rb-islands.css",
+        "products-page.css",
+        "site-navigation.css",
+        "site-theme.css",
+        "css/pages/account.css"
+      ],
+      "scripts": [
+        "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
+        "js/customer-account.js"
+      ]
+    }
   },
   "admin-404.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -85,6 +109,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -92,15 +118,15 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
   },
   "admin-bundles.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -108,6 +134,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -115,15 +143,40 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
+  },
+  "admin-categories.html": {
+    "css": "dist/admin-404.7ad073907dc1.css",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
+    "sources": {
+      "styles": [
+        "assets/fonts/fonts.css",
+        "admin/index.css"
+      ],
+      "scripts": [
+        "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
+        "admin-config.js",
+        "data/products.js",
+        "js/image-store.js",
+        "data/store.js",
+        "data/bundles.js",
+        "js/admin/auth.js",
+        "js/admin/data.js",
+        "js/admin/cloud-operations.js",
+        "js/admin/core.js",
+        "js/admin/app.js"
+      ]
+    }
   },
   "admin-contact.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -131,6 +184,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -138,15 +193,15 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
   },
   "admin-customers.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -154,6 +209,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -161,15 +218,15 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
   },
   "admin-login.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -177,6 +234,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -184,15 +243,15 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
   },
   "admin-orders.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -200,6 +259,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -207,15 +268,15 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
   },
   "admin-product.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -223,6 +284,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -230,15 +293,15 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
   },
   "admin-products.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -246,6 +309,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -253,15 +318,15 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
   },
   "admin-reports.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -269,6 +334,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -276,15 +343,15 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
   },
   "admin-settings.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -292,6 +359,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -299,15 +368,15 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
   },
   "admin.html": {
     "css": "dist/admin-404.7ad073907dc1.css",
-    "js": "dist/admin-404.db6eda1d9e2a.js",
+    "js": "dist/admin-404.2eb9878cdcd3.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -315,6 +384,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "admin-config.js",
         "data/products.js",
         "js/image-store.js",
@@ -322,15 +393,15 @@
         "data/bundles.js",
         "js/admin/auth.js",
         "js/admin/data.js",
+        "js/admin/cloud-operations.js",
         "js/admin/core.js",
         "js/admin/app.js"
       ]
-    },
-    "criticalBytes": 38050
+    }
   },
   "auth.html": {
     "css": "dist/auth.0e3cc21dd31f.css",
-    "js": "dist/auth.bc290939d89d.js",
+    "js": "dist/auth.adb0fd350d63.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -343,16 +414,18 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "js/site-theme.js",
         "auth.js",
-        "js/page-entry.js"
+        "js/page-entry.js",
+        "js/auth-language.js"
       ]
-    },
-    "criticalBytes": 34905
+    }
   },
   "blog.html": {
     "css": "dist/blog.d0957907e207.css",
-    "js": "dist/blog.c27711f72103.js",
+    "js": "dist/blog.7a4aec07d75a.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -368,6 +441,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "js/site-navigation.js",
         "js/site-theme.js",
         "shared-site-header.js",
@@ -383,12 +458,11 @@
         "js/shared-drawers.js",
         "js/page-entry.js"
       ]
-    },
-    "criticalBytes": 73700
+    }
   },
   "checkout.html": {
     "css": "dist/checkout.90b1b3347acf.css",
-    "js": "dist/checkout.d8472ea04499.js",
+    "js": "dist/checkout.43b440412ea1.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -402,6 +476,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "js/site-navigation.js",
         "js/site-theme.js",
         "shared-site-header.js",
@@ -416,12 +492,11 @@
         "js/shared-drawers.js",
         "js/page-entry.js"
       ]
-    },
-    "criticalBytes": 74306
+    }
   },
   "contact.html": {
     "css": "dist/contact.69d0cefbc0da.css",
-    "js": "dist/contact.e749975b92bd.js",
+    "js": "dist/contact.a568e8aa0f5e.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -436,6 +511,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "js/site-navigation.js",
         "js/site-theme.js",
         "shared-site-header.js",
@@ -454,12 +531,11 @@
         "js/shared-drawers.js",
         "js/page-entry.js"
       ]
-    },
-    "criticalBytes": 71547
+    }
   },
   "forgot-password.html": {
-    "css": "dist/forgot-password.e7b4c7240388.css",
-    "js": "dist/forgot-password.675604a7b2e5.js",
+    "css": "dist/forgot-password.46fcb1a31562.css",
+    "js": "dist/forgot-password.616899dbc5a6.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -472,20 +548,21 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "js/site-navigation.js",
         "js/site-theme.js",
-        "shared-site-header.js",
         "shared-site-footer.js",
         "auth.js",
         "js/fx.js",
-        "js/page-entry.js"
+        "js/page-entry.js",
+        "js/auth-language.js"
       ]
-    },
-    "criticalBytes": 63353
+    }
   },
   "index.html": {
     "css": "dist/index.fed829c81191.css",
-    "js": "dist/index.89340adb5e3c.js",
+    "js": "dist/index.9719f83f3d7c.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -504,6 +581,8 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "js/site-navigation.js",
         "js/site-theme.js",
         "shared-site-footer.js",
@@ -521,12 +600,11 @@
         "js/shared-drawers.js",
         "js/page-entry.js"
       ]
-    },
-    "criticalBytes": 112091
+    }
   },
   "product.html": {
-    "css": "dist/product.5a0c3b6e4488.css",
-    "js": "dist/product.91e8fd9c71a5.js",
+    "css": "dist/product.2c067b88fdef.css",
+    "js": "dist/product.b18e59908a48.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -542,10 +620,13 @@
         "product-detail.css",
         "site-navigation.css",
         "site-theme.css",
-        "cart-drawer.css"
+        "cart-drawer.css",
+        "css/pages/product.css"
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "js/site-navigation.js",
         "js/site-theme.js",
         "shared-site-header.js",
@@ -565,12 +646,11 @@
         "js/shared-drawers.js",
         "js/page-entry.js"
       ]
-    },
-    "criticalBytes": 128389
+    }
   },
   "reset-password.html": {
-    "css": "dist/reset-password.ace16df60b62.css",
-    "js": "dist/forgot-password.675604a7b2e5.js",
+    "css": "dist/reset-password.a29dacc9dbfa.css",
+    "js": "dist/forgot-password.616899dbc5a6.js",
     "sources": {
       "styles": [
         "assets/fonts/fonts.css",
@@ -583,15 +663,16 @@
       ],
       "scripts": [
         "js/page-bootstrap.js",
+        "supabase-config.js",
+        "js/supabase-client.js",
         "js/site-navigation.js",
         "js/site-theme.js",
-        "shared-site-header.js",
         "shared-site-footer.js",
         "auth.js",
         "js/fx.js",
-        "js/page-entry.js"
+        "js/page-entry.js",
+        "js/auth-language.js"
       ]
-    },
-    "criticalBytes": 62747
+    }
   }
 }

@@ -1,2 +1,2 @@
-// Only public credentials belong here. Local mode is explicitly a same-browser demo.
-window.AdminCloudConfig=Object.freeze({mode:'local',url:'',publishableKey:'',version:'2.0.0'});
+// Compatibility alias; centralized public connection values live in supabase-config.js.
+window.AdminCloudConfig=Object.freeze({get mode(){return window.StoreBackendConfig?.enabled?'cloud':'local'},get url(){return window.StoreBackendConfig?.url||''},get publishableKey(){return window.StoreBackendConfig?.publishableKey||''},version:'2.1.0'});

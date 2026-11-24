@@ -1,0 +1,758 @@
+{
+  "server": "postgres (PostgreSQL) 17.12",
+  "disposable": true,
+  "productionContacted": false,
+  "passed": true,
+  "failure": null,
+  "checks": [
+    {
+      "name": "platform guard rejects both missing function and missing trigger",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform fingerprint algorithm is MD5(pg_get_functiondef)",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform exact definition/owner/security/trigger accepted by actual generated guard",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects zero-argument function missing while trigger still exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects changed definition",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects wrong function owner",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects security invoker",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects wrong language",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects wrong search_path",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects extra search_path entry",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects extra function setting",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects trigger absent under required name",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects trigger disabled",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects trigger enabled always",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects trigger replica mode",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects wrong trigger owner",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects wrong trigger event",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects wrong trigger tags",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects wrong trigger function",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects extra event trigger on verified function",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects additional unknown public function",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects additional unknown support routine",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "platform guard rejects overload with arguments",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "failed guard attempts retain original platform function",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "failed guard attempts retain original enabled trigger",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "complete DEPLOY_TO_SUPABASE.sql including postcommit verification",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "full deployment preserves platform function hash",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "full deployment preserves platform event trigger",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "first-install repeat refuses existing application without changes",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "single apply: messages.customer_id",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "single apply: anon table INSERT revoked",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "single apply: anon status INSERT denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "pgcrypto extensions schema",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "complete setup repeated apply",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "11 migration versions",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611220001_existing_model.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611220002_relations_and_queries.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611220003_overview.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611220004_safe_operations.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611220005_customer_privacy.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611220006_security_review.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611220007_final_permissions.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611230008_checkout_identity.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611230009_live_queries.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611230010_privacy_and_roles.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 1: 202611230011_deployment_safety.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611220001_existing_model.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611220002_relations_and_queries.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611220003_overview.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611220004_safe_operations.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611220005_customer_privacy.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611220006_security_review.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611220007_final_permissions.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611230008_checkout_identity.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611230009_live_queries.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611230010_privacy_and_roles.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "individual pass 2: 202611230011_deployment_safety.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "store_schema_migrations: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "store_schema_migrations: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "store_schema_migrations: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "store_schema_migrations: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "profiles: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "profiles: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "profiles: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "profiles: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "user_roles: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "user_roles: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "user_roles: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "user_roles: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "categories: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "categories: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "categories: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "categories: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "products: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "products: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "products: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "products: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "bundles: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "bundles: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "bundles: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "bundles: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "bundle_items: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "bundle_items: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "bundle_items: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "bundle_items: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "customers: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "customers: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "customers: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "customers: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "orders: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "orders: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "orders: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "orders: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "order_items: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "order_items: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "order_items: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "order_items: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "notifications: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "notifications: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "notifications: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "notifications: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "settings: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "settings: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "settings: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "settings: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "support_messages: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "support_messages: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "support_messages: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "support_messages: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "product_images: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "product_images: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "product_images: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "product_images: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "inventory_transactions: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "inventory_transactions: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "inventory_transactions: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "inventory_transactions: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "message_replies: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "message_replies: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "message_replies: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "message_replies: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "payment_transactions: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "payment_transactions: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "payment_transactions: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "payment_transactions: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "provider_events: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "provider_events: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "provider_events: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "provider_events: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "shipments: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "shipments: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "shipments: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "shipments: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "order_stock_reservations: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "order_stock_reservations: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "order_stock_reservations: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "order_stock_reservations: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "shipment_requests: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "shipment_requests: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "shipment_requests: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "shipment_requests: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "deleted_support_messages: exists",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "deleted_support_messages: RLS",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "deleted_support_messages: primary key",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "deleted_support_messages: anon TRUNCATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon view SELECT denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon view UPDATE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon view DELETE denied",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon view insert name",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon view insert email",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon view insert subject",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon view insert order_number",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon view insert product_name",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon view insert message",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon view insert consent",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon private read denied orders",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon private read denied customers",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon private read denied support_messages",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon private read denied payment_transactions",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "anon private read denied deleted_support_messages",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "request ID unique",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "demo delete policy removed",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "definers fixed search_path",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime orders",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime products",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime bundles",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime support_messages",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime message_replies",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime customers",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime notifications",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime settings",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime payment_transactions",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime shipments",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime order_stock_reservations",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime shipment_requests",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "Realtime categories",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "scenario: checkout-identity.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "scenario: final-security-regressions.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "scenario: guest-backfill.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "scenario: live-queries.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "scenario: payment-settlement.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "scenario: public-catalog-privacy.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "scenario: storage-policy-boundary.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "scenario: support-archive.sql",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "postcommit validation does not recreate schema",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "parallel independent connections: one order",
+      "status": "Passed and tested"
+    },
+    {
+      "name": "parallel independent connections: one stock deduction",
+      "status": "Passed and tested"
+    }
+  ],
+  "note": "Auth/Storage fixtures only. Temporary cluster retained stopped for inspection."
+}

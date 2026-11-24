@@ -1,0 +1,32 @@
+begin;
+do $$begin if current_setting('almumez.test_isolated',true) is distinct from 'yes' then raise exception 'Disposable database only';end if;end$$;
+insert into auth.users(id,email,email_confirmed_at) values('22222222-0000-4000-8000-000000000001','query-admin@fixture.invalid',now());
+insert into public.user_roles(user_id,role) values('22222222-0000-4000-8000-000000000001','admin');
+insert into public.products(id,published,payload) select 'query-'||n,true,jsonb_build_object('price',n*100,'stock',10,'name',jsonb_build_object('ar','منتج '||n,'en','Product '||n),'category','query-category','brand','Fixture','rating',4,'placements',jsonb_build_object('home-featured',n),'variants',jsonb_build_array(jsonb_build_object('id','128','label',jsonb_build_object('en','128GB'),'stock',10,'priceDelta',0))) from generate_series(1,30)n;
+select set_config('request.jwt.claim.sub','',true);
+select set_config('request.jwt.claims','{"role":"anon"}',true);
+set local role anon;
+do $$declare result jsonb;begin
+ result=public.catalog_page('{"dept":"query-category","brands":["Fixture"],"storage":["128GB"],"sort":"price-asc"}',2,12);
+ if (result->>'total')::int<>30 or jsonb_array_length(result->'rows')<>12 or result->'rows'->0->>'id'<>'query-13' then raise exception 'Public catalog pagination/filter/sort mismatch: %',result;end if;
+ if (result->'facets'->'departments'->>'query-category')::int<>30 then raise exception 'Facet counts are not server totals';end if;
+ result=public.site_bootstrap(array['query-30']);if jsonb_array_length(result->'products')>116 then raise exception 'Unbounded bootstrap';end if;
+ if coalesce((result->'settings'->'paymentMethods'->>'card')::boolean,true) then raise exception 'Online payment enabled';end if;
+end$$;
+reset role;
+select set_config('request.jwt.claim.sub','22222222-0000-4000-8000-000000000001',true);
+select set_config('request.jwt.claims','{"sub":"22222222-0000-4000-8000-000000000001","role":"authenticated"}',true);
+set local role authenticated;
+select public.admin_category_page('query',1);
+select public.admin_operational_summary();
+select public.admin_notifications();
+select public.admin_page('products','{"q":"query-"}',1,12);
+select public.admin_overview(now()-interval '30 days',now()+interval '1 day',now()-interval '60 days',now()-interval '30 days');
+select public.admin_report(now()-interval '30 days',now()+interval '1 day','city');
+reset role;
+insert into auth.users(id,email) values('22222222-0000-4000-8000-000000000002','unverified@fixture.invalid');
+do $$declare rejected boolean=false;begin
+ begin insert into public.user_roles(user_id,role) values('22222222-0000-4000-8000-000000000002','admin');exception when raise_exception then rejected=true;end;
+ if not rejected then raise exception 'Unverified user received administrator role';end if;
+end$$;
+rollback;

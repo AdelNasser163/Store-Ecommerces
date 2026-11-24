@@ -1,0 +1,2 @@
+# Exact PostgreSQL pg_get_functiondef fingerprint fixture must preserve LF.
+tests/postgres17/fixtures/rls-auto-enable.sql text eol=lf

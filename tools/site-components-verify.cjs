@@ -11,8 +11,10 @@ const selectors=['[data-component="site-header"]','.home-cart-button','.home-hea
    await page.goto('http://127.0.0.1:8785/'+file);
    await page.addStyleTag({content:'.products-footer{content-visibility:visible!important;contain-intrinsic-size:none!important}'});
    await page.evaluate(()=>document.fonts.ready);
-   assert.equal(await page.locator('[data-component="site-header"]').count(),1,file);
+   const passwordPage=['forgot-password.html','reset-password.html'].includes(file);
+   assert.equal(await page.locator('[data-component="site-header"]').count(),passwordPage?0:1,file);
    assert.equal(await page.locator('[data-component="site-footer"]').count(),1,file);
+   if(passwordPage){const footer=await page.evaluate(({props,selectors})=>selectors.slice(5).map(selector=>{const s=getComputedStyle(document.querySelector(selector));return props.map(p=>s[p])}),{props,selectors});assert.deepEqual(footer,home.slice(5),file+' shared footer');assert.deepEqual(errors,[],file);results.push({file,width,lang,sharedFooter:true,navbarRemoved:true});await context.close();continue;}
    assert.equal((await page.locator('.home-navigation a[href="blog.html"]').textContent()).trim(),lang==='ar'?'المدونة':'Blog');
    assert.doesNotMatch(await page.locator('.home-account-dropdown').textContent(),/\?{2,}/);
    const signature=await page.evaluate(({props,selectors})=>selectors.map(selector=>{const n=document.querySelector(selector);if(!n)throw Error(selector);const s=getComputedStyle(n);return props.map(p=>s[p])}),{props,selectors});
@@ -26,7 +28,7 @@ const selectors=['[data-component="site-header"]','.home-cart-button','.home-hea
  for(const [file,meta]of Object.entries(metadata)){
   const h=fs.readFileSync(file,'utf8');
   if(file==='index.html'||meta.scripts.includes('shared-site-header.js'))assert.match(h,/<header\b[\s\S]*?home-cart-button/);
-  if(meta.scripts.includes('shared-site-footer.js'))assert.match(h,/<footer data-component="site-footer"/);
+  if(meta.scripts.includes('shared-site-footer.js'))assert.match(h,/<footer\s+data-component="site-footer"/);
  }
  const catalog=fs.readFileSync('accessories.html','utf8');
  assert.match(catalog,/<footer>\s*<button[^>]*[\s\S]*?data-filter-results/);

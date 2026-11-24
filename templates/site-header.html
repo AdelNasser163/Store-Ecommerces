@@ -1,90 +1,139 @@
-<header data-component="site-header"
-      class="hb-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
-      <div class="w-full max-w-7xl mx-auto px-margin py-3 flex flex-col gap-3">
-        <div class="flex items-center justify-between gap-space-lg">
-          <button
-            class="mobile-menu-button md:hidden inline-flex items-center justify-center size-10 rounded-full border border-slate-200 text-navy-dark"
-            type="button" aria-label="فتح القائمة" aria-expanded="false"
-            aria-controls="mobile-navigation">
-            <span class="material-symbols-outlined">menu</span>
-          </button>
-          <!-- Logo: AlMumez Online Store -->
-          <a
-            class="flex items-center shrink-0 transition-transform duration-200 active:scale-95"
-            href="index.html" title="AlMumez Online Store - المميز ستور">
-            <div
-              class="bg-white rounded-lg px-2 py-0.5 flex items-center justify-center">
-              <img alt="AlMumez Online Store"
-                class="h-10 md:h-12 w-auto object-contain block"
-                src="assets/images/logo.png" width="150" height="48" decoding="async" sizes="(max-width:767px) 88px, 112px">
-            </div>
-          </a>
-          <!-- Search Bar -->
-          <div
-            class="hb-search flex-1 max-w-xl hidden md:flex items-center bg-slate-50 hover:bg-slate-100/90 rounded-full border border-slate-200 focus-within:border-mumez-green focus-within:ring-2 focus-within:ring-mumez-green/25 transition-all duration-200 px-4 py-1.5 shadow-inner">
-            <span
-              class="material-symbols-outlined text-slate-400 text-xl mr-2">search</span>
-            <label class="sr-only" for="hb-search-input">Search</label>
-            <input id="hb-search-input"
-              class="bg-transparent border-0 text-slate-800 placeholder:text-slate-400 focus:ring-0 w-full text-sm font-medium py-0.5"
-              placeholder="Search genuine electronics, accessories, laptops..."
-              type="text" />
-            <button
-              class="bg-mumez-green hover:bg-mumez-green-dark text-navy-dark hover:text-white font-extrabold px-5 py-1.5 rounded-full text-xs transition-all ml-1 shadow-sm flex items-center gap-1">
-              <span>Search</span>
-            </button>
-          </div>
-          <!-- Compact Actions: Wishlist, Account, Language, Cart -->
-          <div
-            class="home-header-actions flex items-center gap-space-md shrink-0">
-            <a href="index.html?wishlist=1" class="home-header-wishlist home-action-icon"
-              title="Wishlist" aria-label="Open wishlist">
-              <svg class="hb-wishlist-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>
-              <span class="home-wishlist-count">0</span>
-            </a>
-            <a class="home-action-icon" href="auth.html" title="Login"
-              aria-label="Login or create account">
-              <span class="material-symbols-outlined">person</span>
-            </a>
-            <div class="home-action-icon home-language-toggle"
-              title="Change language" aria-label="Current language: English">
-              <span class="material-symbols-outlined">language</span>
-              <span class="home-language-badge">AR</span><span class="sr-only">/
-                EN</span>
-            </div>
-            <button class="home-cart-button" type="button"
-              title="Shopping Cart">
-              <span
-                class="material-symbols-outlined home-cart-icon">shopping_bag</span>
-              <span class="home-cart-copy">
-                <span class="home-cart-meta">Cart: 0 items</span>
-                <strong class="home-cart-total">0 EGP</strong>
-              </span>
-            </button>
-          </div>
+<header
+  data-component="site-header"
+  class="hb-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm"
+>
+  <div class="w-full max-w-7xl mx-auto px-margin py-3 flex flex-col gap-3">
+    <div class="flex items-center justify-between gap-space-lg">
+      <button
+        class="mobile-menu-button md:hidden inline-flex items-center justify-center size-10 rounded-full border border-slate-200 text-navy-dark"
+        type="button"
+        aria-label="فتح القائمة"
+        aria-expanded="false"
+        aria-controls="mobile-navigation"
+      >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <!-- Logo: AlMumez Online Store -->
+      <a
+        class="flex items-center shrink-0 transition-transform duration-200 active:scale-95"
+        href="index.html"
+        title="AlMumez Online Store - المميز ستور"
+      >
+        <div class="bg-white rounded-lg px-2 py-0.5 flex items-center justify-center">
+          <img
+            alt="AlMumez Online Store"
+            class="h-10 md:h-12 w-auto object-contain block"
+            src="assets/images/logo.png"
+            width="150"
+            height="48"
+            decoding="async"
+            sizes="(max-width:767px) 88px, 112px"
+          />
         </div>
-        <!-- Secondary Nav Bar -->
-        <nav id="mobile-navigation"
-          class="home-navigation flex items-center justify-between border-t border-slate-100 pt-2 text-sm overflow-x-auto no-scrollbar">
-          <div class="flex items-center gap-space-lg whitespace-nowrap">
-            <a
-              class="text-primary font-bold border-b-2 border-mumez-green pb-1 flex items-center gap-1"
-              href="index.html">
-              <span>Home</span>
-            </a>
-            <a
-              class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
-              href="accessories.html">Products</a>
-            <a
-              class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
-              href="about.html">About</a>
-            <a
-              class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
-              href="blog.html">Blog</a>
-            <a
-              class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
-              href="contact.html">Contact</a>
-          </div>
-        </nav>
+      </a>
+      <!-- Search Bar -->
+      <div
+        class="hb-search flex-1 max-w-xl hidden md:flex items-center bg-slate-50 hover:bg-slate-100/90 rounded-full border border-slate-200 focus-within:border-mumez-green focus-within:ring-2 focus-within:ring-mumez-green/25 transition-all duration-200 px-4 py-1.5 shadow-inner"
+      >
+        <span class="material-symbols-outlined text-slate-400 text-xl mr-2">search</span>
+        <label class="sr-only" for="hb-search-input">Search</label>
+        <input
+          id="hb-search-input"
+          class="bg-transparent border-0 text-slate-800 placeholder:text-slate-400 focus:ring-0 w-full text-sm font-medium py-0.5"
+          placeholder="Search genuine electronics, accessories, laptops..."
+          type="text"
+        />
+        <button
+          class="bg-mumez-green hover:bg-mumez-green-dark text-navy-dark hover:text-white font-extrabold px-5 py-1.5 rounded-full text-xs transition-all ml-1 shadow-sm flex items-center gap-1"
+        >
+          <span>Search</span>
+        </button>
       </div>
-    </header>
+      <!-- Compact Actions: Wishlist, Account, Language, Cart -->
+      <div class="home-header-actions flex items-center gap-space-md shrink-0">
+        <a
+          href="index.html?wishlist=1"
+          class="home-header-wishlist home-action-icon"
+          title="Wishlist"
+          aria-label="Open wishlist"
+        >
+          <svg
+            class="hb-wishlist-heart"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+            />
+          </svg>
+          <span class="home-wishlist-count">0</span>
+        </a>
+        <a
+          class="home-action-icon"
+          href="auth.html"
+          title="Login"
+          aria-label="Login or create account"
+        >
+          <span class="material-symbols-outlined">person</span>
+        </a>
+        <div
+          class="home-action-icon home-language-toggle"
+          title="Change language"
+          aria-label="Current language: English"
+        >
+          <span class="material-symbols-outlined">language</span>
+          <span class="home-language-badge">AR</span><span class="sr-only">/ EN</span>
+        </div>
+        <button class="home-cart-button" type="button" title="Shopping Cart">
+          <span class="material-symbols-outlined home-cart-icon">shopping_bag</span>
+          <span class="home-cart-copy">
+            <span class="home-cart-meta">Cart: 0 items</span>
+            <strong class="home-cart-total">0 EGP</strong>
+          </span>
+        </button>
+      </div>
+    </div>
+    <!-- Secondary Nav Bar -->
+    <nav
+      id="mobile-navigation"
+      class="home-navigation flex items-center justify-between border-t border-slate-100 pt-2 text-sm overflow-x-auto no-scrollbar"
+    >
+      <div class="flex items-center gap-space-lg whitespace-nowrap">
+        <a
+          class="text-primary font-bold border-b-2 border-mumez-green pb-1 flex items-center gap-1"
+          href="index.html"
+        >
+          <span>Home</span>
+        </a>
+        <a
+          class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
+          href="accessories.html"
+          >Products</a
+        >
+        <a
+          class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
+          href="about.html"
+          >About</a
+        >
+        <a
+          class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
+          href="blog.html"
+          >Blog</a
+        >
+        <a
+          class="text-slate-600 hover:text-navy-dark font-semibold transition-colors duration-150 pb-1"
+          href="contact.html"
+          >Contact</a
+        >
+      </div>
+    </nav>
+  </div>
+</header>

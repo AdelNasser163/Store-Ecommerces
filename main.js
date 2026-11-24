@@ -165,13 +165,16 @@
   const requestedId = new URLSearchParams(location.search).get("id"),
     storedSelected = load(SELECTED_PRODUCT_KEY, null),
     storedCatalog = load(CATALOG_KEY, []);
-  const activeProduct = isProductPage
+  const activeProduct = isProductPage && window.StoreCloud?.enabled
+    ? centralProducts.find(item=>item.id===requestedId)||null
+    : isProductPage
     ? products.find((item) => item.id === requestedId) ||
       storedCatalog.find((item) => item.id === requestedId) ||
       ((!requestedId || storedSelected?.id === requestedId) &&
         storedSelected) ||
       defaultProduct
     : null;
+  if(isProductPage&&window.StoreCloud?.enabled&&!activeProduct){const main=document.querySelector('main');if(main){const note=document.createElement('p');note.setAttribute('role','alert');note.textContent=document.documentElement.lang==='ar'?'المنتج غير متاح':'Product is unavailable';main.replaceChildren(note)}return;}
   const activeBundle = activeProduct && window.StoreBundles
     ? window.StoreBundles.forProduct(activeProduct.id)
     : null;
@@ -1941,15 +1944,15 @@
           total: Math.max(0, subtotal + shipping - discount),
           delivery,
           payment,
-          status: payment === "cod" ? "طلب جديد" : "مدفوع",
+          status: "طلب جديد",
         },
         orders = load("store-orders-v1", []);
       if(window.StoreCloud?.enabled){
         try{Object.assign(order,await window.StoreCloud.submitOrder(order))}
         catch(error){return toast(error.message)}
       }
-      orders.unshift(order);
-      if (!save("store-orders-v1", orders)) {
+      if(!window.StoreCloud?.enabled)orders.unshift(order);
+      if (!window.StoreCloud?.enabled&&!save("store-orders-v1", orders)) {
         return toast(
           language === "ar"
             ? "تعذر حفظ الطلب. راجع مساحة المتصفح وحاول مرة أخرى."

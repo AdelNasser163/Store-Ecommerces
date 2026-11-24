@@ -2,13 +2,19 @@
   {
     "file": "about.html",
     "width": 390,
-    "elements": 250,
+    "elements": 249,
     "differences": 0
   },
   {
     "file": "accessories.html",
     "width": 390,
     "elements": 848,
+    "differences": 0
+  },
+  {
+    "file": "account.html",
+    "width": 390,
+    "elements": 9,
     "differences": 0
   },
   {
@@ -20,55 +26,61 @@
   {
     "file": "blog.html",
     "width": 390,
-    "elements": 289,
+    "elements": 288,
     "differences": 0
   },
   {
     "file": "checkout.html",
     "width": 390,
-    "elements": 334,
+    "elements": 333,
     "differences": 0
   },
   {
     "file": "contact.html",
     "width": 390,
-    "elements": 294,
+    "elements": 293,
     "differences": 0
   },
   {
     "file": "forgot-password.html",
     "width": 390,
-    "elements": 127,
+    "elements": 66,
     "differences": 0
   },
   {
     "file": "index.html",
     "width": 390,
-    "elements": 844,
+    "elements": 843,
     "differences": 0
   },
   {
     "file": "product.html",
     "width": 390,
-    "elements": 390,
+    "elements": 391,
     "differences": 0
   },
   {
     "file": "reset-password.html",
     "width": 390,
-    "elements": 137,
+    "elements": 76,
     "differences": 0
   },
   {
     "file": "about.html",
     "width": 820,
-    "elements": 250,
+    "elements": 249,
     "differences": 0
   },
   {
     "file": "accessories.html",
     "width": 820,
     "elements": 848,
+    "differences": 0
+  },
+  {
+    "file": "account.html",
+    "width": 820,
+    "elements": 9,
     "differences": 0
   },
   {
@@ -80,55 +92,61 @@
   {
     "file": "blog.html",
     "width": 820,
-    "elements": 289,
+    "elements": 288,
     "differences": 0
   },
   {
     "file": "checkout.html",
     "width": 820,
-    "elements": 334,
+    "elements": 333,
     "differences": 0
   },
   {
     "file": "contact.html",
     "width": 820,
-    "elements": 294,
+    "elements": 293,
     "differences": 0
   },
   {
     "file": "forgot-password.html",
     "width": 820,
-    "elements": 127,
+    "elements": 66,
     "differences": 0
   },
   {
     "file": "index.html",
     "width": 820,
-    "elements": 844,
+    "elements": 843,
     "differences": 0
   },
   {
     "file": "product.html",
     "width": 820,
-    "elements": 390,
+    "elements": 391,
     "differences": 0
   },
   {
     "file": "reset-password.html",
     "width": 820,
-    "elements": 137,
+    "elements": 76,
     "differences": 0
   },
   {
     "file": "about.html",
     "width": 1440,
-    "elements": 250,
+    "elements": 249,
     "differences": 0
   },
   {
     "file": "accessories.html",
     "width": 1440,
     "elements": 848,
+    "differences": 0
+  },
+  {
+    "file": "account.html",
+    "width": 1440,
+    "elements": 9,
     "differences": 0
   },
   {
@@ -140,43 +158,43 @@
   {
     "file": "blog.html",
     "width": 1440,
-    "elements": 289,
+    "elements": 288,
     "differences": 0
   },
   {
     "file": "checkout.html",
     "width": 1440,
-    "elements": 334,
+    "elements": 333,
     "differences": 0
   },
   {
     "file": "contact.html",
     "width": 1440,
-    "elements": 294,
+    "elements": 293,
     "differences": 0
   },
   {
     "file": "forgot-password.html",
     "width": 1440,
-    "elements": 127,
+    "elements": 66,
     "differences": 0
   },
   {
     "file": "index.html",
     "width": 1440,
-    "elements": 844,
+    "elements": 843,
     "differences": 0
   },
   {
     "file": "product.html",
     "width": 1440,
-    "elements": 390,
+    "elements": 391,
     "differences": 0
   },
   {
     "file": "reset-password.html",
     "width": 1440,
-    "elements": 137,
+    "elements": 76,
     "differences": 0
   }
 ]

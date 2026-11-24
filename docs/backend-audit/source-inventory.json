@@ -1,0 +1,1619 @@
+[
+  {
+    "file": "about-page.css",
+    "bytes": 7472,
+    "sha256": "664e63259f4fbd46591a5cbeddb07d3e8c1804e2d2ad5757638c4cafb2bf8742",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "about-page.js",
+    "bytes": 6155,
+    "sha256": "f835bea63dacdbd336a5cb7a397593a388e6c86f5943a8622515b14f1599c077",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "about.html",
+    "bytes": 21891,
+    "sha256": "6cd92e0bc7db9dd256b5831887fda02efe5151294213447554cb3076f0de71aa",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "accessories.html",
+    "bytes": 17936,
+    "sha256": "43de82b4b66be067b003ac515fa04216e2db499cde42d71f2dd3a4a481d778c7",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "admin\\index.css",
+    "bytes": 25735,
+    "sha256": "fc0ad213851e5f99d30e4f63a574f0bd2562b84a5501bd8e08a171d46a954d95",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin\\tailwind.config.cjs",
+    "bytes": 544,
+    "sha256": "ff97e7d683047b1bc45a46ffacec8198ebfb188034cd702a4f70b969a052a2be",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-404.html",
+    "bytes": 1714,
+    "sha256": "69691e8b567f2e3c242e3169d7749440f05357ff0c1c0053acf32479b4a87922",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-bundles.html",
+    "bytes": 1710,
+    "sha256": "831441e74b159b328b60129779629516ed7983f41ffaaebd2523115256bc575c",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-bundles.js",
+    "bytes": 5903,
+    "sha256": "367f5c68c79c343d1bd46659f9de106998742859edd8bbbcefe18b631a6469dc",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "admin-config.js",
+    "bytes": 345,
+    "sha256": "129ee4e4013ae124343e67134bf287716605ed02de2f58e702c50f4ae76bb820",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-contact.css",
+    "bytes": 7868,
+    "sha256": "1d3379033bc7ea1a21ae4c1763807b22a1ddd29ef740c841e0496ee8aaa02b95",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-contact.html",
+    "bytes": 1714,
+    "sha256": "bbbf0f36dd77f5b26fef2be6b3682464af6dd5c47d11d86d84a2e88da14a509c",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-contact.js",
+    "bytes": 11022,
+    "sha256": "6edb5d001bba2285190fb561e92bdd34e14c287db264d5481268b1bccf41a66f",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "admin-customers.html",
+    "bytes": 1718,
+    "sha256": "daccb2b6f55b487f174947cc5c36560748a9f6a8db866576f08b7c452ec5a9fa",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-dashboard.js",
+    "bytes": 18975,
+    "sha256": "1b6b8d7a72a06c493be3e161c117e6b5cbfeb0e0c778fe882ab8604b39a5fac9",
+    "storage": 6,
+    "auth": false
+  },
+  {
+    "file": "admin-login.html",
+    "bytes": 1702,
+    "sha256": "8d193980132f03702890ce23b0f98e08b18a193047b7d0323623a3354d9fefd7",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-orders-theme.css",
+    "bytes": 15151,
+    "sha256": "e62e7e0fc15cd0575255681cdfe29052f48f2b89f84ddf0178a185528177d597",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-orders-view.js",
+    "bytes": 11483,
+    "sha256": "b0ded74dac23c1d92a081341e66b07b531a8268564c85c99645506d847d0df72",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "admin-orders.html",
+    "bytes": 1706,
+    "sha256": "90e8b2d3a094fdd066e1b8a1b42cb930f9fbf5be61fb80025232373d155b8a52",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-orders.js",
+    "bytes": 7501,
+    "sha256": "d93da487ae009b5949239e6d909c6e5ba6951d0253b9c3cc3aa936137be9b763",
+    "storage": 4,
+    "auth": false
+  },
+  {
+    "file": "admin-product.html",
+    "bytes": 1714,
+    "sha256": "ba2c9b0aa10851e2723dd6c139b8fcd2c7aa8dca3a404487dd4847308f46b91b",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-products.html",
+    "bytes": 1714,
+    "sha256": "ba2c9b0aa10851e2723dd6c139b8fcd2c7aa8dca3a404487dd4847308f46b91b",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-products.js",
+    "bytes": 6886,
+    "sha256": "6e6fc92c6803afe8884068dcc47b17375b83c2479dca51c7249385c03d1f08b5",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "admin-reports.html",
+    "bytes": 1710,
+    "sha256": "32afff871b847e41d75a8ca2361851253524c8af0524acf69bb26b0ea93a477c",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-settings.html",
+    "bytes": 1714,
+    "sha256": "93c854ec00ea71002fc64e1370bca0d6653d66f48ad27f4fb075ae22cc78b04a",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-shell.css",
+    "bytes": 1018,
+    "sha256": "7468ebc79715d970ea498c1cd207653cd068dd615b26bfa64e91a14cc104b680",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin-ui.js",
+    "bytes": 27848,
+    "sha256": "6a5f92eccdaab13232f884c68dcc0d0fcc8c46d9b55e30b58ad8cb62ce1d7f6e",
+    "storage": 14,
+    "auth": false
+  },
+  {
+    "file": "admin.html",
+    "bytes": 1718,
+    "sha256": "01a07e58df15a9df89988dd2e780f926bf32d2e07b15d9958025925191c3f1b1",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "admin.js",
+    "bytes": 19000,
+    "sha256": "ed651c57db4382629347700c3e24f5e8fb7e2b14f18e77fe5adb5a99846ed1c6",
+    "storage": 3,
+    "auth": false
+  },
+  {
+    "file": "assets\\fonts\\fonts-performance.css",
+    "bytes": 10597,
+    "sha256": "6f1cada6a75484c3a0afa775cc68baa42a67bb2062879d08a482ad681c2706e5",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "assets\\fonts\\fonts.css",
+    "bytes": 10823,
+    "sha256": "eda6d7b8bfc4e852d8c5940531920ac74b748bda213d11999f44cfecc39949c3",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "auth.html",
+    "bytes": 8547,
+    "sha256": "5950ad0b7765c80b92beebdf4f0510345053e6cf375067577d3fd81be622c2bd",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "auth.js",
+    "bytes": 11402,
+    "sha256": "bc9d0942a0a5a922aa41a5f607481473d192f7f2b5fddd59df8479c1a5ba8153",
+    "storage": 6,
+    "auth": true
+  },
+  {
+    "file": "blog-page.css",
+    "bytes": 7233,
+    "sha256": "75bebfbdc26bc40a8c5f5f42ac97ce7ee1a3b4930086edae2e9b1095753a1b2c",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "blog-page.js",
+    "bytes": 7965,
+    "sha256": "b692ebc5fb16fee252568dcfb168e8c3dfe4fa1caebff2950221a29a4f349a31",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "blog.html",
+    "bytes": 28417,
+    "sha256": "25cd80c26be894c26c893dd5d6555bdac09387a9bd5fa2d5d05a14d7987c1fee",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "bundle-cart.js",
+    "bytes": 4366,
+    "sha256": "f7ac7a5c2f44625482978ffda8b9077d9b9d950293a3cabd4bcd14c71cf38d2f",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "cart-drawer.css",
+    "bytes": 6543,
+    "sha256": "8b725349a3896dcfe66eb911786f7a985f956be7dfa491722fdad45281d79b72",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "catalog-theme.css",
+    "bytes": 11585,
+    "sha256": "e244a9193237d11939a6095f01cc673d9163a435b3fec6a0abd1862558830bf5",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "catalog.js",
+    "bytes": 7142,
+    "sha256": "a660e8b5f27a3c95244b4bbcd632fd6ba5fd0b1fe34cb8c7ebf25f8c10fb110e",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "checkout.html",
+    "bytes": 22539,
+    "sha256": "c32515784ebad87079078859a51a1bcdbed1986ea83f93fe5fc981711da44988",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "contact-page.css",
+    "bytes": 6787,
+    "sha256": "08318695dbddde69ffe36252cac440cd80ea37896c797c7f03302236eb9cd8b5",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "contact-page.js",
+    "bytes": 8856,
+    "sha256": "327b5beb966740f43e1996cb074e9f3176d8e8024078984fae4026f112ab0e02",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "contact.html",
+    "bytes": 23757,
+    "sha256": "da5063b8ec90359784fb4adcd68a2d1dbad6050228f2c276f4b6bde44b695224",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "css\\pages\\product.css",
+    "bytes": 116,
+    "sha256": "7b72608903df08bc7d82e37464adbb705f31d0b61128e40ee51ce2ea6caacf3d",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "data\\bundles.js",
+    "bytes": 1953,
+    "sha256": "f848f89ac5c33af67593fb259831b5cc0c436dc0fb755acc5a5f48504b0e50fd",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "data\\products.js",
+    "bytes": 10725,
+    "sha256": "df8051cf325022c47e297ab9de45fb91f69194b01664ffa116d63bf177108c71",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "data\\store.js",
+    "bytes": 16663,
+    "sha256": "8c0950eb3b7edab3c2fa7d68b7ad8452e9a57ab789a4e8faaeef5f62b7d7e57b",
+    "storage": 19,
+    "auth": false
+  },
+  {
+    "file": "db\\admin-schema.sql",
+    "bytes": 24629,
+    "sha256": "414f4025a7b3c63ab97399c672b37966a369845fa0cd6eee4fb701287b9adfbe",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "db\\admin-seed.sql",
+    "bytes": 35030,
+    "sha256": "828459b1edeaa491674cbb4fc4cf7dd1b977822b40e2d78edadd0100d24a2f9c",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "dist\\about.1011aa9d643b.js",
+    "bytes": 170208,
+    "sha256": "1011aa9d643b2908f40210030e4c16f2841b13adf810a4bb8d41be86059bf6aa",
+    "storage": 41,
+    "auth": true
+  },
+  {
+    "file": "dist\\about.10bd05902d1d.css",
+    "bytes": 167875,
+    "sha256": "10bd05902d1daaaf76243b8433ac7415d6f79fb34528479bdf9a2c7fdc813a09",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "dist\\accessories.32fa976bf7f8.js",
+    "bytes": 120339,
+    "sha256": "32fa976bf7f8e88e8b6aebf066c235cf2688650b3f6ed35d87e55831b245d70f",
+    "storage": 34,
+    "auth": true
+  },
+  {
+    "file": "dist\\accessories.ccee01c7f6bd.css",
+    "bytes": 213174,
+    "sha256": "ccee01c7f6bd5fb449120c8a6c3beb5ed9710c024145dbf60e21598b5aa1556a",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "dist\\admin-404.5249882cdbd6.js",
+    "bytes": 101970,
+    "sha256": "5249882cdbd62f07d27be5ab1f3b3b89bde1f0970708faae29d99e03f1d9935d",
+    "storage": 47,
+    "auth": true
+  },
+  {
+    "file": "dist\\admin-404.7ad073907dc1.css",
+    "bytes": 38101,
+    "sha256": "7ad073907dc13314a62bea0831a572c5d8a4149ab0693a4beee14de27876f0e1",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "dist\\admin-view-bundles.5a697d1264a0.js",
+    "bytes": 8738,
+    "sha256": "5a697d1264a04424bb561456991dae38426de430ee58fb30163a6369ff84ba47",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "dist\\admin-view-customers.9870ed658b00.js",
+    "bytes": 4243,
+    "sha256": "9870ed658b0010e6dcd1937a09ddcb56865874f0d9ba294b926508db3c6eaec8",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "dist\\admin-view-dashboard.fec19cad4027.js",
+    "bytes": 16185,
+    "sha256": "fec19cad4027f944c47014dca240a08711c925c82f4637804e271d85035e1372",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "dist\\admin-view-messages.f833c5628a1e.js",
+    "bytes": 8812,
+    "sha256": "f833c5628a1e95d326e1889438d49e845d813e95234e3408d76613233683032d",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "dist\\admin-view-notfound.e63246911f23.js",
+    "bytes": 378,
+    "sha256": "e63246911f23b78cc6710a7388e73ee9978eedaffa641403abe59549d5029f4c",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "dist\\admin-view-orders.c9be24cec931.js",
+    "bytes": 12794,
+    "sha256": "c9be24cec93158fe4117f7e57083083d32a05af775008aa8deae7aa805f7b0b2",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "dist\\admin-view-products.7c3a486f8b09.js",
+    "bytes": 15514,
+    "sha256": "7c3a486f8b09fe80467a47571cae36aac8b00a5cbaec7ac9238b130de6f23460",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "dist\\admin-view-reports.5fc777bab02c.js",
+    "bytes": 6659,
+    "sha256": "5fc777bab02c4516ab5ec24c2f373c252c76a7718eea8f7aeba8ffdb7499f4b1",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "dist\\admin-view-settings.370529685fd2.js",
+    "bytes": 12371,
+    "sha256": "370529685fd2a187761ff5e2bf10adaea0490cbb8f9e72c6b4c1fa6b94c46b84",
+    "storage": 2,
+    "auth": true
+  },
+  {
+    "file": "dist\\auth.0e3cc21dd31f.css",
+    "bytes": 76861,
+    "sha256": "0e3cc21dd31ff0760b8780fd075df98a4345aa303d74400f807ff404dbd18f40",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "dist\\auth.3b567ff24f61.js",
+    "bytes": 11922,
+    "sha256": "3b567ff24f61af3e2e5d7151a1e3fd5a74324e11ace73b72595f73479282c05a",
+    "storage": 6,
+    "auth": true
+  },
+  {
+    "file": "dist\\blog.907363ea94c8.js",
+    "bytes": 171740,
+    "sha256": "907363ea94c880980591a9142afcd7347f0cced65ae647f455cfa639a26f2007",
+    "storage": 41,
+    "auth": true
+  },
+  {
+    "file": "dist\\blog.d0957907e207.css",
+    "bytes": 166957,
+    "sha256": "d0957907e2074147ea36b526628f6a6e65732a3ca1b3fc4ea5d150626bb2d3d4",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "dist\\checkout.5d57001bf169.js",
+    "bytes": 165101,
+    "sha256": "5d57001bf169a3693c9a34d6a6f38a9de49ad560259905a0088252bebe58f950",
+    "storage": 42,
+    "auth": true
+  },
+  {
+    "file": "dist\\checkout.90b1b3347acf.css",
+    "bytes": 159860,
+    "sha256": "90b1b3347acf06e3a579284138a0afe79743deca92202f6913e2da1117e68918",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "dist\\contact.58a28db07645.js",
+    "bytes": 177013,
+    "sha256": "58a28db076453c61c91f727586e783a8dfba00790c61055eb3a5be14e3dbab72",
+    "storage": 43,
+    "auth": true
+  },
+  {
+    "file": "dist\\contact.69d0cefbc0da.css",
+    "bytes": 166358,
+    "sha256": "69d0cefbc0da9b483d155c9e5d14c1a56787f5cca8a90bd6773df7345aff229b",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "dist\\forgot-password.46fcb1a31562.css",
+    "bytes": 96630,
+    "sha256": "46fcb1a315624fbaf3b218d5d7a65adf1d0073fa5185b1288c1ee12b60c92f77",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "dist\\forgot-password.6798d62a18a2.js",
+    "bytes": 21870,
+    "sha256": "6798d62a18a2a7d9fd1c6f976c29da4af9b0f53f468dbe7d9de08d5ff8dabd09",
+    "storage": 8,
+    "auth": true
+  },
+  {
+    "file": "dist\\home-early-translations.28a922628c27.js",
+    "bytes": 1488,
+    "sha256": "28a922628c27108ceeae5df26382cceb96bd4d14c45b2675d01fe365e9ea8946",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "dist\\index.65e27baa4e43.js",
+    "bytes": 185117,
+    "sha256": "65e27baa4e43511a6abf11b8f682f7626b17404b2fce8d671cab60130df931f1",
+    "storage": 39,
+    "auth": true
+  },
+  {
+    "file": "dist\\index.fed829c81191.css",
+    "bytes": 245168,
+    "sha256": "fed829c8119102c8d5c6e207b453a0333bdc6ff7f56cb8e300c962d517a433b3",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "dist\\page-bootstrap.1ffab02f6a1a.js",
+    "bytes": 1271,
+    "sha256": "1ffab02f6a1a5f5680dd4da44c5f504272480419527520586f3614e2c668ba3c",
+    "storage": 5,
+    "auth": false
+  },
+  {
+    "file": "dist\\page-bootstrap.efc1f195a1db.js",
+    "bytes": 1498,
+    "sha256": "efc1f195a1db9e921f20b7fcb427b7ad28e61ac652f4f58f410e45db403dd5aa",
+    "storage": 6,
+    "auth": false
+  },
+  {
+    "file": "dist\\product.2c067b88fdef.css",
+    "bytes": 251169,
+    "sha256": "2c067b88fdefd475e7bfa3dadbedfc165eeaabd23cf8d77e9d665e2c8fb4c1d4",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "dist\\product.6ba329f4d857.js",
+    "bytes": 186378,
+    "sha256": "6ba329f4d8577fce188166ff1080558c2c029517bb153cc0ea670c5304b8a7d3",
+    "storage": 48,
+    "auth": true
+  },
+  {
+    "file": "dist\\reset-password.a29dacc9dbfa.css",
+    "bytes": 96569,
+    "sha256": "a29dacc9dbfa2288dfc94d729d344917a14183d3453636d4e66e3f2d0a7104e7",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "forgot-password.html",
+    "bytes": 6498,
+    "sha256": "099b29ac8d1f907e72abfed835a2e463feab6575dd79a757acba84fcde893b09",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "fx.css",
+    "bytes": 1770,
+    "sha256": "b086b4e997fd8018d9f48e23550faea448427778cb44dc85d19650ee72ab3e18",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "hero-b.css",
+    "bytes": 43680,
+    "sha256": "37ec07a46a39e0564ebd5fada1da0c31cef4ff09155d5454edec8bc86e762dc8",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "index.html",
+    "bytes": 38847,
+    "sha256": "b2f33092555e097892ffa81dab15374e5d562f3a3deefb973e78d71d05f420c9",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "js\\admin\\app.js",
+    "bytes": 28922,
+    "sha256": "60c52af068d0192ca2dd990cdeb2c866c47c14e6f486138575e9a97b541e4197",
+    "storage": 8,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\auth.js",
+    "bytes": 5658,
+    "sha256": "a0ada2d3af759174bfd7177be3e22f8b501ac4fea598787c0fab8005b575b532",
+    "storage": 12,
+    "auth": true
+  },
+  {
+    "file": "js\\admin\\bootstrap.js",
+    "bytes": 329,
+    "sha256": "97db2cd0a23fb7b50322af190bf70470b72c065e0817eb4a0a2aaf83263ecef4",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\cloud-operations.js",
+    "bytes": 2860,
+    "sha256": "d65296fc6efa6a694aea80f203b84cb99af7cf140a9ff157528c379ae4868274",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "js\\admin\\core.js",
+    "bytes": 6639,
+    "sha256": "5b58eed250a29639a517c22e929472a23e8a8b75603280f51b28297ff273b624",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\data.js",
+    "bytes": 10598,
+    "sha256": "c119f68375d7b8510752d04007de3c1a57cee1ecb6a8277c423cb92522aef858",
+    "storage": 5,
+    "auth": true
+  },
+  {
+    "file": "js\\admin\\pages\\bundles.js",
+    "bytes": 9436,
+    "sha256": "c7e6d74ed902f97e94a551491748e922899c77a803fe90cab6274c5957c990e6",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\pages\\customers.js",
+    "bytes": 4437,
+    "sha256": "51f51790ce0043b5f5a40adc137948685750e2b5ffbb105c74c78f7497e88430",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\pages\\dashboard.js",
+    "bytes": 17485,
+    "sha256": "807f9c05b1b657a60d998d087519d10a971b6294f3d0277d585b656d1da6810a",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\pages\\messages.js",
+    "bytes": 9360,
+    "sha256": "4a0c83ea2a971f1fffd237de79a719e23055c0d39b10ae865be9588baf05071a",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\pages\\notfound.js",
+    "bytes": 371,
+    "sha256": "0af396d37b90b9b2ca122f42ac5a416af1511a57bc19592b0c70bac63bc42f45",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\pages\\orders.js",
+    "bytes": 13544,
+    "sha256": "4636cb9e54457ab6722277e5555825a1fccc5a5874a46f07175f83c2d48fe1de",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\pages\\products.js",
+    "bytes": 16571,
+    "sha256": "627a958b8a8d9a339ea7b074a99614012924a57d6cca6d7370a0ae525d8a7f95",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\pages\\reports.js",
+    "bytes": 7078,
+    "sha256": "01537f4fd07abe99ab82371a27c74efee358112746659611c70b75ca08d5df23",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\admin\\pages\\settings.js",
+    "bytes": 12870,
+    "sha256": "54c6fb9e38ec2112623717905f26f4581ec5b4c1753287eb3f1ecc732ebecfc2",
+    "storage": 2,
+    "auth": true
+  },
+  {
+    "file": "js\\fx.js",
+    "bytes": 5855,
+    "sha256": "668736d568a0928af48c03f9d5f04fc1bc57258b24e62297f41d696303bbbb3a",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\hero-b.js",
+    "bytes": 3533,
+    "sha256": "4314dcb65c750c3ef8f375562b78c8ff6eb754de88f644f02956c4fd7f3957c0",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\home-card-quantity.js",
+    "bytes": 3548,
+    "sha256": "d3b76f9885ce5e898eba671a4f8fe341dd4db6ed0d2769caa6fea2d407cd342d",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "js\\image-manifest.js",
+    "bytes": 28653,
+    "sha256": "8c63e2af815f0441ed82adc8d6864ebea58b1f3d01e27a134425caaedbeefc40",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\image-performance.js",
+    "bytes": 2870,
+    "sha256": "10f32b54035cd3bb0f1b4a6c35dab421c0933b3b7da764dcd6f98063e15c791d",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\image-store.js",
+    "bytes": 7565,
+    "sha256": "c0c624237952298bacac0fa8c8712e1623dd37f4d93740bf4d87e47a681e032c",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "js\\mobile-product-rails.js",
+    "bytes": 4560,
+    "sha256": "2ebee018fd96dcc0b5fc757129a2fc846e269b4be260ec3ce635ad8aeddecc16",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\page-bootstrap.js",
+    "bytes": 1785,
+    "sha256": "8306ccfc02f35e06babfe5b3e416907e48af4658f8dc1ab0c29ef5187173fa5b",
+    "storage": 5,
+    "auth": false
+  },
+  {
+    "file": "js\\page-entry.js",
+    "bytes": 1676,
+    "sha256": "6254a5c43d2add6c944ea53c53569568ff42408742b2715d4e2b926d8335afd6",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\page-theme.js",
+    "bytes": 8599,
+    "sha256": "dedbe393e85e366d90bc14b73ad8c41a44336dfab16a8e74e44d0b1a69b254fa",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\pages\\home-early-translations.js",
+    "bytes": 1807,
+    "sha256": "de956713ffeb2d728d0a38f14c75e5c7e3735cc1e2b2cdeb2cb9a591c5f579d2",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\pages\\products-redirect.js",
+    "bytes": 72,
+    "sha256": "9bfe7a4dc71829462943708be70f8c8ba0dab644881476dc64003d63ff8ff0bb",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\product-card.js",
+    "bytes": 11707,
+    "sha256": "e64d4d92e74405678489cf6df9ae62d7915aeccc7fcb2e46cedc5abaa946264e",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "js\\product-detail-theme.js",
+    "bytes": 2441,
+    "sha256": "c23279952daac9cddb836110bce3a3fa062c04de3ef6a0e5cfd66c76d8db6e61",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\product-visibility.js",
+    "bytes": 1060,
+    "sha256": "263901f71cfda769fe9ceac2b2b8c95c4bda93ba999bc164d64cf2ab898f7feb",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\products-data.js",
+    "bytes": 3066,
+    "sha256": "aa82b5f578f9e84495d9447a028b85a16a0b91d9c02ed0e37718f6318b788fca",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\products-logic.js",
+    "bytes": 5001,
+    "sha256": "fa5eaa3c3c2e6cf12cc8994c6421509e96c676e09263d58bf026bc264b7e4cd1",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\products-page.js",
+    "bytes": 28553,
+    "sha256": "71aa219b098d74d72e4a7b1f11232960ab011a9a6f382879396b068d853820ed",
+    "storage": 4,
+    "auth": false
+  },
+  {
+    "file": "js\\shared-drawers.js",
+    "bytes": 10962,
+    "sha256": "1ba8fe62658192552ef221e0c24e02cbfcaa8bf7da3b2c708536fab03760e06c",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "js\\site-chrome-theme.js",
+    "bytes": 1874,
+    "sha256": "a5fb9b7c2458abef4aeae783e19b92470fb7a13240e71684d1efe84c541c03b4",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\site-navigation.js",
+    "bytes": 7242,
+    "sha256": "7622a03e5471ec32504864b2daddc92920b98bf6724c4a95b07af932f81ff992",
+    "storage": 2,
+    "auth": true
+  },
+  {
+    "file": "js\\site-theme.js",
+    "bytes": 3431,
+    "sha256": "cc2954f89a0e69355e571e14a86d30889ea79a0f432cdeb3db431503f849f2bc",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\store-cloud.js",
+    "bytes": 1718,
+    "sha256": "3f026d4bec42660bc8fec4bae797b0625bd26ced2a3d832ab2376c35db754936",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "js\\storefront-settings.js",
+    "bytes": 1372,
+    "sha256": "e9fddbf160f184a6632773e96c8faf78947ab829debce32006c8a7f9ae6426fb",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "js\\supabase-client.js",
+    "bytes": 2663,
+    "sha256": "0aa4f845764f661ed988b83a1e42cd272f421ca6a1e26c113058e10721130690",
+    "storage": 9,
+    "auth": true
+  },
+  {
+    "file": "js\\support-api.js",
+    "bytes": 3445,
+    "sha256": "d5e8fba54c2a69c941d8e4ff00ec989c66293c1f99a96c81f0168a6cda5265c9",
+    "storage": 2,
+    "auth": true
+  },
+  {
+    "file": "js\\support-fields.js",
+    "bytes": 2020,
+    "sha256": "f72bf8d952d5784e118974db567b7fa6fc47387ce3af5b3bab49cd8fe983c631",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\vendor\\gsap.min.js",
+    "bytes": 73357,
+    "sha256": "3d1bea374ab1b703cc5c4105358eec63c4465efdc573931dc116e34a0a190c1b",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\vendor\\lenis.min.js",
+    "bytes": 18815,
+    "sha256": "80f53e77f1c13e379fc246d2b5e299188e20bcb2b2fe7ebb13e8e8c7563a6da7",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\vendor\\rb-islands.css",
+    "bytes": 5910,
+    "sha256": "e290c10c0114ef8a9ac7f379a7ff7c45608d1e8596fd514fc5f0f85365efaad8",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\vendor\\rb-islands.js",
+    "bytes": 265614,
+    "sha256": "1077b325a3943b189d75659bfbb49e66975bcd98c02d20d2891ad78b804acd75",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "js\\vendor\\ScrollTrigger.min.js",
+    "bytes": 44683,
+    "sha256": "b5bb360661f478f0ff6ffa11500d8ce5e2b6aaf6f7288237cdca3aac9548035a",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "main.js",
+    "bytes": 132335,
+    "sha256": "55c48b593ecf2ab6844bce44320737d3156c26a76baa864a33215f367592591b",
+    "storage": 12,
+    "auth": true
+  },
+  {
+    "file": "mobile-product-rails.css",
+    "bytes": 2247,
+    "sha256": "ad6e0f76649ed4173e70c3f3b5ea27fbc926f7b1eb21b8c971a4cdcbbecc4a6f",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "page-theme.css",
+    "bytes": 38750,
+    "sha256": "e5b1412d18d1489527b506bedc4acf169465d82034e2508209b50e7e10e092e5",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "performance.css",
+    "bytes": 5890,
+    "sha256": "a6a7d7f66d84aa7c96ec0077cffe6e29aa13330b1e3b13549205b9d5a060e8f6",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "product-bundle.js",
+    "bytes": 6537,
+    "sha256": "83af4a8caf0d64b2700a15d7065ff976a6b5541543c8b5a40949d202d829b549",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "product-card.css",
+    "bytes": 22821,
+    "sha256": "02b17a949dfefc4183d3b848c75817c3f436cecfa91f602f86df65b08ef9f4d5",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "product-detail.css",
+    "bytes": 15007,
+    "sha256": "c42f47b221b549599ecb7fc6277502cc48b54f2bf133abd21095582b6fd4a6d5",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "product.html",
+    "bytes": 49607,
+    "sha256": "2762c418fa36b061a5e9e9bdb64f34c1e2971674db762f316ed22f8dcf5129c5",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "products-logic.test.cjs",
+    "bytes": 2014,
+    "sha256": "908f79d279db146f21c7d56af33e5ef73708b8516cad282497d5b12a48d294c0",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "products-page.css",
+    "bytes": 49996,
+    "sha256": "19c3a4eca9632543fc3db4ac66aa943c7afb5386c0936fd8070d837233d3ed05",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "products.html",
+    "bytes": 621,
+    "sha256": "1359aa78e1f345b770760a1f4649f361d92b8d76784b28ede51a482e58abedf7",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "products.js",
+    "bytes": 4518,
+    "sha256": "08d21ecb5e0975764b0ec27c3e7f5016552e2efc08ecb82bb704c375a785ee5e",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "reset-password.html",
+    "bytes": 7412,
+    "sha256": "e46da15b529e3fcdd50b698e4095b07a0f1bd970ed850284d0e1be6d6ace0c8d",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "shared-site-footer.js",
+    "bytes": 303,
+    "sha256": "3ae9a7dda87fb3d12ac4b473b6f84ed1ca82aa1b4b91cbdfe97f73a8369def3f",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "shared-site-header.js",
+    "bytes": 8085,
+    "sha256": "0767820016c8de3c624e92ed98b1bb2a77e0912c827f41bf2cd36d28ae4b07c5",
+    "storage": 6,
+    "auth": false
+  },
+  {
+    "file": "shared-ui.css",
+    "bytes": 251,
+    "sha256": "20cbdfad4069c04e7c19de2990e9848b671d9a3f4e283ca904ef20ace77340fe",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "site-navigation.css",
+    "bytes": 19801,
+    "sha256": "c08cfaa02a4dbd5636ab4344ffa66b9296a3ed4a7a5b6227c3b3d071199cbbbf",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "site-theme.css",
+    "bytes": 10405,
+    "sha256": "b2cb2e7f7aa27021a00a7344325820465e0f41a9bd61381b63e5871a3b0a6e5f",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\build.mjs",
+    "bytes": 351,
+    "sha256": "e479719f7977a3d4599caae050d938b8531ab6c2b28d74317f4334e235641005",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\index.jsx",
+    "bytes": 7037,
+    "sha256": "83c4e7abc7afe234a8c63ae315e6a961e19ba9a6bc19bb4c4682ab48494876d5",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\islands.css",
+    "bytes": 1398,
+    "sha256": "a74af0fd1c684b95936de42d336b77efde3cfbee10534ecdb50683910a8fc2cd",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\rb\\ClickSpark.jsx",
+    "bytes": 14707,
+    "sha256": "d826b10004a9ba67ee88c3692230055513491495fbdc149598310e77edef170f",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\rb\\CountUp.jsx",
+    "bytes": 15407,
+    "sha256": "7c3d3b6cdbd6957484fd7f3a2149d9cd56ad3e4df11437e09dcfa84225b648e3",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\rb\\LogoLoop.css",
+    "bytes": 4508,
+    "sha256": "f6fa424e4c054e7418043edaa59e3204daf241587a8db557216d34d2abfa5cac",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\rb\\LogoLoop.jsx",
+    "bytes": 36097,
+    "sha256": "322c2f94b95dc96fc6b59d04de525f05d254d4c6a0a58925e348dedd9ff63311",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\rb\\Particles.css",
+    "bytes": 204,
+    "sha256": "13108261d7541ade64a60fb850f901a80cc81329b98d1b6c07b5861dc8fa2401",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\rb\\Particles.jsx",
+    "bytes": 31728,
+    "sha256": "e7854d178e283b25fb537b6ba0c75f0f935665e7cf7c98ee3f98f79dc4428ef5",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\rb\\ShinyText.css",
+    "bytes": 469,
+    "sha256": "6030200a8885aba91536e2e367a0ed316989f10122f9d91a20f09caf1b5f46ab",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\rb\\ShinyText.jsx",
+    "bytes": 11226,
+    "sha256": "2f7fa6e4e929985b97bd3542383d748749c2ac32e0f498f37d87d7d9b35bb159",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\rb\\SpotlightCard.css",
+    "bytes": 980,
+    "sha256": "b646b7da4bb46f0a4d819d0af275804c49a845a5c2dc848700aaf9282db13a92",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "src-islands\\rb\\SpotlightCard.jsx",
+    "bytes": 10294,
+    "sha256": "e0b91ba07c173c98b87b44ec451d0243fe0a3edc67864e2779ad8507d455af67",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "storage-test.cjs",
+    "bytes": 5439,
+    "sha256": "a7bedae055513d0947920214510b04c47e6c1aa64ebbdb5d799e068042818d75",
+    "storage": 6,
+    "auth": false
+  },
+  {
+    "file": "style.css",
+    "bytes": 303599,
+    "sha256": "29cfdd72f3fb2aff9037097765ffaf28816396ac09234f110c86a920bff148e4",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "supabase\\migrations\\202611220001_existing_model.sql",
+    "bytes": 28401,
+    "sha256": "44a8ab400afd79081ddc75268910e1d495ddcd3157c19c3521aa67e6750e2478",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "supabase\\migrations\\202611220002_relations_and_queries.sql",
+    "bytes": 20926,
+    "sha256": "c332c7913e95640cb5e3818cd90dda3232168a804be99acd5fef34bbcd29284f",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "supabase\\migrations\\202611220003_overview.sql",
+    "bytes": 2999,
+    "sha256": "318880ab026edefeb1c0fa132dfeb0372f77ab48a057e444b0130edac8758f61",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "supabase\\migrations\\202611220004_safe_operations.sql",
+    "bytes": 2937,
+    "sha256": "9bbc8e90e595c8d302ae865fde8f96b2b796355a8262ecb4b2b1659851b2d800",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "supabase\\migrations\\202611220005_customer_privacy.sql",
+    "bytes": 990,
+    "sha256": "384b87951ea2e77f7dc261998bcd628582b4efce0cfb438f5f458784b6a27f2c",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "supabase\\migrations\\202611220006_security_review.sql",
+    "bytes": 19814,
+    "sha256": "1444b9e3522a44387d895fe64da68704ed68eb68fd80b0f703eb9d6a15b247b1",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "supabase\\migrations\\202611220007_final_permissions.sql",
+    "bytes": 8069,
+    "sha256": "1597d1ac73c707f672b95288a1c1dadee5e1e082b1a33c274db8cd35b30d4a52",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "supabase\\preflight.sql",
+    "bytes": 13368,
+    "sha256": "d9432c15655e6466e09ce0818a1686280a42e10cb8f13d7ff19f1377c8cbe463",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "supabase\\setup.sql",
+    "bytes": 97819,
+    "sha256": "aad709e2a9d6de63d9c8c25cee0911ee9b67763dcb58fa3e571145347ad3b3f3",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "supabase\\tests\\final-security-regressions.sql",
+    "bytes": 9779,
+    "sha256": "769084a914bad881c253319c710e8303c056d60a01da8bdbbfff07ea68991e76",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "supabase-config.js",
+    "bytes": 310,
+    "sha256": "fe4690110ad1fdd9680bed897ad487ccde228d10a49a00fde7c0dc94a1862b48",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "support-config.js",
+    "bytes": 327,
+    "sha256": "955e70b8dbf6770881ac0aa766ba40f27f4f612a701023a2ad5c9e1b3e35eea2",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "support-setup.sql",
+    "bytes": 481,
+    "sha256": "cc63fe5f34ec55521385315736f053c55a11647b861919aa7788c906299a77ab",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "templates\\site-footer.html",
+    "bytes": 2165,
+    "sha256": "bacd745a1cd2252739250817f334da3f3b6a711d0a007f8085c3728e6384ddb2",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "templates\\site-header.html",
+    "bytes": 5449,
+    "sha256": "af59a11fcc9bacf11c07016ce3de3ab011a40cdbb63ea8a68e29cc4965fc862f",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "tools\\account-menu-verify.cjs",
+    "bytes": 3185,
+    "sha256": "c1823e4a2d9367c0ec39eaf0ee6c05c882333bc435f558b152c886c0f6083e9e",
+    "storage": 1,
+    "auth": true
+  },
+  {
+    "file": "tools\\admin-accessibility.cjs",
+    "bytes": 1908,
+    "sha256": "6c394a600ce786c030d8543008e81bce3f1eadc6ac2c88b5be632dfe3d0c4321",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "tools\\admin-actions-verify.cjs",
+    "bytes": 4843,
+    "sha256": "687262d1555a42fbaf62341d78d191435a562c3a64bf9b01f8a96d7015c42de0",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "tools\\admin-logic.test.cjs",
+    "bytes": 1299,
+    "sha256": "dfac438473509f589d298d5f4655d3d3af4ba032d43504b7e51cf1fd21aacf81",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\admin-login-verify.cjs",
+    "bytes": 3220,
+    "sha256": "a16ff16abaebec6b6589f11af9797d843cde9a6e6047fb54e522c8ffd0952274",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "tools\\admin-redesign-audit.cjs",
+    "bytes": 1623,
+    "sha256": "78cc19ec5e6a3809057577234fbf62af2740122a2731235fbaa6c61fbf03b205",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\admin-schema.test.cjs",
+    "bytes": 6610,
+    "sha256": "b4bdcf16cab98674063217869c4545139cf44a9485285ffb2463ad2ebcb5e0ad",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "tools\\admin-store-integration.cjs",
+    "bytes": 3662,
+    "sha256": "0d6b3eba9a6205daf3bbd3482990ae76e3df438e834d1c09d52b135abd436b1a",
+    "storage": 2,
+    "auth": false
+  },
+  {
+    "file": "tools\\admin-workspace-verify.cjs",
+    "bytes": 6531,
+    "sha256": "c002978192f171d8e8239b909fcbaddf936478b9be1f6a77653f5bd8a948e399",
+    "storage": 7,
+    "auth": false
+  },
+  {
+    "file": "tools\\build-performance.mjs",
+    "bytes": 16315,
+    "sha256": "62146fb1b3eb93bdac26f840679e5b087ec4c06ae6e66ceb414a838866e7b58c",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\build-supabase-setup.cjs",
+    "bytes": 8180,
+    "sha256": "0fa0af1f24e32e6868285f785ff422f96f865b232d75f32fcc3521e6f5d82cc9",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "tools\\cart-drawer-verify.cjs",
+    "bytes": 3432,
+    "sha256": "26c40f2b2476af563adf166b5ea0da41df906bd13d6b041fbfbe8d36b26536d7",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "tools\\catalog-loading-verify.cjs",
+    "bytes": 3143,
+    "sha256": "6e2e38340dd95c11800e8beef5e2119a9f39b7d54ac149c48961e9be15c011c8",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "tools\\clean-css.cjs",
+    "bytes": 2358,
+    "sha256": "8b2f5a1f8c6218ca67a992260a52b6618bace1f7bc29988b2dfb3f3917aa0f50",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\css-cleanup.test.cjs",
+    "bytes": 1095,
+    "sha256": "1b230d062db8d0af3692529a706eec7533f48b45c0b2c0ed8fe8cbef25aac01a",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\encoding-source.test.cjs",
+    "bytes": 643,
+    "sha256": "ac02b5d59d44e29a2fb71d1e350d8c97feca7bef05a3353eaac37bc7ea2720f7",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\font-faces.cjs",
+    "bytes": 2589,
+    "sha256": "e653953910d4ac3881efb84b0896152d846a669403fc41d5443fa6ca056a65b9",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\font-faces.test.cjs",
+    "bytes": 1006,
+    "sha256": "c7c5ccc4ed74479c9a1b35618a5f8b0db3a2ba8c2ee9e28063439b7e616627a1",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\format-page-sources.mjs",
+    "bytes": 529,
+    "sha256": "f15585ee06e9cdf2151fdd272f5c70a7345f9917c283355132f97a30d19d1b09",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\hero-performance-verify.cjs",
+    "bytes": 3319,
+    "sha256": "e9d4629f0a6a77a750a410c2cac94f391e611f68a9bae659f0dc57ee8ab4cfd8",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\html-separation.test.mjs",
+    "bytes": 2093,
+    "sha256": "f075069ccc1236d1890b39c528f402e2f23ffb9be3127773be7adc6b26e8a526",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\optimize-logos.cjs",
+    "bytes": 2123,
+    "sha256": "7ab50c32299507b9ba76926dc1bcd434ff2d05ee5e3734f120affdc9eff3a407",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\orders-view-verify.cjs",
+    "bytes": 3579,
+    "sha256": "a96cdb8fe1193b4ca30216c91296cdd83af8c75ac10d46fc906b13ffe41e7323",
+    "storage": 6,
+    "auth": false
+  },
+  {
+    "file": "tools\\page-build-repeatability.test.mjs",
+    "bytes": 810,
+    "sha256": "2318cb4682cc82085b74e5b330bdf003138bb9f2f15f2a92f1db2dc8b61a1a64",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\page-entry-verify.cjs",
+    "bytes": 3484,
+    "sha256": "b785971034fddedab440008f7e1a1317f39e285d05a02902451783b5afb10bdf",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "tools\\pagespeed-server.cjs",
+    "bytes": 1018,
+    "sha256": "6de37a6c330b35efc6503cb3979d8e295b9a6870e013aa3cdb663b9d4852bd04",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\pagespeed-summary.cjs",
+    "bytes": 6764,
+    "sha256": "874aaa342fc993e095fbd813bfcd4a908a17df10a159df4742cea18270f16054",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\pagespeed-visual-verify.cjs",
+    "bytes": 1346,
+    "sha256": "6a2d0fcf8e0680e8aba41c6a23b4be61fbc889bb787a92ba9fa5053d6a418a2f",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\perf-css-regression.cjs",
+    "bytes": 3396,
+    "sha256": "dfadbb80729ebf34a60f1bee03f8714c95c97305511aed66d7100625b9e9bbca",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "tools\\perf-layout.cjs",
+    "bytes": 1251,
+    "sha256": "aa3d7c216302a957cbec40af66c158a2dec4d3ce15c93df25bc5a15cc1e73e68",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "tools\\perf-measure.cjs",
+    "bytes": 4495,
+    "sha256": "5deebfe4f28efe9a48d6ba9910909f509ba0d03080dc09b58c37bea6cd481bd5",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "tools\\perf-scroll.cjs",
+    "bytes": 1607,
+    "sha256": "24a6a718559664a03268adced85e85237ad9588c0c77e0dc602500af255a77fc",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\perf-summary.cjs",
+    "bytes": 1851,
+    "sha256": "11630458f27bc5e939150a066a0b2a831f35b92d0b486881ee38b294eddff548",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\perf-verify.cjs",
+    "bytes": 5505,
+    "sha256": "55c9bea9083292a441c0c3383aad0fd1a79d40425106e24858d595d0842fb61f",
+    "storage": 3,
+    "auth": true
+  },
+  {
+    "file": "tools\\prepare-assets.cjs",
+    "bytes": 5483,
+    "sha256": "5e08a82755b320d3231b0940624c9d94007a9d8a5e72817cd6f246fbf75adfff",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\prune-utilities.cjs",
+    "bytes": 2215,
+    "sha256": "0d42109528debafb217f9f5594a8a08dc1bfdb9b64adf29c27bf16f167911d8e",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\run-pagespeed.cjs",
+    "bytes": 1704,
+    "sha256": "ef0eb316a4173c28ec5304585c5b162c3695455d976233dc3d0bc1937c989a66",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\shared-drawers-verify.cjs",
+    "bytes": 4250,
+    "sha256": "a88f10f044b67dd6b38ff5bb6f3d7bc1c57cf7367c2cac7f9525920bfdcd3ea5",
+    "storage": 4,
+    "auth": false
+  },
+  {
+    "file": "tools\\site-components-home-verify.cjs",
+    "bytes": 2138,
+    "sha256": "b1bc509dd231c64d2f739d82916e82b2d4759767d4cefb8a6a6fdd906807dfbf",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "tools\\site-components-verify.cjs",
+    "bytes": 4376,
+    "sha256": "9c242640a0a51dadbed17f7cf8751443dddc183e460fe4196e95ed25e8f607fe",
+    "storage": 1,
+    "auth": true
+  },
+  {
+    "file": "tools\\site-components.mjs",
+    "bytes": 4713,
+    "sha256": "a379ce6fbf5b75af4af0210e678d93eccd82d4da7c1722544465b1faba28af9e",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "tools\\supabase-final-correction.test.cjs",
+    "bytes": 3125,
+    "sha256": "0f87beceb5df412fad7bbafa0a0ba9263ace93acfac41aa42898381aecb39fec",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "tools\\supabase-migrations.test.cjs",
+    "bytes": 3645,
+    "sha256": "5d779fe2b5fbb2c4de71fb4d5b5ebe07f552bc7e5beeb52e1e3533541697187b",
+    "storage": 0,
+    "auth": true
+  },
+  {
+    "file": "tools\\supabase-review-tests.cjs",
+    "bytes": 1239,
+    "sha256": "e0b2fa726fc3a232116fa18edc7e142bb84fe36d94dae69019891a1677e5ea8e",
+    "storage": 0,
+    "auth": false
+  },
+  {
+    "file": "tools\\supabase-source.test.cjs",
+    "bytes": 4433,
+    "sha256": "47d263646f2497cec38d88968d7a717f947258820ee266aed9c8396401e7bef9",
+    "storage": 1,
+    "auth": false
+  },
+  {
+    "file": "tools\\support-permissions-verify.cjs",
+    "bytes": 1832,
+    "sha256": "15ed1a42bbfc21ec279192019a64397f638cec74c4477fd4225378868bf57f54",
+    "storage": 4,
+    "auth": true
+  },
+  {
+    "file": "tools\\support-verify.cjs",
+    "bytes": 3549,
+    "sha256": "6fd6d37ce5f4cbf995f63fb7275a13f2d459c92a6ad6df4cda30e0cc6373effd",
+    "storage": 4,
+    "auth": false
+  },
+  {
+    "file": "tools\\wishlist-header-verify.cjs",
+    "bytes": 2057,
+    "sha256": "0a3f11e139bd7a8453cadeeac668acb7a94f8a027835762f35bf841ce058a592",
+    "storage": 3,
+    "auth": false
+  },
+  {
+    "file": "variant-prices-check.cjs",
+    "bytes": 1976,
+    "sha256": "a532f1ea377bfa5b49a7de9d8c2a7465b902ea1ffd84394013bf4e17d09db6f1",
+    "storage": 2,
+    "auth": false
+  }
+]

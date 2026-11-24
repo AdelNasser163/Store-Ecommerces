@@ -172,5 +172,5 @@
   const reset = async () => { const products=clone(window.STORE_DEFAULT_PRODUCTS||[]); await write(products); return products; };
   if (navigator.storage?.persist) navigator.storage.persist().catch(() => false);
   window.StoreProducts = {KEY,MIGRATION_FLAG,SCHEMA_FLAG,REPORT_KEY,VARIANT_REPORT_KEY,read,write,reset,localized,imageFallback,migrate,migrateVariantSchema,exportBackup,uniqueIds,quotaMessage,normalizeProduct,getOfferState,getVariant,getVariantPrice,getEffectivePrice};
-  window.StoreProducts.ready = migrate().then(async result=>{const variantMigration=await migrateVariantSchema();return {...result,variantMigration}}).catch(error => { console.error("Safe product migration failed; original data was kept.", error); return {migrated:false,error,products:read()}; });
+  window.StoreProducts.ready = window.StoreBackendConfig?.enabled?Promise.resolve({cloud:true}):migrate().then(async result=>{const variantMigration=await migrateVariantSchema();return {...result,variantMigration}}).catch(error => { console.error("Safe product migration failed; original data was kept.", error); return {migrated:false,error,products:read()}; });
 })();

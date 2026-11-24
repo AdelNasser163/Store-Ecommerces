@@ -3,22 +3,32 @@
   "private": true,
   "scripts": {
     "build:performance": "node tools/build-performance.mjs",
+    "format:pages": "node tools/format-page-sources.mjs",
+    "check:html": "node tools/html-separation.test.mjs",
     "build:fx": "node src-islands/build.mjs",
     "check:hero": "node tools/hero-performance-verify.cjs",
     "check:entry": "node tools/page-entry-verify.cjs",
     "check:cart": "node tools/cart-drawer-verify.cjs",
     "check:drawers": "node tools/shared-drawers-verify.cjs",
     "check:site": "node tools/perf-verify.cjs",
-    "css:audit": "node tools/clean-css.cjs"
+    "css:audit": "node tools/clean-css.cjs",
+    "test:backend": "node tools/backend-database.test.cjs",
+    "test:cloud-mock": "node tools/cloud-frontend-verify.cjs",
+    "test:integration-local": "node tools/supabase-review-tests.cjs"
   },
   "devDependencies": {
-    "esbuild": "^0.25.0"
+    "@electric-sql/pglite": "0.5.17",
+    "esbuild": "^0.25.0",
+    "parse5": "8.1.1",
+    "pgsql-parser": "18.4.2",
+    "prettier": "3.10.1"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "motion": "^11.18.2",
+    "@supabase/supabase-js": "2.119.2",
     "gsap": "^3.13.0",
-    "lenis": "^1.3.4"
+    "lenis": "^1.3.4",
+    "motion": "^11.18.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
